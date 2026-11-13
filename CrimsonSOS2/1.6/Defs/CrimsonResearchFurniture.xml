@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>Crimson_ResearchBench</defName><label>심홍 연구대</label>
+    <description>중앙 분석 콘솔과 낮은 좌우 작업면을 갖춘 3×2 함선용 연구대입니다. 고급 연구대가 필요한 연구를 수행하며 벽걸이 심홍 연구 업링크를 최대 두 개 연결할 수 있습니다. 연구 속도의 기본값과 소비 전력은 고급 연구대와 동일합니다.</description>
+    <designationCategory>Production</designationCategory><designationHotKey IsNull="True" />
+    <thingClass>Building_ResearchBench</thingClass><drawerType>RealtimeOnly</drawerType><tickerType>Normal</tickerType>
+    <size>(3,2)</size><rotatable>true</rotatable><defaultPlacingRot>North</defaultPlacingRot>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <minifiedDef IsNull="True" /><thingCategories Inherit="False" />
+    <graphicData><texPath>Crimson/Decor/Research/ResearchBenchAtlas</texPath><graphicClass>CrimsonSOS2.CrimsonV51FurnitureGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(3,2.2)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /><damageData IsNull="True" /></graphicData>
+    <altitudeLayer>Building</altitudeLayer><passability>PassThroughOnly</passability><pathCost>50</pathCost><fillPercent>0.5</fillPercent><castEdgeShadows>false</castEdgeShadows>
+    <statBases><MaxHitPoints>1750</MaxHitPoints><WorkToBuild>5000</WorkToBuild><Mass>80</Mass><Beauty>5</Beauty><Flammability>0</Flammability><ResearchSpeedFactor>1</ResearchSpeedFactor></statBases>
+    <costList Inherit="False"><Steel>250</Steel><ComponentIndustrial>10</ComponentIndustrial></costList>
+    <comps Inherit="False">
+      <li Class="CompProperties_ReportWorkSpeed"><workSpeedStat>ResearchSpeedFactor</workSpeedStat></li>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>250</basePowerConsumption><shortCircuitInRain>true</shortCircuitInRain></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_AffectedByFacilities"><linkableFacilities><li>Crimson_WallResearchUplink</li><li>MultiAnalyzer</li><li>ArchotechUplink</li></linkableFacilities></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>250</originalMaxHitPoints><goldReference>true</goldReference></li>
+    </comps>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset><hasInteractionCell>true</hasInteractionCell><terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <surfaceType>Item</surfaceType><constructionSkillPrerequisite>6</constructionSkillPrerequisite><techLevel>Industrial</techLevel>
+    <researchPrerequisites><li>MicroelectronicsBasics</li></researchPrerequisites>
+    <placeWorkers><li>PlaceWorker_ShowFacilitiesConnections</li><li>PlaceWorker_PreventInteractionSpotOverlap</li><li>PlaceWorker_DrawLinesToBookcasesInRoom</li></placeWorkers>
+    <building><paintable>false</paintable></building><uiOrder>1003</uiOrder>
+    <designatorDropdown IsNull="True" />
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_WallResearchUplink</defName><label>심홍 연구 업링크</label>
+    <description>1×1 벽걸이 아코테크 연구 보조 장치입니다. 연구대 뒤쪽 벽에 나란히 두 개 설치할 수 있도록 본체가 벽 쪽으로 올라가 있습니다. 전원이 공급되면 SOS2 업링크의 연구 속도 +20%p와 복합분석기의 +10%p를 합친 +30%p를 제공하고 두 장치의 연구 설비 요건을 모두 충족합니다. 연구대당 최대 두 개가 효과를 제공합니다. 소비 전력은 200W입니다.</description>
+    <designationCategory>Misc</designationCategory><designationHotKey IsNull="True" />
+    <drawerType>RealtimeOnly</drawerType><tickerType>Normal</tickerType><size>(1,1)</size><rotatable>true</rotatable><defaultPlacingRot>North</defaultPlacingRot>
+    <altitudeLayer>BuildingOnTop</altitudeLayer><passability>Standable</passability><pathCost>0</pathCost><fillPercent>0</fillPercent><blockLight>false</blockLight><blockWind>false</blockWind><coversFloor>false</coversFloor><clearBuildingArea>false</clearBuildingArea><canOverlapZones>true</canOverlapZones>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <graphicData><texPath>Crimson/Decor/Research/WallUplinkAtlas</texPath><graphicClass>CrimsonSOS2.CrimsonV51FurnitureGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(0.98,0.7)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /><addTopAltitudeBias>false</addTopAltitudeBias>
+      <drawOffsetNorth>(0,0,0.55)</drawOffsetNorth><drawOffsetEast>(0.55,0,0)</drawOffsetEast><drawOffsetSouth>(0,0,-0.55)</drawOffsetSouth><drawOffsetWest>(-0.55,0,0)</drawOffsetWest>
+    </graphicData>
+    <building><isEdifice>false</isEdifice><isAttachment>true</isAttachment><paintable>false</paintable></building>
+    <statBases><MaxHitPoints>8400</MaxHitPoints><WorkToBuild>10000</WorkToBuild><Mass>60</Mass><Beauty>5</Beauty><Flammability>0</Flammability></statBases>
+    <costList><Uranium>20</Uranium><Plasteel>125</Plasteel><Gold>50</Gold><ComponentSpacer>4</ComponentSpacer></costList>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>200</basePowerConsumption><shortCircuitInRain>true</shortCircuitInRain></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Facility"><statOffsets><ResearchSpeedFactor>0.3</ResearchSpeedFactor></statOffsets><maxSimultaneous>2</maxSimultaneous></li>
+      <li Class="SaveOurShip2.CompProps_ResearchUnlock"><unlock>ArchotechUplink</unlock></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>1200</originalMaxHitPoints><goldReference>true</goldReference></li>
+    </comps>
+    <placeWorkers><li>CrimsonSOS2.CrimsonFurnitureWallPlaceWorker</li><li>PlaceWorker_ShowFacilitiesConnections</li></placeWorkers>
+    <constructionSkillPrerequisite>15</constructionSkillPrerequisite><techLevel>Archotech</techLevel><terrainAffordanceNeeded>Light</terrainAffordanceNeeded><uiOrder>1063</uiOrder>
+    <designatorDropdown IsNull="True" />
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_ToolCabinet</defName><label>심홍 공구함</label>
+    <description>2×1 검은 금속 공구함입니다. 기본 공구함과 같은 작업대에 연결되며 작업 속도 +6%p를 제공합니다. 작업대당 최대 두 개가 효과를 제공합니다. 전원은 필요하지 않습니다.</description>
+    <designationCategory>Misc</designationCategory><designationHotKey IsNull="True" />
+    <drawerType>RealtimeOnly</drawerType><size>(2,1)</size><rotatable>true</rotatable><defaultPlacingRot>South</defaultPlacingRot>
+    <altitudeLayer>Building</altitudeLayer><passability>PassThroughOnly</passability><pathCost>42</pathCost><fillPercent>0.5</fillPercent><canOverlapZones>false</canOverlapZones>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <graphicData><texPath>Crimson/Decor/Research/ToolCabinetAtlas</texPath><graphicClass>CrimsonSOS2.CrimsonV51FurnitureGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(2,1.25)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
+    <statBases><MaxHitPoints>700</MaxHitPoints><WorkToBuild>1800</WorkToBuild><Mass>20</Mass><Beauty>5</Beauty><Flammability>0</Flammability></statBases>
+    <costList><Steel>200</Steel></costList>
+    <building><paintable>false</paintable></building>
+    <comps><li Class="CompProperties_Facility"><statOffsets><WorkTableWorkSpeedFactor>0.06</WorkTableWorkSpeedFactor></statOffsets><maxSimultaneous>2</maxSimultaneous></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>100</originalMaxHitPoints><goldReference>true</goldReference></li></comps>
+    <researchPrerequisites><li>ComplexFurniture</li></researchPrerequisites><constructionSkillPrerequisite>4</constructionSkillPrerequisite><techLevel>Industrial</techLevel><terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <placeWorkers><li>PlaceWorker_ShowFacilitiesConnections</li></placeWorkers><uiOrder>1062</uiOrder>
+    <designatorDropdown IsNull="True" />
+  </ThingDef>
+</Defs>

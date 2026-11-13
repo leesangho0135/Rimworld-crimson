@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Crimson_DeckLightNeedsDeck>모노리스 갑판 위에 설치해야 합니다.</Crimson_DeckLightNeedsDeck>
+  <Crimson_DeckLightDuplicate>이미 조명선 또는 조명선 건설 계획이 있습니다.</Crimson_DeckLightDuplicate>
+  <Crimson_DeckLightBlocked>벽이나 다른 건물과 겹쳐 설치할 수 없습니다.</Crimson_DeckLightBlocked>
+  <Crimson_ThresholdGuideNeedsDoor>문이 있는 칸에 설치해야 합니다.</Crimson_ThresholdGuideNeedsDoor>
+</LanguageData>

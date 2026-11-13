@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Crimson_InfantrySMG</defName>
+    <label>심홍 제식 기관단총</label>
+    <description>긴 총신과 밀착형 개머리판을 갖춘 함선 병사용 7점사 에너지 기관단총. 심홍 광선탄으로 화상 피해를 준다. 전설급 성능을 고정 적용하며 품질 등급과 전용 특성은 없다.</description>
+    <graphicData>
+      <texPath>Crimson/Equipment/Infantry/SMG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(1.65,0.825)</drawSize>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <WorkToMake>32000</WorkToMake>
+      <Mass>1.6</Mass>
+      <MaxHitPoints>150</MaxHitPoints>
+      <MarketValue>14400</MarketValue>
+      <Flammability>0</Flammability>
+      <Beauty>-3</Beauty>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.4</AccuracyLong>
+      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+      <RangedWeapon_WarmupMultiplier>1</RangedWeapon_WarmupMultiplier>
+      <RangedWeapon_DamageMultiplier>1</RangedWeapon_DamageMultiplier>
+      <RangedWeapon_ArmorPenetrationMultiplier>1</RangedWeapon_ArmorPenetrationMultiplier>
+      <DeteriorationRate>0.2</DeteriorationRate>
+    </statBases>
+    <costList>
+      <Plasteel>45</Plasteel>
+      <Steel>30</Steel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>ChargedShot</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+    </recipeMaker>
+    <soundInteract>Interact_SMG</soundInteract>
+    <equippedAngleOffset>0</equippedAngleOffset>
+    <weaponTags>
+      <li>SpacerGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Crimson_InfantryPulseBolt</defaultProjectile>
+        <warmupTime>0.2</warmupTime>
+        <range>27.9</range>
+        <burstShotCount>7</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable" />
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li Class="CompProperties_Styleable" />
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Crimson_InfantryPulseBolt</defName>
+    <label>심홍 제식 광선탄</label>
+    <thingClass>CrimsonSOS2.CrimsonPulseProjectile</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Burn</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <armorPenetrationBase>0.32</armorPenetrationBase>
+      <speed>180</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>Crimson_InfantryDagger</defName>
+    <label>심홍 제식 단검</label>
+    <description>두꺼운 중앙 능선과 심홍 발광 홈을 가진 양날 단검. 짧고 빠른 찌르기로 장갑에 대응한다. 전설급 성능을 고정 적용하며 품질 등급과 결속·전용 특성은 없다.</description>
+    <graphicData>
+      <texPath>Crimson/Equipment/Infantry/Dagger</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(0.85,0.85)</drawSize>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <statBases>
+      <WorkToMake>22000</WorkToMake>
+      <Mass>0.6</Mass>
+      <MaxHitPoints>140</MaxHitPoints>
+      <MarketValue>2400</MarketValue>
+      <Flammability>0</Flammability>
+      <Beauty>-3</Beauty>
+      <MeleeWeapon_DamageMultiplier>1</MeleeWeapon_DamageMultiplier>
+      <MeleeWeapon_CooldownMultiplier>1</MeleeWeapon_CooldownMultiplier>
+      <DeteriorationRate>0.2</DeteriorationRate>
+    </statBases>
+    <stuffCategories Inherit="False" />
+    <costStuffCount>0</costStuffCount>
+    <defaultStuff IsNull="True" />
+    <costList>
+      <Plasteel>25</Plasteel>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Fabrication</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+    </recipeMaker>
+    <tools Inherit="False">
+      <li>
+        <label>칼끝</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>42</power>
+        <cooldownTime>0.6</cooldownTime>
+        <armorPenetration>0.9775</armorPenetration>
+      </li>
+      <li>
+        <label>칼날</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>32</power>
+        <cooldownTime>0.6</cooldownTime>
+        <armorPenetration>0.750</armorPenetration>
+      </li>
+      <li>
+        <label>손잡이</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>0.6</cooldownTime>
+        <armorPenetration>0.16200</armorPenetration>
+      </li>
+    </tools>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable" />
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li Class="CompProperties_Styleable" />
+    </comps>
+  </ThingDef>
+</Defs>

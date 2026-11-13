@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="ApparelArmorHelmetCataphractBase" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_WardenHelmet</defName>
+    <label>모노리스 집행관 밀폐 후드</label>
+    <description>눈만 드러나는 밀폐 마스크를 검은 후드로 감싼 지도자용 장비. 목의 압력 밀폐부가 기존 수호 망토의 높은 옷깃 안으로 이어진다. 정신감응 기능과 기존 방호 성능을 유지한다. 집행관 제식복과 함께 착용하면 SOS2 진공 환경에 대응한다. 품질 등급 없이 전설급 능력치가 고정되어 있다.</description>
+    <thingClass>Apparel</thingClass>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <generateCommonality>0</generateCommonality>
+    <uiIconScale>1</uiIconScale>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Equipment/Helmet</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonWardenGroundGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases Inherit="False">
+      <ArmorRating_Sharp>2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.2600000000000002</ArmorRating_Blunt>
+      <ArmorRating_Heat>2</ArmorRating_Heat>
+      <Insulation_Cold>96</Insulation_Cold>
+      <Insulation_Heat>72</Insulation_Heat>
+      <Beauty>16</Beauty>
+      <MarketValue>5200</MarketValue>
+      <Mass>.2</Mass>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <EquipDelay>3</EquipDelay>
+      <WorkToMake>52500</WorkToMake>
+    </statBases>
+    <equippedStatOffsets Inherit="False">
+      <PsychicSensitivity>0.05</PsychicSensitivity>
+      <PsychicEntropyRecoveryRate>0.033</PsychicEntropyRecoveryRate>
+      <HypoxiaResistance>1</HypoxiaResistance>
+      <DecompressionResistance>0.25</DecompressionResistance>
+      <ToxicResistance>0.5</ToxicResistance>
+      <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.7</VacuumResistance>
+    </equippedStatOffsets>
+    <costList Inherit="False">
+      <Plasteel>75</Plasteel>
+      <Gold>9</Gold>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <recipeMaker Inherit="False">
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>CataphractArmor</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingCategories Inherit="False">
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <apparel Inherit="False">
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicPath>Crimson/Equipment/Helmet</wornGraphicPath>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <tags>
+        <li>Spacer</li>
+        <li>PrestigeCombatGear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <parentTagDef>ApparelHead</parentTagDef>
+    </apparel>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Biocodable" />
+      <li>
+        <compClass>SaveOurShip2.CompEVA</compClass>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_Single" Inherit="False">
+      <color>(1,1,1,1)</color>
+    </colorGenerator>
+    <tradeTags Inherit="False">
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <thingSetMakerTags Inherit="False" />
+  </ThingDef>
+  <ThingDef ParentName="ApparelArmorCataphractBase" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_WardenUniform</defName>
+    <label>모노리스 집행관 제식복</label>
+    <description>얇은 분절 금속판과 유연한 보강 가죽을 압력 내피에 결합한 집행관의 제식복. 상의 아래로 짧은 바지가 드러나는 기존 디자인을 유지한다. 집행관 밀폐 후드와 함께 착용하면 SOS2 진공 환경에 대응한다. 품질 등급 없이 전설급 능력치가 고정되어 있다.</description>
+    <thingClass>Apparel</thingClass>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <generateCommonality>0</generateCommonality>
+    <uiIconScale>1</uiIconScale>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Equipment/Uniform</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonWardenGroundGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases Inherit="False">
+      <ArmorRating_Sharp>1.8900000000000001</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.6300000000000001</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.4175</ArmorRating_Heat>
+      <Insulation_Cold>180.0</Insulation_Cold>
+      <Insulation_Heat>144</Insulation_Heat>
+      <Beauty>16</Beauty>
+      <MarketValue>5800</MarketValue>
+      <Mass>.6</Mass>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <EquipDelay>5</EquipDelay>
+      <WorkToMake>150000</WorkToMake>
+    </statBases>
+    <equippedStatOffsets Inherit="False">
+      <PsychicSensitivity>0.05</PsychicSensitivity>
+      <PsychicEntropyRecoveryRate>0.033</PsychicEntropyRecoveryRate>
+      <DecompressionResistance>0.75</DecompressionResistance>
+      <VacuumSpeedMultiplier>4</VacuumSpeedMultiplier>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
+    </equippedStatOffsets>
+    <costList Inherit="False">
+      <Plasteel>100</Plasteel>
+      <Hyperweave>80</Hyperweave>
+      <Gold>18</Gold>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <recipeMaker Inherit="False">
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>CataphractArmor</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingCategories Inherit="False">
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel Inherit="False">
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <wornGraphicPath>Crimson/Equipment/Uniform</wornGraphicPath>
+      <countsAsClothingForNudity>true</countsAsClothingForNudity>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <tags>
+        <li>Spacer</li>
+        <li>PrestigeCombatGear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <parentTagDef>ApparelBody</parentTagDef>
+    </apparel>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Biocodable" />
+      <li>
+        <compClass>SaveOurShip2.CompEVA</compClass>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_Single" Inherit="False">
+      <color>(1,1,1,1)</color>
+    </colorGenerator>
+    <tradeTags Inherit="False">
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <thingSetMakerTags Inherit="False" />
+  </ThingDef>
+  <ThingDef ParentName="ApparelBase" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_WardenCloak</defName>
+    <label>모노리스 수호 망토</label>
+    <description>검은 외피와 심홍색 안감을 두른 전용 보호막 망토. 보호막을 유지하며 원거리 무기를 발사할 수 있다. 전설 규격의 보호막 최대 에너지와 재충전 속도를 각각 1.5배 강화했다. 근접 공격과 열은 차단하지 못하고 EMP에 정지한다. 전설 성능이 규격으로 고정되어 품질 등급이 없다.</description>
+    <thingClass>Apparel</thingClass>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <generateCommonality>0</generateCommonality>
+    <uiIconScale>1</uiIconScale>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Equipment/Cloak</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonWardenGroundGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases Inherit="False">
+      <ArmorRating_Sharp>0.6300000000000001</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.25200000000000006</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.9450000000000001</ArmorRating_Heat>
+      <Insulation_Cold>96</Insulation_Cold>
+      <Insulation_Heat>72</Insulation_Heat>
+      <Beauty>24</Beauty>
+      <MarketValue>4000</MarketValue>
+      <EnergyShieldEnergyMax>3.465</EnergyShieldEnergyMax>
+      <EnergyShieldRechargeRate>0.2535</EnergyShieldRechargeRate>
+      <Mass>.4</Mass>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <EquipDelay>2</EquipDelay>
+      <WorkToMake>28000</WorkToMake>
+    </statBases>
+    <equippedStatOffsets Inherit="False" />
+    <costList Inherit="False">
+      <Hyperweave>60</Hyperweave>
+      <Plasteel>25</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <recipeMaker Inherit="False">
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>ShieldBelt</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingCategories Inherit="False">
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel Inherit="False">
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>Crimson/Equipment/Cloak</wornGraphicPath>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <useDeflectMetalEffect>false</useDeflectMetalEffect>
+      <tags>
+        <li>Spacer</li>
+        <li>PrestigeCombatGear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <parentTagDef>ApparelBody</parentTagDef>
+    </apparel>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Biocodable" />
+      <li Class="CrimsonSOS2.CompProperties_WardenShield">
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_Single" Inherit="False">
+      <color>(1,1,1,1)</color>
+    </colorGenerator>
+    <tradeTags Inherit="False">
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <thingSetMakerTags Inherit="False" />
+  </ThingDef>
+  <ThingDef ParentName="BaseWeapon_Bladelink" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_WardenSword</defName>
+    <label>결속 광검 「단죄」</label>
+    <description>결속 단분자검을 바탕으로 만든 집행관의 심홍색 광검. 전설 성능이 규격으로 고정되어 품질 등급이 없다. 사용자의 정신에 결속될 때 「반복되는 특이점」과 「확정된 종언」 두 특성이 부여된다.</description>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Equipment/Sword</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonWardenGroundGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(1.05, 1.05)</drawSize>
+    </graphicData>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <statBases>
+      <WorkToMake>70000</WorkToMake>
+      <Mass>0.5</Mass>
+      <MaxHitPoints>180</MaxHitPoints>
+      <MarketValue>7200</MarketValue>
+      <Flammability>0</Flammability>
+      <Beauty>-3</Beauty>
+      <MeleeWeapon_DamageMultiplier>1.65</MeleeWeapon_DamageMultiplier>
+      <MeleeWeapon_CooldownMultiplier>1</MeleeWeapon_CooldownMultiplier>
+      <RangedWeapon_DamageMultiplier>1.5</RangedWeapon_DamageMultiplier>
+      <RangedWeapon_ArmorPenetrationMultiplier>1.5</RangedWeapon_ArmorPenetrationMultiplier>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <RangedWeapon_WarmupMultiplier>1</RangedWeapon_WarmupMultiplier>
+      <DeteriorationRate>0.2</DeteriorationRate>
+    </statBases>
+    <costList>
+      <Plasteel>90</Plasteel>
+      <Gold>10</Gold>
+      <Uranium>20</Uranium>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <recipeMaker Inherit="False">
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <researchPrerequisite>Fabrication</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>20.25</power>
+        <cooldownTime>1.2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>45.5625</power>
+        <cooldownTime>1.2</cooldownTime>
+        <armorPenetration>1.125</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>46.575</power>
+        <cooldownTime>1.2</cooldownTime>
+        <armorPenetration>1.035</armorPenetration>
+      </li>
+    </tools>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable" />
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li Class="CompProperties_Styleable" />
+      <li Class="CrimsonSOS2.CompProperties_WardenBlade">
+        <biocodeOnEquip>true</biocodeOnEquip>
+        <fixedTraits>
+          <li>Crimson_RepeatingSingularity</li>
+          <li>Crimson_CertainEnd</li>
+        </fixedTraits>
+      </li>
+      <li Class="CompProperties_GeneratedName">
+        <nameMaker>NamerWeaponBladelink</nameMaker>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Crimson_WardenPistol</defName>
+    <label>심홍 기관권총 「낙인」</label>
+    <description>권총 크기로 압축한 집행관의 5점사 에너지 화기. 심홍색 광선탄은 명중 부위에 화상을 입힌다. 전설 성능이 규격으로 고정되어 품질 등급이 없다. 「제어된 혼돈」과 「전투 공명」 두 전용 특성이 적용된다.</description>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Equipment/Pistol</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonWardenGroundGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(0.80, 0.80)</drawSize>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <WorkToMake>24000</WorkToMake>
+      <Mass>1.2</Mass>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>0.645</AccuracyMedium>
+      <AccuracyLong>0.54</AccuracyLong>
+      <RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+      <MarketValue>61440</MarketValue>
+      <Beauty>-3</Beauty>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MeleeWeapon_DamageMultiplier>1.65</MeleeWeapon_DamageMultiplier>
+      <MeleeWeapon_CooldownMultiplier>1</MeleeWeapon_CooldownMultiplier>
+      <RangedWeapon_DamageMultiplier>1.5</RangedWeapon_DamageMultiplier>
+      <RangedWeapon_ArmorPenetrationMultiplier>1.5</RangedWeapon_ArmorPenetrationMultiplier>
+      <RangedWeapon_WarmupMultiplier>1</RangedWeapon_WarmupMultiplier>
+      <DeteriorationRate>0.2</DeteriorationRate>
+    </statBases>
+    <costList>
+      <Plasteel>35</Plasteel>
+      <Steel>20</Steel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <recipeMaker Inherit="False">
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <researchPrerequisite>ChargedShot</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <soundInteract>Interact_SMG</soundInteract>
+    <equippedAngleOffset>0</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Crimson_PulseBurnBolt</defaultProjectile>
+        <warmupTime>0.35</warmupTime>
+        <range>19.9</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable" />
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li Class="CompProperties_Styleable" />
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+      <li Class="CompProperties_Biocodable" />
+      <li Class="CrimsonSOS2.CompProperties_WardenGunTraits">
+        <fixedTraits>
+          <li>Crimson_ControlledChaos</li>
+          <li>Crimson_CombatResonanceTrait</li>
+        </fixedTraits>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Crimson_PulseBurnBolt</defName>
+    <label>심홍 광선탄</label>
+    <thingClass>CrimsonSOS2.CrimsonPulseProjectile</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Burn</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <armorPenetrationBase>0.18</armorPenetrationBase>
+      <speed>180</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

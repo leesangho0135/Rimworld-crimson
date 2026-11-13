@@ -1,0 +1,381 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="ApparelBase">
+    <defName>Crimson_SoldierHelmet</defName>
+    <label>모노리스 병사 작업 헬멧</label>
+    <description>심우주 채광과 선체 수리를 위한 밀폐 작업 보호모. 넓은 심홍 바이저와 보강 턱받이, 귀 보호판을 갖춘다. 병사 작업 방호복과 함께 착용하면 SOS2 진공 환경에 대응한다. 품질 등급 없이 전설급 능력치가 고정되어 있다.</description>
+    <thingClass>Apparel</thingClass>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <generateCommonality>0</generateCommonality>
+    <uiIconScale>1</uiIconScale>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Equipment/RanksV173/SoldierHelmet</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonWardenGroundGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases Inherit="False">
+      <ArmorRating_Sharp>1.08</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.26</ArmorRating_Heat>
+      <Insulation_Cold>36</Insulation_Cold>
+      <Insulation_Heat>27</Insulation_Heat>
+      <Beauty>4</Beauty>
+      <MarketValue>2200</MarketValue>
+      <Mass>.8</Mass>
+      <MaxHitPoints>260</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <EquipDelay>2</EquipDelay>
+      <WorkToMake>30000</WorkToMake>
+      <DeteriorationRate>0.2</DeteriorationRate>
+    </statBases>
+    <equippedStatOffsets Inherit="False">
+      <HypoxiaResistance>1</HypoxiaResistance>
+      <DecompressionResistance>0.25</DecompressionResistance>
+      <ToxicResistance>0.5</ToxicResistance>
+      <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.7</VacuumResistance>
+    </equippedStatOffsets>
+    <costList Inherit="False">
+      <Plasteel>45</Plasteel>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <recipeMaker Inherit="False">
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>Fabrication</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingCategories Inherit="False">
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <apparel Inherit="False">
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicPath>Crimson/Equipment/RanksV173/SoldierHelmet</wornGraphicPath>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <tags>
+        <li>Spacer</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <parentTagDef>ApparelHead</parentTagDef>
+    </apparel>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable" />
+      <li>
+        <compClass>SaveOurShip2.CompEVA</compClass>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_Single" Inherit="False">
+      <color>(1,1,1,1)</color>
+    </colorGenerator>
+    <tradeTags Inherit="False">
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <thingSetMakerTags Inherit="False" />
+  </ThingDef>
+  <ThingDef ParentName="ApparelBase">
+    <defName>Crimson_SoldierUniform</defName>
+    <label>모노리스 병사 작업 방호복</label>
+    <description>유연한 밀폐 내피와 가슴·어깨·허리의 보강판을 결합한 작업·전투 겸용 방호복. 상의 아래로 짧은 바지가 드러난다. 작업 헬멧과 함께 착용하면 SOS2 진공 환경에 대응한다. 품질 등급 없이 전설급 능력치가 고정되어 있다.</description>
+    <thingClass>Apparel</thingClass>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <generateCommonality>0</generateCommonality>
+    <uiIconScale>1</uiIconScale>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Equipment/RanksV173/SoldierUniform</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonWardenGroundGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases Inherit="False">
+      <ArmorRating_Sharp>1.08</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.72</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.26</ArmorRating_Heat>
+      <Insulation_Cold>90</Insulation_Cold>
+      <Insulation_Heat>54</Insulation_Heat>
+      <Beauty>4</Beauty>
+      <MarketValue>3000</MarketValue>
+      <Mass>1.8</Mass>
+      <MaxHitPoints>320</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <EquipDelay>4</EquipDelay>
+      <WorkToMake>50000</WorkToMake>
+      <DeteriorationRate>0.2</DeteriorationRate>
+    </statBases>
+    <equippedStatOffsets Inherit="False">
+      <DecompressionResistance>0.75</DecompressionResistance>
+      <VacuumSpeedMultiplier>4</VacuumSpeedMultiplier>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
+    </equippedStatOffsets>
+    <costList Inherit="False">
+      <Plasteel>65</Plasteel>
+      <Hyperweave>25</Hyperweave>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <recipeMaker Inherit="False">
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>Fabrication</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingCategories Inherit="False">
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel Inherit="False">
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <wornGraphicPath>Crimson/Equipment/RanksV173/SoldierUniform</wornGraphicPath>
+      <countsAsClothingForNudity>true</countsAsClothingForNudity>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <tags>
+        <li>Spacer</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <parentTagDef>ApparelBody</parentTagDef>
+    </apparel>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable" />
+      <li>
+        <compClass>SaveOurShip2.CompEVA</compClass>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_Single" Inherit="False">
+      <color>(1,1,1,1)</color>
+    </colorGenerator>
+    <tradeTags Inherit="False">
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <thingSetMakerTags Inherit="False" />
+  </ThingDef>
+  <ThingDef ParentName="ApparelBase">
+    <defName>Crimson_OfficerCoat</defName>
+    <label>모노리스 장교 코트</label>
+    <description>각진 어깨와 높은 옷깃을 갖춘 장교용 보강 코트. 열린 앞섶 사이로 제식복이 보이며 뒤쪽 자락은 갈라져 있다. 밀폐 각모와 내의 위에 함께 착용할 수 있다. 품질 등급 없이 전설급 능력치가 고정되어 있다.</description>
+    <thingClass>Apparel</thingClass>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <generateCommonality>0</generateCommonality>
+    <uiIconScale>1</uiIconScale>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Equipment/RanksV173/OfficerCoat</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonWardenGroundGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases Inherit="False">
+      <ArmorRating_Sharp>1.08</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.36</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.08</ArmorRating_Heat>
+      <Insulation_Cold>45</Insulation_Cold>
+      <Insulation_Heat>27</Insulation_Heat>
+      <Beauty>8</Beauty>
+      <MarketValue>3200</MarketValue>
+      <Mass>.5</Mass>
+      <MaxHitPoints>260</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <EquipDelay>3</EquipDelay>
+      <WorkToMake>40000</WorkToMake>
+      <DeteriorationRate>0.2</DeteriorationRate>
+    </statBases>
+    <equippedStatOffsets Inherit="False" />
+    <costList Inherit="False">
+      <Hyperweave>45</Hyperweave>
+      <Plasteel>30</Plasteel>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <recipeMaker Inherit="False">
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>Fabrication</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingCategories Inherit="False">
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel Inherit="False">
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>Crimson/Equipment/RanksV173/OfficerCoat</wornGraphicPath>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <tags>
+        <li>Spacer</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <parentTagDef>ApparelBody</parentTagDef>
+    </apparel>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <colorGenerator Class="ColorGenerator_Single" Inherit="False">
+      <color>(1,1,1,1)</color>
+    </colorGenerator>
+    <tradeTags Inherit="False">
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <thingSetMakerTags Inherit="False" />
+  </ThingDef>
+  <ThingDef ParentName="ApparelBase">
+    <defName>Crimson_AssistDrones</defName>
+    <label>심홍 부유 작업 보조기</label>
+    <description>착용자의 어깨 뒤에 안정적으로 떠 있는 심홍빛 보조 드론 두 기. 몸에 고정되는 외골격 대신 하중과 작업 동작을 보조한다. 외피 슬롯에 착용하는 동안 운반량 ×2, 일반 작업속도 ×1.2. 공격·이동속도 보너스는 없다. 품질 등급 없이 전설급 능력치가 고정되어 있다.</description>
+    <thingClass>Apparel</thingClass>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <generateCommonality>0</generateCommonality>
+    <uiIconScale>1</uiIconScale>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Equipment/RanksV173/AssistDrones</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonWardenGroundGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases Inherit="False">
+      <ArmorRating_Sharp>.36</ArmorRating_Sharp>
+      <ArmorRating_Blunt>.72</ArmorRating_Blunt>
+      <ArmorRating_Heat>.48</ArmorRating_Heat>
+      <Insulation_Cold>0</Insulation_Cold>
+      <Insulation_Heat>0</Insulation_Heat>
+      <Beauty>6</Beauty>
+      <MarketValue>3400</MarketValue>
+      <Mass>.2</Mass>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <EquipDelay>2</EquipDelay>
+      <WorkToMake>50000</WorkToMake>
+      <DeteriorationRate>0.2</DeteriorationRate>
+    </statBases>
+    <equippedStatOffsets Inherit="False" />
+    <costList Inherit="False">
+      <Plasteel>50</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <recipeMaker Inherit="False">
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>Fabrication</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingCategories Inherit="False">
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel Inherit="False">
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>Crimson/Equipment/RanksV173/AssistDrones</wornGraphicPath>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <tags>
+        <li>Spacer</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <parentTagDef>ApparelBody</parentTagDef>
+    </apparel>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <colorGenerator Class="ColorGenerator_Single" Inherit="False">
+      <color>(1,1,1,1)</color>
+    </colorGenerator>
+    <tradeTags Inherit="False">
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <thingSetMakerTags Inherit="False" />
+    <modExtensions>
+      <li Class="CrimsonSOS2.CrimsonWorkEquipmentExtension">
+        <carryFactor>2</carryFactor>
+        <workFactor>1.2</workFactor>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

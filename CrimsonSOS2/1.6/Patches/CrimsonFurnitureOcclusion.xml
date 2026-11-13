@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Apply the native upright-sprite depth tilt only to Crimson furniture.
+       Floor guides, rugs, hydroponic trays and original game/mod Defs are excluded. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef/graphicData[not(addTopAltitudeBias) and not(starts-with(texPath,'Crimson/Decor/Hydroponics/')) and (graphicClass='CrimsonSOS2.CrimsonRoyaltyMultiGraphic' or graphicClass='CrimsonSOS2.CrimsonRoyaltySingleGraphic' or graphicClass='CrimsonSOS2.CrimsonV48AtlasGraphic' or graphicClass='CrimsonSOS2.CrimsonSculptureGraphic' or graphicClass='CrimsonSOS2.CrimsonStorageHygieneGraphic' or graphicClass='CrimsonSOS2.CrimsonHabitatGraphic')]</xpath>
+    <value><addTopAltitudeBias>true</addTopAltitudeBias></value>
+  </Operation>
+</Patch>

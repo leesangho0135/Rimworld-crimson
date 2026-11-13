@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>Crimson_ElectricSmelter</defName><label>심홍 전기로</label>
+    <description>중앙의 깊은 고철 투입구와 전자기 제련실을 갖춘 3×2 함선용 전기로입니다. 검은 각면 장갑과 심홍색 유도 가열부를 사용합니다. 강철 고철 또는 메카노이드 고철 1개를 분해하여 강철 5개, 우라늄 5개, 플라스틸 5개를 동시에 회수합니다. 소비 전력은 700W이며 작업자는 제어부 앞에서 제련 지시를 수행합니다.</description>
+    <thingClass>Building_WorkTable_HeatPush</thingClass>
+    <drawerType>RealtimeOnly</drawerType><tickerType>Normal</tickerType>
+    <size>(3,2)</size><rotatable>true</rotatable><defaultPlacingRot>North</defaultPlacingRot>
+    <graphicData>
+      <texPath>Crimson/Decor/Workshops/ElectricSmelterRecessedAtlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonV51FurnitureGraphic</graphicClass>
+      <shaderType>Cutout</shaderType><drawSize>(3,2)</drawSize><drawRotated>false</drawRotated>
+      <shadowData IsNull="True" /><damageData IsNull="True" />
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer><passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost><fillPercent>0.5</fillPercent><castEdgeShadows>false</castEdgeShadows>
+    <constructEffect>ConstructMetal</constructEffect>
+    <statBases>
+      <MaxHitPoints>1260</MaxHitPoints><WorkToBuild>3500</WorkToBuild><Mass>100</Mass>
+      <Beauty>2</Beauty><Flammability>0</Flammability>
+    </statBases>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <costList Inherit="False"><Steel>170</Steel><ComponentIndustrial>2</ComponentIndustrial></costList>
+    <hasInteractionCell>true</hasInteractionCell><interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType><terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite><techLevel>Industrial</techLevel>
+    <researchPrerequisites><li>Electricity</li></researchPrerequisites>
+    <recipes><li>Crimson_ExtractMetalsFromSlag</li></recipes>
+    <inspectorTabs><li>ITab_Bills</li></inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>0.32</heatPerTickWhileWorking>
+      <workTableRoomRole>Workshop</workTableRoomRole><workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    </building>
+    <comps Inherit="False">
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>700</basePowerConsumption><shortCircuitInRain>true</shortCircuitInRain></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower"><glowRadius>6</glowRadius><glowColor>(245,24,38,0)</glowColor></li>
+      <li Class="CompProperties_HeatPusher"><compClass>CompHeatPusherPowered</compClass><heatPerSecond>9</heatPerSecond></li>
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>180</originalMaxHitPoints><goldReference>true</goldReference></li>
+    </comps>
+    <placeWorkers><li>PlaceWorker_PreventInteractionSpotOverlap</li></placeWorkers>
+    <designationCategory>Production</designationCategory><designatorDropdown IsNull="True" /><uiOrder>1003</uiOrder>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>Crimson_ExtractMetalsFromSlag</defName><label>고철에서 금속 회수</label>
+    <description>강철 고철 또는 메카노이드 고철 1개를 정밀 분해하여 강철 5개, 우라늄 5개, 플라스틸 5개를 동시에 회수합니다.</description>
+    <jobString>심홍 전기로에서 고철을 분해하는 중.</jobString>
+    <workAmount>400</workAmount><workSpeedStat>SmeltingSpeed</workSpeedStat><soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients><li><filter><thingDefs><li>ChunkSlagSteel</li><li>ChunkMechanoidSlag</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>ChunkSlagSteel</li><li>ChunkMechanoidSlag</li></thingDefs></fixedIngredientFilter>
+    <products><Steel>5</Steel><Uranium>5</Uranium><Plasteel>5</Plasteel></products>
+  </RecipeDef>
+
+  <WorkGiverDef>
+    <defName>Crimson_DoBillsElectricSmelter</defName><label>심홍 전기로에서 제련</label>
+    <giverClass>WorkGiver_DoBill</giverClass><workType>Crafting</workType><priorityInType>80</priorityInType>
+    <fixedBillGiverDefs><li>Crimson_ElectricSmelter</li></fixedBillGiverDefs>
+    <verb>제련</verb><gerund>제련 중</gerund>
+    <requiredCapacities><li>Manipulation</li></requiredCapacities><prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+</Defs>

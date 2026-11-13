@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_CeilingLight</defName><label>심홍 숨김 천장등</label>
+    <description>천장에 숨겨 설치하는 1×1 실내 조명입니다. 본체는 바닥에 보이지 않고 가구 위에도 설치할 수 있습니다. 100W를 사용하여 반경 12칸을 심홍색 빛으로 넓게 밝히며, 중심의 반경 1.2칸에는 작은 심홍색 강조광이 맺힙니다. 천장이 사라지거나 전원이 끊기면 꺼집니다.</description>
+    <thingClass>CrimsonSOS2.CrimsonCeilingLight</thingClass>
+    <drawerType>RealtimeOnly</drawerType><tickerType>Rare</tickerType>
+    <altitudeLayer>MoteLow</altitudeLayer>
+    <size>(1,1)</size><rotatable>false</rotatable><passability>Standable</passability>
+    <pathCost>0</pathCost><fillPercent>0</fillPercent><blockLight>false</blockLight>
+    <coversFloor>false</coversFloor><wipesPlants>false</wipesPlants><clearBuildingArea>false</clearBuildingArea>
+    <graphicData><texPath>Crimson/Decor/DeckLightHub</texPath><graphicClass>Graphic_Single</graphicClass><shaderType>Cutout</shaderType><drawSize>(0.3,0.3)</drawSize><shadowData IsNull="True" /></graphicData>
+    <uiIconPath>Crimson/Decor/DeckLightHub</uiIconPath>
+    <building><isEdifice>false</isEdifice><isInert>true</isInert><canBuildNonEdificesUnder>true</canBuildNonEdificesUnder><paintable>false</paintable></building>
+    <placeWorkers><li>CrimsonSOS2.CrimsonCeilingLightPlaceWorker</li></placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>100</basePowerConsumption></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower"><compClass>CrimsonSOS2.CrimsonCeilingGlower</compClass><glowRadius>12</glowRadius><glowColor>(245,24,38,0)</glowColor></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonCeilingAccent"><glowRadius>1.2</glowRadius><glowColor>(245,24,38,0)</glowColor></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>80</originalMaxHitPoints></li>
+    </comps>
+    <costList><Steel>12</Steel><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <statBases><MaxHitPoints>560</MaxHitPoints><Beauty>0</Beauty><Flammability>0</Flammability><WorkToBuild>400</WorkToBuild><Mass>2</Mass></statBases>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <researchPrerequisites><li>Electricity</li></researchPrerequisites>
+    <designationCategory>Furniture</designationCategory><designatorDropdown>Crimson_Lighting</designatorDropdown><uiOrder>1066</uiOrder>
+  </ThingDef>
+</Defs>

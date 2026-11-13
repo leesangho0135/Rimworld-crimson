@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Independent Crimson definitions adapted from SOS2 V2.8.104, CC BY-NC-SA 4.0; installed originals are read-only.-->
+  <ThingDef ParentName="ShipTurretBuilding">
+    <defName>Crimson_LaserTurret</defName>
+    <designationCategory>Crimson_CS</designationCategory>
+    <label>수렴 광선포</label>
+    <designatorDropdown>ShipTurrets_Laser</designatorDropdown>
+    <description>3×3 고정 받침과 회전 포신이 분리된 광선포입니다. 기본 피해750, 40발 연사, 함선전 최대 사거리500과 지상 방어 최대 사거리2500을 적용합니다. 함선전과 지상 방어 모두 최소거리는0입니다. 상시 소비전력은3750W이며, 연사 시작 시 명목2000Wd와 열750Hu를 사용합니다. 원본의 함선·지상 방어와 어뢰·셔틀 요격 체계를 유지합니다.</description>
+    <graphicData>
+      <texPath>Crimson/Weapons/Laser/Base</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonLaserGraphic</graphicClass>
+      <drawSize>(3.8277511962,3.8277511962)</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Stunnable">
+        <affectedDamageDefs>
+          <li>EMP</li>
+        </affectedDamageDefs>
+      </li>
+      <li Class="SaveOurShip2.CompProps_ShipHeat">
+        <compClass>SaveOurShip2.CompShipHeat</compClass>
+        <showOnRoof>true</showOnRoof>
+        <heatPerPulse>250</heatPerPulse>
+        <energyToFire>2000</energyToFire>
+        <optRange>500</optRange>
+        <maxRange>500</maxRange>
+        <projectileSpeed>10</projectileSpeed>
+        <pointDefense>true</pointDefense>
+        <groundDefense>true</groundDefense>
+        <groundProjectile>Crimson_LaserGroundProjectile</groundProjectile>
+        <singleFireSound>ShipCombatLaser</singleFireSound>
+        <threat>10</threat>
+        <color>(255,32,48)</color>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>3750</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <building>
+      <turretGunDef>Crimson_LaserGun</turretGunDef>
+      <turretBurstWarmupTime>0.5</turretBurstWarmupTime>
+      <turretBurstCooldownTime>25.0</turretBurstCooldownTime>
+      <turretTopDrawSize>3.8277511962</turretTopDrawSize>
+      <turretTopOffset>(0,0)</turretTopOffset>
+    </building>
+    <costList>
+      <Steel>80</Steel>
+      <Uranium>20</Uranium>
+      <Plasteel>80</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <uiIconPath>Crimson/Weapons/Laser/Barrel</uiIconPath>
+    <researchPrerequisites>
+      <li>ShipTurretLaser</li>
+    </researchPrerequisites>
+    <thingClass>CrimsonSOS2.CrimsonLaserTurret</thingClass>
+    <size>(3,3)</size>
+    <rotatable>true</rotatable>
+  </ThingDef>
+  <ThingDef ParentName="BaseShipArtilleryWeapon">
+    <defName>Crimson_LaserGun</defName>
+    <label>수렴 광선포 포신</label>
+    <description>수렴 광선포의 회전 포신입니다. 기본 피해750, 40발 연사와 지상 방어 최대 사거리2500을 적용합니다.</description>
+    <graphicData>
+      <texPath>Crimson/Weapons/Laser/Barrel</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonLaserGraphic</graphicClass>
+      <drawSize>(3.8277511962,3.8277511962)</drawSize>
+    </graphicData>
+    <verbs>
+      <li>
+        <label>shoot laser</label>
+        <verbClass>SaveOurShip2.Verb_LaunchProjectileShip</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>2500</range>
+        <minRange>0</minRange>
+        <warmupTime>0</warmupTime>
+        <forcedMissRadius>1</forcedMissRadius>
+        <noiseRadius>4</noiseRadius>
+        <burstShotCount>40</burstShotCount>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <requireLineOfSight>false</requireLineOfSight>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>Crimson_LaserProjectile</defaultProjectile>
+        <spawnDef>Crimson_LaserFakeProjectile</spawnDef>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Crimson_LaserProjectile</defName>
+    <label>수렴 광선</label>
+    <thingClass>SaveOurShip2.Projectile_ExplosiveShipLaser</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Ship/HullPlateTransparent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <explosionRadius>1.9</explosionRadius>
+      <damageDef>ShipLaserSmall</damageDef>
+      <speed>100</speed>
+      <damageAmountBase>750</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Crimson_LaserFakeProjectile</defName>
+    <label>수렴 광선</label>
+    <graphicData>
+      <texPath>Things/Building/Ship/HullPlateTransparent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>SaveOurShip2.Projectile_ShipFake</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <speed>150</speed>
+      <explosionRadius>0</explosionRadius>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <damageAmountBase>750</damageAmountBase>
+    </projectile>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <seeThroughFog>true</seeThroughFog>
+  </ThingDef>
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Crimson_LaserGroundProjectile</defName>
+    <label>수렴 광선</label>
+    <graphicData>
+      <texPath>Things/Building/Ship/HullPlateTransparent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ShipLaserSmall</damageDef>
+      <speed>800</speed>
+      <explosionRadius>0</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <damageAmountBase>750</damageAmountBase>
+    </projectile>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <seeThroughFog>true</seeThroughFog>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_ShieldGenerator</defName>
+    <label>사건지평 생성기</label>
+    <designatorDropdown>Ship_Shields</designatorDropdown>
+    <description>사건지평 방벽을 펼치는 생성기입니다. 작동 반경은 선택 버튼으로 조절하고 최대 허용 반경과 기본 반경은 크림슨 모드 설정에서 조절합니다. 작동 소비전력은 실제 반경×50W입니다.</description>
+    <size>(5,5)</size>
+    <receivesSignals>true</receivesSignals>
+    <statBases>
+      <MaxHitPoints>600</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <WorkToBuild>8000</WorkToBuild>
+    </statBases>
+    <graphicData>
+      <texPath>Crimson/Shield/Generator</texPath>
+      <graphicClass>SaveOurShip2.Graphic_SingleOnOff</graphicClass>
+      <drawSize>(5,5)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <placeWorkers>
+      <li>SaveOurShip2.PlaceWorker_ShipShieldRadius</li>
+      <li>SaveOurShip2.PlaceWorker_OnShipHull</li>
+    </placeWorkers>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ShipHeat">
+        <compClass>CrimsonSOS2.CrimsonShieldComp</compClass>
+        <heatMultiplier>0.75</heatMultiplier>
+        <color>(255,32,48)</color>
+        <shieldMin>20</shieldMin>
+        <shieldMax>150</shieldMax>
+        <shieldDefault>40</shieldDefault>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1500</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+    </comps>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Crimson_CS</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+    <tickerType>Normal</tickerType>
+    <researchPrerequisites>
+      <li>ArchotechShields</li>
+    </researchPrerequisites>
+    <costList>
+      <Plasteel>75</Plasteel>
+      <Gold>200</Gold>
+      <Silver>200</Silver>
+      <ComponentSpacer>6</ComponentSpacer>
+      <ArchotechExoticParticles>6</ArchotechExoticParticles>
+    </costList>
+    <seeThroughFog>true</seeThroughFog>
+    <modExtensions>
+      <li Class="Vehicles.CustomCostDefModExtension">
+        <cost>10000</cost>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

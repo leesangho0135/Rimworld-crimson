@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThinkTreeDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_ShipRobotWork</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+        <li Class="ThinkNode_QueuedJob" />
+        <li Class="CrimsonSOS2.ThinkNode_ConditionalCrimsonRobotDrafted">
+          <subNodes>
+            <li Class="ThinkNode_Tagger">
+              <tagToGive>DraftedOrder</tagToGive>
+              <subNodes>
+                <li Class="JobGiver_MoveToStandable" />
+                <li Class="JobGiver_Orders" />
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+        <li Class="CrimsonSOS2.ThinkNode_ConditionalCrimsonShipAI">
+          <subNodes>
+            <li Class="JobGiver_SeekAllowedArea" />
+            <li Class="CrimsonSOS2.JobGiver_CrimsonRobotRescue" />
+            <li Class="CrimsonSOS2.JobGiver_CrimsonRobotWork">
+              <emergency>true</emergency>
+            </li>
+            <li Class="CrimsonSOS2.JobGiver_CrimsonRobotWork" />
+            <li Class="JobGiver_WanderColony" />
+          </subNodes>
+        </li>
+        <li Class="CrimsonSOS2.JobGiver_CrimsonRobotWait" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+  <ThinkTreeDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_ShipRobotCombat</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+        <li Class="ThinkNode_QueuedJob" />
+        <li Class="CrimsonSOS2.ThinkNode_ConditionalCrimsonRobotDrafted">
+          <subNodes>
+            <li Class="ThinkNode_Tagger">
+              <tagToGive>DraftedOrder</tagToGive>
+              <subNodes>
+                <li Class="JobGiver_MoveToStandable" />
+                <li Class="JobGiver_Orders" />
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+        <li Class="CrimsonSOS2.ThinkNode_ConditionalCrimsonShipAI">
+          <subNodes>
+            <li Class="JobGiver_SeekAllowedArea" />
+            <li Class="CrimsonSOS2.JobGiver_CrimsonRobotFight">
+              <targetAcquireRadius>40</targetAcquireRadius>
+              <targetKeepRadius>45</targetKeepRadius>
+            </li>
+            <li Class="JobGiver_WanderColony" />
+          </subNodes>
+        </li>
+        <li Class="CrimsonSOS2.JobGiver_CrimsonRobotWait" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+  <ThinkTreeDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_ShipRobotConstant</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+  <ThingDef ParentName="LightMechanoid" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_ShipRobotOmni</defName>
+    <label>심홍 다목적 작업로봇</label>
+    <description>목격자의 지휘로 생산·건설·채굴·재배·운반·청소와 연구를 수행하는 다목적 로봇. 목격자 또는 함선 드론 코어에 연결되며 무선 전력으로 움직인다. 충전·폐기물·메카나이터·대역폭을 요구하지 않는다. 통제 연결이 사라지면 작업을 멈추고 대기한다.</description>
+    <statBases>
+      <MoveSpeed>4.5</MoveSpeed>
+      <WorkSpeedGlobal>1</WorkSpeedGlobal>
+      <CarryingCapacity>150</CarryingCapacity>
+      <BandwidthCost>0</BandwidthCost>
+      <MechEnergyLossPerHP>0</MechEnergyLossPerHP>
+      <WastepacksPerRecharge>0</WastepacksPerRecharge>
+    </statBases>
+    <race>
+      <thinkTreeMain>Crimson_ShipRobotWork</thinkTreeMain>
+      <thinkTreeConstant>Crimson_ShipRobotConstant</thinkTreeConstant>
+      <mechFixedSkillLevel>15</mechFixedSkillLevel>
+      <mechEnabledWorkTypes Inherit="False">
+        <li>Firefighter</li>
+        <li>Doctor</li>
+        <li>Cooking</li>
+        <li>Construction</li>
+        <li>Growing</li>
+        <li>Mining</li>
+        <li>PlantCutting</li>
+        <li>Smithing</li>
+        <li>Tailoring</li>
+        <li>Art</li>
+        <li>Crafting</li>
+        <li>Hauling</li>
+        <li>Cleaning</li>
+        <li>Research</li>
+      </mechEnabledWorkTypes>
+      <lifeStageAges Inherit="False">
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps Inherit="False">
+      <li Class="CrimsonSOS2.CompProperties_CrimsonShipRobot">
+        <role>Omni</role>
+      </li>
+      <li Class="CompProperties_MechRepairable" />
+    </comps>
+  </ThingDef>
+  <PawnKindDef ParentName="LightMechanoidKind" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_ShipRobotOmni</defName>
+    <label>심홍 다목적 작업로봇</label>
+    <race>Crimson_ShipRobotOmni</race>
+    <combatPower>10</combatPower>
+    <isFighter>false</isFighter>
+    <weaponTags Inherit="False" />
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Crimson/Robots/OmniAtlas</texPath>
+          <graphicClass>CrimsonSOS2.CrimsonRobotGraphic</graphicClass>
+          <shaderType>Cutout</shaderType>
+          <drawSize>(1.5,1)</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Crimson/Robots/OmniAtlas</texPath>
+          <graphicClass>CrimsonSOS2.CrimsonRobotGraphic</graphicClass>
+          <shaderType>Cutout</shaderType>
+          <drawSize>(1.5,1)</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  <ThingDef ParentName="ResourceBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_ShipRobotOmniCrate</defName>
+    <label>심홍 다목적 작업로봇 기체</label>
+    <description>심홍 다목적 작업로봇의 완성된 기체. 바닥에 놓고 가동 명령으로 목격자의 통제망에 연결한다.</description>
+    <thingClass>CrimsonSOS2.CrimsonRobotCrate</thingClass>
+    <stackLimit>1</stackLimit>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Crimson/Robots/OmniAtlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonRobotCrateGraphic</graphicClass>
+      <drawSize>(0.9,0.6)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <MarketValue>2400</MarketValue>
+      <Mass>35</Mass>
+      <Flammability>0</Flammability>
+      <WorkToMake>50000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <Plasteel>50</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Fabrication</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <modExtensions>
+      <li Class="CrimsonSOS2.CrimsonRobotCrateExtension">
+        <pawnKind>Crimson_ShipRobotOmni</pawnKind>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="LightMechanoid" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_ShipRobotRescue</defName>
+    <label>심홍 구조로봇</label>
+    <description>목격자의 지휘로 쓰러진 아군을 우선 구조하며 치료와 소방을 수행하는 구조로봇. 목격자 또는 함선 드론 코어에 연결되며 무선 전력으로 움직인다. 충전·폐기물·메카나이터·대역폭을 요구하지 않는다. 통제 연결이 사라지면 작업을 멈추고 대기한다.</description>
+    <statBases>
+      <MoveSpeed>4.5</MoveSpeed>
+      <WorkSpeedGlobal>1</WorkSpeedGlobal>
+      <CarryingCapacity>250</CarryingCapacity>
+      <BandwidthCost>0</BandwidthCost>
+      <MechEnergyLossPerHP>0</MechEnergyLossPerHP>
+      <WastepacksPerRecharge>0</WastepacksPerRecharge>
+    </statBases>
+    <race>
+      <thinkTreeMain>Crimson_ShipRobotWork</thinkTreeMain>
+      <thinkTreeConstant>Crimson_ShipRobotConstant</thinkTreeConstant>
+      <mechFixedSkillLevel>15</mechFixedSkillLevel>
+      <mechEnabledWorkTypes Inherit="False">
+        <li>Doctor</li>
+        <li>Firefighter</li>
+      </mechEnabledWorkTypes>
+      <lifeStageAges Inherit="False">
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps Inherit="False">
+      <li Class="CrimsonSOS2.CompProperties_CrimsonShipRobot">
+        <role>Rescue</role>
+      </li>
+      <li Class="CompProperties_MechRepairable" />
+    </comps>
+  </ThingDef>
+  <PawnKindDef ParentName="LightMechanoidKind" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_ShipRobotRescue</defName>
+    <label>심홍 구조로봇</label>
+    <race>Crimson_ShipRobotRescue</race>
+    <combatPower>10</combatPower>
+    <isFighter>false</isFighter>
+    <weaponTags Inherit="False" />
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Crimson/Robots/RescueAtlas</texPath>
+          <graphicClass>CrimsonSOS2.CrimsonRobotGraphic</graphicClass>
+          <shaderType>Cutout</shaderType>
+          <drawSize>(1.5,1)</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Crimson/Robots/RescueAtlas</texPath>
+          <graphicClass>CrimsonSOS2.CrimsonRobotGraphic</graphicClass>
+          <shaderType>Cutout</shaderType>
+          <drawSize>(1.5,1)</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  <ThingDef ParentName="ResourceBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_ShipRobotRescueCrate</defName>
+    <label>심홍 구조로봇 기체</label>
+    <description>심홍 구조로봇의 완성된 기체. 바닥에 놓고 가동 명령으로 목격자의 통제망에 연결한다.</description>
+    <thingClass>CrimsonSOS2.CrimsonRobotCrate</thingClass>
+    <stackLimit>1</stackLimit>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Crimson/Robots/RescueAtlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonRobotCrateGraphic</graphicClass>
+      <drawSize>(0.9,0.6)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <MarketValue>2400</MarketValue>
+      <Mass>35</Mass>
+      <Flammability>0</Flammability>
+      <WorkToMake>50000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <Plasteel>50</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Fabrication</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <modExtensions>
+      <li Class="CrimsonSOS2.CrimsonRobotCrateExtension">
+        <pawnKind>Crimson_ShipRobotRescue</pawnKind>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="LightMechanoid" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_ShipRobotMilitor</defName>
+    <label>심홍 밀리터</label>
+    <description>기본 밀리터의 소형 산탄총과 경량 기체를 바탕으로 목격자가 자율 운용하는 전투 메카노이드. 목격자 또는 함선 드론 코어에 연결되며 무선 전력으로 움직인다. 충전·폐기물·메카나이터·대역폭을 요구하지 않는다. 통제 연결이 사라지면 작업을 멈추고 대기한다.</description>
+    <statBases>
+      <MoveSpeed>3.8</MoveSpeed>
+      <WorkSpeedGlobal>1</WorkSpeedGlobal>
+      <CarryingCapacity>150</CarryingCapacity>
+      <BandwidthCost>0</BandwidthCost>
+      <MechEnergyLossPerHP>0</MechEnergyLossPerHP>
+      <WastepacksPerRecharge>0</WastepacksPerRecharge>
+    </statBases>
+    <race>
+      <thinkTreeMain>Crimson_ShipRobotCombat</thinkTreeMain>
+      <thinkTreeConstant>Crimson_ShipRobotConstant</thinkTreeConstant>
+      <mechFixedSkillLevel>15</mechFixedSkillLevel>
+      <mechEnabledWorkTypes Inherit="False" />
+      <lifeStageAges Inherit="False">
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps Inherit="False">
+      <li Class="CrimsonSOS2.CompProperties_CrimsonShipRobot">
+        <role>Militor</role>
+      </li>
+      <li Class="CompProperties_MechRepairable" />
+    </comps>
+  </ThingDef>
+  <PawnKindDef ParentName="LightMechanoidKind" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_ShipRobotMilitor</defName>
+    <label>심홍 밀리터</label>
+    <race>Crimson_ShipRobotMilitor</race>
+    <combatPower>45</combatPower>
+    <isFighter>true</isFighter>
+    <weaponTags Inherit="False">
+      <li>MechanoidGunShortRange</li>
+    </weaponTags>
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Crimson/Robots/MilitorAtlas</texPath>
+          <graphicClass>CrimsonSOS2.CrimsonRobotGraphic</graphicClass>
+          <shaderType>Cutout</shaderType>
+          <drawSize>(1.5,1)</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Crimson/Robots/MilitorAtlas</texPath>
+          <graphicClass>CrimsonSOS2.CrimsonRobotGraphic</graphicClass>
+          <shaderType>Cutout</shaderType>
+          <drawSize>(1.5,1)</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  <ThingDef ParentName="ResourceBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_ShipRobotMilitorCrate</defName>
+    <label>심홍 밀리터 기체</label>
+    <description>심홍 밀리터의 완성된 기체. 바닥에 놓고 가동 명령으로 목격자의 통제망에 연결한다.</description>
+    <thingClass>CrimsonSOS2.CrimsonRobotCrate</thingClass>
+    <stackLimit>1</stackLimit>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Crimson/Robots/MilitorAtlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonRobotCrateGraphic</graphicClass>
+      <drawSize>(0.9,0.6)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <MarketValue>2400</MarketValue>
+      <Mass>35</Mass>
+      <Flammability>0</Flammability>
+      <WorkToMake>50000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <Plasteel>50</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Fabrication</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <modExtensions>
+      <li Class="CrimsonSOS2.CrimsonRobotCrateExtension">
+        <pawnKind>Crimson_ShipRobotMilitor</pawnKind>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

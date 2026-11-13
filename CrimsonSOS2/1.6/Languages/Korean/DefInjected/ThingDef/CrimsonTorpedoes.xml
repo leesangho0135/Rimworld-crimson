@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Crimson_TorpedoLauncher.label>종언 어뢰 발사기</Crimson_TorpedoLauncher.label>
+  <Crimson_TorpedoLauncher.description>마름모 단면으로 배치된 4개 발사관을 갖춘 3×5 어뢰 발사기입니다. 특이점 탄두를 자체 형성하므로 탄약 운반과 재장전이 필요하지 않습니다. 함선전 최대 사거리500이며, 1초 간격으로 최대4발을 발사합니다. 첫발 발사 후20초가 지나면 다음 일제사격이 가능합니다. 명중 폭발 뒤에는 진홍색 잔향이 남습니다.</Crimson_TorpedoLauncher.description>
+  <Crimson_TorpedoGun.label>종언 어뢰 발사관</Crimson_TorpedoGun.label>
+  <Crimson_SingularityFakeProjectile.label>특이점 어뢰 「붉은 편린」</Crimson_SingularityFakeProjectile.label>
+  <Crimson_SingularityProjectile.label>특이점 어뢰 「붉은 편린」</Crimson_SingularityProjectile.label>
+</LanguageData>

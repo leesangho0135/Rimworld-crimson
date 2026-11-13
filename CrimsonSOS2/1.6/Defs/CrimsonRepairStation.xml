@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="StorageShelfBase">
+    <defName>Crimson_RepairStation</defName><label>심홍 자동 장비 수리 스테이션</label>
+    <description>함선 장비의 자동 정비를 위한 2×2 스테이션. 무기와 의복·방어구를 최대 4개 보관하며 각 장비를 최대 내구도의 25%씩 하루 동안 수리한다. 소수점 수리량은 보존되며 정전 중에는 수리를 멈춘다. 별도 수리 작업이나 소모 재료는 필요하지 않다.</description>
+    <thingClass>CrimsonSOS2.CrimsonRepairStation</thingClass><drawerType>RealtimeOnly</drawerType><tickerType>Rare</tickerType>
+    <designationCategory>Production</designationCategory><size>(2,2)</size><rotatable>true</rotatable><defaultPlacingRot>South</defaultPlacingRot>
+    <graphicData><texPath>Crimson/Support/RepairStation2x2Atlas</texPath><graphicClass>CrimsonSOS2.CrimsonRepairStationGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(2,2)</drawSize><shadowData IsNull="True"/></graphicData>
+    <stuffCategories Inherit="False"/><costStuffCount>0</costStuffCount><defaultStuff IsNull="True"/>
+    <costList><Steel>100</Steel><Plasteel>80</Plasteel><ComponentSpacer>4</ComponentSpacer></costList>
+    <statBases><MaxHitPoints>200</MaxHitPoints><Beauty>5</Beauty><WorkToBuild>12000</WorkToBuild><Mass>100</Mass><Flammability>0</Flammability></statBases>
+    <building>
+      <maxItemsInCell>1</maxItemsInCell><preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <fixedStorageSettings Inherit="False"><filter><categories><li>Weapons</li><li>Apparel</li></categories></filter></fixedStorageSettings>
+      <defaultStorageSettings Inherit="False"><priority>Important</priority><filter><categories><li>Weapons</li><li>Apparel</li></categories></filter></defaultStorageSettings>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>400</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>200</originalMaxHitPoints><goldReference>true</goldReference></li>
+    </comps>
+    <researchPrerequisites><li>Fabrication</li></researchPrerequisites><constructionSkillPrerequisite>8</constructionSkillPrerequisite><techLevel>Spacer</techLevel>
+    <designatorDropdown IsNull="True" />
+    <uiOrder>1004</uiOrder>
+  </ThingDef>
+</Defs>

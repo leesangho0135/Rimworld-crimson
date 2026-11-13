@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="Crimson_HullWindowBase">
+    <defName>Crimson_HangarVentPanel</defName>
+    <label>모노리스 출격구</label>
+    <size>(5,1)</size>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Hull/HangarVentDirectionalAtlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonHangarVentGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(5,1)</drawSize>
+      <drawRotated>false</drawRotated>
+      <linkFlags>
+        <li>Wall</li>
+      </linkFlags>
+      <shadowData IsNull="True" />
+      <damageData IsNull="True" />
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>22500</MaxHitPoints>
+      <WorkToBuild>8500</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>500</Beauty>
+    </statBases>
+    <costList>
+      <Steel>35</Steel>
+      <Plasteel>25</Plasteel>
+      <Gold>25</Gold>
+    </costList>
+    <description>기존 모노리스 선체벽의 각진 프레임을 유지하는 5×1 출격구 장식형 선체벽입니다. 북쪽 방향은 닫힌 실내 격벽, 남쪽 방향은 안으로 들어갈 듯한 외부 출격구이며 동·서 방향에도 긴 전용 외형이 있습니다. 통행과 시야를 차단하고 방을 밀폐하며 지붕을 지지합니다. 전기·SOS2 열망과 Dubs Bad Hygiene 급수·하수 배관을 연결합니다. 실제 문 개폐나 우주선 출입 기능은 없습니다.</description>
+    <designatorDropdown IsNull="True" />
+    <uiIconPath>Crimson/Hull/HangarVent</uiIconPath>
+    <uiOrder>26</uiOrder>
+    <passability>Impassable</passability>
+    <fillPercent>1</fillPercent>
+    <blockLight>true</blockLight>
+    <holdsRoof>true</holdsRoof>
+  </ThingDef>
+</Defs>

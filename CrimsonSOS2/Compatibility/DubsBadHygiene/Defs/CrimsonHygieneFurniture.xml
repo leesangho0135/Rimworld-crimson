@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Fixed construction materials; gold is the Beauty/MarketValue reference,
+       not a selected Stuff. Native CompQuality/CompArt come from BasedFixture.
+       Gold: Beauty x4 then +20; small-volume material count x10, value10/unit.
+       MarketValue quality and health adjustments remain native and occur once. -->
+  <ThingDef ParentName="DubsDirtyTerletBase">
+    <defName>Crimson_SpacerToilet</defName>
+    <label>심홍 진공변기</label>
+    <description>물을 사용하지 않고 오물을 우주로 배출하는 함선용 진공변기입니다. 내장 진공 배출 장치로 별도 진공 덤프 없이 사용할 수 있으며, 기존 Dubs 위생 배관 연결을 지원합니다. 진공 배출·표시등·편안함 보조 장치에 3000W를 사용합니다. 전원 공급 시 편안함이 50% 향상됩니다.</description>
+    <thingClass>DubsBadHygiene.Building_SpacerToilet</thingClass>
+    <designationCategory>Hygiene</designationCategory>
+    <designationHotKey IsNull="True" />
+    <drawerType>RealtimeOnly</drawerType>
+    <size>(1,1)</size>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Decor/Hygiene/ToiletV44AngularStates</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonStorageHygieneGraphic</graphicClass>
+      <shaderType>Cutout</shaderType><drawRotated>false</drawRotated><drawSize>(1,1)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+      <shadowData IsNull="True" />
+    </graphicData>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <costList Inherit="False"><Plasteel>30</Plasteel><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <statBases>
+      <WorkToBuild>2500</WorkToBuild><Beauty>40</Beauty><MarketValue>3108.1</MarketValue>
+      <Comfort>0.6</Comfort><Mass>35</Mass><MaxHitPoints>700</MaxHitPoints><Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>3000</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower"><glowRadius>1.6</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonPoweredComfort" />
+    <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>100</originalMaxHitPoints></li></comps>
+    <researchPrerequisites Inherit="False"><li>Electricity</li><li MayRequire="Ludeon.RimWorld.Odyssey">OrbitalTech</li></researchPrerequisites>
+    <techLevel>Spacer</techLevel><uiOrder>1000</uiOrder>
+    <designatorDropdown>Crimson_HygieneFurniture</designatorDropdown>
+  </ThingDef>
+
+  <ThingDef ParentName="DubsDirtyBasinBase">
+    <defName>Crimson_WashBasin</defName>
+    <label>심홍 세면대</label>
+    <description>벽에 붙여 설치하는 함선 생활 구역의 세면대입니다. 앞쪽 사용 공간과 Dubs 급수·배수 배관, 50W 전원이 필요합니다.</description>
+    <designationCategory>Hygiene</designationCategory>
+    <designationHotKey IsNull="True" />
+    <drawerType>RealtimeOnly</drawerType><size>(1,1)</size><defaultPlacingRot>North</defaultPlacingRot>
+    <placeWorkers><li>RimWorld.Placeworker_AttachedToWall</li></placeWorkers>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Decor/Hygiene/BasinV119States</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonStorageHygieneGraphic</graphicClass>
+      <shaderType>Cutout</shaderType><drawRotated>false</drawRotated><drawSize>(1,.9)</drawSize>
+      <drawOffsetNorth>(0,0,.235)</drawOffsetNorth><drawOffsetSouth>(0,0,-.059)</drawOffsetSouth>
+      <drawOffsetEast>(.029,0,0)</drawOffsetEast><drawOffsetWest>(-.028,0,0)</drawOffsetWest>
+      <shadowData IsNull="True" />
+    </graphicData>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <costList Inherit="False"><Steel>15</Steel></costList>
+    <statBases><Beauty>40</Beauty><MarketValue>1501.782</MarketValue><Flammability>0</Flammability><MaxHitPoints>525</MaxHitPoints></statBases>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>50</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Glower"><glowRadius>1.6</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+    <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>75</originalMaxHitPoints></li></comps>
+    <researchPrerequisites><li>Electricity</li></researchPrerequisites>
+    <techLevel>Industrial</techLevel><uiOrder>1001</uiOrder>
+    <designatorDropdown>Crimson_HygieneFurniture</designatorDropdown>
+  </ThingDef>
+
+  <ThingDef ParentName="DubsDirtyShowerBase">
+    <defName>Crimson_PowerShower</defName>
+    <label>심홍 전기샤워기</label>
+    <description>필요한 물을 즉시 가열하는 함선용 전기샤워기입니다. Dubs 급수 배관과 1875W 전원이 필요하며 별도의 온수 탱크는 필요하지 않습니다. 전력은 온수 가열·표시등·편안함 보조 장치에 사용합니다. 한 번 씻을 때 물 90L를 사용하고 일반 샤워기보다 두 배 빠르게 씻습니다. 전원 공급 시 편안함이 50% 향상됩니다.</description>
+    <thingClass>DubsBadHygiene.Building_PowerShower</thingClass>
+    <designationCategory>Hygiene</designationCategory>
+    <designationHotKey IsNull="True" />
+    <drawerType>RealtimeOnly</drawerType><size>(1,1)</size><defaultPlacingRot>South</defaultPlacingRot>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Decor/Hygiene/ShowerV42States</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonStorageHygieneGraphic</graphicClass>
+      <shaderType>Cutout</shaderType><drawRotated>false</drawRotated><drawSize>(1,1.6)</drawSize>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <shadowData IsNull="True" />
+    </graphicData>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <costList Inherit="False"><Steel>30</Steel><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <statBases><Beauty>60</Beauty><MarketValue>3109.72</MarketValue><Comfort>1.2</Comfort><WorkToBuild>3000</WorkToBuild><Flammability>0</Flammability><MaxHitPoints>525</MaxHitPoints></statBases>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>1875</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower"><glowRadius>1.6</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonPoweredComfort" />
+    <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>75</originalMaxHitPoints></li></comps>
+    <researchPrerequisites Inherit="False"><li>Electricity</li><li MayRequire="dbhlitemode">AdvancedShowers</li></researchPrerequisites>
+    <techLevel>Spacer</techLevel><uiOrder>1002</uiOrder>
+    <designatorDropdown>Crimson_HygieneFurniture</designatorDropdown>
+  </ThingDef>
+
+  <ThingDef ParentName="DubsDirtyBathtubBase">
+    <defName>Crimson_Bathtub</defName>
+    <label>심홍 욕조</label>
+    <description>함선 거주 구역을 위한 넓은 욕조입니다. Dubs 급수와 온수 또는 원본이 지원하는 인접 난방원이 필요하며 별도의 하수 배출구는 필요하지 않습니다. 물 190L로 천천히 편안하게 목욕합니다. 표시등과 약한 주변 조명, 편안함 보조 장치에 125W 전원이 필요합니다. 전원 공급 시 편안함이 50% 향상됩니다.</description>
+    <thingClass>CrimsonSOS2.CrimsonBath</thingClass>
+    <designationCategory>Hygiene</designationCategory>
+    <designationHotKey IsNull="True" />
+    <drawerType>RealtimeOnly</drawerType><size>(1,2)</size><defaultPlacingRot>East</defaultPlacingRot>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Decor/Hygiene/BathtubStates</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonStorageHygieneGraphic</graphicClass>
+      <shaderType>Cutout</shaderType><drawRotated>false</drawRotated><drawSize>(1,2)</drawSize>
+      <shadowData IsNull="True" />
+    </graphicData>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <costList Inherit="False"><Steel>35</Steel></costList>
+    <statBases><Beauty>80</Beauty><MarketValue>3504.212</MarketValue><Comfort>2</Comfort><Flammability>0</Flammability><MaxHitPoints>525</MaxHitPoints></statBases>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>125</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Glower"><glowRadius>1.6</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonPoweredComfort" />
+    <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>75</originalMaxHitPoints></li></comps>
+    <researchPrerequisites><li>Electricity</li></researchPrerequisites>
+    <techLevel>Industrial</techLevel><uiOrder>1003</uiOrder>
+    <designatorDropdown>Crimson_HygieneFurniture</designatorDropdown>
+  </ThingDef>
+</Defs>

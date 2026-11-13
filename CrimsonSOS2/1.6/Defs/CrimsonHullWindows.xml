@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DesignatorDropdownGroupDef>
+    <defName>Crimson_HullWindows</defName>
+  </DesignatorDropdownGroupDef>
+  <ThingDef Name="Crimson_HullWindowBase" ParentName="BuildingShipHullBase" Abstract="True">
+    <thingClass>CrimsonSOS2.CrimsonHullWindow</thingClass>
+    <description>검은 금속 프레임과 청회색 장갑 유리를 갖춘 밀폐형 선체 관측창입니다. 유리에는 희미한 별빛과 반사가 표현되어 있으며 실제 뒤쪽 풍경을 보여주지는 않습니다. 벽 자체를 대신하며 전기와 SOS2 열망을 연결합니다. Dubs Bad Hygiene 사용 시 급수·하수 배관도 내장됩니다.</description>
+    <designationCategory>Crimson_CS</designationCategory>
+    <designatorDropdown>Crimson_HullWindows</designatorDropdown>
+    <rotatable>true</rotatable>
+    <tickerType>Never</tickerType>
+    <drawerType>MapMeshOnly</drawerType>
+    <uiIconPath>Crimson/Decor/ObservationWindow/W04</uiIconPath>
+    <graphicData>
+      <texPath>Crimson/Decor/ObservationWindow/W04</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonHullWindowGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawRotated>true</drawRotated>
+      <linkFlags><li>Wall</li></linkFlags>
+      <shadowData IsNull="True" />
+    </graphicData>
+    <building>
+      <shipPart>true</shipPart>
+      <isEdifice>true</isEdifice>
+      <isInert>true</isInert>
+      <isAirtight>true</isAirtight>
+      <supportsWallAttachments>false</supportsWallAttachments>
+      <canPlaceOverWall>false</canPlaceOverWall>
+    </building>
+    <stuffCategories Inherit="False" />
+    <costStuffCount>0</costStuffCount>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ShipCachePart">
+        <isHull>true</isHull><hermetic>true</hermetic><archotech>true</archotech><roof>true</roof>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTransmitter</compClass><transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="SaveOurShip2.CompProps_ShipHeat"><compClass>SaveOurShip2.CompShipHeat</compClass></li>
+      <li Class="SaveOurShip2.CompProps_ResearchUnlock"><unlock>ArchotechUplink</unlock></li>
+      <li Class="DubsBadHygiene.CompProperties_Pipe" MayRequire="Dubwise.DubsBadHygiene"><mode>Sewage</mode></li>
+    </comps>
+    <uiOrder>25</uiOrder>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_HullWindowBase">
+    <defName>Crimson_HullWindow1x1Panel</defName><label>모노리스 선체 관측창 1×1</label>
+    <size>(1,1)</size><graphicData><drawSize>(1,1)</drawSize></graphicData>
+    <statBases><MaxHitPoints>4500</MaxHitPoints><WorkToBuild>1700</WorkToBuild><Flammability>0</Flammability><Beauty>100</Beauty></statBases>
+    <costList><Steel>7</Steel><Plasteel>5</Plasteel><Gold>5</Gold></costList>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_HullWindowBase">
+    <defName>Crimson_HullWindow2x1Panel</defName><label>모노리스 선체 관측창 2×1</label>
+    <size>(2,1)</size><graphicData><drawSize>(2,1)</drawSize></graphicData>
+    <statBases><MaxHitPoints>9000</MaxHitPoints><WorkToBuild>3400</WorkToBuild><Flammability>0</Flammability><Beauty>200</Beauty></statBases>
+    <costList><Steel>14</Steel><Plasteel>10</Plasteel><Gold>10</Gold></costList>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_HullWindowBase">
+    <defName>Crimson_HullWindow3x1Panel</defName><label>모노리스 선체 관측창 3×1</label>
+    <size>(3,1)</size><graphicData><drawSize>(3,1)</drawSize></graphicData>
+    <statBases><MaxHitPoints>13500</MaxHitPoints><WorkToBuild>5100</WorkToBuild><Flammability>0</Flammability><Beauty>300</Beauty></statBases>
+    <costList><Steel>21</Steel><Plasteel>15</Plasteel><Gold>15</Gold></costList>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_HullWindowBase">
+    <defName>Crimson_HullWindow4x1Panel</defName><label>모노리스 선체 관측창 4×1</label>
+    <size>(4,1)</size><graphicData><drawSize>(4,1)</drawSize></graphicData>
+    <statBases><MaxHitPoints>18000</MaxHitPoints><WorkToBuild>6800</WorkToBuild><Flammability>0</Flammability><Beauty>400</Beauty></statBases>
+    <costList><Steel>28</Steel><Plasteel>20</Plasteel><Gold>20</Gold></costList>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_HullWindowBase">
+    <defName>Crimson_HullWindow5x1Panel</defName><label>모노리스 선체 관측창 5×1</label>
+    <size>(5,1)</size><graphicData><drawSize>(5,1)</drawSize></graphicData>
+    <statBases><MaxHitPoints>22500</MaxHitPoints><WorkToBuild>8500</WorkToBuild><Flammability>0</Flammability><Beauty>500</Beauty></statBases>
+    <costList><Steel>35</Steel><Plasteel>25</Plasteel><Gold>25</Gold></costList>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="Crimson_PremiumSeatingBase" ParentName="Crimson_FunctionalChairBase" Abstract="True">
+    <graphicData>
+      <graphicClass>CrimsonSOS2.CrimsonV51FurnitureGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawRotated>false</drawRotated>
+      <shadowData IsNull="True" />
+    </graphicData>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <defaultStuff IsNull="True" />
+  </ThingDef>
+  <ThingDef ParentName="Crimson_PremiumSeatingBase">
+    <defName>Crimson_PremiumLoungeChair</defName>
+    <label>심홍 고급 라운지 의자</label>
+    <description>각진 흑색 장갑 프레임과 검붉은 완충재, 넓은 팔걸이를 갖춘 고급 휴게 의자입니다. 고급 소파와 같은 디자인을 사용하며 놀이·TV 시청·식사에 앉아서 사용할 수 있습니다. 전원 공급 시 편안함 보조 장치와 심홍색 표시등이 작동하고 편안함이 50% 향상됩니다. 소비 전력은 100W이며 정전 중에도 앉을 수 있습니다.</description>
+    <graphicData><texPath>Crimson/Decor/Seating/Premium/LoungeChairAtlas</texPath><drawSize>(1,1.2)</drawSize></graphicData>
+    <statBases><MaxHitPoints>1960</MaxHitPoints><Comfort>1.2</Comfort><Beauty>20</Beauty><Mass>24</Mass><WorkToBuild>3000</WorkToBuild><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>45</Steel><Cloth>35</Cloth><Plasteel>15</Plasteel><ComponentIndustrial>2</ComponentIndustrial></costList>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>100</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonPoweredComfort" />
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>280</originalMaxHitPoints><goldReference>true</goldReference></li>
+    </comps>
+    <uiOrder>1026</uiOrder>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_SeatingFurniture</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_PremiumSeatingBase">
+    <defName>Crimson_PremiumDiningChair</defName>
+    <label>심홍 고급 식탁 의자</label>
+    <description>각진 흑색 금속 등받이와 검붉은 완충재를 갖춘 고급 식탁 의자입니다. 기존 식탁과 함께 식사에 사용할 수 있으며 놀이·TV 시청에도 앉을 수 있습니다. 전원 공급 시 편안함 보조 장치와 심홍색 표시등이 작동하고 편안함이 50% 향상됩니다. 소비 전력은 75W이며 정전 중에도 앉을 수 있습니다.</description>
+    <graphicData><texPath>Crimson/Decor/Seating/Premium/DiningChairAtlas</texPath><drawSize>(.92,1.25)</drawSize></graphicData>
+    <statBases><MaxHitPoints>1540</MaxHitPoints><Comfort>0.8</Comfort><Beauty>10</Beauty><Mass>14</Mass><WorkToBuild>2400</WorkToBuild><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>35</Steel><Cloth>16</Cloth><Plasteel>10</Plasteel><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>75</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonPoweredComfort" />
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>220</originalMaxHitPoints><goldReference>true</goldReference></li>
+    </comps>
+    <uiOrder>1027</uiOrder>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_SeatingFurniture</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_PremiumSeatingBase">
+    <defName>Crimson_PremiumSofa</defName>
+    <label>심홍 고급 소파</label>
+    <description>고급 라운지 의자와 같은 흑색 장갑 프레임과 검붉은 완충재를 사용하는 두 칸짜리 소파입니다. 회전해 1×2 또는 2×1로 배치할 수 있으며 두 좌석을 휴게·TV 시청·식사에 사용할 수 있습니다. 전원 공급 시 편안함 보조 장치와 심홍색 표시등이 작동하고 편안함이 50% 향상됩니다. 소비 전력은 150W이며 정전 중에도 앉을 수 있습니다.</description>
+    <size>(2,1)</size><defaultPlacingRot>East</defaultPlacingRot>
+    <building><multiSittable>true</multiSittable></building>
+    <graphicData><texPath>Crimson/Decor/Seating/Premium/SofaAtlas</texPath><drawSize>(2,1.25)</drawSize></graphicData>
+    <statBases><MaxHitPoints>2800</MaxHitPoints><Comfort>1.2</Comfort><Beauty>20</Beauty><Mass>42</Mass><WorkToBuild>4800</WorkToBuild><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>75</Steel><Cloth>65</Cloth><Plasteel>25</Plasteel><ComponentIndustrial>3</ComponentIndustrial></costList>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>150</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonPoweredComfort" />
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>400</originalMaxHitPoints><goldReference>true</goldReference></li>
+    </comps>
+    <uiOrder>1028</uiOrder>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_SeatingFurniture</designatorDropdown>
+  </ThingDef>
+</Defs>

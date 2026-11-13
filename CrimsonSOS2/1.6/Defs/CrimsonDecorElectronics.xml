@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DesignatorDropdownGroupDef>
+    <defName>Crimson_DecorElectronics</defName>
+  </DesignatorDropdownGroupDef>
+  <ThingDef Name="Crimson_ElectronicDecorBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>Building</thingClass>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <coversFloor>false</coversFloor>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>true</rotatable>
+    <tickerType>Normal</tickerType>
+    <building>
+      <isInert>true</isInert>
+      <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <graphicData>
+      <graphicClass>CrimsonSOS2.CrimsonFurnitureStateGraphic</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawRotated>true</drawRotated>
+      <shadowData IsNull="True" />
+    </graphicData>
+    <statBases>
+      <Beauty>0</Beauty>
+      <Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <transmitsPower>false</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_DecorElectronics</designatorDropdown>
+    <researchPrerequisites><li>Electricity</li></researchPrerequisites>
+    <uiOrder>990</uiOrder>
+  </ThingDef>
+  <ThingDef Name="Crimson_WallDisplayBase" ParentName="Crimson_ElectronicDecorBase">
+    <defName>Crimson_WallDisplay</defName>
+    <label>벽면 스크린</label>
+    <description>함선 벽에 부착하는 3×1 장식 스크린입니다. 화면 전환 버튼으로 우주 항행, 레이저 함포 보고, 미사일 함포 보고, 재배실을 순서대로 표시합니다. 심홍색 보고 그래프와 생장도는 장식용이며 실제 항행·발사·작물 수치와 연동하지 않습니다. 전원이 꺼지면 검은 대기 화면으로 바뀌며 선택한 화면은 저장 후에도 유지됩니다.</description>
+    <size>(3,1)</size>
+    <graphicData>
+      <texPath>Crimson/Decor/Furniture/WallReports/Navigation/WallDisplay</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonWallReportGraphic</graphicClass>
+      <drawSize>(3,1)</drawSize>
+      <drawOffsetNorth>(0,0,0.65)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,-0.65)</drawOffsetSouth>
+      <drawOffsetEast>(0.65,0,0)</drawOffsetEast>
+      <drawOffsetWest>(-0.65,0,0)</drawOffsetWest>
+    </graphicData>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>Standable</passability>
+    <pathCost>0</pathCost>
+    <fillPercent>0.15</fillPercent>
+    <blockLight>false</blockLight>
+    <clearBuildingArea>false</clearBuildingArea>
+    <building><isEdifice>false</isEdifice><isAttachment>true</isAttachment></building>
+    <placeWorkers><li>CrimsonSOS2.CrimsonFurnitureWallPlaceWorker</li></placeWorkers>
+    <statBases><MaxHitPoints>1400</MaxHitPoints><WorkToBuild>400</WorkToBuild><Beauty>80</Beauty><MarketValue>2101.296</MarketValue><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>20</Steel><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <comps Inherit="False">
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>100</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower"><glowRadius>2</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonWallReport" />
+    <li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>200</originalMaxHitPoints></li></comps>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designationCategory>Misc</designationCategory>
+    <designatorDropdown>Crimson_CommandFurniture</designatorDropdown>
+    <uiOrder>1000</uiOrder>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_ElectronicDecorBase">
+    <defName>Crimson_ConsoleTerminal</defName>
+    <label>콘솔 터미널</label>
+    <description>검은 각면 외장에 화면과 입력부를 모아 놓은 낮은 장식 터미널입니다. 전원이 들어오면 화면의 선과 입력 표시가 진홍색으로 선명해집니다.</description>
+    <size>(2,1)</size>
+    <graphicData><texPath>Crimson/Decor/Furniture/ConsoleTerminal</texPath><drawSize>(2,1)</drawSize></graphicData>
+    <statBases><MaxHitPoints>1750</MaxHitPoints><WorkToBuild>500</WorkToBuild><Beauty>60</Beauty><MarketValue>2601.62</MarketValue><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>25</Steel><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <comps Inherit="False">
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>200</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower"><glowRadius>2</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+    <li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>250</originalMaxHitPoints></li></comps>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designationCategory>Misc</designationCategory>
+    <designatorDropdown>Crimson_CommandFurniture</designatorDropdown>
+    <uiOrder>1001</uiOrder>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_ElectronicDecorBase">
+    <defName>Crimson_ServerPort</defName>
+    <label>서버 단자</label>
+    <description>함선 내부의 데이터 접점을 상징하는 작은 장식 단자입니다. 넓고 차분한 검은 외피와 좁은 서비스 홈, 세 개의 작은 진홍색 표식으로 구성되어 있습니다.</description>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Crimson/Decor/Furniture/ServerPort</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonFurnitureStateGraphic</graphicClass>
+      <drawSize>(1,2)</drawSize>
+      <drawOffset>(0,0,0.5)</drawOffset>
+      <addTopAltitudeBias>true</addTopAltitudeBias>
+    </graphicData>
+    <comps Inherit="False">
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>100</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower"><glowRadius>2</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+    <li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>250</originalMaxHitPoints></li></comps>
+    <statBases><MaxHitPoints>1750</MaxHitPoints><WorkToBuild>300</WorkToBuild><Beauty>20</Beauty><MarketValue>1500.972</MarketValue><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>15</Steel></costList>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designationCategory>Misc</designationCategory>
+    <designatorDropdown>Crimson_CommandFurniture</designatorDropdown>
+    <uiOrder>1002</uiOrder>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_ElectronicDecorBase">
+    <defName>Crimson_TacticalTable</defName>
+    <label>중형 전술 투영 테이블</label>
+    <description>낮은 검은 프레임과 어두운 유리 상판을 갖춘 3×2 투영 테이블입니다. 화면 선택 버튼으로 전투·생체·항행·장교·지휘자 보고 11종을 선택합니다. 보고 화면은 장식용이며 선택은 저장 후에도 유지됩니다. 전원이 꺼지면 상판의 그림도 꺼집니다.</description>
+    <size>(3,2)</size>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData><texPath>Crimson/Decor/Furniture/TacticalTableParallelV137</texPath><graphicClass>CrimsonSOS2.CrimsonTacticalReportGraphic</graphicClass><drawSize>(3,2)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
+    <statBases><MaxHitPoints>2100</MaxHitPoints><WorkToBuild>700</WorkToBuild><Beauty>80</Beauty><MarketValue>4202.268</MarketValue><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>40</Steel><ComponentIndustrial>2</ComponentIndustrial></costList>
+    <comps Inherit="False">
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>300</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower"><glowRadius>2</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li><compClass>CrimsonSOS2.CompCrimsonFurnitureVisuals</compClass></li>
+    <li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>300</originalMaxHitPoints></li><li Class="CrimsonSOS2.CompProperties_CrimsonTacticalReport" /></comps>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designationCategory>Misc</designationCategory>
+    <designatorDropdown>Crimson_CommandFurniture</designatorDropdown>
+    <uiOrder>1004</uiOrder>
+  </ThingDef>
+</Defs>

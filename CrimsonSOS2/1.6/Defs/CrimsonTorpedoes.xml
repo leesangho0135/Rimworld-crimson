@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Adapted from installed Save Our Ship 2 V2.8.104 definitions (Kentington, Thain, SonicTHI and contributors), CC BY-NC-SA 4.0. Original files are read-only. New Crimson definitions only.-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Crimson_SingularityFakeProjectile</defName>
+    <label>특이점 어뢰 「붉은 편린」</label>
+    <graphicData>
+      <texPath>Crimson/SingularityTorpedo</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <thingClass>SaveOurShip2.Projectile_ShipFake</thingClass>
+    <projectile>
+      <damageDef>BombSuper</damageDef>
+      <!-- damage amount is the damage def default -->
+      <speed>60</speed>
+      <explosionRadius>0</explosionRadius>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+    </projectile>
+    <interactionCellIcon>Crimson_SingularityProjectile</interactionCellIcon>
+    <!-- This is such a horrible kludge, but it's a way to attach a ThingDef to another ThingDef!-->
+    <altitudeLayer>TerrainEdges</altitudeLayer>
+    <seeThroughFog>true</seeThroughFog>
+  </ThingDef>
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Crimson_SingularityProjectile</defName>
+    <label>특이점 어뢰 「붉은 편린」</label>
+    <thingClass>SaveOurShip2.Projectile_ExplosiveShipAntigrain</thingClass>
+    <graphicData>
+      <texPath>Crimson/SingularityTorpedo</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <projectile>
+      <explosionRadius>15.9</explosionRadius>
+      <damageDef>ShipTorpedoBombSuper</damageDef>
+      <speed>60</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseShipTorpedoWeapon">
+    <defName>Crimson_TorpedoGun</defName>
+    <label>종언 어뢰 발사관</label>
+    <verbs Inherit="False">
+      <li>
+        <verbClass>SaveOurShip2.Verb_LaunchProjectileShip</verbClass>
+        <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+        <warmupTime>4.0</warmupTime>
+        <requireLineOfSight>false</requireLineOfSight>
+        <range>3000</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+        <soundCast>Mortar_LaunchA</soundCast>
+        <muzzleFlashScale>16</muzzleFlashScale>
+        <targetParams><canTargetLocations>true</canTargetLocations></targetParams>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ChangeableProjectile">
+        <compClass>CrimsonSOS2.CompCrimsonTorpedoWarhead</compClass>
+        <tubes>4</tubes>
+        <maxTorpedoes>0</maxTorpedoes>
+      </li>
+    </comps>
+    <building><fixedStorageSettings><filter Inherit="False" /></fixedStorageSettings><defaultStorageSettings><filter Inherit="False" /></defaultStorageSettings></building>
+  </ThingDef>
+  <ThingDef ParentName="BaseShipTorpedoBuilding">
+    <defName>Crimson_TorpedoLauncher</defName>
+    <designationCategory>Crimson_CS</designationCategory>
+    <label>종언 어뢰 발사기</label>
+    <description>마름모 단면으로 배치된 4개 발사관이 전방으로 길게 뻗은 3×5 어뢰 발사기입니다. 특이점 탄두를 자체 형성하므로 탄약 운반과 재장전이 필요하지 않습니다. 함선전 최대 사거리500이며, 1초 간격으로 최대4발을 발사합니다. 첫발 발사 후20초가 지나면 다음 일제사격이 가능합니다. 명중 폭발 뒤에는 진홍색 잔향이 남습니다.</description>
+    <graphicData>
+      <texPath>Crimson/Weapons/Spinal/TorpedoLauncher3x5</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonTorpedoLauncherGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(2.96,4.96)</drawSize>
+      <drawRotated>true</drawRotated>
+      <drawOffset>(0,0,0)</drawOffset>
+      <shadowData IsNull="True" />
+    </graphicData>
+    <size>(3,5)</size>
+    <rotatable>true</rotatable>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <hasInteractionCell>false</hasInteractionCell>
+    <inspectorTabs Inherit="False" />
+    <comps>
+      <li Class="CompProperties_Stunnable">
+        <affectedDamageDefs>
+          <li>EMP</li>
+        </affectedDamageDefs>
+      </li>
+      <li Class="SaveOurShip2.CompProps_ShipHeat">
+        <compClass>SaveOurShip2.CompShipHeat</compClass>
+        <showOnRoof>true</showOnRoof>
+        <heatPerPulse>0</heatPerPulse>
+        <energyToFire>0</energyToFire>
+        <optRange>500</optRange>
+        <maxRange>500</maxRange>
+        <projectileSpeed>1</projectileSpeed>
+        <threat>20</threat>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <building>
+      <turretGunDef>Crimson_TorpedoGun</turretGunDef>
+      <turretBurstCooldownTime>17.0</turretBurstCooldownTime>
+      <turretBurstWarmupTime>0</turretBurstWarmupTime>
+    </building>
+    <uiIconPath>Crimson/Weapons/Spinal/TorpedoLauncher3x5</uiIconPath>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <Steel>20</Steel>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <thingClass>CrimsonSOS2.CrimsonTorpedoLauncher</thingClass>
+    <drawerType>RealtimeOnly</drawerType>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Crimson.Shield.SettingsHelp>Settings for Crimson shield generators only. Values are radii in cells, separate from the building footprint. The original minimum radius of20 is retained.</Crimson.Shield.SettingsHelp>
+  <Crimson.Shield.Maximum>Maximum allowed radius</Crimson.Shield.Maximum>
+  <Crimson.Shield.Default>Radius on construction/reset</Crimson.Shield.Default>
+  <Crimson.Shield.PowerHelp>Operating power: actual radius × 50 W. Radius changes use the original gradual transition. Original SOS2 shields are unaffected.</Crimson.Shield.PowerHelp>
+</LanguageData>

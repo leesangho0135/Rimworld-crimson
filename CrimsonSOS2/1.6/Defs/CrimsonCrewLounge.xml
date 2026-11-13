@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="Crimson_FunctionalChairBase">
+    <defName>Crimson_LoungeSofaTwoSeat</defName><label>심홍 라운지 소파 · 2인용</label>
+    <description>일반 승무원이 함께 앉는 2×1 라운지 소파입니다. 검은 금속 프레임과 두 개의 완충 좌석을 갖추었습니다. 휴게·TV 시청·식사에 사용할 수 있으며 전원 공급 시 편안함이 50% 향상됩니다. 소비 전력은 100W이고 정전 중에도 앉을 수 있습니다.</description>
+    <size>(2,1)</size><defaultPlacingRot>South</defaultPlacingRot><building><multiSittable>true</multiSittable></building>
+    <graphicData><texPath>Crimson/Decor/Research/CrewSofaTwoAtlas</texPath><graphicClass>CrimsonSOS2.CrimsonV51FurnitureGraphic</graphicClass><drawSize>(2,1.2)</drawSize></graphicData>
+    <statBases><MaxHitPoints>1960</MaxHitPoints><Comfort>1</Comfort><Beauty>15</Beauty><Mass>36</Mass><WorkToBuild>3200</WorkToBuild><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>55</Steel><Cloth>45</Cloth><Plasteel>7</Plasteel><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <comps><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>100</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CrimsonSOS2.CompProperties_CrimsonPoweredComfort" /><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>280</originalMaxHitPoints><goldReference>true</goldReference></li></comps>
+    <uiOrder>1029</uiOrder>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_SeatingFurniture</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>Crimson_CoffeeTable</defName><label>심홍 소파 테이블</label>
+    <description>승무원용 라운지 소파에 맞춘 낮은 2×1 탁자입니다. 짧은 받침과 검은 금속 상판을 갖추었으며 식사와 휴게용 표면으로 사용할 수 있습니다. 전력망에 연결해 50W를 소비하며 전원을 끌 수 있습니다. 정전 중에도 탁자로 사용할 수 있습니다.</description>
+    <designationCategory>Furniture</designationCategory><designationHotKey IsNull="True" />
+    <drawerType>RealtimeOnly</drawerType><tickerType>Normal</tickerType><size>(2,1)</size><rotatable>true</rotatable><defaultPlacingRot>South</defaultPlacingRot>
+    <altitudeLayer>Building</altitudeLayer><passability>PassThroughOnly</passability><pathCost>30</pathCost><fillPercent>0.3</fillPercent><surfaceType>Eat</surfaceType>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <graphicData><texPath>Crimson/Decor/Research/CoffeeTableAtlas</texPath><graphicClass>CrimsonSOS2.CrimsonV51FurnitureGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(2,0.9)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
+    <statBases><MaxHitPoints>1050</MaxHitPoints><Beauty>5</Beauty><Mass>24</Mass><WorkToBuild>1800</WorkToBuild><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>50</Steel><Plasteel>5</Plasteel></costList>
+    <comps><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>50</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CompProperties_Flickable" /><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>150</originalMaxHitPoints><goldReference>true</goldReference></li></comps>
+    <building><paintable>false</paintable></building><researchPrerequisites><li>ComplexFurniture</li></researchPrerequisites><constructionSkillPrerequisite>3</constructionSkillPrerequisite><terrainAffordanceNeeded>Light</terrainAffordanceNeeded><uiOrder>1041</uiOrder>
+    <designatorDropdown>Crimson_Tables</designatorDropdown>
+  </ThingDef>
+</Defs>

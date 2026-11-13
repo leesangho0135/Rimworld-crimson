@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Crimson_DeckLightNeedsDeck>Must be placed on a Monolith deck.</Crimson_DeckLightNeedsDeck>
+  <Crimson_DeckLightDuplicate>A deck light or its construction plan already occupies this cell.</Crimson_DeckLightDuplicate>
+  <Crimson_DeckLightBlocked>Cannot overlap a wall or another building.</Crimson_DeckLightBlocked>
+  <Crimson_ThresholdGuideNeedsDoor>Must be placed in a doorway.</Crimson_ThresholdGuideNeedsDoor>
+</LanguageData>

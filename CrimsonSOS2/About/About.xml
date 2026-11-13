@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Crimson - SOS2 Addon</name>
+  <author>Crimson Personal Project</author>
+  <packageId>rimod.crimson.sos2</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Crimson 개인용 SOS2 애드온. 모노리스 선체, 특이점 반응로, 관측자, 사건지평 생성기, 수렴 광선포, 종언 어뢰 발사기와 특이점 어뢰 「붉은 편린」 등을 별도 부품으로 추가합니다. 개발 버전0.6.1-ship-battle-followup은 부유 광선포2기와 기본 보호막을 탑재한 무인 운용 가능 초대형 왕복선 순례자를 포함합니다. 원본 SOS2 부품은 보존하며 실제 게임 동작 검증과 배포는 별도 단계입니다.</description>
+  <modDependencies>
+    <li>
+      <packageId>kentington.saveourship2</packageId>
+      <displayName>Save Our Ship 2</displayName>
+    </li>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+    </li>
+    <li>
+      <packageId>smashphil.vehicleframework</packageId>
+      <displayName>Vehicle Framework</displayName>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>ludeon.rimworld</li>
+    <li>brrainz.harmony</li>
+    <li>smashphil.vehicleframework</li>
+    <li>kentington.saveourship2</li>
+    <li>dubwise.dubsbadhygiene</li>
+    <li>oskarpotocki.vanillafactionsexpanded.core</li>
+    <li>Poncho.AutomaticHydroponics</li>
+    <li>AutomaticHydroponics.Expanded</li>
+    <li>adaptive.storage.framework</li>
+  </loadAfter>
+</ModMetaData>

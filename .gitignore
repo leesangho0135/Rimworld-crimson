@@ -1,0 +1,27 @@
+# Track only the distributable mod, its source, and publication/build files.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/THIRD-PARTY-NOTICES.md
+!/Build.ps1
+!/CrimsonSOS2/
+!/Source/
+
+# Never publish saves, local profiles, credentials, or transient build output.
+**/bin/
+**/obj/
+**/.vs/
+**/__pycache__/
+*.pdb
+*.rws
+*.rws.bak
+*.log
+*.tmp
+*.bak
+*.zip
+.env
+.env.*
+*.pfx
+*.p12
+*.key

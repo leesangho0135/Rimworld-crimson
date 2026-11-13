@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_ShipVent</defName>
+    <label>심홍 온도 조절기</label>
+    <description>벽 안쪽에 부착하는 함선용 온도 조절기. 목표 온도에 맞춰 냉각망의 열을 실내로 가져오거나 실내의 열을 냉각망으로 보낸다. 냉각망에서 열을 가져올 수 없을 때 전기 난방을 사용하도록 설정할 수 있다.\n\nSOS2 함선 환기구와 같은 냉난방 성능과 전력 소비를 사용한다. 기존 벽을 유지하며 바로 앞 실내의 온도를 조절한다.</description>
+    <thingClass>CrimsonSOS2.CrimsonShipVent</thingClass>
+    <graphicData>
+      <texPath>Crimson/Support/ShipVent/V01</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonShipVentGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <addTopAltitudeBias>false</addTopAltitudeBias>
+      <drawSize>(0.7265625,0.265625)</drawSize>
+      <drawOffsetNorth>(0,0,0.6796875)</drawOffsetNorth>
+      <drawOffsetEast>(0.6796875,0,0)</drawOffsetEast>
+      <drawOffsetSouth>(0,0,-0.6796875)</drawOffsetSouth>
+      <drawOffsetWest>(-0.6796875,0,0)</drawOffsetWest>
+    </graphicData>
+    <size>(1,1)</size>
+    <rotatable>true</rotatable>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>Standable</passability>
+    <pathCost>0</pathCost>
+    <fillPercent>0</fillPercent>
+    <blockLight>false</blockLight>
+    <blockWind>false</blockWind>
+    <coversFloor>false</coversFloor>
+    <clearBuildingArea>false</clearBuildingArea>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>3200</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>15</Steel>
+      <Plasteel>5</Plasteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <building>
+      <isEdifice>false</isEdifice>
+      <isAttachment>true</isAttachment>
+    </building>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ShipCachePart" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>150</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_TempControl">
+        <energyPerSecond>-64</energyPerSecond>
+      </li>
+      <li Class="SaveOurShip2.CompProps_ShipHeat">
+        <compClass>SaveOurShip2.CompShipHeat</compClass>
+      </li>
+      <li Class="DubsBadHygiene.CompProperties_Pipe" MayRequire="Dubwise.DubsBadHygiene"><mode>Sewage</mode></li>
+    </comps>
+    <placeWorkers>
+      <li>CrimsonSOS2.CrimsonFurnitureWallPlaceWorker</li>
+    </placeWorkers>
+    <designationCategory>Crimson_CS</designationCategory>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li>ShipBasics</li>
+      <li>AirConditioning</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

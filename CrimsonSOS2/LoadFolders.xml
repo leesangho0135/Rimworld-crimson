@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<loadFolders>
+  <v1.6>
+    <li>1.6</li>
+    <li IfModActive="dubwise.dubsbadhygiene">Compatibility/DubsBadHygiene</li>
+    <li IfModActive="Poncho.AutomaticHydroponics,oskarpotocki.vanillafactionsexpanded.core">Compatibility/AutomaticHydroponics</li>
+    <li IfModActive="adaptive.storage.framework">Compatibility/AdaptiveStorageFramework</li>
+  </v1.6>
+</loadFolders>

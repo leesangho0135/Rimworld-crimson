@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DesignatorDropdownGroupDef><defName>Crimson_RoomFittings</defName></DesignatorDropdownGroupDef>
+
+  <ThingDef ParentName="Crimson_FunctionalChairBase">
+    <defName>Crimson_AuxiliaryCrewSeat</defName>
+    <label>심홍 보조 승무원 좌석</label>
+    <description>지휘실의 보조 담당자가 사용하는 간결한 1×1 좌석입니다. 작업대 앞이나 식탁, 놀이 시설과 TV 시청에 앉아 사용할 수 있습니다. 표시등과 편안함 보조 장치에 75W를 사용합니다.</description>
+    <designatorDropdown>Crimson_SeatingFurniture</designatorDropdown>
+    <size>(1,1)</size>
+    <graphicData>
+      <texPath>Crimson/Decor/Rooms/AuxiliaryCrewSeatAtlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonV48AtlasGraphic</graphicClass>
+      <drawSize>(1,1.4)</drawSize><drawOffset>(0,0,0)</drawOffset>
+    </graphicData>
+    <statBases><MaxHitPoints>1400</MaxHitPoints><Comfort>0.8</Comfort><Beauty>60</Beauty><Mass>12</Mass><WorkToBuild>1200</WorkToBuild><MarketValue>3803.888</MarketValue><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>25</Steel><Cloth>12</Cloth><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>75</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonPoweredComfort" />
+    <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>200</originalMaxHitPoints></li></comps>
+    <uiOrder>1021</uiOrder>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designationCategory>Furniture</designationCategory>
+  </ThingDef>
+
+  <ThingDef ParentName="Crimson_FloorGuideBase">
+    <defName>Crimson_PathGuideLight</defName>
+    <label>심홍 방향 안내등</label>
+    <description>모노리스 갑판 위에 놓는 낮은 화살표 안내등입니다. 회전해 복도나 출입구의 진행 방향을 표시합니다. 전력 10W가 공급되면 가까운 바닥을 은은한 진홍색으로 밝히며 통행을 막지 않습니다.</description>
+    <designatorDropdown>Crimson_Lighting</designatorDropdown>
+    <size>(1,1)</size><defaultPlacingRot>North</defaultPlacingRot>
+    <graphicData>
+      <texPath>Crimson/Decor/Rooms/PathGuideLight</texPath>
+      <graphicClass>Graphic_Single</graphicClass><shaderType>Cutout</shaderType>
+      <drawSize>(2.15,2.15)</drawSize><drawRotated>true</drawRotated>
+    </graphicData>
+    <uiIconScale>3.25</uiIconScale>
+    <placeWorkers Inherit="False"><li>CrimsonSOS2.CrimsonPathGuideLightPlaceWorker</li></placeWorkers>
+    <uiOrder>1062</uiOrder>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+      <costList Inherit="False"><Steel>2</Steel></costList>
+      <statBases><Beauty>20</Beauty><MarketValue>200.1944</MarketValue><MaxHitPoints>560</MaxHitPoints><Flammability>0</Flammability></statBases>
+      <comps><li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>80</originalMaxHitPoints></li></comps>
+    <designationCategory>Furniture</designationCategory>
+  </ThingDef>
+
+  <ThingDef ParentName="BookcaseBase">
+    <defName>Crimson_MedicalSupplyCabinet</defName>
+    <label>심홍 책장</label>
+    <thingClass>CrimsonSOS2.CrimsonBookshelf</thingClass>
+    <description>검은 금속 외장과 심홍색 장식을 갖춘 1×1 책장입니다. 3단 선반에 단당 4권씩, 실제 책을 최대 12권 보관합니다. 책을 넣고 꺼내면 정면의 책등 표시가 수납 상태에 맞춰 바뀝니다. 보관한 책은 열화로부터 보호되며 기본 책장과 같은 독서·연구 보조 기능을 제공합니다. 표시등과 약한 주변 조명에 50W를 사용하며 정전 중에도 책을 보관할 수 있습니다.</description>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown IsNull="True" />
+    <designationHotKey IsNull="True" />
+    <drawerType>RealtimeOnly</drawerType><tickerType>Normal</tickerType>
+    <size>(1,1)</size><rotatable>true</rotatable>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount>
+    <graphicData>
+      <texPath>Crimson/Decor/Rooms/MedicalSupplyCabinetAtlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonV48AtlasGraphic</graphicClass><shaderType>Cutout</shaderType>
+      <drawRotated>false</drawRotated><drawSize>(1,1.5)</drawSize><drawOffset>(0,0,0.25)</drawOffset>
+      <shadowData IsNull="True" /><addTopAltitudeBias>true</addTopAltitudeBias>
+    </graphicData>
+    <statBases><MaxHitPoints>980</MaxHitPoints><WorkToBuild>1000</WorkToBuild><Mass>12</Mass><Beauty>60</Beauty><Flammability>0</Flammability><MarketValue>3103.24</MarketValue></statBases>
+    <costList Inherit="False"><Steel>30</Steel><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <building>
+      <storageGroupTag>Crimson_Bookshelf</storageGroupTag><paintable>false</paintable>
+      <maxItemsInCell>12</maxItemsInCell>
+      <fixedStorageSettings Inherit="False"><filter><categories><li>Books</li></categories></filter></fixedStorageSettings>
+      <defaultStorageSettings Inherit="False"><priority>Preferred</priority><filter><categories><li>Books</li></categories></filter></defaultStorageSettings>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>50</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Glower"><glowRadius>1.6</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+    <li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>140</originalMaxHitPoints></li></comps>
+    <researchPrerequisites><li>Electricity</li></researchPrerequisites>
+    <uiOrder>1143</uiOrder>
+      <defaultStuff IsNull="True" />
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CrimsonEchoOn>잔향 on: {0}</CrimsonEchoOn>
+  <CrimsonEchoDisassembling>잔향 disassembling matter</CrimsonEchoDisassembling>
+  <CrimsonEchoSizeLower>잔향 size: {0}</CrimsonEchoSizeLower>
+  <CrimsonEchoAlertLabel>잔향 in home area</CrimsonEchoAlertLabel>
+  <CrimsonEchoAlertDescription>Lingering crimson singularity fire is disassembling matter in the home area.</CrimsonEchoAlertDescription>
+</LanguageData>

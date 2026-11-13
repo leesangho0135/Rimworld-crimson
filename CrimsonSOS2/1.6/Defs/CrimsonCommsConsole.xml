@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_CommsConsole</defName>
+    <label>심홍 통신기</label>
+    <description>검은 각면 금속과 심홍색 신호 화면을 사용하는 3×1 통신 콘솔입니다. 다른 세력과 무역선에 연락하며 통신 기능·연구·제작 비용·소비전력은 기본 통신 콘솔과 같습니다. 조작자는 전면 중앙에 서서 사용합니다. 소비전력은 200W이며 전원 공급 시 신호 화면과 표시등이 켜집니다. 궤도 무역에는 기본 게임과 같은 무역 신호기 조건이 적용됩니다.</description>
+    <thingClass>Building_CommsConsole</thingClass>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Decor/Communications/CommsConsoleAtlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonV51FurnitureGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(3,1)</drawSize>
+      <drawRotated>false</drawRotated>
+      <addTopAltitudeBias>true</addTopAltitudeBias>
+      <shadowData IsNull="True" />
+      <damageData IsNull="True" />
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>1750</MaxHitPoints>
+      <WorkToBuild>2200</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>10</Beauty>
+    </statBases>
+    <size>(3,1)</size>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+    </building>
+    <costList>
+      <Steel>120</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designationCategory>Misc</designationCategory>
+    <uiOrder>1060</uiOrder>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Usable" MayRequire="Ludeon.RimWorld.Biotech">
+        <useJob>TriggerObject</useJob>
+        <useLabel>Summon diabolus threat</useLabel>
+        <useDuration>900</useDuration>
+        <floatMenuOptionPriority>SummonThreat</floatMenuOptionPriority>
+        <floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
+        <ignoreOtherReservations>true</ignoreOtherReservations>
+      </li>
+      <li Class="CompProperties_Useable_CallBossgroup" MayRequire="Ludeon.RimWorld.Biotech">
+        <bossgroupDef>Diabolus</bossgroupDef>
+        <spawnLetterLabelKey>LetterLabelCommsConsoleSpawned</spawnLetterLabelKey>
+        <spawnLetterTextKey>LetterCommsConsoleSpawned</spawnLetterTextKey>
+        <effecterDef>CommsConsoleBossgroupSummoned</effecterDef>
+        <delayTicks>120</delayTicks>
+      </li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture">
+        <originalMaxHitPoints>250</originalMaxHitPoints>
+        <goldReference>true</goldReference>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <designationHotKey IsNull="True" />
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>MicroelectronicsBasics</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <stuffCategories Inherit="False" />
+    <costStuffCount>0</costStuffCount>
+    <defaultStuff IsNull="True" />
+    <designatorDropdown IsNull="True" />
+  </ThingDef>
+</Defs>

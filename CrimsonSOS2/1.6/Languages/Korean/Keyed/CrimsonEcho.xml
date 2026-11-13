@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CrimsonEchoOn>{0}에 붙은 잔향</CrimsonEchoOn>
+  <CrimsonEchoDisassembling>잔향이 물질을 분해하는 중</CrimsonEchoDisassembling>
+  <CrimsonEchoSizeLower>잔향 크기: {0}</CrimsonEchoSizeLower>
+  <CrimsonEchoAlertLabel>거주 구역의 잔향</CrimsonEchoAlertLabel>
+  <CrimsonEchoAlertDescription>거주 구역에 물질을 분해하는 진홍색 잔향이 남아 있습니다.</CrimsonEchoAlertDescription>
+</LanguageData>

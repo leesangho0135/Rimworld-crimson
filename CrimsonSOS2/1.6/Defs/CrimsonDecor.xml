@@ -48,7 +48,7 @@
   <ThingDef ParentName="Crimson_DeckLightBase">
     <defName>Crimson_DeckLight</defName>
     <drawStyleCategory>Conduits</drawStyleCategory>
-    <label>갑판 조명선</label>
+    <label>심홍 갑판 조명선</label>
     <description>모노리스 갑판과 에어록 바닥에 덧놓는 진홍색 조명 겸 전선입니다. 같은 조명선에 맞춰 직선·꺾임·분기가 이어지고 통행을 막지 않습니다. 맞닿은 전력망을 연결하며 칸마다 전력 10W를 사용합니다. 전력이 공급되면 항상 빛나고 공급이 끊기면 꺼집니다.</description>
     <rotatable>false</rotatable>
       <stuffCategories Inherit="False" />
@@ -64,7 +64,7 @@
   <ThingDef ParentName="Crimson_DeckLightBase">
     <defName>Crimson_DeckLightParallel</defName>
     <drawStyleCategory>Conduits</drawStyleCategory>
-    <label>갑판 조명선 · 평행형</label>
+    <label>심홍 평행 갑판 조명선</label>
     <description>모노리스 갑판과 에어록 바닥에 나란히 덧놓는 두 줄의 진홍색 조명 겸 전선입니다. 이웃한 평행형 조명선에 맞춰 직선·꺾임·삼거리·교차로가 자동으로 이어지며, 벽처럼 드래그해 연속 설치할 수 있습니다. 맞닿은 조명선과 전력망을 연결하며 칸마다 전력 20W를 사용합니다. 전력이 공급되면 항상 빛나고 공급이 끊기면 꺼집니다.</description>
     <rotatable>false</rotatable>
     <comps Inherit="False">

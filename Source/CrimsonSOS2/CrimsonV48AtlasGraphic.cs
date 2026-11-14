@@ -20,7 +20,7 @@ namespace CrimsonSOS2
         public override void Init(GraphicRequest request)
         {
             base.Init(request);
-            registration = CrimsonV48ArtRegistration.Find(path, drawSize);
+            registration = CrimsonFurnitureDirections.Remap(path, CrimsonV48ArtRegistration.Find(path, drawSize));
             Material original = mat;
             for (int direction = 0; direction < frames.Length; direction++)
             {
@@ -134,13 +134,13 @@ namespace CrimsonSOS2
 
         internal static void Register(ThingDef def)
         {
-            Material front = def.graphicData.Graphic.MatAt(Rot4.South, null);
+            Material front = def.graphicData.Graphic.MatAt(Rot4.North, null);
             Register(def, front);
         }
 
         internal static void Register(ThingDef def, Material front)
         {
-            Texture2D source = ContentFinder<Texture2D>.Get(def.graphicData.texPath);
+            Texture2D source = (Texture2D)front.mainTexture;
             Vector2 scale = front.mainTextureScale;
             Vector2 offset = front.mainTextureOffset;
             int width = Mathf.Max(1, Mathf.RoundToInt(source.width * scale.x));

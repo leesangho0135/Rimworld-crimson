@@ -44,31 +44,31 @@
     <uiOrder>25</uiOrder>
   </ThingDef>
   <ThingDef ParentName="Crimson_HullWindowBase">
-    <defName>Crimson_HullWindow1x1Panel</defName><label>모노리스 선체 관측창 1×1</label>
+    <defName>Crimson_HullWindow1x1Panel</defName><label>심홍 선체 관측창 (1×1)</label>
     <size>(1,1)</size><graphicData><drawSize>(1,1)</drawSize></graphicData>
     <statBases><MaxHitPoints>4500</MaxHitPoints><WorkToBuild>1700</WorkToBuild><Flammability>0</Flammability><Beauty>100</Beauty></statBases>
     <costList><Steel>7</Steel><Plasteel>5</Plasteel><Gold>5</Gold></costList>
   </ThingDef>
   <ThingDef ParentName="Crimson_HullWindowBase">
-    <defName>Crimson_HullWindow2x1Panel</defName><label>모노리스 선체 관측창 2×1</label>
+    <defName>Crimson_HullWindow2x1Panel</defName><label>심홍 선체 관측창 (2×1)</label>
     <size>(2,1)</size><graphicData><drawSize>(2,1)</drawSize></graphicData>
     <statBases><MaxHitPoints>9000</MaxHitPoints><WorkToBuild>3400</WorkToBuild><Flammability>0</Flammability><Beauty>200</Beauty></statBases>
     <costList><Steel>14</Steel><Plasteel>10</Plasteel><Gold>10</Gold></costList>
   </ThingDef>
   <ThingDef ParentName="Crimson_HullWindowBase">
-    <defName>Crimson_HullWindow3x1Panel</defName><label>모노리스 선체 관측창 3×1</label>
+    <defName>Crimson_HullWindow3x1Panel</defName><label>심홍 선체 관측창 (3×1)</label>
     <size>(3,1)</size><graphicData><drawSize>(3,1)</drawSize></graphicData>
     <statBases><MaxHitPoints>13500</MaxHitPoints><WorkToBuild>5100</WorkToBuild><Flammability>0</Flammability><Beauty>300</Beauty></statBases>
     <costList><Steel>21</Steel><Plasteel>15</Plasteel><Gold>15</Gold></costList>
   </ThingDef>
   <ThingDef ParentName="Crimson_HullWindowBase">
-    <defName>Crimson_HullWindow4x1Panel</defName><label>모노리스 선체 관측창 4×1</label>
+    <defName>Crimson_HullWindow4x1Panel</defName><label>심홍 선체 관측창 (4×1)</label>
     <size>(4,1)</size><graphicData><drawSize>(4,1)</drawSize></graphicData>
     <statBases><MaxHitPoints>18000</MaxHitPoints><WorkToBuild>6800</WorkToBuild><Flammability>0</Flammability><Beauty>400</Beauty></statBases>
     <costList><Steel>28</Steel><Plasteel>20</Plasteel><Gold>20</Gold></costList>
   </ThingDef>
   <ThingDef ParentName="Crimson_HullWindowBase">
-    <defName>Crimson_HullWindow5x1Panel</defName><label>모노리스 선체 관측창 5×1</label>
+    <defName>Crimson_HullWindow5x1Panel</defName><label>심홍 선체 관측창 (5×1)</label>
     <size>(5,1)</size><graphicData><drawSize>(5,1)</drawSize></graphicData>
     <statBases><MaxHitPoints>22500</MaxHitPoints><WorkToBuild>8500</WorkToBuild><Flammability>0</Flammability><Beauty>500</Beauty></statBases>
     <costList><Steel>35</Steel><Plasteel>25</Plasteel><Gold>25</Gold></costList>

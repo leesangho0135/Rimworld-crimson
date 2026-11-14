@@ -23,7 +23,7 @@ namespace CrimsonSOS2
         {
             ThingDef def=DefDatabase<ThingDef>.GetNamedSilentFail("Crimson_LoungeSofaThreeSeat");
             if(def==null)return;
-            def.uiIcon=(Texture2D)def.graphicData.Graphic.MatAt(Rot4.South).mainTexture;
+            def.uiIcon=(Texture2D)def.graphicData.Graphic.MatAt(Rot4.North).mainTexture;
             def.uiIconMaterial=null;
         }
     }

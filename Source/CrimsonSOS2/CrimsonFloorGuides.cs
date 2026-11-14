@@ -10,7 +10,6 @@ namespace CrimsonSOS2
         static CrimsonFloorGuideIcons()
         {
             Register("Crimson_FloorBeacon", "FloorBeaconStates", 146, 283, 593, 324);
-            Register("Crimson_ThresholdGuide", "ThresholdGuideStates", 44, 417, 797, 57);
         }
 
         private static void Register(string defName, string file, int x, int y, int width, int height)
@@ -52,11 +51,8 @@ namespace CrimsonSOS2
         {
             base.Init(request);
             Material original = mat;
-            bool threshold = request.path.EndsWith("ThresholdGuideStates");
-            mat = threshold ? Frame(original, 44f, 417f, 797f, 57f)
-                : Frame(original, 146f, 283f, 593f, 324f);
-            unpowered = threshold ? Frame(original, 932f, 417f, 797f, 57f)
-                : Frame(original, 1033f, 283f, 593f, 324f);
+            mat = Frame(original, 146f, 283f, 593f, 324f);
+            unpowered = Frame(original, 1033f, 283f, 593f, 324f);
             // An unlit metal fixture follows the room's normal illumination.
             if (original.shader == ShaderDatabase.TransparentPostLight)
                 unpowered.shader = ShaderDatabase.Cutout;
@@ -86,43 +82,30 @@ namespace CrimsonSOS2
 
     public class CrimsonFloorGuidePlaceWorker : PlaceWorker
     {
-        protected virtual bool RequiresDoor { get { return false; } }
 
         public override bool ForceAllowPlaceOver(BuildableDef other)
         {
             ThingDef target = other as ThingDef;
-            return target != null && (target.defName == "Crimson_Deck"
-                || (RequiresDoor && target.IsDoor));
+            return target != null && target.defName == "Crimson_Deck";
         }
 
         public override AcceptanceReport AllowsPlacing(BuildableDef checkingDef, IntVec3 loc,
             Rot4 rot, Map map, Thing thingToIgnore = null, Thing thing = null)
         {
             if (!loc.InBounds(map)) return false;
-            bool deck = false, door = false;
+            bool deck = false;
             foreach (Thing existing in map.thingGrid.ThingsListAtFast(loc))
             {
                 if (existing == thingToIgnore || existing == thing) continue;
                 ThingDef target = existing.def.entityDefToBuild as ThingDef ?? existing.def;
-                // A Monolith airlock supplies its own ship plating; a separate
-                // deck Thing is not required beneath this door. Its terrain is
-                // shared with other SOS2 parts, so terrain alone is not proof.
-                if (target.defName == "Crimson_Deck"
-                    || (RequiresDoor && target.IsDoor && target.defName == "Crimson_Airlock")) deck = true;
-                if (target.IsDoor) door = true;
-                if (target.defName == "Crimson_FloorBeacon" || target.defName == "Crimson_ThresholdGuide"
+                if (target.defName == "Crimson_Deck") deck = true;
+                if (target.defName == "Crimson_FloorBeacon"
                     || CrimsonDeckLight.IsLight(target)) return "SpaceAlreadyOccupied".Translate();
-                if (target.building != null && target.building.isEdifice
-                    && !(RequiresDoor && target.IsDoor)) return "Crimson_DeckLightBlocked".Translate();
+                if (target.building != null && target.building.isEdifice) return "Crimson_DeckLightBlocked".Translate();
             }
             if (!deck) return "Crimson_DeckLightNeedsDeck".Translate();
-            if (RequiresDoor && !door) return "Crimson_ThresholdGuideNeedsDoor".Translate();
             return true;
         }
     }
 
-    public sealed class CrimsonThresholdGuidePlaceWorker : CrimsonFloorGuidePlaceWorker
-    {
-        protected override bool RequiresDoor { get { return true; } }
-    }
 }

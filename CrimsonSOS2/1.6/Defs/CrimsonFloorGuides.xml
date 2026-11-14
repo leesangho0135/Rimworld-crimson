@@ -23,7 +23,7 @@
   </ThingDef>
   <ThingDef ParentName="Crimson_FloorGuideBase">
     <defName>Crimson_FloorBeacon</defName>
-    <label>바닥 유도 표식</label>
+    <label>심홍 바닥 유도 표식</label>
     <description>교차로나 방 입구의 모노리스 갑판 위에 덧놓는 작은 마름모 표식입니다. 전력 10W를 사용하며 전원이 공급되면 중앙의 짧은 진홍색 홈이 빛나고 가까운 바닥을 은은하게 밝힙니다. 통행을 막지 않습니다.</description>
     <graphicData><texPath>Crimson/Decor/Guides/FloorBeaconStates</texPath></graphicData>
       <stuffCategories Inherit="False" />
@@ -35,28 +35,5 @@
     <designationCategory>Furniture</designationCategory>
     <designatorDropdown>Crimson_Lighting</designatorDropdown>
     <uiOrder>1063</uiOrder>
-  </ThingDef>
-  <ThingDef ParentName="Crimson_FloorGuideBase">
-    <defName>Crimson_ThresholdGuide</defName>
-    <label>문턱 유도등</label>
-    <description>모노리스 갑판 위 문칸의 앞 가장자리에 덧놓는 얇은 진홍색 조명 레일입니다. 기존 문과 갑판을 유지하며 문이 열리고 닫혀도 통행을 막지 않습니다. 회전으로 문턱 방향을 맞춥니다. 전력 10W를 사용하며 전원이 공급되면 항상 빛나고 가까운 바닥을 은은하게 밝힙니다.</description>
-    <graphicData>
-      <texPath>Crimson/Decor/Guides/ThresholdGuideStates</texPath>
-      <drawSize>(0.98,0.10)</drawSize>
-      <drawOffsetNorth>(0,0,-0.56)</drawOffsetNorth>
-      <drawOffsetEast>(-0.56,0,0)</drawOffsetEast>
-      <drawOffsetSouth>(0,0,0.56)</drawOffsetSouth>
-      <drawOffsetWest>(0.56,0,0)</drawOffsetWest>
-    </graphicData>
-    <placeWorkers Inherit="False"><li>CrimsonSOS2.CrimsonThresholdGuidePlaceWorker</li></placeWorkers>
-      <stuffCategories Inherit="False" />
-      <costStuffCount>0</costStuffCount>
-      <defaultStuff IsNull="True" />
-      <costList Inherit="False"><Steel>2</Steel></costList>
-      <statBases><Beauty>20</Beauty><MarketValue>200.1944</MarketValue><MaxHitPoints>560</MaxHitPoints><Flammability>0</Flammability></statBases>
-      <comps><li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>80</originalMaxHitPoints></li></comps>
-    <designationCategory>Furniture</designationCategory>
-    <designatorDropdown>Crimson_Lighting</designatorDropdown>
-    <uiOrder>1064</uiOrder>
   </ThingDef>
 </Defs>

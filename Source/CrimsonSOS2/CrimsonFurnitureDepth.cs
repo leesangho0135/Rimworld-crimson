@@ -127,18 +127,20 @@ namespace CrimsonSOS2
 
         private static Material SolidMaterial(Material material)
         {
-            if (material.shader != ShaderDatabase.TransparentPostLight) return material;
+            if (material.shader != ShaderDatabase.TransparentPostLight
+                && material.shader != ShaderDatabase.Cutout && material.shader != ShaderDatabase.CutoutComplex) return material;
             Material solid;
             if (!SolidMaterials.TryGetValue(material, out solid))
             {
                 solid = new Material(material);
-                solid.shader = ShaderDatabase.Cutout;
+                if (material.shader == ShaderDatabase.TransparentPostLight) solid.shader = ShaderDatabase.Cutout;
+                solid.mainTexture = CrimsonFurniturePalette.Metal(material.mainTexture);
                 SolidMaterials.Add(material, solid);
             }
             return solid;
         }
 
-        private static void PrintQuad(LayerSubMesh sub, Matrix4x4 matrix, Vector2 size)
+        internal static void PrintQuad(LayerSubMesh sub, Matrix4x4 matrix, Vector2 size)
         {
             int start = sub.verts.Count;
             float left = -size.x / 2f, right = size.x / 2f;

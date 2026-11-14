@@ -87,7 +87,7 @@ namespace CrimsonSOS2
         public override Material MatNorth { get { return housing == null ? base.MatSingle : MaterialFor(Rot4.North, true, 0, null); } }
         public override Material MatSouth { get { return MatSingle; } }
         public override Material MatEast { get { return housing == null ? base.MatSingle : MaterialFor(Rot4.East, true, 0, null); } }
-        public override Material MatWest { get { return MatEast; } }
+        public override Material MatWest { get { return housing == null ? base.MatSingle : MaterialFor(Rot4.West, true, 0, null); } }
         public override Material MatAt(Rot4 rotation, Thing thing = null)
         {
             if (housing == null) return base.MatAt(rotation, thing);
@@ -116,13 +116,12 @@ namespace CrimsonSOS2
         }
         private Material MaterialFor(Rot4 direction, bool powered, int report, Thing thing)
         {
-            int facing = direction.IsHorizontal ? 1 : 0;
+            int facing = direction.AsInt;
             int state = powered ? report + 1 : 0;
             int key = facing * 12 + state;
             Material material;
             if (frames.TryGetValue(key, out material)) return material;
-            Rot4 canonical = facing == 0 ? Rot4.North : Rot4.East;
-            Material original = housing.MatAt(canonical, thing);
+            Material original = housing.MatAt(direction, thing);
             Texture source = original.mainTexture;
             int w = source.width, h = source.height;
             int baseKey = facing * 2 + (powered ? 1 : 0);
@@ -133,7 +132,7 @@ namespace CrimsonSOS2
                 housingPixels.Add(baseKey, originalPixels);
             }
             Color32[] pixels = (Color32[])originalPixels.Clone();
-            Vector2[] polygon = ScreenPolygon(facing != 0);
+            Vector2[] polygon = ScreenPolygon(direction.IsHorizontal);
             float left = float.MaxValue, right = float.MinValue, top = float.MaxValue, bottom = float.MinValue;
             foreach (Vector2 point in polygon) { left = Mathf.Min(left, point.x); right = Mathf.Max(right, point.x); top = Mathf.Min(top, point.y); bottom = Mathf.Max(bottom, point.y); }
             ReportPixels image = powered ? Image(report) : null;
@@ -155,6 +154,9 @@ namespace CrimsonSOS2
                         float cy = y + .5f - (top + bottom) * .5f;
                         float u = (portrait ? cy : cx) / displayW + .5f;
                         float v = (portrait ? -cx : cy) / displayH + .5f;
+                        // Opposite directions use their own report pixels and
+                        // cache entries, while the upright table body stays upright.
+                        if (facing >= 2) { u = 1f - u; v = 1f - v; }
                         if (u >= 0f && u < 1f && v >= 0f && v < 1f)
                             result = SampleReport(image, u, v, sampleRadius);
                     }

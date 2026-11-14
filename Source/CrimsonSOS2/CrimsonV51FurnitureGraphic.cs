@@ -30,7 +30,7 @@ namespace CrimsonSOS2
 
         public override void Init(GraphicRequest request)
         {
-            base.Init(request);art=CrimsonV51ArtRegistration.Find(path);
+            base.Init(request);art=CrimsonFurnitureDirections.Remap(path, CrimsonV51ArtRegistration.Find(path));
             frames=new Material[art.windows.Length];
             for(int index=0;index<frames.Length;index++)
             {
@@ -66,8 +66,7 @@ namespace CrimsonSOS2
         }
         public override Material MatAt(Rot4 rotation, Thing thing=null)
         {
-            CompPowerTrader power=thing==null?null:thing.TryGetComp<CompPowerTrader>();
-            int state=art.powered&&(power==null||power.PowerOn)?4:0;
+            int state=art.powered&&CrimsonVisualState.Powered(thing)?4:0;
             return frames[rotation.AsInt+state];
         }
         public override Material MatSingleFor(Thing thing)
@@ -113,17 +112,17 @@ namespace CrimsonSOS2
                 ThingDef definition = DefDatabase<ThingDef>.GetNamed(name);
                 if (name == "Crimson_MealDisplayRefrigerator" || name == "Crimson_TacticalTableLarge")
                 {
-                    definition.uiIcon = (Texture2D)definition.graphicData.Graphic.MatSingle.mainTexture;
+                    definition.uiIcon = (Texture2D)definition.graphicData.Graphic.MatNorth.mainTexture;
                     definition.uiIconMaterial = null;
                 }
                 else CrimsonV48AtlasIcons.Register(definition);
             }
             ThingDef compact=DefDatabase<ThingDef>.GetNamed("Crimson_TacticalTableCompact");
             // Its native frame also serves blueprint shaders that ignore atlas UVs.
-            compact.uiIcon=(Texture2D)compact.graphicData.Graphic.MatSouth.mainTexture;
+            compact.uiIcon=(Texture2D)compact.graphicData.Graphic.MatNorth.mainTexture;
             compact.uiIconMaterial=null;
             ThingDef standard=DefDatabase<ThingDef>.GetNamed("Crimson_TacticalTable");
-            standard.uiIcon=(Texture2D)standard.graphicData.Graphic.MatSouth.mainTexture;
+            standard.uiIcon=(Texture2D)standard.graphicData.Graphic.MatNorth.mainTexture;
             standard.uiIconMaterial=null;
             ThingDef door=DefDatabase<ThingDef>.GetNamedSilentFail("Crimson_ToiletStallDoor");
             if(door==null)return;

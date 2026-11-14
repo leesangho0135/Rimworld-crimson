@@ -5,13 +5,7 @@
     <label>심홍 조리대</label>
     <description>불꽃 없이 밀폐형 유도 가열판으로 식사를 준비하는 미래형 조리대입니다. 작업대 위에 선반을 얹어 식재료를 가까이 보관할 수 있습니다.</description>
     <thingClass>Building_WorkTable_HeatPush</thingClass>
-    <graphicData>
-      <texPath>Crimson/Decor/Workshops/InductionCookerAtlas</texPath>
-      <graphicClass>CrimsonSOS2.CrimsonV48AtlasGraphic</graphicClass>
-      <shaderType>Cutout</shaderType>
-      <drawSize>(3.3,1.8)</drawSize>
-      <drawRotated>false</drawRotated>
-    </graphicData>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/InductionCooker</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(3,1.15)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
     <castEdgeShadows>true</castEdgeShadows>
     <staticSunShadowHeight>0.20</staticSunShadowHeight>
     <constructEffect>ConstructMetal</constructEffect>
@@ -85,7 +79,7 @@
       <li>Electricity</li>
     </researchPrerequisites>
     <drawerType>RealtimeOnly</drawerType>
-    <defaultPlacingRot>South</defaultPlacingRot>
+    <defaultPlacingRot>North</defaultPlacingRot>
       <stuffCategories Inherit="False" />
       <costStuffCount>0</costStuffCount>
       <defaultStuff IsNull="True" />
@@ -96,13 +90,7 @@
     <label>심홍 기계 작업대</label>
     <description>일상적인 기계 가공과 장비 분해에 쓰는 간결한 함선 작업대입니다. 작업대 위에 선반을 얹어 재료를 가까이 보관할 수 있습니다.</description>
     <thingClass>Building_WorkTable</thingClass>
-    <graphicData>
-      <texPath>Crimson/Decor/Workshops/MachiningBenchAtlas</texPath>
-      <graphicClass>CrimsonSOS2.CrimsonV48AtlasGraphic</graphicClass>
-      <shaderType>Cutout</shaderType>
-      <drawSize>(3.3,1.8)</drawSize>
-      <drawRotated>false</drawRotated>
-    </graphicData>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/MachiningBench</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(3,1.15)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
     <castEdgeShadows>true</castEdgeShadows>
     <staticSunShadowHeight>0.20</staticSunShadowHeight>
     <costList Inherit="False"><Steel>80</Steel><ComponentIndustrial>2</ComponentIndustrial></costList>
@@ -162,7 +150,7 @@
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <drawerType>RealtimeOnly</drawerType>
-    <defaultPlacingRot>South</defaultPlacingRot>
+    <defaultPlacingRot>North</defaultPlacingRot>
       <stuffCategories Inherit="False" />
       <costStuffCount>0</costStuffCount>
       <defaultStuff IsNull="True" />

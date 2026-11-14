@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="BuildingBase">
-    <defName>Crimson_CeilingLight</defName><label>심홍 숨김 천장등</label>
+    <defName>Crimson_CeilingLight</defName><label>심홍 천장등</label>
     <description>천장에 숨겨 설치하는 1×1 실내 조명입니다. 본체는 바닥에 보이지 않고 가구 위에도 설치할 수 있습니다. 100W를 사용하여 반경 12칸을 심홍색 빛으로 넓게 밝히며, 중심의 반경 1.2칸에는 작은 심홍색 강조광이 맺힙니다. 천장이 사라지거나 전원이 끊기면 꺼집니다.</description>
     <thingClass>CrimsonSOS2.CrimsonCeilingLight</thingClass>
     <drawerType>RealtimeOnly</drawerType><tickerType>Rare</tickerType>

@@ -4,20 +4,19 @@ using Verse;
 
 namespace CrimsonSOS2
 {
-    // Building rotation belongs to the interaction cell. Artwork remains in a
-    // fixed overhead orientation for live drawing, map printing and ghosts.
+    // This is an overhead drawing: its controls turn with the interaction cell.
     public sealed class CrimsonOrganicReconstructorGraphic : Graphic_SingleOnOff
     {
-        public override bool ShouldDrawRotated { get { return false; } }
+        public override bool ShouldDrawRotated { get { return true; } }
 
         public override void DrawWorker(Vector3 loc, Rot4 rot, ThingDef def, Thing thing, float extraRotation)
         {
-            CrimsonFurnitureDepth.Draw(this, loc, Rot4.North, def, thing, 0f);
+            CrimsonFurnitureDepth.Draw(this, loc, rot, def, thing, extraRotation);
         }
 
         public override void Print(SectionLayer layer, Thing thing, float extraRotation)
         {
-            CrimsonFurnitureDepth.Print(layer, thing, this, CrimsonFurnitureDepth.Size(MeshAt(Rot4.North)));
+            CrimsonFurnitureDepth.Print(layer, thing, this, CrimsonFurnitureDepth.Size(MeshAt(thing.Rotation)));
         }
 
         public override Graphic GetColoredVersion(Shader shader, Color color, Color colorTwo)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="Crimson_FunctionalChairBase">
-    <defName>Crimson_LoungeSofaTwoSeat</defName><label>심홍 라운지 소파 · 2인용</label>
+    <defName>Crimson_LoungeSofaTwoSeat</defName><label>심홍 2인용 라운지 소파</label>
     <description>일반 승무원이 함께 앉는 2×1 라운지 소파입니다. 검은 금속 프레임과 두 개의 완충 좌석을 갖추었습니다. 휴게·TV 시청·식사에 사용할 수 있으며 전원 공급 시 편안함이 50% 향상됩니다. 소비 전력은 100W이고 정전 중에도 앉을 수 있습니다.</description>
     <size>(2,1)</size><defaultPlacingRot>South</defaultPlacingRot><building><multiSittable>true</multiSittable></building>
     <graphicData><texPath>Crimson/Decor/Research/CrewSofaTwoAtlas</texPath><graphicClass>CrimsonSOS2.CrimsonV51FurnitureGraphic</graphicClass><drawSize>(2,1.2)</drawSize></graphicData>

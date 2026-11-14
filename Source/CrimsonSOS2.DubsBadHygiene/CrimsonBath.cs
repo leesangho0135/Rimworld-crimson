@@ -13,6 +13,8 @@ namespace CrimsonSOS2
         private static readonly Material[] waterMaterials = new Material[16];
         private static Mesh foamMesh, foamHighlights;
         private static Material foamMaterial, foamHighlightMaterial;
+        // The new north footprint is horizontal 2x1, a quarter turn from DBH.
+        internal Quaternion BathRotation { get { return Rotation.AsQuat * Quaternion.Euler(0f, 90f, 0f); } }
 
         private bool HasBathingOccupant
         {
@@ -33,10 +35,10 @@ namespace CrimsonSOS2
                 Vector3 offset;
                 switch (Rotation.AsInt)
                 {
-                    case 0: offset = new Vector3(-0.05f, 0f, 0.14f); break;
-                    case 2: offset = new Vector3(0.06f, 0f, 0.14f); break;
-                    case 3: offset = new Vector3(0f, 0f, 0.07f); break;
-                    default: offset = new Vector3(0f, 0f, 0.14f); break;
+                    case 0: offset = new Vector3(0f, 0f, 0.07f); break;
+                    case 1: offset = new Vector3(-0.05f, 0f, 0.14f); break;
+                    case 2: offset = new Vector3(0f, 0f, 0.14f); break;
+                    default: offset = new Vector3(0.06f, 0f, 0.14f); break;
                 }
                 return DrawPos + offset;
             }
@@ -46,8 +48,8 @@ namespace CrimsonSOS2
         {
             // DBH's Rotation+180 body angle puts the head at local -Z. Keep
             // enough room inside each view's end wall for the exposed head.
-            float headward = Rotation.AsInt == 0 || Rotation.AsInt == 2 ? 0.06f : 0.12f;
-            return BowlCenter + Rotation.AsQuat * new Vector3(0f, 0f, -headward * PawnScale(pawn));
+            float headward = Rotation.IsHorizontal ? 0.06f : 0.12f;
+            return BowlCenter + BathRotation * new Vector3(0f, 0f, -headward * PawnScale(pawn));
         }
 
         private static float PawnScale(Pawn pawn)
@@ -94,9 +96,9 @@ namespace CrimsonSOS2
                 Vector3 surface = BowlCenter;
                 surface.y += WaterOffset;
                 // The water tint stays below the foam, away from the head.
-                if (bathing) surface += Rotation.AsQuat * new Vector3(0f, 0f, 0.35f);
+                if (bathing) surface += BathRotation * new Vector3(0f, 0f, 0.35f);
                 Graphics.DrawMesh(MeshPool.GridPlane(new Vector2(0.38f, bathing ? 0.62f : 1.05f)),
-                    surface, Rotation.AsQuat, waterMaterials[step], 0);
+                    surface, BathRotation, waterMaterials[step], 0);
             }
             if (occupant != null) DubUtils.RenderPawnWithY(occupant, DrawPos, 0f);
             if (HasBathingOccupant) DrawBathFoam();
@@ -138,9 +140,9 @@ namespace CrimsonSOS2
             position.y = Mathf.Max(occupant.DrawPos.y + 0.03f, DrawPos.y + WaterOffset + 0.02f);
             float bodyScale = PawnScale(occupant);
             Vector3 scale = new Vector3(bodyScale * FoamWidthScale(occupant), 1f, bodyScale);
-            Graphics.DrawMesh(foamMesh, Matrix4x4.TRS(position, Rotation.AsQuat, scale), foamMaterial, 0);
+            Graphics.DrawMesh(foamMesh, Matrix4x4.TRS(position, BathRotation, scale), foamMaterial, 0);
             position.y += 0.002f;
-            Graphics.DrawMesh(foamHighlights, Matrix4x4.TRS(position, Rotation.AsQuat, scale), foamHighlightMaterial, 0);
+            Graphics.DrawMesh(foamHighlights, Matrix4x4.TRS(position, BathRotation, scale), foamHighlightMaterial, 0);
         }
 
         private static Mesh BubbleMesh(Vector3[] circles, string name)

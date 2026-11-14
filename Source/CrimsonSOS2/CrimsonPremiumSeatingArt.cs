@@ -26,7 +26,7 @@ namespace CrimsonSOS2
             foreach (string name in new[] { "Crimson_PremiumLoungeChair", "Crimson_PremiumDiningChair", "Crimson_PremiumSofa" })
             {
                 ThingDef def = DefDatabase<ThingDef>.GetNamed(name);
-                def.uiIcon = (Texture2D)def.graphicData.Graphic.MatAt(Rot4.South, null).mainTexture;
+                def.uiIcon = (Texture2D)def.graphicData.Graphic.MatAt(Rot4.North, null).mainTexture;
                 def.uiIconMaterial = null;
             }
         }

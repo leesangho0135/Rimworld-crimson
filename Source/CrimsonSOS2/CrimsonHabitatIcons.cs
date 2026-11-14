@@ -24,7 +24,7 @@ namespace CrimsonSOS2
             // A null Thing selects the registered ON material. Keep its UVs
             // as the single source of the icon crop, including half-pixel edges.
             Material active = def.graphicData.Graphic.MatAt(Rot4.North, null);
-            Texture2D source = ContentFinder<Texture2D>.Get(def.graphicData.texPath);
+            Texture2D source = (Texture2D)active.mainTexture;
             Vector2 scale = active.mainTextureScale;
             Vector2 offset = active.mainTextureOffset;
             int width = Mathf.Max(1, Mathf.RoundToInt(source.width * scale.x));

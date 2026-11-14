@@ -8,7 +8,7 @@
     <size>(3,2)</size><rotatable>true</rotatable><defaultPlacingRot>North</defaultPlacingRot>
     <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
     <minifiedDef IsNull="True" /><thingCategories Inherit="False" />
-    <graphicData><texPath>Crimson/Decor/Research/ResearchBenchAtlas</texPath><graphicClass>CrimsonSOS2.CrimsonV51FurnitureGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(3,2.2)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /><damageData IsNull="True" /></graphicData>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/ResearchBench</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(3,2)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
     <altitudeLayer>Building</altitudeLayer><passability>PassThroughOnly</passability><pathCost>50</pathCost><fillPercent>0.5</fillPercent><castEdgeShadows>false</castEdgeShadows>
     <statBases><MaxHitPoints>1750</MaxHitPoints><WorkToBuild>5000</WorkToBuild><Mass>80</Mass><Beauty>5</Beauty><Flammability>0</Flammability><ResearchSpeedFactor>1</ResearchSpeedFactor></statBases>
     <costList Inherit="False"><Steel>250</Steel><ComponentIndustrial>10</ComponentIndustrial></costList>
@@ -33,9 +33,7 @@
     <drawerType>RealtimeOnly</drawerType><tickerType>Normal</tickerType><size>(1,1)</size><rotatable>true</rotatable><defaultPlacingRot>North</defaultPlacingRot>
     <altitudeLayer>BuildingOnTop</altitudeLayer><passability>Standable</passability><pathCost>0</pathCost><fillPercent>0</fillPercent><blockLight>false</blockLight><blockWind>false</blockWind><coversFloor>false</coversFloor><clearBuildingArea>false</clearBuildingArea><canOverlapZones>true</canOverlapZones>
     <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
-    <graphicData><texPath>Crimson/Decor/Research/WallUplinkAtlas</texPath><graphicClass>CrimsonSOS2.CrimsonV51FurnitureGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(0.98,0.7)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /><addTopAltitudeBias>false</addTopAltitudeBias>
-      <drawOffsetNorth>(0,0,0.55)</drawOffsetNorth><drawOffsetEast>(0.55,0,0)</drawOffsetEast><drawOffsetSouth>(0,0,-0.55)</drawOffsetSouth><drawOffsetWest>(-0.55,0,0)</drawOffsetWest>
-    </graphicData>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/ResearchUplink</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(0.98,0.7)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
     <building><isEdifice>false</isEdifice><isAttachment>true</isAttachment><paintable>false</paintable></building>
     <statBases><MaxHitPoints>8400</MaxHitPoints><WorkToBuild>10000</WorkToBuild><Mass>60</Mass><Beauty>5</Beauty><Flammability>0</Flammability></statBases>
     <costList><Uranium>20</Uranium><Plasteel>125</Plasteel><Gold>50</Gold><ComponentSpacer>4</ComponentSpacer></costList>
@@ -54,10 +52,10 @@
     <defName>Crimson_ToolCabinet</defName><label>심홍 공구함</label>
     <description>2×1 검은 금속 공구함입니다. 기본 공구함과 같은 작업대에 연결되며 작업 속도 +6%p를 제공합니다. 작업대당 최대 두 개가 효과를 제공합니다. 전원은 필요하지 않습니다.</description>
     <designationCategory>Misc</designationCategory><designationHotKey IsNull="True" />
-    <drawerType>RealtimeOnly</drawerType><size>(2,1)</size><rotatable>true</rotatable><defaultPlacingRot>South</defaultPlacingRot>
+    <drawerType>RealtimeOnly</drawerType><size>(2,1)</size><rotatable>true</rotatable><defaultPlacingRot>North</defaultPlacingRot>
     <altitudeLayer>Building</altitudeLayer><passability>PassThroughOnly</passability><pathCost>42</pathCost><fillPercent>0.5</fillPercent><canOverlapZones>false</canOverlapZones>
     <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
-    <graphicData><texPath>Crimson/Decor/Research/ToolCabinetAtlas</texPath><graphicClass>CrimsonSOS2.CrimsonV51FurnitureGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(2,1.25)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/ToolCabinet</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(2,1.25)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
     <statBases><MaxHitPoints>700</MaxHitPoints><WorkToBuild>1800</WorkToBuild><Mass>20</Mass><Beauty>5</Beauty><Flammability>0</Flammability></statBases>
     <costList><Steel>200</Steel></costList>
     <building><paintable>false</paintable></building>

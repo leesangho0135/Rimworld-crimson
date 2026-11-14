@@ -12,6 +12,8 @@ namespace CrimsonSOS2
     // must still be passed through to their own cached graphic instance.
     public sealed class CrimsonRoyaltyMultiGraphic : Graphic_Multi
     {
+        public override Material MatAt(Rot4 rot, Thing thing = null)
+        { return base.MatAt(new Rot4(CrimsonFurnitureDirections.Source(path, rot.AsInt)), thing); }
         public override void DrawWorker(Vector3 loc, Rot4 rot, ThingDef def, Thing thing, float extraRotation)
         { CrimsonFurnitureDepth.Draw(this, loc, rot, def, thing, extraRotation); }
         public override void Print(SectionLayer layer, Thing thing, float extraRotation)

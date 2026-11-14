@@ -59,7 +59,7 @@ namespace CrimsonSOS2
             CompPowerTrader power = thing == null ? null : thing.TryGetComp<CompPowerTrader>();
             // Icons and construction graphics have no live power component.
             // Their already-requested shader/color stays on the ON material.
-            return power != null && !power.PowerOn ? inactive : mat;
+            return CrimsonVisualState.Mirrored(power != null && !power.PowerOn ? inactive : mat, thing);
         }
 
         public override Graphic GetColoredVersion(Shader shader, Color color,
@@ -88,28 +88,9 @@ namespace CrimsonSOS2
                     uv = AtlasWindow(active ? 968.5f : 81f, 57f, 725f, 798f,
                         1774f, 887f);
                     break;
-                case "EndTableStates":
-                    uv = AtlasWindow(active ? 963f : 76f, 47f, 735f, 801f,
-                        1774f, 887f);
-                    break;
-                case "WardrobeStates":
-                    uv = AtlasWindow(active ? 915f : 28f, 256f, 831f, 405f,
-                        1774f, 887f);
-                    break;
                 case "MedicalBedStates":
                     uv = AtlasWindow(active ? 679f : 48f, 36f, 536f, 1174f,
                         1263f, 1246f);
-                    break;
-                case "VitalsMonitorStates":
-                    uv = AtlasWindow(active ? 1108.5f : 22f, 86f, 1042f, 563f,
-                        2172f, 724f);
-                    break;
-                case "MedicineCabinet3x1States":
-                    uv = active ? new Rect(0.507891770f,0.324689966f,0.484780158f,0.358511838f) : new Rect(0.007891770f,0.324689966f,0.484216460f,0.358511838f);
-                    break;
-                case "MedicineCabinetStates":
-                    uv = AtlasWindow(active ? 925f : 38f, 234f, 811f, 437f,
-                        1774f, 887f);
                     break;
                 case "IVStandStates":
                     uv = AtlasWindow(active ? 783f : 206f, 54f, 349f, 1104f,

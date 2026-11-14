@@ -62,37 +62,37 @@
 
   <ThingDef ParentName="Crimson_StorageFurnitureBase">
     <defName>Crimson_StorageShelf</defName>
-    <label>심홍 표준 선반</label>
-    <description>자재와 생활용품을 정리하는 함선용 선반입니다. 두 칸에 칸마다 3묶음씩, 총 6묶음을 보관합니다. 묶음마다 담을 수 있는 수량은 물품과 적용 중인 스택 설정을 따릅니다. 보관 물품의 열화를 막고 내용물의 미관 영향을 가립니다. 50W는 진홍색 표시등과 약한 주변 조명에 사용하며, 정전 중에도 수납 기능은 유지됩니다.</description>
+    <label>심홍 중형 선반</label>
+    <description>바닥 2×1칸을 차지하는 2단 선반입니다. 2열×2단의 4개 수납부에 실제 보관 물품을 한 묶음씩 표시합니다. 물품을 꺼낸 칸은 비워지고 남은 물품의 표시 칸은 유지됩니다. 묶음별 수량은 물품과 적용 중인 스택 설정을 따릅니다. 남북에서는 양면 수납부가 보이고 동서에서는 닫힌 측판이 내용물을 가립니다. 정전 중에도 수납과 운반 기능은 유지됩니다.</description>
     <size>(2,1)</size>
-    <graphicData><texPath>Crimson/Decor/Storage/StandardShelfStates</texPath><drawSize>(2,1)</drawSize></graphicData>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/ShelfMedium</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(2,1.8)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
     <statBases><MaxHitPoints>1260</MaxHitPoints><WorkToBuild>1800</WorkToBuild><Mass>32</Mass><Beauty>60</Beauty><MarketValue>7205.832</MarketValue><Flammability>0</Flammability></statBases>
     <costList Inherit="False"><Steel>70</Steel><ComponentIndustrial>2</ComponentIndustrial></costList>
-    <comps><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>50</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>180</originalMaxHitPoints></li></comps>
+    <comps><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>50</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>180</originalMaxHitPoints></li><li Class="CrimsonSOS2.CompProperties_CrimsonLargeShelfDisplay"><columns>2</columns><rows>2</rows></li></comps>
     <uiOrder>1081</uiOrder>
       <stuffCategories Inherit="False" />
       <costStuffCount>0</costStuffCount>
       <defaultStuff IsNull="True" />
     <designationCategory>Furniture</designationCategory>
     <designatorDropdown>Crimson_StorageFurniture</designatorDropdown>
-  </ThingDef>
+  <building><maxItemsInCell>2</maxItemsInCell></building><defaultPlacingRot>North</defaultPlacingRot></ThingDef>
 
   <ThingDef ParentName="Crimson_StorageFurnitureBase">
     <defName>Crimson_StorageShelfLarge</defName>
     <label>심홍 대형 선반</label>
-    <description>바닥 세 칸을 차지하는 3단 함선용 선반입니다. 총 9묶음을 보관하며 묶음별 수량은 물품과 적용 중인 스택 설정을 따릅니다. 남·북 방향에서는 가로 세 칸씩 세 단, 총 아홉 수납부에 실제 저장한 물품을 한 묶음씩 표시합니다. 표시 물품은 각 칸에 맞게 축소하며 물품을 꺼낸 칸은 비워집니다. 동·서 방향에서는 내용물이 보이지 않습니다. 필터와 보관 우선순위로 자재를 분류할 수 있습니다. 보관 물품의 열화를 막고 내용물의 미관 영향을 가립니다. 표시등과 약한 주변 조명에 80W를 사용하며, 정전 중에도 수납 기능은 유지됩니다.</description>
+    <description>바닥 3×1칸을 차지하는 3단 선반입니다. 3열×3단의 9개 수납부에 실제 보관 물품을 한 묶음씩 표시합니다. 물품을 꺼낸 칸은 비워지고 남은 물품의 표시 칸은 유지됩니다. 묶음별 수량은 물품과 적용 중인 스택 설정을 따릅니다. 남북에서는 양면 수납부가 보이고 동서에서는 닫힌 측판이 내용물을 가립니다. 정전 중에도 수납과 운반 기능은 유지됩니다.</description>
     <size>(3,1)</size>
-    <graphicData><texPath>Crimson/Decor/Storage/LargeShelfNineV178</texPath><graphicClass>CrimsonSOS2.CrimsonLargeShelfGraphic</graphicClass><drawSize>(3,3)</drawSize></graphicData>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/ShelfLarge</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(3,3)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
     <statBases><MaxHitPoints>1680</MaxHitPoints><WorkToBuild>2400</WorkToBuild><Mass>46</Mass><Beauty>80</Beauty><MarketValue>11307.7764</MarketValue><Flammability>0</Flammability></statBases>
     <costList Inherit="False"><Steel>100</Steel><Plasteel>10</Plasteel><ComponentIndustrial>3</ComponentIndustrial></costList>
-    <comps><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>80</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>240</originalMaxHitPoints></li><li Class="CrimsonSOS2.CompProperties_CrimsonLargeShelfDisplay" /></comps>
+    <comps><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>80</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>240</originalMaxHitPoints></li><li Class="CrimsonSOS2.CompProperties_CrimsonLargeShelfDisplay"><columns>3</columns><rows>3</rows></li></comps>
     <uiOrder>1082</uiOrder>
       <stuffCategories Inherit="False" />
       <costStuffCount>0</costStuffCount>
       <defaultStuff IsNull="True" />
     <designationCategory>Furniture</designationCategory>
     <designatorDropdown>Crimson_StorageFurniture</designatorDropdown>
-  </ThingDef>
+  <building><maxItemsInCell>3</maxItemsInCell></building><defaultPlacingRot>North</defaultPlacingRot></ThingDef>
 
   <ThingDef ParentName="Crimson_StorageFurnitureBase">
     <defName>Crimson_StorageCargoContainer</defName>
@@ -113,12 +113,12 @@
 
   <ThingDef ParentName="Crimson_StorageFurnitureBase">
     <defName>Crimson_OpenStorageCabinetSmall</defName>
-    <label>심홍 개방형 소형 수납장</label>
-    <description>보관 물품을 바로 확인할 수 있는 개방형 함선 수납장입니다. 한 칸에 3묶음을 보관하며, 묶음마다 담을 수 있는 수량은 물품과 적용 중인 스택 설정을 따릅니다. 보관 물품의 열화를 막고 내용물의 미관 영향을 가립니다. 30W는 진홍색 표시등과 약한 주변 조명에 사용하며, 정전 중에도 수납·운반 기능은 유지됩니다.</description>
+    <label>심홍 소형 선반</label>
+    <description>바닥 1×1칸을 차지하는 2단 선반입니다. 1열×2단의 2개 수납부에 실제 보관 물품을 한 묶음씩 표시합니다. 물품을 꺼낸 칸은 비워지고 남은 물품의 표시 칸은 유지됩니다. 묶음별 수량은 물품과 적용 중인 스택 설정을 따릅니다. 남북에서는 양면 수납부가 보이고 동서에서는 닫힌 측판이 내용물을 가립니다. 정전 중에도 수납과 운반 기능은 유지됩니다.</description>
     <size>(1,1)</size>
-    <graphicData><texPath>Crimson/Decor/Storage/OpenCabinetStates</texPath><drawSize>(1,1)</drawSize></graphicData>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/ShelfSmall</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(1,1.8)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
     <costList Inherit="False"><Steel>35</Steel><ComponentIndustrial>1</ComponentIndustrial></costList>
-    <comps><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>30</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>120</originalMaxHitPoints></li></comps>
+    <comps><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>30</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>120</originalMaxHitPoints></li><li Class="CrimsonSOS2.CompProperties_CrimsonLargeShelfDisplay"><columns>1</columns><rows>2</rows></li></comps>
     <uiOrder>1084</uiOrder>
       <stuffCategories Inherit="False" />
       <costStuffCount>0</costStuffCount>
@@ -126,5 +126,5 @@
       <statBases><Beauty>40</Beauty><MarketValue>3603.24</MarketValue><MaxHitPoints>840</MaxHitPoints><Flammability>0</Flammability></statBases>
     <designationCategory>Furniture</designationCategory>
     <designatorDropdown>Crimson_StorageFurniture</designatorDropdown>
-  </ThingDef>
+  <building><maxItemsInCell>2</maxItemsInCell></building><defaultPlacingRot>North</defaultPlacingRot></ThingDef>
 </Defs>

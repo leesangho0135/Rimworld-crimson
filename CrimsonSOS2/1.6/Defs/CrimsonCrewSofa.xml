@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="Crimson_FunctionalChairBase">
-    <defName>Crimson_LoungeSofaThreeSeat</defName><label>심홍 라운지 소파 · 3인용</label>
+    <defName>Crimson_LoungeSofaThreeSeat</defName><label>심홍 3인용 라운지 소파</label>
     <description>두 칸짜리 승무원용 소파의 검은 금속 프레임과 완충재를 이어 확장한 3인용 라운지 소파입니다. 세 개의 좌석을 휴게·TV 시청·식사에 사용할 수 있습니다. 설치 크기는 3×1이며 회전하면 1×3입니다. 전원이 공급되면 심홍 표시등과 편안함 보조 장치가 작동하며 편안함이 50% 향상됩니다. 소비 전력은 150W이고 정전 중에도 앉을 수 있습니다.</description>
     <size>(3,1)</size><defaultPlacingRot>South</defaultPlacingRot>
     <building><multiSittable>true</multiSittable></building>

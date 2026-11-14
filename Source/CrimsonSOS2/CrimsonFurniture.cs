@@ -81,17 +81,11 @@ namespace CrimsonSOS2
                 case "WallDisplay":
                     uv = new Rect(66f / 2172f, 124f / 724f, 2063f / 2172f, 468f / 724f);
                     break;
-                case "ConsoleTerminal":
-                    uv = new Rect(157f / 1774f, 74f / 887f, 1460f / 1774f, 707f / 887f);
-                    break;
                 case "ServerPort":
                     uv = original.mainTexture != null
                         && original.mainTexture.name.EndsWith("_off")
                         ? new Rect(163f / 1008f, 67f / 1561f, 682f / 1008f, 1413f / 1561f)
                         : new Rect(165f / 992f, 68f / 1586f, 662f / 992f, 1432f / 1586f);
-                    break;
-                case "TacticalTable":
-                    uv = new Rect(52f / 1536f, 92f / 1024f, 1432f / 1536f, 817f / 1024f);
                     break;
                 default:
                     return original;

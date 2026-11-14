@@ -31,7 +31,7 @@
     <researchPrerequisites><li>CarpetMaking</li></researchPrerequisites>
   </ThingDef>
   <ThingDef ParentName="Crimson_RugA1Base">
-    <defName>Crimson_RugA1Small</defName><label>심홍 A1 카펫 · 소형</label>
+    <defName>Crimson_RugA1Small</defName><label>심홍 카펫 (2×1)</label>
     <description>문 앞이나 침대 옆에 놓는 2×1 크기의 검은 직물 카펫입니다. 네 모서리의 사선과 끊어진 진홍색 테두리를 유지합니다. 기존 바닥 위에 덧놓으며 통행을 막지 않고 가구 아래에도 깔 수 있습니다.</description>
     <size>(2,1)</size><graphicData><drawSize>(2,1)</drawSize></graphicData>
     <costList><Hyperweave>14</Hyperweave></costList><statBases><Beauty>900</Beauty><WorkToBuild>1600</WorkToBuild><Mass>0.4</Mass></statBases>
@@ -41,7 +41,7 @@
     <designatorDropdown>Crimson_RugsA1</designatorDropdown>
   </ThingDef>
   <ThingDef ParentName="Crimson_RugA1Base">
-    <defName>Crimson_RugA1Medium</defName><label>심홍 A1 카펫 · 준중형</label>
+    <defName>Crimson_RugA1Medium</defName><label>심홍 카펫 (3×2)</label>
     <description>침실이나 작은 휴게 공간에 놓는 3×2 크기의 검은 직물 카펫입니다. 네 모서리의 사선과 끊어진 진홍색 테두리를 유지합니다. 기존 바닥 위에 덧놓으며 통행을 막지 않고 가구 아래에도 깔 수 있습니다.</description>
     <size>(3,2)</size><graphicData><drawSize>(3,2)</drawSize></graphicData>
     <costList><Hyperweave>42</Hyperweave></costList><statBases><Beauty>1200</Beauty><WorkToBuild>4800</WorkToBuild><Mass>1.2</Mass></statBases>
@@ -51,7 +51,7 @@
     <designatorDropdown>Crimson_RugsA1</designatorDropdown>
   </ThingDef>
   <ThingDef ParentName="Crimson_RugA1Base">
-    <defName>Crimson_RugA1MediumWide</defName><label>심홍 A1 카펫 · 중형</label>
+    <defName>Crimson_RugA1MediumWide</defName><label>심홍 카펫 (4×3)</label>
     <description>침실과 거실, 휴게 공간에 놓는 4×3 크기의 검은 직물 카펫입니다. 기존 A1 카펫의 네 모서리와 끊어진 심홍색 테두리를 유지합니다. 회전하면 3×4가 되며, 기존 바닥 위와 가구 아래에 깔 수 있습니다.</description>
     <size>(4,3)</size><graphicData><drawSize>(4,3)</drawSize></graphicData>
     <costList><Hyperweave>84</Hyperweave></costList>
@@ -61,7 +61,7 @@
     <designationCategory>Floors</designationCategory><designatorDropdown>Crimson_RugsA1</designatorDropdown>
   </ThingDef>
   <ThingDef ParentName="Crimson_RugA1Base">
-    <defName>Crimson_RugA1SemiLarge</defName><label>심홍 A1 카펫 · 준대형</label>
+    <defName>Crimson_RugA1SemiLarge</defName><label>심홍 카펫 (3×5)</label>
     <description>침실과 휴게실의 긴 공간에 맞춘 3×5 크기의 검은 직물 카펫입니다. 기존 A1 카펫의 네 모서리와 끊어진 심홍색 테두리를 유지합니다. 회전하면 5×3이 되며, 기존 바닥 위와 가구 아래에 깔 수 있습니다.</description>
     <size>(3,5)</size><graphicData><drawSize>(3,5)</drawSize></graphicData>
     <costList><Hyperweave>105</Hyperweave></costList>
@@ -71,7 +71,7 @@
     <designationCategory>Floors</designationCategory><designatorDropdown>Crimson_RugsA1</designatorDropdown>
   </ThingDef>
   <ThingDef ParentName="Crimson_RugA1Base">
-    <defName>Crimson_RugA1Large</defName><label>심홍 A1 카펫 · 대형</label>
+    <defName>Crimson_RugA1Large</defName><label>심홍 카펫 (5×4)</label>
     <description>거실이나 식당, 오락 공간에 놓는 5×4 크기의 검은 직물 카펫입니다. 네 모서리의 사선과 끊어진 진홍색 테두리를 유지합니다. 기존 바닥 위에 덧놓으며 통행을 막지 않고 가구 아래에도 깔 수 있습니다.</description>
     <size>(5,4)</size><graphicData><drawSize>(5,4)</drawSize></graphicData>
     <costList><Hyperweave>140</Hyperweave></costList><statBases><Beauty>1500</Beauty><WorkToBuild>16000</WorkToBuild><Mass>4</Mass></statBases>
@@ -81,7 +81,7 @@
     <designatorDropdown>Crimson_RugsA1</designatorDropdown>
   </ThingDef>
   <ThingDef ParentName="Crimson_RugA1Base">
-    <defName>Crimson_RugA1ExtraLarge</defName><label>심홍 A1 카펫 · 특대형</label>
+    <defName>Crimson_RugA1ExtraLarge</defName><label>심홍 카펫 (5×7)</label>
     <description>넓은 지휘실과 왕실, 휴게실을 위한 5×7 크기의 검은 직물 카펫입니다. 기존 A1 카펫의 네 모서리와 끊어진 심홍색 테두리를 유지합니다. 회전하면 7×5가 되며, 기존 바닥 위와 가구 아래에 깔 수 있습니다.</description>
     <size>(5,7)</size><graphicData><drawSize>(5,7)</drawSize></graphicData>
     <costList><Hyperweave>245</Hyperweave></costList>

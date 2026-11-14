@@ -282,7 +282,7 @@ namespace CrimsonSOS2
         internal static bool IsFloorLight(ThingDef def)
         {
             return def != null && (CrimsonDeckLight.IsLight(def)
-                || def.defName == "Crimson_FloorBeacon" || def.defName == "Crimson_ThresholdGuide"
+                || def.defName == "Crimson_FloorBeacon"
                 || def.defName == "Crimson_PathGuideLight");
         }
 

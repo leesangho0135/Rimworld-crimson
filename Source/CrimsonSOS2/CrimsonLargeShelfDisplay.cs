@@ -6,67 +6,54 @@ using Verse;
 
 namespace CrimsonSOS2
 {
-    public sealed class CrimsonLargeShelfGraphic : Graphic_SingleOnOff
-    {
-        internal const float FrontCenterZ = 1f;
-        private Graphic sides;
-        public override bool ShouldDrawRotated { get { return false; } }
-        public override Material MatNorth { get { return mat; } }
-        public override Material MatSouth { get { return mat; } }
-        public override Material MatEast { get { return sides.MatEast; } }
-        public override Material MatWest { get { return sides.MatWest; } }
-
-        public override void Init(GraphicRequest request)
-        {
-            base.Init(request);
-            // Both native file names contain the unchanged two-state atlas.
-            // Reuse SOS2's power selection, sampling one square state at a time.
-            mat = FrontFrame(mat, 0f);
-            matOff = FrontFrame(matOff, .5f);
-            sides = GraphicDatabase.Get<CrimsonStorageHygieneGraphic>(
-                "Crimson/Decor/Storage/LargeShelfStates", request.shader,
-                new Vector2(3f, 1f), request.color, request.colorTwo, request.graphicData);
-        }
-
-        private static Material FrontFrame(Material original, float offset)
-        {
-            Material frame = new Material(original);
-            frame.mainTextureScale = new Vector2(.5f, 1f);
-            frame.mainTextureOffset = new Vector2(offset, 0f);
-            return frame;
-        }
-
-        public override Material MatAt(Rot4 rot, Thing thing = null)
-        { return rot.IsHorizontal ? sides.MatAt(rot, thing) : base.MatAt(rot, thing); }
-        public override Material MatSingleFor(Thing thing)
-        { return thing == null ? MatSingle : MatAt(thing.Rotation, thing); }
-        public override Mesh MeshAt(Rot4 rot)
-        { return MeshPool.GridPlane(rot.IsHorizontal ? new Vector2(1f, 3f) : drawSize); }
-        public override void DrawWorker(Vector3 loc, Rot4 rot, ThingDef def, Thing thing, float extraRotation)
-        {
-            if (!rot.IsHorizontal) loc.z += FrontCenterZ;
-            CrimsonFurnitureDepth.Draw(this, loc, rot, def, thing, extraRotation);
-        }
-        public override void Print(SectionLayer layer, Thing thing, float extraRotation)
-        {
-            CrimsonFurnitureDepth.Print(layer, thing, this, CrimsonFurnitureDepth.Size(MeshAt(thing.Rotation)),
-                thing.Rotation.IsHorizontal ? 0f : FrontCenterZ);
-        }
-        public override Graphic GetColoredVersion(Shader shader, Color color, Color colorTwo)
-        { return GraphicDatabase.Get<CrimsonLargeShelfGraphic>(path, shader, drawSize, color, colorTwo, data); }
-    }
-
     public sealed class CompProperties_CrimsonLargeShelfDisplay : CompProperties
     {
+        public int columns = 3;
+        public int rows = 3;
         public CompProperties_CrimsonLargeShelfDisplay() { compClass = typeof(CompCrimsonLargeShelfDisplay); }
     }
 
-    // Each of the three native storage cells holds three real stacks. Display
-    // them in three levels without changing hauling or owning those items.
+    // Parameterized native storage display: small 1x2, medium 2x2, large 3x3.
+    // Every compartment tracks one real stack without replacing hauling.
     public sealed class CompCrimsonLargeShelfDisplay : ThingComp
     {
-        internal const int Columns = 3, Rows = 3, SlotCount = Columns * Rows;
+        private CompProperties_CrimsonLargeShelfDisplay Settings
+        { get { return (CompProperties_CrimsonLargeShelfDisplay)props; } }
+        internal int Columns { get { return Settings.columns; } }
+        internal int Rows { get { return Settings.rows; } }
+        internal int SlotCount { get { return Columns * Rows; } }
         private List<Thing> displaySlots = new List<Thing>();
+
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            if (!respawningAfterLoad) return;
+            // Old small/medium shelves stored three stacks per floor cell.
+            // Move only the surplus outside the resized shelf, never delete it.
+            LongEventHandler.ExecuteWhenFinished(MoveLegacyOverflow);
+        }
+
+        private void MoveLegacyOverflow()
+        {
+            if (!parent.Spawned || parent.Destroyed) return;
+            Map map = parent.Map;
+            CellRect footprint = parent.OccupiedRect();
+            foreach (IntVec3 cell in footprint)
+            {
+                List<Thing> items = new List<Thing>();
+                foreach (Thing thing in cell.GetThingList(map))
+                    if (thing.def.category == ThingCategory.Item) items.Add(thing);
+                items.Sort(delegate(Thing a, Thing b) { return a.thingIDNumber.CompareTo(b.thingIDNumber); });
+                for (int i = Rows; i < items.Count; i++)
+                {
+                    Thing item = items[i];
+                    item.DeSpawn(DestroyMode.Vanish);
+                    if (!GenPlace.TryPlaceThing(item, cell, map, ThingPlaceMode.Near, null,
+                        delegate(IntVec3 candidate) { return !footprint.Contains(candidate); }))
+                        GenSpawn.Spawn(item, cell, map, WipeMode.Vanish);
+                }
+            }
+            RefreshSlots();
+        }
 
         private void EnsureSlots()
         {
@@ -86,7 +73,15 @@ namespace CrimsonSOS2
         {
             return item != null && !item.Destroyed && item.Spawned && item.Map == parent.Map
                 && item.def.category == ThingCategory.Item
-                && item.Position == parent.Position + new IntVec3(column - 1, 0, 0);
+                && item.Position == ColumnCell(column);
+        }
+
+        private IntVec3 ColumnCell(int column)
+        {
+            CellRect footprint = parent.OccupiedRect();
+            return parent.Rotation.IsHorizontal
+                ? new IntVec3(footprint.minX, 0, footprint.minZ + column)
+                : new IntVec3(footprint.minX + column, 0, footprint.minZ);
         }
 
         private void RefreshSlots()
@@ -104,10 +99,9 @@ namespace CrimsonSOS2
                     if (displaySlots[earlier] == item) duplicate = true;
                 if (!InColumn(item, slot % Columns) || duplicate) displaySlots[slot] = null;
             }
-            if (parent.Rotation.IsHorizontal) return;
             for (int column = 0; column < Columns; column++)
             {
-                IntVec3 cell = parent.Position + new IntVec3(column - 1, 0, 0);
+                IntVec3 cell = ColumnCell(column);
                 if (!cell.InBounds(parent.Map)) continue;
                 List<Thing> things = parent.Map.thingGrid.ThingsListAtFast(cell);
                 for (int row = 0; row < Rows; row++)
@@ -145,10 +139,14 @@ namespace CrimsonSOS2
         internal Matrix4x4 ItemMatrix(int slot, Thing item)
         {
             Vector2 size = ItemSize(item);
-            Vector3 location = parent.DrawPos + new Vector3(0f, 0f, CrimsonLargeShelfGraphic.FrontCenterZ);
+            CrimsonCardinalGraphic graphic = parent.Graphic as CrimsonCardinalGraphic;
+            float offset = graphic == null ? (parent.def.graphicData.drawSize.y - 1f) * .5f : graphic.FrameOffset(parent.Rotation);
+            Vector3 location = parent.DrawPos + new Vector3(0f, 0f, offset);
             Matrix4x4 body = CrimsonFurnitureDepth.Transform(parent.Graphic, location, parent.Rotation, parent, 0f);
             int column = slot % Columns, row = slot / Columns;
-            return body * Matrix4x4.TRS(new Vector3((column - 1) * .9f, .015f, .025f + (row - 1) * .84f),
+            float centerColumn = (Columns - 1) * .5f, centerRow = (Rows - 1) * .5f;
+            float rowSpacing = Rows == 3 ? .84f : .78f;
+            return body * Matrix4x4.TRS(new Vector3((column - centerColumn) * .9f, .015f, .025f + (row - centerRow) * rowSpacing),
                 Quaternion.identity, new Vector3(size.x, 1f, size.y));
         }
 

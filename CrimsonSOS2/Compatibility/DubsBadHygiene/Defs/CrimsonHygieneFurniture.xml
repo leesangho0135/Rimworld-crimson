@@ -6,7 +6,7 @@
        MarketValue quality and health adjustments remain native and occur once. -->
   <ThingDef ParentName="DubsDirtyTerletBase">
     <defName>Crimson_SpacerToilet</defName>
-    <label>심홍 진공변기</label>
+    <label>심홍 진공 변기</label>
     <description>물을 사용하지 않고 오물을 우주로 배출하는 함선용 진공변기입니다. 내장 진공 배출 장치로 별도 진공 덤프 없이 사용할 수 있으며, 기존 Dubs 위생 배관 연결을 지원합니다. 진공 배출·표시등·편안함 보조 장치에 3000W를 사용합니다. 전원 공급 시 편안함이 50% 향상됩니다.</description>
     <thingClass>DubsBadHygiene.Building_SpacerToilet</thingClass>
     <designationCategory>Hygiene</designationCategory>
@@ -46,14 +46,7 @@
     <designationHotKey IsNull="True" />
     <drawerType>RealtimeOnly</drawerType><size>(1,1)</size><defaultPlacingRot>North</defaultPlacingRot>
     <placeWorkers><li>RimWorld.Placeworker_AttachedToWall</li></placeWorkers>
-    <graphicData Inherit="False">
-      <texPath>Crimson/Decor/Hygiene/BasinV119States</texPath>
-      <graphicClass>CrimsonSOS2.CrimsonStorageHygieneGraphic</graphicClass>
-      <shaderType>Cutout</shaderType><drawRotated>false</drawRotated><drawSize>(1,.9)</drawSize>
-      <drawOffsetNorth>(0,0,.235)</drawOffsetNorth><drawOffsetSouth>(0,0,-.059)</drawOffsetSouth>
-      <drawOffsetEast>(.029,0,0)</drawOffsetEast><drawOffsetWest>(-.028,0,0)</drawOffsetWest>
-      <shadowData IsNull="True" />
-    </graphicData>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/WashBasin</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(1,1)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
     <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
     <costList Inherit="False"><Steel>15</Steel></costList>
     <statBases><Beauty>40</Beauty><MarketValue>1501.782</MarketValue><Flammability>0</Flammability><MaxHitPoints>525</MaxHitPoints></statBases>
@@ -68,7 +61,7 @@
 
   <ThingDef ParentName="DubsDirtyShowerBase">
     <defName>Crimson_PowerShower</defName>
-    <label>심홍 전기샤워기</label>
+    <label>심홍 전기 샤워기</label>
     <description>필요한 물을 즉시 가열하는 함선용 전기샤워기입니다. Dubs 급수 배관과 1875W 전원이 필요하며 별도의 온수 탱크는 필요하지 않습니다. 전력은 온수 가열·표시등·편안함 보조 장치에 사용합니다. 한 번 씻을 때 물 90L를 사용하고 일반 샤워기보다 두 배 빠르게 씻습니다. 전원 공급 시 편안함이 50% 향상됩니다.</description>
     <thingClass>DubsBadHygiene.Building_PowerShower</thingClass>
     <designationCategory>Hygiene</designationCategory>
@@ -102,11 +95,11 @@
     <thingClass>CrimsonSOS2.CrimsonBath</thingClass>
     <designationCategory>Hygiene</designationCategory>
     <designationHotKey IsNull="True" />
-    <drawerType>RealtimeOnly</drawerType><size>(1,2)</size><defaultPlacingRot>East</defaultPlacingRot>
+    <drawerType>RealtimeOnly</drawerType><size>(2,1)</size><defaultPlacingRot>North</defaultPlacingRot>
     <graphicData Inherit="False">
       <texPath>Crimson/Decor/Hygiene/BathtubStates</texPath>
       <graphicClass>CrimsonSOS2.CrimsonStorageHygieneGraphic</graphicClass>
-      <shaderType>Cutout</shaderType><drawRotated>false</drawRotated><drawSize>(1,2)</drawSize>
+      <shaderType>Cutout</shaderType><drawRotated>false</drawRotated><drawSize>(2,1)</drawSize>
       <shadowData IsNull="True" />
     </graphicData>
     <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />

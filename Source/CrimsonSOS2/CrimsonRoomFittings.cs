@@ -44,7 +44,6 @@ namespace CrimsonSOS2
         private static bool IsEstablishedLight(ThingDef def)
         {
             return def != null && (def.defName == "Crimson_FloorBeacon"
-                || def.defName == "Crimson_ThresholdGuide"
                 || def.defName == "Crimson_DeckLight"
                 || def.defName == "Crimson_DeckLightParallel");
         }

@@ -29,7 +29,7 @@
   </ThingDef>
   <ThingDef ParentName="Crimson_ConstructedSculptureBase">
     <defName>Crimson_SculptureGrand</defName>
-    <label>크림슨 대형 조각상</label>
+    <label>심홍 대형 조각상</label>
     <description>검은 각면과 절제된 진홍색 포인트로 구성한 조각품입니다. 건설할 때 선택된 조형 4종 가운데 하나가 무작위로 정해지며, 저장·운반·재설치 후에도 같은 외형을 유지합니다. 좌우반전 명령은 현재 조형의 방향만 바꿉니다.</description>
     <size>(3,3)</size>
     <fillPercent>0.5</fillPercent>
@@ -64,7 +64,7 @@
   </ThingDef>
   <ThingDef ParentName="Crimson_ConstructedSculptureBase">
     <defName>Crimson_SculptureMedium</defName>
-    <label>크림슨 중형 조각상</label>
+    <label>심홍 중형 조각상</label>
     <description>검은 각면과 절제된 진홍색 포인트로 구성한 조각품입니다. 건설할 때 선택된 조형 4종 가운데 하나가 무작위로 정해지며, 저장·운반·재설치 후에도 같은 외형을 유지합니다. 좌우반전 명령은 현재 조형의 방향만 바꿉니다.</description>
     <size>(2,2)</size>
     <fillPercent>0.5</fillPercent>
@@ -99,7 +99,7 @@
   </ThingDef>
   <ThingDef ParentName="Crimson_ConstructedSculptureBase">
     <defName>Crimson_SculptureSmall</defName>
-    <label>크림슨 소형 조각상</label>
+    <label>심홍 소형 조각상</label>
     <description>검은 각면과 절제된 진홍색 포인트로 구성한 조각품입니다. 건설할 때 선택된 조형 4종 가운데 하나가 무작위로 정해지며, 저장·운반·재설치 후에도 같은 외형을 유지합니다. 좌우반전 명령은 현재 조형의 방향만 바꿉니다.</description>
     <size>(1,1)</size>
     <fillPercent>0.35</fillPercent>
@@ -134,7 +134,7 @@
   </ThingDef>
   <ThingDef ParentName="Crimson_ConstructedSculptureBase">
     <defName>Crimson_WallRelief</defName>
-    <label>크림슨 벽걸이 부조</label>
+    <label>심홍 벽걸이 부조</label>
     <description>북쪽의 연속된 세 칸 벽에 부착하는 얕은 부조입니다. 바닥 기단은 없습니다. 건설할 때 선택된 조형 4종 가운데 하나가 무작위로 정해지며, 저장·운반·재설치 후에도 같은 외형을 유지합니다. 좌우반전 명령은 현재 조형의 방향만 바꿉니다.</description>
     <size>(3,1)</size>
     <fillPercent>0.15</fillPercent>
@@ -177,7 +177,7 @@
   </ThingDef>
   <ThingDef ParentName="Crimson_ConstructedSculptureBase">
     <defName>Crimson_Obelisk</defName>
-    <label>크림슨 오벨리스크</label>
+    <label>심홍 오벨리스크</label>
     <description>검은 각면과 절제된 진홍색 포인트로 구성한 조각품입니다. 건설할 때 선택된 조형 6종 가운데 하나가 무작위로 정해지며, 저장·운반·재설치 후에도 같은 외형을 유지합니다. 좌우반전 명령은 현재 조형의 방향만 바꿉니다.</description>
     <size>(1,1)</size>
     <fillPercent>0.35</fillPercent>

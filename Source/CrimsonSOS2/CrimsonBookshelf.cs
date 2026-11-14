@@ -9,6 +9,7 @@ namespace CrimsonSOS2
 {
     // Native book storage, reading, research benefits, contents UI and saving
     // remain owned by Building_Bookcase. Only the upright 3x4 display differs.
+    [StaticConstructorOnStartup]
     public sealed class CrimsonBookshelf : Building_Bookcase
     {
         internal const int Columns = 4;
@@ -90,9 +91,9 @@ namespace CrimsonSOS2
             if (!(bool)PreventDrawing.Invoke(this, null))
             {
                 Graphic.Draw(drawLoc, Rotation, this);
-                // The accepted atlas has an open front only in its south view;
-                // the closed back and sides naturally conceal the held books.
-                if (Rotation == Rot4.South)
+                // The remapped north view exposes the open front to the south.
+                // Both side panels and the actual rear conceal every book.
+                if (Rotation == Rot4.North)
                 {
                     if (crimsonSpine == null)
                         crimsonSpine = GraphicDatabase.Get<Graphic_Single>("Crimson/Decor/Extras/CrimsonBookSpineV111",

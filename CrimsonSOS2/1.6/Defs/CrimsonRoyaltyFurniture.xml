@@ -5,7 +5,7 @@
   </DesignatorDropdownGroupDef>
   <ThingDef ParentName="ThroneBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>Crimson_Throne</defName>
-    <label>모노리스 명상 옥좌</label>
+    <label>심홍 명상 옥좌</label>
     <description>간결한 검은 각면과 진홍색 장식을 갖춘 명상 옥좌입니다. 위엄 명상을 수행하는 귀족에게 어울리는 좌석입니다.</description>
     <statBases>
       <MaxHitPoints>1050</MaxHitPoints>
@@ -20,29 +20,17 @@
     <costStuffCount>0</costStuffCount>
     <uiIconOffset>(0, 0.08)</uiIconOffset>
     <uiIconScale>0.75</uiIconScale>
-    <graphicData>
-      <drawSize>(1.8,1.8)</drawSize>
-      <texPath>Crimson/Decor/Royalty/Throne</texPath>
-      <graphicClass>CrimsonSOS2.CrimsonRoyaltyMultiGraphic</graphicClass>
-      <shadowData>
-        <volume>(0.5,0.35,0.4)</volume>
-      </shadowData>
-      <damageData>
-        <rect>(0.2,0,2, 0.6, 0.6)</rect>
-      </damageData>
-      <shaderType>Cutout</shaderType>
-      <allowFlip>false</allowFlip>
-    </graphicData>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/Throne</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(1.35,1.8)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
     <designationCategory>Furniture</designationCategory>
     <designatorDropdown>Crimson_Thrones</designatorDropdown>
-    <uiIconPath>Crimson/Decor/Royalty/Throne_south</uiIconPath>
+    <uiIconPath>Crimson/Decor/Revision/Throne</uiIconPath>
   <comps><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>200</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CompProperties_Glower"><glowRadius>2.5</glowRadius><glowColor>(144,24,16,0)</glowColor></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>150</originalMaxHitPoints></li></comps><tickerType>Normal</tickerType>    <defaultStuff IsNull="True" />
       <costList Inherit="False"><WoodLog>125</WoodLog></costList>
     <uiOrder>1120</uiOrder>
-  </ThingDef>
+  <defaultPlacingRot>North</defaultPlacingRot></ThingDef>
   <ThingDef ParentName="ThroneBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>Crimson_GrandThrone</defName>
-    <label>모노리스 대형 명상 옥좌</label>
+    <label>심홍 대형 명상 옥좌</label>
     <description>넓은 기단과 높은 등받이를 갖춘 대형 명상 옥좌입니다. 위엄 명상과 알현실의 중심이 되는 좌석입니다.</description>
     <castEdgeShadows>True</castEdgeShadows>
     <size>(3,2)</size>
@@ -64,27 +52,15 @@
     </building>
     <uiIconOffset>(0, 0.04)</uiIconOffset>
     <uiIconScale>1</uiIconScale>
-    <graphicData>
-      <drawSize>(3.6,3.6)</drawSize>
-      <texPath>Crimson/Decor/Royalty/GrandThroneAtlas</texPath>
-      <graphicClass>CrimsonSOS2.CrimsonV48AtlasGraphic</graphicClass>
-      <shaderType>Cutout</shaderType>
-      <shadowData>
-        <volume>(2.1,0.5,1.5)</volume>
-      </shadowData>
-      <damageData>
-        <rect>(0.1,0.1,2.8,1.8)</rect>
-      </damageData>
-      <allowFlip>false</allowFlip>
-    </graphicData>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/GrandThrone</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(3.15,3.05)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
     <designationCategory>Furniture</designationCategory>
     <designatorDropdown>Crimson_Thrones</designatorDropdown>
   <comps><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>200</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CompProperties_Glower"><glowRadius>2.5</glowRadius><glowColor>(144,24,16,0)</glowColor></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>350</originalMaxHitPoints></li></comps><tickerType>Normal</tickerType>    <defaultStuff IsNull="True" />
     <uiOrder>1121</uiOrder>
-  </ThingDef>
+  <defaultPlacingRot>North</defaultPlacingRot></ThingDef>
   <ThingDef ParentName="FurnitureBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>Crimson_Brazier</defName>
-    <label>모노리스 화로</label>
+    <label>심홍 화로</label>
     <description>검은 각면으로 둘러싼 화로입니다. 목재를 태워 주변을 밝히고 열을 냅니다. 연료가 있어 불이 켜져야 왕실의 점등 요구를 충족합니다.</description>
     <category>Building</category>
     <tickerType>Normal</tickerType>
@@ -198,7 +174,7 @@
   </ThingDef>
   <ThingDef ParentName="FurnitureBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>Crimson_Drape</defName>
-    <label>모노리스 왕실 가림막</label>
+    <label>심홍 왕실 가림막</label>
     <description>검은 프레임에 짙은 진홍색 천을 걸친 왕실 가림막입니다. 왕실의 방과 알현실을 꾸미는 데 사용합니다. 설치 크기는 3×1이며, 회전하면 1×3입니다. 설치된 칸은 통과할 수 없으며 엄폐율은 90%입니다.</description>
     <designationCategory>Furniture</designationCategory>
     <passability>Impassable</passability>
@@ -243,7 +219,7 @@
         <rectW>(0.25, 0.5, 0.5, 1.5)</rectW>
       </damageData>
       <allowFlip>false</allowFlip>
-    <drawOffsetNorth>(0.000000,0,0.613078)</drawOffsetNorth><drawOffsetEast>(-0.016587,0,1.158852)</drawOffsetEast><drawOffsetSouth>(-0.001356,0,0.608931)</drawOffsetSouth><drawOffsetWest>(0.000000,0,1.166986)</drawOffsetWest><drawOffset>(0,0,0)</drawOffset></graphicData>
+    <drawOffsetNorth>(0.000000,0,0.613078)</drawOffsetNorth><drawOffsetEast>(0.000000,0,1.166986)</drawOffsetEast><drawOffsetSouth>(-0.001356,0,0.608931)</drawOffsetSouth><drawOffsetWest>(-0.016587,0,1.158852)</drawOffsetWest><drawOffset>(0,0,0)</drawOffset></graphicData>
     <designatorDropdown IsNull="True" />
     <uiIconPath>Crimson/Decor/Royalty/Drape_south</uiIconPath>
       <defaultStuff IsNull="True" />
@@ -252,7 +228,7 @@
   </ThingDef>
   <ThingDef ParentName="MusicalInstrumentBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>Crimson_Harp</defName>
-    <label>모노리스 하프</label>
+    <label>심홍 하프</label>
     <description>검은 각면 프레임과 절제된 진홍색 장식을 갖춘 하프입니다. 음악을 연주하여 휴식을 즐길 수 있습니다. 가구 메뉴에서 직접 건설할 수 있으며 기존 제작 작업도 사용할 수 있습니다.</description>
     <possessionCount>1</possessionCount>
     <descriptionHyperlinks>
@@ -296,23 +272,8 @@
     <uiIconOffset>(0, 0.08)</uiIconOffset>
     <uiIconScale>0.5</uiIconScale>
     <minifiedDrawScale>0.5</minifiedDrawScale>
-    <graphicData>
-      <texPath>Crimson/Decor/Royalty/Harp</texPath>
-      <drawSize>(3, 3)</drawSize>
-      <drawOffset>(0.174641,0,0.983732)</drawOffset>
-      <graphicClass>CrimsonSOS2.CrimsonRoyaltySingleGraphic</graphicClass>
-      <drawRotated>false</drawRotated>
-      <allowFlip>false</allowFlip>
-      <shadowData>
-        <volume>(0.5, 0.5, 0.2)</volume>
-        <offset>(0, 0, -0.12)</offset>
-      </shadowData>
-      <damageData>
-        <rect>(0.2, 0.2, 0.5, 0.5)</rect>
-      </damageData>
-      <shaderType>Cutout</shaderType>
-    </graphicData>
-    <uiIconPath>Crimson/Decor/Royalty/Harp</uiIconPath>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/Harp</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(1.6,2)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
+    <uiIconPath>Crimson/Decor/Revision/Harp</uiIconPath>
       <stuffCategories Inherit="False" />
       <costStuffCount>0</costStuffCount>
       <defaultStuff IsNull="True" />
@@ -321,10 +282,10 @@
       <designatorDropdown>Crimson_Instruments</designatorDropdown>
       <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
     <uiOrder>1020</uiOrder>
-  </ThingDef>
+  <defaultPlacingRot>North</defaultPlacingRot></ThingDef>
   <ThingDef ParentName="MusicalInstrumentBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>Crimson_Harpsichord</defName>
-    <label>모노리스 하프시코드</label>
+    <label>심홍 하프시코드</label>
     <description>검은 몸체와 건반을 갖춘 하프시코드입니다. 건반으로 현을 뜯어 음악을 연주합니다. 가구 메뉴에서 직접 건설할 수 있으며 기존 제작 작업도 사용할 수 있습니다.</description>
     <descriptionHyperlinks>
       <ThingDef>Harp</ThingDef>
@@ -332,7 +293,7 @@
     </descriptionHyperlinks>
     <size>(2,3)</size>
     <minTechLevelToBuild>Medieval</minTechLevelToBuild>
-    <interactionCellOffset>(0,0,2)</interactionCellOffset>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
     <soundPlayInstrument>Harpsichord_Play</soundPlayInstrument>
     <defaultPlacingRot>West</defaultPlacingRot>
     <researchPrerequisites>
@@ -390,7 +351,7 @@
   </ThingDef>
   <ThingDef ParentName="MusicalInstrumentBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>Crimson_Piano</defName>
-    <label>모노리스 그랜드 피아노</label>
+    <label>심홍 그랜드 피아노</label>
     <description>검은 각면 몸체와 절제된 진홍색 장식을 갖춘 그랜드 피아노입니다. 건반과 해머로 현을 울려 풍부한 음악을 연주합니다. 가구 메뉴에서 직접 건설할 수 있으며 기존 제작 작업도 사용할 수 있습니다.</description>
     <descriptionHyperlinks>
       <ThingDef>Harp</ThingDef>
@@ -398,7 +359,7 @@
     </descriptionHyperlinks>
     <size>(3,3)</size>
     <minTechLevelToBuild>Industrial</minTechLevelToBuild>
-    <interactionCellOffset>(0,0,2)</interactionCellOffset>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
     <soundPlayInstrument>Piano_Play</soundPlayInstrument>
     <defaultPlacingRot>West</defaultPlacingRot>
     <researchPrerequisites>
@@ -457,7 +418,7 @@
   </ThingDef>
   <ThingDef ParentName="BuildingBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>Crimson_Column</defName>
-    <label>모노리스 왕실 기둥</label>
+    <label>심홍 왕실 기둥</label>
     <description>검은 각면과 절제된 진홍색 장식을 갖춘 기둥입니다. 시야와 이동을 가리지 않으며 지붕을 지탱하고 왕실의 방과 알현실을 꾸밉니다.</description>
     <designationCategory>Structure</designationCategory>
     <uiOrder>1000</uiOrder>

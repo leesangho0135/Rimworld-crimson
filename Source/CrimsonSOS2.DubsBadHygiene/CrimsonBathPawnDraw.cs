@@ -8,11 +8,24 @@ namespace CrimsonSOS2
     [StaticConstructorOnStartup]
     internal static class CrimsonBathPawnDraw
     {
+        private static readonly System.Reflection.FieldInfo RendererPawn = AccessTools.Field(typeof(PawnRenderer), "pawn");
         static CrimsonBathPawnDraw()
         {
             new Harmony("rimod.crimson.sos2.dbh.bathdraw").Patch(
                 AccessTools.PropertyGetter(typeof(Pawn), "DrawPos"),
                 postfix: new HarmonyMethod(typeof(CrimsonBathPawnDraw), "AfterPawnDrawPos"));
+            HarmonyMethod angle = new HarmonyMethod(typeof(CrimsonBathPawnDraw), "AfterBodyAngle");
+            angle.priority = Priority.Last;
+            new Harmony("rimod.crimson.sos2.dbh.bath-angle").Patch(
+                AccessTools.Method(typeof(PawnRenderer), "BodyAngle"), postfix: angle);
+        }
+
+        private static void AfterBodyAngle(PawnRenderer __instance, ref float __result)
+        {
+            Pawn pawn = (Pawn)RendererPawn.GetValue(__instance);
+            CrimsonBath bath = pawn.CurJob == null ? null : pawn.CurJob.targetA.Thing as CrimsonBath;
+            if (bath != null && bath.occupant == pawn && bath.WaterInTub > 0f)
+                __result = (__result + 90f) % 360f;
         }
 
         private static void AfterPawnDrawPos(Pawn __instance, ref Vector3 __result)

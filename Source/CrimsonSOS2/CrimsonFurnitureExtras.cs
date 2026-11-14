@@ -54,7 +54,6 @@ namespace CrimsonSOS2
         private readonly Material[] directions = new Material[4];
         private readonly Material[] directionsOff = new Material[4];
         private readonly Material[] signals = new Material[4];
-        private bool bench;
 
         public override bool ShouldDrawRotated { get { return false; } }
         public override Material MatNorth { get { return directions[0]; } }
@@ -65,16 +64,7 @@ namespace CrimsonSOS2
         public override void Init(GraphicRequest request)
         {
             base.Init(request);
-            bench = request.path.EndsWith("CrewBenchDirections");
-            // Each frame was drawn from its own view. Crop its transparent
-            // margins so every direction retains the same floor contact.
-            Rect[] windows = bench ? new[]
-            {
-                AtlasWindow(27f, 260f, 573f, 308f),
-                AtlasWindow(790f, 82f, 302f, 486f),
-                AtlasWindow(29f, 885f, 569f, 309f),
-                AtlasWindow(789f, 709f, 303f, 486f)
-            } : new[]
+            Rect[] windows = new[]
             {
                 AtlasWindow(137f, 57f, 354f, 501f),
                 AtlasWindow(783f, 55f, 331f, 504f),
@@ -83,21 +73,11 @@ namespace CrimsonSOS2
             };
             for (int index = 0; index < directions.Length; index++)
             {
-                directions[index] = Frame(mat, windows[index]);
-                directionsOff[index] = Frame(matOff, windows[index]);
+                int source = CrimsonFurnitureDirections.Source(path, index);
+                directions[index] = Frame(mat, windows[source]);
+                directionsOff[index] = Frame(matOff, windows[source]);
                 if (request.path.EndsWith("CommandSeatDirections") && request.shader == ShaderDatabase.Cutout)
                     signals[index] = CreateSignal(directions[index]);
-            }
-            if (bench)
-            {
-                // Only the two end-on views use the revised shallow perspective.
-                // North/south retain their original materials and source pixels.
-                Texture2D eastWest = ContentFinder<Texture2D>.Get("Crimson/Decor/Extras/CrewBenchEWV111");
-                Material revised = MaterialPool.MatFrom(eastWest, request.shader, request.color);
-                directions[1] = BenchFrame(revised, BenchEndWindow(144f, 87f));
-                directions[3] = BenchFrame(revised, BenchEndWindow(634f, 87f));
-                directionsOff[1] = BenchFrame(revised, BenchEndWindow(144f, 855f));
-                directionsOff[3] = BenchFrame(revised, BenchEndWindow(634f, 855f));
             }
             mat = directions[0];
             matOff = directionsOff[0];
@@ -172,9 +152,7 @@ namespace CrimsonSOS2
         {
             // The chair keeps vertical legs in every view. Only the bench's
             // occupied footprint changes between long and wide.
-            Vector2 size = bench && rot.IsHorizontal
-                ? new Vector2(drawSize.y, drawSize.x) : drawSize;
-            return MeshPool.GridPlane(size);
+            return MeshPool.GridPlane(drawSize);
         }
 
         public override Graphic GetColoredVersion(Shader shader, Color color,
@@ -189,26 +167,6 @@ namespace CrimsonSOS2
             const float canvas = 1254f;
             return new Rect(left / canvas, (canvas - top - height) / canvas,
                 width / canvas, height / canvas);
-        }
-
-        private static Rect BenchEndWindow(float left, float top)
-        { return new Rect(left / 1024f, (1536f - top - 592f) / 1536f, 247f / 1024f, 592f / 1536f); }
-
-        private static Material BenchFrame(Material original, Rect window)
-        {
-            RenderTexture previous = RenderTexture.active;
-            RenderTexture target = RenderTexture.GetTemporary(247, 592, 0, RenderTextureFormat.ARGB32);
-            try
-            {
-                Graphics.Blit(original.mainTexture, target, new Vector2(window.width, window.height), new Vector2(window.x, window.y));
-                RenderTexture.active = target;
-                Texture2D texture = new Texture2D(247, 592, TextureFormat.ARGB32, false);
-                texture.name = "CrimsonCrewBenchEnd" + window.x + "_" + window.y;
-                texture.ReadPixels(new Rect(0, 0, 247, 592), 0, 0); texture.wrapMode = TextureWrapMode.Clamp;
-                texture.Apply(false, true);
-                return MaterialPool.MatFrom(texture, original.shader, original.color);
-            }
-            finally { RenderTexture.active = previous; RenderTexture.ReleaseTemporary(target); }
         }
 
         private static Material Frame(Material original, Rect window)

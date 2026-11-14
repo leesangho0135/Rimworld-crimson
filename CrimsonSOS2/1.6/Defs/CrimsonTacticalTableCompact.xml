@@ -2,7 +2,7 @@
 <Defs>
   <ThingDef ParentName="Crimson_ElectronicDecorBase">
     <defName>Crimson_TacticalTableCompact</defName>
-    <label>소형 전술 투영 테이블</label>
+    <label>심홍 소형 전술 테이블</label>
     <description>벽면 스크린과 나란히 구성하기 위한 얕은 3×1 투영 테이블입니다. 낮은 검은 각면 프레임과 짧은 받침을 사용합니다. 소비전력 300W. 화면 선택 버튼으로 전투·생체·항행·장교·지휘자 보고 11종을 선택합니다. 보고 화면은 장식용이며 선택은 저장 후에도 유지됩니다. 전원이 꺼지면 상판의 그림도 꺼집니다.</description>
     <size>(3,1)</size>
     <defaultPlacingRot>North</defaultPlacingRot>

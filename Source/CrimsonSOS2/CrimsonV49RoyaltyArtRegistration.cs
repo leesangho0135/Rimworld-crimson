@@ -3,9 +3,6 @@ namespace CrimsonSOS2 {
     internal static class CrimsonV49RoyaltyArtRegistration {
         internal static bool TryFind(string path, out CrimsonV48ArtSpec result) {
             switch (path) {
-                case "Crimson/Decor/Royalty/GrandThroneAtlas":
-                    result = new CrimsonV48ArtSpec(new[] { new Rect(0.039872f,0.530303f,0.463317f,0.449761f),new Rect(0.620415f,0.522329f,0.301435f,0.456938f),new Rect(0.039872f,0.030303f,0.463317f,0.449761f),new Rect(0.578150f,0.022329f,0.303030f,0.456938f) },
-                        new[] { new Vector2(3.150000f,3.057831f),new Vector2(2.049398f,4.057831f),new Vector2(3.150000f,3.057831f),new Vector2(2.060241f,4.057831f) }, new[] { 0.578916f,0.578916f,0.578916f,0.578916f }); return true;
                 case "Crimson/Decor/Royalty/PianoAtlas":
                     result = new CrimsonV48ArtSpec(new[] { new Rect(0.039872f,0.507974f,0.376396f,0.464115f),new Rect(0.433812f,0.534290f,0.534290f,0.393142f),new Rect(0.034290f,0.027113f,0.384370f,0.464115f),new Rect(0.459330f,0.045455f,0.517544f,0.393142f) },
                         new[] { new Vector2(3.150000f,3.500000f),new Vector2(3.150000f,3.500000f),new Vector2(3.150000f,3.500000f),new Vector2(3.150000f,3.500000f) }, new[] { 0.300000f,0.300000f,0.300000f,0.300000f }); return true;

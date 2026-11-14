@@ -42,7 +42,7 @@ namespace CrimsonSOS2
             return thing is Building_Storage && thing.def != null
                 && (thing.def.defName == "Crimson_StorageCargoContainer"
                     || thing.def.defName == "Crimson_StorageCabinetSmall"
-                    || thing.def.defName == "Crimson_StorageShelfLarge"
+                    || thing.TryGetComp<CompCrimsonLargeShelfDisplay>() != null
                     // Refrigerator displays draw the real stacks in their
                     // shelves; suppress the original floor-level item pass.
                     || thing.TryGetComp<CompCrimsonRefrigerator>() != null);

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="BuildingShipBase">
+    <defName>Crimson_JohnsonTanakaLarge</defName>
+    <label>적색편이 추진기</label>
+    <designatorDropdown>Ship_Engines_Interplanetary</designatorDropdown>
+    <thingClass>CrimsonSOS2.CrimsonPowerBuilding</thingClass>
+    <drawerType>RealtimeOnly</drawerType>
+    <graphicData>
+      <texPath>Crimson/Power/Tanaka/Inactive</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(5,7)</drawSize>
+    </graphicData>
+    <researchPrerequisites>
+      <li>SoSJTDrive</li>
+    </researchPrerequisites>
+    <statBases>
+      <WorkToBuild>120000</WorkToBuild>
+      <MaxHitPoints>1200</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>An advanced reactionless engine capable of interplanetary and interstellar travel.\n\nCannot be used inside a planet's atmosphere. This larger version, usually found on big warships, utilizes two manifolds in a more efficient configuration.\n\nJT mass limit: 30000\nThrust: 60000\n\n후방 배기 위험 구역: 폭 5 × 길이 9칸</description>
+    <size>(5,7)</size>
+    <receivesSignals>true</receivesSignals>
+    <designationCategory>Crimson_CS</designationCategory>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ShipCachePart">
+        <hermetic>true</hermetic>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>600</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CrimsonSOS2.CompProperties_CrimsonEngine">
+        <!--graphicData>
+					<texPath>Things/Building/Ship/Ship_Engine_Trail_Energy_Large</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(11,26.5)</drawSize>
+				</graphicData-->
+        <energy>true</energy>
+        <reactionless>true</reactionless>
+        <reactionlessExhaustDamage>true</reactionlessExhaustDamage>
+        <killZoneLength>9</killZoneLength>
+        <killZoneWidth>5</killZoneWidth>
+        <thrust>120</thrust>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>SaveOurShip2.PlaceWorker_ShipEngine</li>
+    </placeWorkers>
+    <building>
+      <isAirtight>true</isAirtight>
+      <shipPart>true</shipPart>
+    </building>
+    <costList>
+      <Plasteel>500</Plasteel>
+      <Uranium>300</Uranium>
+      <ComponentSpacer>30</ComponentSpacer>
+      <SoSEntanglementManifold>2</SoSEntanglementManifold>
+    </costList>
+    <designationHotKey>Misc5</designationHotKey>
+    <resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+    <modExtensions>
+      <li Class="CrimsonSOS2.CrimsonPowerArt">
+        <activePath>Crimson/Power/Tanaka/Active</activePath>
+        <inactivePath>Crimson/Power/Tanaka/Inactive</inactivePath>
+        <drawSize>(5,7)</drawSize>
+        <directional>true</directional>
+        <engine>true</engine>
+        <battery>false</battery>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  </Defs>

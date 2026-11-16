@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef Name="Crimson_CommanderWallStorageBase" ParentName="StorageShelfBase" Abstract="True">
+    <thingClass>CrimsonSOS2.CrimsonCommanderWallStorage</thingClass>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey IsNull="True" />
+    <size>(1,2)</size><rotatable>false</rotatable><defaultPlacingRot>North</defaultPlacingRot>
+    <drawerType>MapMeshOnly</drawerType><tickerType>Normal</tickerType>
+    <passability>Impassable</passability><fillPercent>1</fillPercent><holdsRoof>true</holdsRoof>
+    <blockLight>true</blockLight><blockWind>true</blockWind><altitudeLayer>BuildingOnTop</altitudeLayer>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Hull/HullWall_Atlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonCommanderWallStorageGraphic</graphicClass>
+      <shaderType>Cutout</shaderType><drawSize>(1.06,2)</drawSize><drawRotated>false</drawRotated>
+      <linkFlags><li>Wall</li><li>Rock</li></linkFlags><shadowData IsNull="True" />
+    </graphicData>
+    <uiIconPath>Crimson/Hull/HullWallIcon</uiIconPath>
+    <surfaceType>Item</surfaceType><staticSunShadowHeight>1</staticSunShadowHeight>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <building>
+      <isEdifice>true</isEdifice><isAirtight>true</isAirtight><shipPart>true</shipPart>
+      <supportsWallAttachments>true</supportsWallAttachments><paintable>false</paintable>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop><ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>3</maxItemsInCell>
+    </building>
+    <comps Inherit="False">
+      <li Class="SaveOurShip2.CompProps_ShipCachePart"><isHull>true</isHull><hermetic>true</hermetic><roof>true</roof><archotech>true</archotech></li>
+      <li Class="SaveOurShip2.CompProps_ShipHeat"><compClass>SaveOurShip2.CompShipHeat</compClass></li>
+      <li Class="DubsBadHygiene.CompProperties_Pipe" MayRequire="Dubwise.DubsBadHygiene"><mode>Sewage</mode></li>
+    </comps>
+    <techLevel>Spacer</techLevel>
+  </ThingDef>
+  </Defs>

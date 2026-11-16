@@ -1,0 +1,114 @@
+﻿{
+    "schema":  1,
+    "projects":  [
+                     {
+                         "name":  "CORE",
+                         "path":  "CORE",
+                         "manifest":  "CORE/Project.json",
+                         "keywords":  [
+                                          "공통",
+                                          "그래픽 기반"
+                                      ]
+                     },
+                     {
+                         "name":  "SOS2_ADDON",
+                         "path":  "SOS2_ADDON",
+                         "manifest":  "SOS2_ADDON/Project.json",
+                         "keywords":  [
+                                          "함선",
+                                          "선체",
+                                          "추진기",
+                                          "함선 무장",
+                                          "왕복선",
+                                          "함선 로봇"
+                                      ]
+                     },
+                     {
+                         "name":  "FURNITURE",
+                         "path":  "FURNITURE",
+                         "manifest":  "FURNITURE/Project.json",
+                         "keywords":  [
+                                          "가구",
+                                          "식탁",
+                                          "의자",
+                                          "일반 침대",
+                                          "수납",
+                                          "냉장고"
+                                      ]
+                     },
+                     {
+                         "name":  "RECREATION",
+                         "path":  "RECREATION",
+                         "manifest":  "RECREATION/Project.json",
+                         "keywords":  [
+                                          "오락",
+                                          "휴양",
+                                          "TV",
+                                          "당구",
+                                          "체스",
+                                          "악기"
+                                      ]
+                     },
+                     {
+                         "name":  "SANITARY",
+                         "path":  "SANITARY",
+                         "manifest":  "SANITARY/Project.json",
+                         "keywords":  [
+                                          "위생",
+                                          "변기",
+                                          "세면대",
+                                          "욕조",
+                                          "샤워"
+                                      ]
+                     },
+                     {
+                         "name":  "MEDICAL",
+                         "path":  "MEDICAL",
+                         "manifest":  "MEDICAL/Project.json",
+                         "keywords":  [
+                                          "의료",
+                                          "약품장",
+                                          "의료침대",
+                                          "수액",
+                                          "생체 모니터"
+                                      ]
+                     },
+                     {
+                         "name":  "DECORATION",
+                         "path":  "DECORATION",
+                         "manifest":  "DECORATION/Project.json",
+                         "keywords":  [
+                                          "장식",
+                                          "부조",
+                                          "조각상",
+                                          "러그",
+                                          "조명"
+                                      ]
+                     },
+                     {
+                         "name":  "PRODUCTION",
+                         "path":  "PRODUCTION",
+                         "manifest":  "PRODUCTION/Project.json",
+                         "keywords":  [
+                                          "생산",
+                                          "작업대",
+                                          "연구",
+                                          "제련",
+                                          "재배"
+                                      ]
+                     },
+                     {
+                         "name":  "EQUIPMENT",
+                         "path":  "EQUIPMENT",
+                         "manifest":  "EQUIPMENT/Project.json",
+                         "keywords":  [
+                                          "장비",
+                                          "방어구",
+                                          "보병 무기",
+                                          "무기 특성"
+                                      ]
+                     }
+                 ],
+    "runtimeAssembly":  "CrimsonSOS2.dll",
+    "packageIdPreserved":  true
+}

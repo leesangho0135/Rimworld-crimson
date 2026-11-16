@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef Name="Crimson_WallEquipmentCabinetBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>CrimsonSOS2.CrimsonWallEquipmentStorage</thingClass>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey IsNull="True" />
+    <drawerType>RealtimeOnly</drawerType>
+    <size>(1,1)</size><rotatable>true</rotatable><defaultPlacingRot>North</defaultPlacingRot>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>Standable</passability><pathCost>0</pathCost><fillPercent>0</fillPercent>
+    <blockLight>false</blockLight><blockWind>false</blockWind><coversFloor>false</coversFloor>
+    <clearBuildingArea>false</clearBuildingArea><canOverlapZones>true</canOverlapZones>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <graphicData>
+      <graphicClass>CrimsonSOS2.CrimsonWallEquipmentGraphic</graphicClass><shaderType>Cutout</shaderType>
+      <drawRotated>true</drawRotated><shadowData IsNull="True" /><addTopAltitudeBias>false</addTopAltitudeBias>
+      <drawOffsetNorth>(0,0,0.55)</drawOffsetNorth><drawOffsetSouth>(0,0,-0.55)</drawOffsetSouth>
+      <drawOffsetEast>(0.55,0,0)</drawOffsetEast><drawOffsetWest>(-0.55,0,0)</drawOffsetWest>
+    </graphicData>
+    <building><isEdifice>false</isEdifice><isAttachment>true</isAttachment><paintable>false</paintable><preventDeteriorationOnTop>true</preventDeteriorationOnTop></building>
+    <inspectorTabs><li>ITab_Storage</li></inspectorTabs>
+    <placeWorkers><li>CrimsonSOS2.CrimsonWallEquipmentPlaceWorker</li></placeWorkers>
+    <statBases><MaxHitPoints>980</MaxHitPoints><Beauty>3</Beauty><Mass>10</Mass><WorkToBuild>1600</WorkToBuild><Flammability>0</Flammability></statBases>
+    <costList><Steel>35</Steel><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>140</originalMaxHitPoints><goldReference>true</goldReference></li></comps>
+    <researchPrerequisites><li>ComplexFurniture</li></researchPrerequisites>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded><techLevel>Spacer</techLevel>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_WallEquipmentCabinetBase">
+    <defName>Crimson_WallWeaponCabinet</defName><label>심홍 벽걸이 무기 보관함</label>
+    <description>벽면에 부착하는 1×1 무기 보관함입니다. 무기 한 개를 가로 방향으로 거치하며 실제 보관한 무기의 외형을 표시합니다. 아래 가구의 수납칸을 차지하지 않고, 전원 없이 사용할 수 있습니다.</description>
+    <graphicData><texPath>Crimson/Decor/WallEquipment/WeaponCabinet</texPath><drawSize>(1,0.9520548)</drawSize></graphicData>
+    <building>
+      <fixedStorageSettings><filter><categories><li>Weapons</li></categories></filter></fixedStorageSettings>
+      <defaultStorageSettings><priority>Important</priority><filter><categories><li>Weapons</li></categories></filter></defaultStorageSettings>
+    </building>
+    <uiOrder>1085</uiOrder>
+    <statBases><Beauty>5</Beauty></statBases>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_StorageFurniture</designatorDropdown>
+  </ThingDef>
+  </Defs>

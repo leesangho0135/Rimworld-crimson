@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="Crimson_ExtraDecorBase">
+    <defName>Crimson_CommsPanel</defName>
+    <label>심홍 통신 패널</label>
+    <description>함선 벽에 부착하는 얇은 장식 통신 패널입니다. 차분한 검은 면 위에 짧은 진홍색 신호 표시와 서비스 홈을 모았습니다. 실제 통신 기능은 없습니다.</description>
+    <size>(1,1)</size>
+    <rotatable>true</rotatable>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Crimson/Decor/Extras/CommsPanel</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonExtraStateGraphic</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <drawRotated>true</drawRotated>
+      <drawOffsetNorth>(0,0,0.65)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,-0.65)</drawOffsetSouth>
+      <drawOffsetEast>(0.65,0,0)</drawOffsetEast>
+      <drawOffsetWest>(-0.65,0,0)</drawOffsetWest>
+    </graphicData>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>Standable</passability>
+    <pathCost>0</pathCost>
+    <fillPercent>0.15</fillPercent>
+    <blockLight>false</blockLight>
+    <clearBuildingArea>false</clearBuildingArea>
+    <building><isEdifice>false</isEdifice><isAttachment>true</isAttachment></building>
+    <placeWorkers><li>CrimsonSOS2.CrimsonFurnitureWallPlaceWorker</li></placeWorkers>
+    <statBases><MaxHitPoints>1050</MaxHitPoints><WorkToBuild>250</WorkToBuild><Beauty>40</Beauty><MarketValue>1000.81</MarketValue><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>10</Steel></costList>
+    <comps><li Class="CompProperties_Glower"><glowRadius>2</glowRadius><glowColor>(120,20,16,0)</glowColor></li><li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>150</originalMaxHitPoints></li></comps>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designationCategory>Misc</designationCategory>
+    <designatorDropdown>Crimson_CommandFurniture</designatorDropdown>
+    <uiOrder>1003</uiOrder>
+  </ThingDef>
+  </Defs>

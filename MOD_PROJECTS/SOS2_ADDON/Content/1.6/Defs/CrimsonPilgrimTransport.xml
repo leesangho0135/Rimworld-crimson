@@ -1,0 +1,1165 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+    <defName>Crimson_PilgrimTransportConstruction</defName>
+    <designationCategory>Crimson_CS</designationCategory>
+    <label>추종자</label>
+    <description>일반 병력용 5×5 왕복선 추종자를 건조합니다. 기본 승객 8명, 적재량 10,000kg, 선체 내장 수렴 광선포 1문과 보호막용 열저장 25,000Hu를 갖춥니다. 건조물 내구도 10,000은 운행 기체 선체 부품 내구도 3,000과 별개입니다.</description>
+    <graphicData>
+      <texPath>Crimson/Vehicles/PilgrimTransport/Hull</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6.18,6.18)</drawSize>
+      <shaderType>Cutout</shaderType>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>10000</MaxHitPoints>
+      <WorkToBuild>150000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Mass>2000</Mass>
+    </statBases>
+    <size>(5,5)</size>
+    <researchPrerequisites>
+      <li>ShuttleDropship</li>
+    </researchPrerequisites>
+    <costList>
+      <Plasteel>120</Plasteel>
+      <Steel>480</Steel>
+      <ComponentIndustrial>12</ComponentIndustrial>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <thingToSpawn>Crimson_PilgrimTransport</thingToSpawn>
+    <defaultPlacingRot>North</defaultPlacingRot>
+  </Vehicles.VehicleBuildDef>
+  <Vehicles.VehicleDef ParentName="BaseVehiclePawn">
+    <defName>Crimson_PilgrimTransport</defName>
+    <label>추종자</label>
+    <description>최정예 수송선 순례자의 뒤를 따르는 일반 병력용 소형 왕복선. 중앙의 눈 자리는 연속된 검은 장갑 능선으로 닫혀 있으며 부유 무장 드론은 없습니다. 승객 8명을 기본 수송하고 적재량은 10,000kg입니다. 수렴 광선포 1문은 선체에 내장되어 있으며 사건지평 방벽용 열저장 25,000Hu와 자체 방열 250Hu/s를 갖춥니다. 기체 질량은 2,000kg, 선체 부품 내구도는 3,000입니다. 조종사 없이 운용할 수 있고 조종석에는 선택적으로 탑승할 수 있습니다.</description>
+    <graphicData>
+      <texPath>Crimson/Vehicles/PilgrimTransport/Hull</texPath>
+      <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(6.18,6.18)</drawSize>
+      <drawRotated>true</drawRotated>
+      <color>(255, 255, 255)</color>
+      <colorTwo>(255, 255, 255)</colorTwo>
+      <colorThree>(255, 255, 255)</colorThree>
+    </graphicData>
+    <fillPercent>0.75</fillPercent>
+    <rotatable>true</rotatable>
+    <nameable>true</nameable>
+    <buildDef>Crimson_PilgrimTransportConstruction</buildDef>
+    <size>(5,5)</size>
+    <canCaravan LockSetting="True">true</canCaravan>
+    <vehicleCategory>Transport</vehicleCategory>
+    <techLevel>Spacer</techLevel>
+    <vehicleType>Air</vehicleType>
+    <draftLabel>Hover Mode</draftLabel>
+    <statBases>
+      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+      <ArmorRating_Heat>2</ArmorRating_Heat>
+      <Flammability>0.0</Flammability>
+      <DecompressionResistance>1</DecompressionResistance>
+      <VacuumSpeedMultiplier>4</VacuumSpeedMultiplier>
+    </statBases>
+    <vehicleStats>
+      <Mass>2000</Mass>
+      <MoveSpeed>9</MoveSpeed>
+      <CargoCapacity>10000</CargoCapacity>
+      <RepairRate>1.6</RepairRate>
+      <FlightSpeed>16</FlightSpeed>
+      <Hardpoints>1</Hardpoints>
+    </vehicleStats>
+    <soundSustainersOnEvent>
+      <li>
+        <start>AerialVehicleLaunch</start>
+        <stop>Despawned</stop>
+        <value>SoS_HeavyShuttleTakeoff_Loop</value>
+      </li>
+      <li>
+        <start>AerialVehicleLanding</start>
+        <stop>Spawned</stop>
+        <value>SoS_HeavyShuttleTakeoff_Loop</value>
+      </li>
+      <li>
+        <start>IgnitionOn</start>
+        <stop>IgnitionOff</stop>
+        <value>SoS_HeavyShuttleTakeoff_Loop</value>
+      </li>
+    </soundSustainersOnEvent>
+    <soundOneShotsOnEvent>
+      <li>
+        <key>AerialVehicleLaunch</key>
+        <value>SoS_HeavyShuttleLiftoff</value>
+      </li>
+    </soundOneShotsOnEvent>
+    <properties>
+      <pawnCollisionMultiplier>0.2</pawnCollisionMultiplier>
+      <pawnCollisionRecoilMultiplier>0.5</pawnCollisionRecoilMultiplier>
+      <roles>
+        <li>
+          <key>pilot</key>
+          <label>Pilot</label>
+          <slots>1</slots>
+          <slotsToOperate>0</slotsToOperate>
+          <handlingTypes>
+            <li>Movement</li>
+          </handlingTypes>
+        </li>
+        <li>
+          <key>passenger</key>
+          <label>Passenger</label>
+          <slots>8</slots>
+        </li>
+      </roles>
+      <customTerrainCosts AssignDefaults="1">
+        <li>
+          <key>EmptySpace</key>
+          <value>0</value>
+        </li>
+      </customTerrainCosts>
+    </properties>
+    <components>
+      <li>
+        <key>FirstThruster</key>
+        <label>First Thruster</label>
+        <health>600</health>
+        <depth>Internal</depth>
+        <reactors>
+          <li Class="Vehicles.Reactor_Explosive">
+            <indicator>VF_Explosive</indicator>
+            <chance>0.25</chance>
+            <maxHealth>0.2</maxHealth>
+            <radius>5</radius>
+            <damageDef>Flame</damageDef>
+          </li>
+        </reactors>
+        <hitbox>
+          <side>Body</side>
+        </hitbox>
+        <categories>
+          <li>FlightControl</li>
+          <li>FlightSpeed</li>
+        </categories>
+      </li>
+      <li>
+        <key>SecondThruster</key>
+        <label>Second Thruster</label>
+        <health>600</health>
+        <depth>Internal</depth>
+        <reactors>
+          <li Class="Vehicles.Reactor_Explosive">
+            <indicator>VF_Explosive</indicator>
+            <chance>0.25</chance>
+            <maxHealth>0.2</maxHealth>
+            <radius>5</radius>
+            <damageDef>Flame</damageDef>
+          </li>
+        </reactors>
+        <hitbox>
+          <side>Body</side>
+        </hitbox>
+        <categories>
+          <li>FlightControl</li>
+          <li>FlightSpeed</li>
+        </categories>
+      </li>
+      <li>
+        <key>ThirdThruster</key>
+        <label>Third Thruster</label>
+        <health>600</health>
+        <depth>Internal</depth>
+        <reactors>
+          <li Class="Vehicles.Reactor_Explosive">
+            <indicator>VF_Explosive</indicator>
+            <chance>0.25</chance>
+            <maxHealth>0.2</maxHealth>
+            <radius>5</radius>
+            <damageDef>Flame</damageDef>
+          </li>
+        </reactors>
+        <hitbox>
+          <side>Body</side>
+        </hitbox>
+        <categories>
+          <li>FlightControl</li>
+          <li>FlightSpeed</li>
+        </categories>
+      </li>
+      <li>
+        <key>FourthThruster</key>
+        <label>Fourth Thruster</label>
+        <health>600</health>
+        <depth>Internal</depth>
+        <reactors>
+          <li Class="Vehicles.Reactor_Explosive">
+            <indicator>VF_Explosive</indicator>
+            <chance>0.25</chance>
+            <maxHealth>0.2</maxHealth>
+            <radius>5</radius>
+            <damageDef>Flame</damageDef>
+          </li>
+        </reactors>
+        <hitbox>
+          <side>Body</side>
+        </hitbox>
+        <categories>
+          <li>FlightControl</li>
+          <li>FlightSpeed</li>
+        </categories>
+      </li>
+      <li>
+        <key>Reactor</key>
+        <label>Reactor</label>
+        <health>1000</health>
+        <depth>Internal</depth>
+        <reactors>
+          <li Class="Vehicles.Reactor_Explosive">
+            <indicator>VF_Explosive</indicator>
+            <chance>0.25</chance>
+            <maxHealth>0.2</maxHealth>
+            <radius>18</radius>
+            <damageDef>Bomb</damageDef>
+          </li>
+        </reactors>
+      </li>
+      <li>
+        <key>Cockpit</key>
+        <label>Cockpit</label>
+        <health>800</health>
+        <depth>Internal</depth>
+        <hitWeight>2</hitWeight>
+      </li>
+      <li>
+        <key>shieldGenerator</key>
+        <label>사건지평 방벽</label>
+        <health>250</health>
+        <depth>Internal</depth>
+      </li>
+      <li>
+        <key>Hull</key>
+        <label>Hull</label>
+        <health>3000</health>
+        <depth>External</depth>
+        <hitbox>
+          <side>Body</side>
+        </hitbox>
+      </li>
+    </components>
+    <!--
+		<modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>VVE_VehicleTier</li>
+				</statToAdd>
+				<statValues>
+					<li>VVE_Tier1</li>
+				</statValues>
+				<statDescriptions>
+					<li>VVE_Tier1Desc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions>
+		-->
+    <comps>
+      <li Class="Vehicles.CompProperties_FueledTravel">
+        <fuelType>ShuttleFuelPods</fuelType>
+        <fuelConsumptionRate>80</fuelConsumptionRate>
+        <fuelCapacity>1500</fuelCapacity>
+      </li>
+      <li Class="Vehicles.CompProperties_UpgradeTree">
+        <def>Crimson_PilgrimTransportUpgradeTree</def>
+      </li>
+      <li Class="Vehicles.CompProperties_VehicleLauncher">
+        <compClass>SaveOurShip2.Vehicles.CompShuttleLauncher</compClass>
+        <spaceFlight>true</spaceFlight>
+        <controlInFlight>true</controlInFlight>
+        <animationPunchAt>2</animationPunchAt>
+        <!--To disable punching through shuttle bay roofs-->
+        <launchProtocol Class="SaveOurShip2.Vehicles.ShuttleTakeoff">
+          <launchProperties Class="Vehicles.VerticalProtocolProperties">
+            <maxTicks>500</maxTicks>
+            <maxTicksVertical>250</maxTicksVertical>
+            <renderShadow>false</renderShadow>
+            <lockShadowZ>true</lockShadowZ>
+            <forcedRotation>North</forcedRotation>
+            <events>
+              <li>
+                <triggerAt>1</triggerAt>
+                <method>SaveOurShip2.VehicleEventMethods.ShuttleLaunched()</method>
+              </li>
+            </events>
+            <rotationCurve Class="SmashTools.BezierCurve">
+              <points>
+                <li>(0, 0)</li>
+                <li>(1, 0)</li>
+              </points>
+            </rotationCurve>
+            <rotationVerticalCurve Class="SmashTools.BezierCurve">
+              <points>
+                <li>(0, 0)</li>
+                <li>(0.2, 2)</li>
+                <li>(0.4, 6)</li>
+                <li>(0.6, -2)</li>
+                <li>(0.8, 0)</li>
+                <li>(1, 0)</li>
+              </points>
+            </rotationVerticalCurve>
+            <xPositionCurve Class="SmashTools.BezierCurve">
+              <points>
+                <li>(0, 0)</li>
+                <li>(1, 0)</li>
+              </points>
+            </xPositionCurve>
+            <xPositionVerticalCurve Class="SmashTools.BezierCurve">
+              <points>
+                <li>(0, 0)</li>
+                <li>(1, 0)</li>
+              </points>
+            </xPositionVerticalCurve>
+            <zPositionCurve Class="SmashTools.BezierCurve">
+              <points>
+                <li>(0, 0)</li>
+                <li>(0.2, 1.33)</li>
+                <li>(0.62, 28.18)</li>
+                <li>(0.85, 42.12)</li>
+                <li>(1, 140)</li>
+              </points>
+            </zPositionCurve>
+            <zPositionVerticalCurve Class="SmashTools.BezierCurve">
+              <points>
+                <li>(0, 0)</li>
+                <li>(0.15, 0.25)</li>
+                <li>(0.85, 2.5)</li>
+                <li>(1, 3)</li>
+              </points>
+            </zPositionVerticalCurve>
+            <fleckDataVertical>
+              <def>Crimson_PilgrimExhaust_Short</def>
+              <angle>0~360</angle>
+              <runOutOfStep>false</runOutOfStep>
+              <lockFleckX>false</lockFleckX>
+              <lockFleckZ>false</lockFleckZ>
+              <frequency Class="SmashTools.BezierCurve">
+                <points>
+                  <li>(0, 200)</li>
+                  <li>(1, 400)</li>
+                </points>
+              </frequency>
+              <rotationRate>
+                <points>
+                  <li>(0, 3)</li>
+                  <li>(1, 1)</li>
+                </points>
+              </rotationRate>
+              <size Class="SmashTools.BezierCurve">
+                <points>
+                  <li>(0, 2.857143)</li>
+                  <li>(1, 1.428571)</li>
+                </points>
+              </size>
+              <speed Class="SmashTools.BezierCurve">
+                <points>
+                  <li>(0, 35)</li>
+                  <li>(1, 30)</li>
+                </points>
+              </speed>
+            </fleckDataVertical>
+            <fleckData>
+              <li>
+                <def>Crimson_PilgrimExhaust_Long</def>
+                <angle>177~183</angle>
+                <lockFleckX>false</lockFleckX>
+                <lockFleckZ>false</lockFleckZ>
+                <runOutOfStep>false</runOutOfStep>
+                <originOffset>(-0.48,0,-1.98)</originOffset>
+                <frequency Class="SmashTools.LinearCurve">
+                  <points>
+                    <li>(0, 0)</li>
+                    <li>(0.2, 250)</li>
+                  </points>
+                </frequency>
+                <rotationRate>
+                  <points>
+                    <li>(0, 3)</li>
+                    <li>(1, 1)</li>
+                  </points>
+                </rotationRate>
+                <size Class="SmashTools.LinearCurve">
+                  <points>
+                    <li>(0, 0.5)</li>
+                    <li>(0.1, 0.5)</li>
+                    <li>(0.2, 1)</li>
+                  </points>
+                </size>
+                <speed Class="SmashTools.LinearCurve">
+                  <points>
+                    <li>(0, 2)</li>
+                    <li>(1, 1)</li>
+                  </points>
+                </speed>
+              </li>
+              <li>
+                <def>Crimson_PilgrimExhaust_Long</def>
+                <angle>177~183</angle>
+                <lockFleckX>false</lockFleckX>
+                <lockFleckZ>false</lockFleckZ>
+                <runOutOfStep>false</runOutOfStep>
+                <originOffset>(0.48,0,-1.98)</originOffset>
+                <frequency Class="SmashTools.LinearCurve">
+                  <points>
+                    <li>(0, 0)</li>
+                    <li>(0.2, 250)</li>
+                  </points>
+                </frequency>
+                <rotationRate>
+                  <points>
+                    <li>(0, 3)</li>
+                    <li>(1, 1)</li>
+                  </points>
+                </rotationRate>
+                <size Class="SmashTools.LinearCurve">
+                  <points>
+                    <li>(0, 0.5)</li>
+                    <li>(0.1, 0.5)</li>
+                    <li>(0.2, 1)</li>
+                  </points>
+                </size>
+                <speed Class="SmashTools.LinearCurve">
+                  <points>
+                    <li>(0, 2)</li>
+                    <li>(1, 1)</li>
+                  </points>
+                </speed>
+              </li>
+            </fleckData>
+          </launchProperties>
+          <landingProperties Class="Vehicles.VerticalProtocolProperties">
+            <maxTicks>500</maxTicks>
+            <maxTicksVertical>100</maxTicksVertical>
+            <renderShadow>false</renderShadow>
+            <forcedRotation>North</forcedRotation>
+            <events>
+              <li>
+                <triggerAt>1</triggerAt>
+                <method>SaveOurShip2.VehicleEventMethods.ShuttleLanded()</method>
+              </li>
+            </events>
+            <rotationVerticalCurve Class="SmashTools.BezierCurve">
+              <points>
+                <li>(0, 0)</li>
+                <li>(0.22, 4.57)</li>
+                <li>(0.44, 5.18)</li>
+                <li>(0.69, 3.37)</li>
+                <li>(0.79, 5.55)</li>
+                <li>(1, 0)</li>
+              </points>
+            </rotationVerticalCurve>
+            <xPositionCurve Class="SmashTools.BezierCurve">
+              <points>
+                <li>(0, 0)</li>
+                <li>(1, 0)</li>
+              </points>
+            </xPositionCurve>
+            <xPositionVerticalCurve Class="SmashTools.BezierCurve">
+              <points>
+                <li>(0, 0)</li>
+                <li>(1, 0)</li>
+              </points>
+            </xPositionVerticalCurve>
+            <zPositionCurve Class="SmashTools.BezierCurve">
+              <points>
+                <li>(0, -150)</li>
+                <li>(0.32, -120.12)</li>
+                <li>(0.49, -91.06)</li>
+                <li>(0.64, -66)</li>
+                <li>(0.73, -41.07)</li>
+                <li>(0.87, -29.64)</li>
+                <li>(1, -10)</li>
+              </points>
+            </zPositionCurve>
+            <zPositionVerticalCurve Class="SmashTools.BezierCurve">
+              <points>
+                <li>(0, 0)</li>
+                <li>(0.25, 5)</li>
+                <li>(0.7, 9.5)</li>
+                <li>(0.8, 10)</li>
+              </points>
+            </zPositionVerticalCurve>
+            <fleckDataVertical>
+              <def>Crimson_PilgrimExhaust_Short</def>
+              <angle>0~360</angle>
+              <runOutOfStep>false</runOutOfStep>
+              <lockFleckX>false</lockFleckX>
+              <lockFleckZ>false</lockFleckZ>
+              <frequency Class="SmashTools.BezierCurve">
+                <points>
+                  <li>(0, 200)</li>
+                  <li>(1, 400)</li>
+                </points>
+              </frequency>
+              <rotationRate>
+                <points>
+                  <li>(0, 3)</li>
+                  <li>(1, 1)</li>
+                </points>
+              </rotationRate>
+              <size Class="SmashTools.BezierCurve">
+                <points>
+                  <li>(0, 2.857143)</li>
+                  <li>(1, 1.428571)</li>
+                </points>
+              </size>
+              <speed Class="SmashTools.BezierCurve">
+                <points>
+                  <li>(0, 30)</li>
+                  <li>(1, 35)</li>
+                </points>
+              </speed>
+            </fleckDataVertical>
+            <fleckData>
+              <li>
+                <def>Crimson_PilgrimExhaust_Long</def>
+                <angle>177~183</angle>
+                <lockFleckX>false</lockFleckX>
+                <lockFleckZ>false</lockFleckZ>
+                <runOutOfStep>false</runOutOfStep>
+                <originOffset>(-0.48,0,-1.98)</originOffset>
+                <frequency Class="SmashTools.LinearCurve">
+                  <points>
+                    <li>(0, 0)</li>
+                    <li>(0.2, 250)</li>
+                  </points>
+                </frequency>
+                <rotationRate>
+                  <points>
+                    <li>(0, 3)</li>
+                    <li>(1, 1)</li>
+                  </points>
+                </rotationRate>
+                <size Class="SmashTools.LinearCurve">
+                  <points>
+                    <li>(0, 1)</li>
+                    <li>(0.8, 1)</li>
+                    <li>(1, 0.5)</li>
+                  </points>
+                </size>
+                <speed Class="SmashTools.LinearCurve">
+                  <points>
+                    <li>(0, 2)</li>
+                    <li>(1, 1)</li>
+                  </points>
+                </speed>
+              </li>
+              <li>
+                <def>Crimson_PilgrimExhaust_Long</def>
+                <angle>177~183</angle>
+                <lockFleckX>false</lockFleckX>
+                <lockFleckZ>false</lockFleckZ>
+                <runOutOfStep>false</runOutOfStep>
+                <originOffset>(0.48,0,-1.98)</originOffset>
+                <frequency Class="SmashTools.LinearCurve">
+                  <points>
+                    <li>(0, 0)</li>
+                    <li>(0.2, 250)</li>
+                  </points>
+                </frequency>
+                <rotationRate>
+                  <points>
+                    <li>(0, 3)</li>
+                    <li>(1, 1)</li>
+                  </points>
+                </rotationRate>
+                <size Class="SmashTools.LinearCurve">
+                  <points>
+                    <li>(0, 1)</li>
+                    <li>(0.8, 1)</li>
+                    <li>(1, 0.5)</li>
+                  </points>
+                </size>
+                <speed Class="SmashTools.LinearCurve">
+                  <points>
+                    <li>(0, 2)</li>
+                    <li>(1, 1)</li>
+                  </points>
+                </speed>
+              </li>
+            </fleckData>
+          </landingProperties>
+        </launchProtocol>
+      </li>
+      <li Class="Vehicles.CompProperties_VehicleTurrets">
+        <turrets>
+          <li Class="CrimsonSOS2.CrimsonPilgrimBit">
+            <turretDef>Crimson_PilgrimLaser</turretDef>
+            <gizmoLabel>내장 수렴 광선포</gizmoLabel>
+            <autoTargeting>true</autoTargeting>
+            <key>pilgrimTransportEmbeddedLaser</key>
+            <side>0</side>
+            <mountOffset>(0,2.1)</mountOffset>
+            <baseSize>(0.9,0.9)</baseSize>
+            <barrelSize>(0.9,0.9)</barrelSize>
+            <hoverAmplitude>0</hoverAmplitude>
+            <hoverPeriodTicks>180</hoverPeriodTicks>
+            <phaseOffset>0</phaseOffset>
+            <basePath>Crimson/Vehicles/Pilgrim/Bits/PointedBody</basePath>
+            <barrelPath>Crimson/Vehicles/Pilgrim/Bits/PointedEmitter</barrelPath>
+            <basePivot>(0.5,0.435)</basePivot>
+            <barrelPivot>(0.5,0.46)</barrelPivot>
+            <embedded>true</embedded>
+          </li>
+        </turrets>
+      </li>
+      <li Class="SaveOurShip2.Vehicles.CompProperties_HoverMode" />
+      <li Class="CrimsonSOS2.CompProperties_PilgrimMissions" />
+      <li Class="CrimsonSOS2.CompProperties_PilgrimHeatNet" />
+      <li Class="SaveOurShip2.CompProps_ShipHeat">
+        <compClass>CrimsonSOS2.CompPilgrimHeatSink</compClass>
+        <heatCapacity>25000</heatCapacity>
+        <heatVent>500</heatVent>
+        <antiEntropic>true</antiEntropic>
+        <antiEntropicRecoveryRate>0.2</antiEntropicRecoveryRate>
+        <color>(255,32,48)</color>
+      </li>
+      <li Class="SaveOurShip2.CompProps_ShipHeat">
+        <compClass>CrimsonSOS2.CrimsonShieldComp</compClass>
+        <shieldMin>20</shieldMin>
+        <shieldDefault>40</shieldDefault>
+        <shieldMax>60</shieldMax>
+        <heatMultiplier>0.75</heatMultiplier>
+        <color>(255,32,48)</color>
+      </li>
+    </comps>
+    <thingClass>CrimsonSOS2.CrimsonPilgrimVehicle</thingClass>
+  </Vehicles.VehicleDef>
+  <Vehicles.UpgradeTreeDef>
+    <defName>Crimson_PilgrimTransportUpgradeTree</defName>
+    <nodes>
+      <li>
+        <key>ArmorMinimal</key>
+        <label>Minimal Armor</label>
+        <description>Retrofit the shuttle's hull to minimize weight, trading armor for speed and fuel efficiency.\n&lt;color=#bb8f04&gt;-10% blunt armor, -20% sharp armor, +6 flight speed, +0.5 ground speed, +100 cargo capacity, -10 fuel consumption rate&lt;/color&gt;</description>
+        <icon>UI/ShuttleUpgrades/ArmorMinimal</icon>
+        <work>6000</work>
+        <gridCoordinate>(1,1)</gridCoordinate>
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <stats>
+              <li>
+                <def>ArmorRating_Blunt</def>
+                <value>-0.1</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>ArmorRating_Sharp</def>
+                <value>-0.2</value>
+                <type>Add</type>
+              </li>
+            </stats>
+            <vehicleStats>
+              <li>
+                <def>FlightSpeed</def>
+                <value>6</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>CargoCapacity</def>
+                <value>100</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>MoveSpeed</def>
+                <value>0.5</value>
+                <type>Add</type>
+              </li>
+            </vehicleStats>
+            <statCategories>
+              <li>
+                <def>FuelConsumptionRate</def>
+                <value>-10</value>
+                <type>Add</type>
+              </li>
+            </statCategories>
+          </li>
+        </upgrades>
+        <replaces>
+          <li>ArmorHeavy</li>
+          <li>ArmorNano</li>
+          <li>ArmorArcho</li>
+        </replaces>
+        <researchPrerequisites>
+          <li>ShuttleCargo</li>
+        </researchPrerequisites>
+        <ingredients>
+          <Plasteel>5</Plasteel>
+        </ingredients>
+      </li>
+      <li>
+        <key>ArmorHeavy</key>
+        <label>Heavy Armor</label>
+        <description>Retrofit the shuttle's hull with additional armor plating.\n&lt;color=#bb8f04&gt;+40% blunt armor, +40% sharp armor, -6 flight speed, -0.5 ground speed, -250 cargo capacity, +10 fuel consumption rate&lt;/color&gt;</description>
+        <icon>UI/ShuttleUpgrades/ArmorHeavy</icon>
+        <work>6000</work>
+        <gridCoordinate>(4,1)</gridCoordinate>
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <stats>
+              <li>
+                <def>ArmorRating_Blunt</def>
+                <value>0.4</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>ArmorRating_Sharp</def>
+                <value>0.4</value>
+                <type>Add</type>
+              </li>
+            </stats>
+            <vehicleStats>
+              <li>
+                <def>FlightSpeed</def>
+                <value>-6</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>CargoCapacity</def>
+                <value>-250</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>MoveSpeed</def>
+                <value>-0.5</value>
+                <type>Add</type>
+              </li>
+            </vehicleStats>
+            <statCategories>
+              <li>
+                <def>FuelConsumptionRate</def>
+                <value>10</value>
+                <type>Add</type>
+              </li>
+            </statCategories>
+          </li>
+        </upgrades>
+        <replaces>
+          <li>ArmorMinimal</li>
+          <li>ArmorNano</li>
+          <li>ArmorArcho</li>
+        </replaces>
+        <researchPrerequisites>
+          <li>ShuttleCargo</li>
+        </researchPrerequisites>
+        <ingredients>
+          <Plasteel>30</Plasteel>
+        </ingredients>
+      </li>
+      <li>
+        <key>ArmorNano</key>
+        <label>Reactive Nano-Armor</label>
+        <description>Apply a layer of vibrating mechanite chains which helps to diffuse blunt impacts.\n&lt;color=#bb8f04&gt;+30% blunt armor, +10% sharp armor, -50 cargo capacity&lt;/color&gt;</description>
+        <icon>UI/ShuttleUpgrades/ArmorNano</icon>
+        <work>12000</work>
+        <gridCoordinate>(7,1)</gridCoordinate>
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <stats>
+              <li>
+                <def>ArmorRating_Blunt</def>
+                <value>0.3</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>ArmorRating_Sharp</def>
+                <value>0.1</value>
+                <type>Add</type>
+              </li>
+            </stats>
+            <vehicleStats>
+              <li>
+                <def>CargoCapacity</def>
+                <value>-50</value>
+                <type>Add</type>
+              </li>
+            </vehicleStats>
+          </li>
+        </upgrades>
+        <replaces>
+          <li>ArmorMinimal</li>
+          <li>ArmorHeavy</li>
+          <li>ArmorArcho</li>
+        </replaces>
+        <researchPrerequisites>
+          <li>ShuttleCargo</li>
+        </researchPrerequisites>
+        <ingredients>
+          <ComponentSpacer>1</ComponentSpacer>
+          <Steel>15</Steel>
+        </ingredients>
+      </li>
+      <li>
+        <key>ArmorArcho</key>
+        <label>Archotech Armor</label>
+        <description>[HUMAN CARAPACE\nFROM THIS COCOON I EMERGE\nTO WEAVE ONE STRONGER]\n&lt;color=#bb8f04&gt;+50% blunt armor, +50% sharp armor&lt;/color&gt;</description>
+        <icon>UI/ShuttleUpgrades/ArmorArcho</icon>
+        <work>18000</work>
+        <gridCoordinate>(10,1)</gridCoordinate>
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <stats>
+              <li>
+                <def>ArmorRating_Blunt</def>
+                <value>0.5</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>ArmorRating_Sharp</def>
+                <value>0.5</value>
+                <type>Add</type>
+              </li>
+            </stats>
+          </li>
+        </upgrades>
+        <replaces>
+          <li>ArmorMinimal</li>
+          <li>ArmorHeavy</li>
+          <li>ArmorNano</li>
+        </replaces>
+        <researchPrerequisites>
+          <li>ArchotechHullConversion</li>
+        </researchPrerequisites>
+        <ingredients>
+          <Plasteel>5</Plasteel>
+          <Gold>5</Gold>
+          <ArchotechExoticParticles>1</ArchotechExoticParticles>
+        </ingredients>
+      </li>
+      <li>
+        <key>EngineOverdriven</key>
+        <label>Overdriven Engine</label>
+        <description>Boost reactor output and overdrive the primary engines.\n&lt;color=#bb8f04&gt;+12 flight speed, +1 ground move speed, +20 fuel consumption rate&lt;/color&gt;</description>
+        <icon>UI/ShuttleUpgrades/EngineOverdriven</icon>
+        <work>8000</work>
+        <gridCoordinate>(1,4)</gridCoordinate>
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>FlightSpeed</def>
+                <value>12</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>MoveSpeed</def>
+                <value>1</value>
+                <type>Add</type>
+              </li>
+            </vehicleStats>
+            <statCategories>
+              <li>
+                <def>FuelConsumptionRate</def>
+                <value>20</value>
+                <type>Add</type>
+              </li>
+            </statCategories>
+          </li>
+        </upgrades>
+        <replaces>
+          <li>EngineThrusters</li>
+          <li>EngineMule</li>
+          <li>EngineArcho</li>
+        </replaces>
+        <researchPrerequisites>
+          <li>ShuttleCargo</li>
+        </researchPrerequisites>
+        <ingredients>
+          <ComponentSpacer>1</ComponentSpacer>
+          <Uranium>10</Uranium>
+        </ingredients>
+      </li>
+      <li>
+        <key>EngineThrusters</key>
+        <label>Auxiliary Thrusters</label>
+        <description>Installing additional thrusters improves the shuttle's chance of dodging enemy point-defense systems.\n&lt;color=#bb8f04&gt;+7% ship combat dodge chance, +5 fuel consumption rate&lt;/color&gt;</description>
+        <icon>UI/ShuttleUpgrades/EngineThrusters</icon>
+        <work>8000</work>
+        <gridCoordinate>(4,4)</gridCoordinate>
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>SoS2CombatDodgeChance</def>
+                <value>13</value>
+                <type>Add</type>
+              </li>
+            </vehicleStats>
+            <statCategories>
+              <li>
+                <def>FuelConsumptionRate</def>
+                <value>5</value>
+                <type>Add</type>
+              </li>
+            </statCategories>
+          </li>
+        </upgrades>
+        <replaces>
+          <li>EngineOverdriven</li>
+          <li>EngineMule</li>
+          <li>EngineArcho</li>
+        </replaces>
+        <researchPrerequisites>
+          <li>ShuttleCargo</li>
+        </researchPrerequisites>
+        <ingredients>
+          <ComponentSpacer>1</ComponentSpacer>
+          <Plasteel>5</Plasteel>
+        </ingredients>
+      </li>
+      <li>
+        <key>EngineMule</key>
+        <label>M.U.L.E. Module</label>
+        <description>Utilize momentum-redirection technology to increase the mass of cargo this shuttle can carry, at the cost of greatly reduced flight speed.\n&lt;color=#bb8f04&gt;-8 flight speed, -0.66 ground move speed, +250 cargo capacity&lt;/color&gt;</description>
+        <icon>UI/ShuttleUpgrades/EngineMule</icon>
+        <work>8000</work>
+        <gridCoordinate>(7,4)</gridCoordinate>
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>FlightSpeed</def>
+                <value>-8</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>CargoCapacity</def>
+                <value>250</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>MoveSpeed</def>
+                <value>-0.66</value>
+                <type>Add</type>
+              </li>
+            </vehicleStats>
+          </li>
+        </upgrades>
+        <replaces>
+          <li>EngineOverdriven</li>
+          <li>EngineThrusters</li>
+          <li>EngineArcho</li>
+        </replaces>
+        <researchPrerequisites>
+          <li>ShuttleCargo</li>
+        </researchPrerequisites>
+        <ingredients>
+          <ComponentSpacer>1</ComponentSpacer>
+          <Plasteel>5</Plasteel>
+          <Uranium>5</Uranium>
+        </ingredients>
+      </li>
+      <li>
+        <key>EngineArcho</key>
+        <label>Archotech Engine</label>
+        <description>[WHAT SAIL CARRIES YOU?\nPUSH AGAINST WHICH FIRMAMENT?\nTHE ANSWER IS: YES]\n&lt;color=#bb8f04&gt;+12 flight speed, +1 ground move speed, +13% ship combat dodge chance, +100 cargo capacity&lt;/color&gt;</description>
+        <icon>UI/ShuttleUpgrades/EngineArcho</icon>
+        <work>12000</work>
+        <gridCoordinate>(10,4)</gridCoordinate>
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>FlightSpeed</def>
+                <value>12</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>SoS2CombatDodgeChance</def>
+                <value>25</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>CargoCapacity</def>
+                <value>100</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>MoveSpeed</def>
+                <value>1</value>
+                <type>Add</type>
+              </li>
+            </vehicleStats>
+          </li>
+        </upgrades>
+        <replaces>
+          <li>EngineOverdriven</li>
+          <li>EngineThrusters</li>
+          <li>EngineMule</li>
+        </replaces>
+        <researchPrerequisites>
+          <li>ArchotechEngine</li>
+        </researchPrerequisites>
+        <ingredients>
+          <ComponentSpacer>2</ComponentSpacer>
+          <ArchotechExoticParticles>1</ArchotechExoticParticles>
+          <Gold>10</Gold>
+        </ingredients>
+      </li>
+      <li>
+        <key>CargoAutodoc</key>
+        <label>Onboard Auto-Doc</label>
+        <description>Install automated paramedic arms aboard the shuttle. These systems will quickly patch any bleeding wounds passengers may have suffered, but their tend quality is minimal.\n\n&lt;color=#bb8f04&gt;-250 cargo capacity&lt;/color&gt;</description>
+        <icon>UI/ShuttleUpgrades/CargoAutodoc</icon>
+        <work>8000</work>
+        <gridCoordinate>(1,10)</gridCoordinate>
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>CargoCapacity</def>
+                <value>-250</value>
+                <type>Add</type>
+              </li>
+            </vehicleStats>
+          </li>
+          <li Class="SaveOurShip2.Vehicles.ShuttleAutodocUpgrade">
+            <props>
+              <tendQualityRange>0.1~0.4</tendQualityRange>
+            </props>
+          </li>
+        </upgrades>
+        <replaces>
+          <li>CargoCloaking</li>
+          <li>CargoHeatsink</li>
+          <li>CargoArcho</li>
+        </replaces>
+        <researchPrerequisites>
+          <li>ShuttleCargo</li>
+        </researchPrerequisites>
+        <ingredients>
+          <ComponentSpacer>1</ComponentSpacer>
+          <MedicineIndustrial>5</MedicineIndustrial>
+          <Plasteel>5</Plasteel>
+        </ingredients>
+      </li>
+      <li>
+        <key>CargoCloaking</key>
+        <label>Cloaking Device</label>
+        <description>Install a miniaturized cloaking device to improve dodge chance in combat. Its heatsinks also slightly boost shield capacity. When Odyssey is active, this device will also act as a signal jammer.\n&lt;color=#bb8f04&gt;+13% ship combat dodge chance, +50 heatsink, -500 cargo capacity&lt;/color&gt;</description>
+        <icon>UI/ShuttleUpgrades/CargoCloaking</icon>
+        <work>12000</work>
+        <gridCoordinate>(4,10)</gridCoordinate>
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>CargoCapacity</def>
+                <value>-500</value>
+                <type>Add</type>
+              </li>
+              <li>
+                <def>SoS2CombatDodgeChance</def>
+                <value>25</value>
+                <type>Add</type>
+              </li>
+            </vehicleStats>
+          </li>
+          <li Class="SaveOurShip2.Vehicles.ShuttleHeatsinkUpgrade">
+            <sink>
+              <compClass>SaveOurShip2.CompShipHeatSink</compClass>
+              <heatCapacity>50</heatCapacity>
+              <heatVent>0.06125</heatVent>
+              <heatLoss>0.06125</heatLoss>
+            </sink>
+          </li>
+          <li Class="SaveOurShip2.Vehicles.ShuttleSignalJammerUpgrade" MayRequire="Ludeon.RimWorld.Odyssey" />
+        </upgrades>
+        <replaces>
+          <li>CargoAutodoc</li>
+          <li>CargoHeatsink</li>
+          <li>CargoArcho</li>
+        </replaces>
+        <researchPrerequisites>
+          <li>ShipCloaking</li>
+        </researchPrerequisites>
+        <ingredients>
+          <ComponentSpacer>3</ComponentSpacer>
+          <Gold>10</Gold>
+          <Plasteel>30</Plasteel>
+          <Steel>30</Steel>
+        </ingredients>
+      </li>
+      <li>
+        <key>CargoHeatsink</key>
+        <label>Auxiliary Heatsink</label>
+        <description>Install an auxiliary heatsink to support shields.\n&lt;color=#bb8f04&gt;+200 heatsink, -100 cargo capacity&lt;/color&gt;</description>
+        <icon>UI/ShuttleUpgrades/CargoHeatsink</icon>
+        <work>8000</work>
+        <gridCoordinate>(7,10)</gridCoordinate>
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>CargoCapacity</def>
+                <value>-100</value>
+                <type>Add</type>
+              </li>
+            </vehicleStats>
+          </li>
+          <li Class="SaveOurShip2.Vehicles.ShuttleHeatsinkUpgrade">
+            <sink>
+              <compClass>SaveOurShip2.CompShipHeatSink</compClass>
+              <heatCapacity>200</heatCapacity>
+              <heatVent>0.3</heatVent>
+              <heatLoss>0.3</heatLoss>
+            </sink>
+          </li>
+        </upgrades>
+        <replaces>
+          <li>CargoAutodoc</li>
+          <li>CargoCloaking</li>
+          <li>CargoArcho</li>
+        </replaces>
+        <researchPrerequisites>
+          <li>ShipHeatsink</li>
+        </researchPrerequisites>
+        <ingredients>
+          <ComponentSpacer>1</ComponentSpacer>
+          <ComponentIndustrial>1</ComponentIndustrial>
+          <Steel>50</Steel>
+          <Plasteel>15</Plasteel>
+        </ingredients>
+      </li>
+      <li>
+        <key>CargoArcho</key>
+        <label>Archotech Slipspace</label>
+        <description>[BOX INSIDE A BOX\nREPEAT AD INFINITUM\nSERIES CONVERGES]\n&lt;color=#bb8f04&gt;+500 cargo capacity&lt;/color&gt;</description>
+        <icon>UI/ShuttleUpgrades/CargoArcho</icon>
+        <work>20000</work>
+        <gridCoordinate>(10,10)</gridCoordinate>
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>CargoCapacity</def>
+                <value>500</value>
+                <type>Add</type>
+              </li>
+            </vehicleStats>
+          </li>
+        </upgrades>
+        <replaces>
+          <li>CargoAutodoc</li>
+          <li>CargoCloaking</li>
+          <li>CargoHeatsink</li>
+        </replaces>
+        <researchPrerequisites>
+          <li>ArchotechExotics</li>
+        </researchPrerequisites>
+        <ingredients>
+          <ComponentSpacer>4</ComponentSpacer>
+          <Jade>100</Jade>
+          <ArchotechExoticParticles>3</ArchotechExoticParticles>
+        </ingredients>
+      </li>
+    </nodes>
+  </Vehicles.UpgradeTreeDef>
+</Defs>

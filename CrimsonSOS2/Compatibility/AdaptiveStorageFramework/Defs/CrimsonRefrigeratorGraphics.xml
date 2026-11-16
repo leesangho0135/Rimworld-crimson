@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Defs>
-  <!-- Closed fridge hides food; display fridge draws actual item materials in
-       its shelves through its own component, including without ASF. -->
-  <AdaptiveStorage.GraphicsDef><defName>Crimson_CookingRefrigeratorContents</defName><targetDef>Crimson_CookingRefrigerator</targetDef><showContainedItems>false</showContainedItems><contentLabelStyle>None</contentLabelStyle></AdaptiveStorage.GraphicsDef>
-  <AdaptiveStorage.GraphicsDef><defName>Crimson_MealDisplayRefrigeratorContents</defName><targetDef>Crimson_MealDisplayRefrigerator</targetDef><showContainedItems>false</showContainedItems><contentLabelStyle>None</contentLabelStyle></AdaptiveStorage.GraphicsDef>
-</Defs>

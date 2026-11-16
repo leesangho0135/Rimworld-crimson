@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="BuildingBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_SingularityRestoration</defName>
+    <label>특이점 복원소</label>
+    <description>작업로봇 세 대를 동시에 수용하는 충전·자가 정비·기체 복원 설비. 배터리가 부족한 로봇은 자동으로 복귀하며 충전과 정비를 끝내면 업무로 돌아간다. 방전·행동 불능 기체와 파괴된 기체의 잔해는 운반해서 넣을 수 있다. 잔해는 기존 기체를 복원하므로 이름과 허용 구역을 보존한다. 정전 중에는 모든 처리를 멈춘다. 완전히 소멸한 기체는 복원할 수 없다.</description>
+    <thingClass>CrimsonSOS2.CrimsonRobotRestoration</thingClass>
+    <drawerType>RealtimeOnly</drawerType><tickerType>Rare</tickerType>
+    <designationCategory>Production</designationCategory>
+    <size>(3,2)</size><rotatable>true</rotatable><defaultPlacingRot>North</defaultPlacingRot>
+    <graphicData>
+      <texPath>Crimson/Support/SingularityRestorationAtlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonRestorationGraphic</graphicClass><shaderType>Cutout</shaderType>
+      <drawSize>(3,2)</drawSize><shadowData IsNull="True" />
+    </graphicData>
+    <fillPercent>0.3</fillPercent><passability>PassThroughOnly</passability><blockLight>false</blockLight>
+    <hasInteractionCell>true</hasInteractionCell><interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <pathCost>30</pathCost><altitudeLayer>Building</altitudeLayer>
+    <costList><Steel>150</Steel><Plasteel>120</Plasteel><ComponentSpacer>6</ComponentSpacer></costList>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints><Beauty>5</Beauty><WorkToBuild>18000</WorkToBuild><Mass>150</Mass><Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>100</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>200</originalMaxHitPoints><goldReference>true</goldReference></li>
+    </comps>
+    <modExtensions><li Class="CrimsonSOS2.CrimsonRestorationSettings">
+      <batteryDurationTicks>60000</batteryDurationTicks><chargeTicks>5000</chargeTicks><repairTicks>10000</repairTicks><resurrectionTicks>30000</resurrectionTicks>
+      <idleWatts>100</idleWatts><wattsPerRobot>3000</wattsPerRobot>
+    </li></modExtensions>
+    <researchPrerequisites><li>Fabrication</li></researchPrerequisites><constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <techLevel>Spacer</techLevel><uiOrder>1005</uiOrder>
+  </ThingDef>
+  <JobDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_RobotDock</defName><driverClass>CrimsonSOS2.JobDriver_CrimsonRobotDock</driverClass>
+    <reportString>특이점 복원소로 복귀 중.</reportString>
+  </JobDef>
+  <JobDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_RobotRecover</defName><driverClass>CrimsonSOS2.JobDriver_CrimsonRobotRecover</driverClass>
+    <reportString>작업로봇 기체를 특이점 복원소로 운반 중.</reportString>
+  </JobDef>
+  <WorkGiverDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Crimson_RobotRecovery</defName><label>로봇 기체 회수</label><giverClass>CrimsonSOS2.WorkGiver_CrimsonRobotRecovery</giverClass>
+    <workType>Hauling</workType><priorityInType>110</priorityInType><verb>회수</verb><gerund>로봇 기체 회수</gerund>
+    <requiredCapacities><li>Manipulation</li></requiredCapacities>
+  </WorkGiverDef>
+</Defs>

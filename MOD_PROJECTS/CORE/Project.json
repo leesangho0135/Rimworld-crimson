@@ -1,0 +1,172 @@
+{
+  "name": "CORE",
+  "sources": [
+    {
+      "original": "Source/CrimsonSOS2/AssemblyInfo.cs",
+      "path": "Source/Main/AssemblyInfo.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonCardinalGraphic.cs",
+      "path": "Source/Main/CrimsonCardinalGraphic.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonMod.cs",
+      "path": "Source/Main/CrimsonMod.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonV48AtlasGraphic.cs",
+      "path": "Source/Main/CrimsonV48AtlasGraphic.cs",
+      "assembly": "main"
+    }
+  ],
+  "content": [
+    {
+      "original": "CrimsonSOS2/1.6/Languages/English/Keyed/CrimsonSettings.xml",
+      "path": "Content/1.6/Languages/English/Keyed/CrimsonSettings.xml",
+      "target": "1.6/Languages/English/Keyed/CrimsonSettings.xml",
+      "sha256": "29AC2BD601D43D581623798B1272F8199D5FA44680C132690964E03FD4DA3E4B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Languages/Korean/Keyed/CrimsonSettings.xml",
+      "path": "Content/1.6/Languages/Korean/Keyed/CrimsonSettings.xml",
+      "target": "1.6/Languages/Korean/Keyed/CrimsonSettings.xml",
+      "sha256": "812F4C9E5FD1BB0D0637082CBF4F9348FBEAD9743D8EBD6F09D06B5BAFE1ABC3"
+    },
+    {
+      "original": "CrimsonSOS2/About/About.xml",
+      "path": "Content/About/About.xml",
+      "target": "About/About.xml",
+      "sha256": "8DE8BE2AFB1641C59D56D03A6A5A3F060CBC96C8D69B175A60CBE967573A6BA6"
+    },
+    {
+      "original": "CrimsonSOS2/LICENSES/SaveOurShip2-CC-BY-NC-SA-4.0.txt",
+      "path": "Content/LICENSES/SaveOurShip2-CC-BY-NC-SA-4.0.txt",
+      "target": "LICENSES/SaveOurShip2-CC-BY-NC-SA-4.0.txt",
+      "sha256": "3DF399F4833868B9B403A46E0C94E2A5DCE963FE65D18A0727979CA366F6E61A"
+    },
+    {
+      "original": "CrimsonSOS2/LoadFolders.xml",
+      "path": "Content/LoadFolders.xml",
+      "target": "LoadFolders.xml",
+      "sha256": "34692DFB499D35CD0D347D18E54D56357870494EB546B22F41AD04D885DF15B7"
+    },
+    {
+      "original": "CrimsonSOS2/THIRD-PARTY-NOTICES.md",
+      "path": "Content/THIRD-PARTY-NOTICES.md",
+      "target": "THIRD-PARTY-NOTICES.md",
+      "sha256": "F972E60011380D16579377406B4B0843D6AB1A60A8F3ED8D5FF6B4D3D9C77223"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/Crimson_Stage0.xml",
+      "path": "Content/1.6/Defs/Crimson_Stage0.xml",
+      "target": "1.6/Defs/Crimson_Stage0.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonCommanderWallStorage.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonCommanderWallStorage.xml",
+      "target": "1.6/Defs/CORE__CrimsonCommanderWallStorage.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonDecor.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonDecor.xml",
+      "target": "1.6/Defs/CORE__CrimsonDecor.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonDecorElectronics.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonDecorElectronics.xml",
+      "target": "1.6/Defs/CORE__CrimsonDecorElectronics.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonDecorExtras.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonDecorExtras.xml",
+      "target": "1.6/Defs/CORE__CrimsonDecorExtras.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonFloorGuides.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonFloorGuides.xml",
+      "target": "1.6/Defs/CORE__CrimsonFloorGuides.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonHabitatFurniture.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonHabitatFurniture.xml",
+      "target": "1.6/Defs/CORE__CrimsonHabitatFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonHull.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonHull.xml",
+      "target": "1.6/Defs/CORE__CrimsonHull.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonHullWindows.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonHullWindows.xml",
+      "target": "1.6/Defs/CORE__CrimsonHullWindows.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonMenu.xml",
+      "path": "Content/1.6/Defs/CrimsonMenu.xml",
+      "target": "1.6/Defs/CrimsonMenu.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRecreationFurniture.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonRecreationFurniture.xml",
+      "target": "1.6/Defs/CORE__CrimsonRecreationFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRoomFittings.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonRoomFittings.xml",
+      "target": "1.6/Defs/CORE__CrimsonRoomFittings.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRoyaltyFurniture.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonRoyaltyFurniture.xml",
+      "target": "1.6/Defs/CORE__CrimsonRoyaltyFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRugs.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonRugs.xml",
+      "target": "1.6/Defs/CORE__CrimsonRugs.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonSculptures.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonSculptures.xml",
+      "target": "1.6/Defs/CORE__CrimsonSculptures.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonSeatingFurniture.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonSeatingFurniture.xml",
+      "target": "1.6/Defs/CORE__CrimsonSeatingFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonStorageFurniture.xml",
+      "path": "Content/1.6/Defs/CORE__CrimsonStorageFurniture.xml",
+      "target": "1.6/Defs/CORE__CrimsonStorageFurniture.xml",
+      "splitXml": true
+    }
+  ],
+  "authoring": [],
+  "integrationDependencies": [
+    "FURNITURE",
+    "SOS2_ADDON"
+  ],
+  "buildMode": "integrated-runtime-preserving-existing-assembly-contract",
+  "namespace": "CrimsonSOS2"
+}

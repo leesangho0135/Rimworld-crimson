@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="Crimson_WallEquipmentCabinetBase">
+    <defName>Crimson_WallArmorCabinet</defName><label>심홍 벽걸이 방어구 보관함</label>
+    <description>벽면에 부착하는 1×1 방어구 보관함입니다. 의류 또는 방어구를 최대 두 개 보관하며, 두 개를 수납하면 실제 장비의 외형을 좌우로 나란히 표시합니다. 각 장비를 따로 꺼낼 수 있습니다. 아래 가구의 수납칸을 차지하지 않고, 전원 없이 사용할 수 있습니다.</description>
+    <graphicData><texPath>Crimson/Decor/WallEquipment/ArmorCabinet</texPath><drawSize>(1,0.9925094)</drawSize></graphicData>
+    <building>
+      <fixedStorageSettings><filter><categories><li>Apparel</li></categories></filter></fixedStorageSettings>
+      <defaultStorageSettings><priority>Important</priority><filter><categories><li>Apparel</li></categories></filter></defaultStorageSettings>
+    </building>
+    <uiOrder>1086</uiOrder>
+    <statBases><Beauty>5</Beauty></statBases>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_StorageFurniture</designatorDropdown>
+  </ThingDef>
+</Defs>

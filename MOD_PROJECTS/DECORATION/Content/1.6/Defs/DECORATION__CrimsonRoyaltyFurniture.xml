@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="FurnitureBase" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_Drape</defName>
+    <label>심홍 왕실 가림막</label>
+    <description>검은 프레임에 짙은 진홍색 천을 걸친 왕실 가림막입니다. 왕실의 방과 알현실을 꾸미는 데 사용합니다. 설치 크기는 3×1이며, 회전하면 1×3입니다. 설치된 칸은 통과할 수 없으며 엄폐율은 90%입니다.</description>
+    <designationCategory>Furniture</designationCategory>
+    <passability>Impassable</passability>
+    <fillPercent>0.90</fillPercent>
+    <statBases>
+      <MaxHitPoints>700</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Mass>15</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>1200</Beauty>
+    <MarketValue>20006.48</MarketValue></statBases>
+    <stuffCategories Inherit="False" />
+    <costStuffCount>0</costStuffCount>
+    <costList Inherit="False"><WoodLog>50</WoodLog><Cloth>150</Cloth></costList>
+    <canOverlapZones>true</canOverlapZones>
+    <pathCost>14</pathCost>
+    <rotatable>true</rotatable>
+    <size>(3,1)</size>
+    <uiIconOffset>(0, 0.15)</uiIconOffset>
+    <filthLeaving>Filth_Trash</filthLeaving>
+    <building>
+      <destroySound>BuildingDestroyed_Soft_Medium</destroySound>
+      <destroyShakeAmount>0</destroyShakeAmount>
+    </building>
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+    </researchPrerequisites>
+    <graphicData>
+      <drawSize>(3.4,2.6)</drawSize>
+      <texPath>Crimson/Decor/Royalty/Drape</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonRoyaltyMultiGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <addTopAltitudeBias>true</addTopAltitudeBias>
+      <shadowData>
+        <volume>(3,0.5,0.3)</volume>
+        <offset>(0,0,-0.2)</offset>
+      </shadowData>
+      <damageData>
+        <rectN>(0.1, 0.1, 2.8, 1.5)</rectN>
+        <rectS>(0.1, 0.1, 2.8, 1.5)</rectS>
+        <rectE>(0.25, 0.5, 0.5, 1.5)</rectE>
+        <rectW>(0.25, 0.5, 0.5, 1.5)</rectW>
+      </damageData>
+      <allowFlip>false</allowFlip>
+    <drawOffsetNorth>(0.000000,0,0.613078)</drawOffsetNorth><drawOffsetEast>(0.000000,0,1.166986)</drawOffsetEast><drawOffsetSouth>(-0.001356,0,0.608931)</drawOffsetSouth><drawOffsetWest>(-0.016587,0,1.158852)</drawOffsetWest><drawOffset>(0,0,0)</drawOffset></graphicData>
+    <designatorDropdown IsNull="True" />
+    <uiIconPath>Crimson/Decor/Royalty/Drape_south</uiIconPath>
+      <defaultStuff IsNull="True" />
+      <comps><li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>100</originalMaxHitPoints></li></comps>
+    <uiOrder>1141</uiOrder>
+  </ThingDef>
+  </Defs>

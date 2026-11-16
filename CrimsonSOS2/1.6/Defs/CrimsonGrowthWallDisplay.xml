@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Defs>
-  <!-- Retain save references as a hidden 3x1 screen with the growth page. -->
-  <ThingDef ParentName="Crimson_WallDisplayBase">
-    <defName>Crimson_GrowthWallDisplay</defName>
-    <label>심홍 재배 스크린</label>
-    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
-  </ThingDef>
-</Defs>

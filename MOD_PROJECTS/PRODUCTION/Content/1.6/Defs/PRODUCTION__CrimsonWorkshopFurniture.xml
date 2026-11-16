@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="BenchBase">
+    <defName>Crimson_FabricationBench</defName>
+    <label>심홍 조립 작업대</label>
+    <description>소형 조립 장치와 정밀 작업면을 갖춘 간결한 함선 조립대입니다. 부품과 첨단 장비를 제작하며, 작업대 위에 선반을 얹어 재료를 가까이 보관할 수 있습니다.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <statBases>
+      <MaxHitPoints>2100</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>0</Flammability>
+    <Beauty>40</Beauty><MarketValue>12406.48</MarketValue></statBases>
+    <minifiedDef />
+    <thingCategories Inherit="false" />
+    <size>(3,1)</size>
+    <costList Inherit="False"><Steel>120</Steel><ComponentIndustrial>4</ComponentIndustrial></costList>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>250</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+    <li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>300</originalMaxHitPoints></li></comps>
+    <recipes>
+      <li>Make_ComponentIndustrial</li>
+      <li>Make_ComponentSpacer</li>
+    </recipes>
+    <graphicData>
+      <texPath>Crimson/Decor/Workshops/FabricationBenchAtlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonV48AtlasGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(3.3,1.8)</drawSize>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Workshop</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    </building>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>1002</uiOrder>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>Fabrication</li>
+    </researchPrerequisites>
+    <drawerType>RealtimeOnly</drawerType>
+    <defaultPlacingRot>South</defaultPlacingRot>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designatorDropdown IsNull="True" />
+  </ThingDef>
+</Defs>

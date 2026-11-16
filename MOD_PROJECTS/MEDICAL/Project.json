@@ -1,0 +1,144 @@
+{
+  "name": "MEDICAL",
+  "sources": [
+    {
+      "original": "Source/CrimsonSOS2/CrimsonCryptosleep.cs",
+      "path": "Source/Main/CrimsonCryptosleep.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonMedicalFloor.cs",
+      "path": "Source/Main/CrimsonMedicalFloor.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonOrganicReconstructor.cs",
+      "path": "Source/Main/CrimsonOrganicReconstructor.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonOrganicReconstructorGraphic.cs",
+      "path": "Source/Main/CrimsonOrganicReconstructorGraphic.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonOrganicReconstructorMigration.cs",
+      "path": "Source/Main/CrimsonOrganicReconstructorMigration.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonOrganicReconstructorQueue.cs",
+      "path": "Source/Main/CrimsonOrganicReconstructorQueue.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonVitalsFacility.cs",
+      "path": "Source/Main/CrimsonVitalsFacility.cs",
+      "assembly": "main"
+    }
+  ],
+  "content": [
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Cryptosleep/CryptosleepStates.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Cryptosleep/CryptosleepStates.png",
+      "target": "1.6/Textures/Crimson/Decor/Cryptosleep/CryptosleepStates.png",
+      "sha256": "47A1E59A5413747A8A2DA2D28865963763D816CCB49743F2EABB7FC23F3EC50B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Floors/MedicalFloor.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Floors/MedicalFloor.png",
+      "target": "1.6/Textures/Crimson/Decor/Floors/MedicalFloor.png",
+      "sha256": "BE79702955BB56458243CC699F221B1F71909656757A71A4444DA5D380529A8A"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Habitat/IVStandStates.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Habitat/IVStandStates.png",
+      "target": "1.6/Textures/Crimson/Decor/Habitat/IVStandStates.png",
+      "sha256": "8CF361B294D2C39D8C2F26DD797AC737D89A778AA29F6D41CEE2189EEC2EE5DF"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Habitat/MedicalBedStates.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Habitat/MedicalBedStates.png",
+      "target": "1.6/Textures/Crimson/Decor/Habitat/MedicalBedStates.png",
+      "sha256": "09BE8ECB3582ACFDB3A85FDE883B6575ED0AEFC5F952DCDB46D7ADBADBEE0E07"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/Bookcase.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/Bookcase.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/Bookcase.png",
+      "sha256": "CA4C8342D10BDADDF80F84FF746C30B12A6F9AD11A6AF8C0ACE5006C387109B3"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/MedicineCabinet.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/MedicineCabinet.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/MedicineCabinet.png",
+      "sha256": "8DC477A654EF8A913038B215FD2092A12C9125A28CB17179613E6E9FEB8AD41C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/VitalsMonitor.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/VitalsMonitor.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/VitalsMonitor.png",
+      "sha256": "FFCB8A12F7E22543BD63F35619657D574CC42F8E66F936011E78519E35F86484"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/VitalsMonitorWall.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/VitalsMonitorWall.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/VitalsMonitorWall.png",
+      "sha256": "DBBC241D7183A4A319883FD28B685DA9AA3A8F65FE4B934ED215B286EC3672EC"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Workshops/OrganicReconstructorTopDown.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Workshops/OrganicReconstructorTopDown.png",
+      "target": "1.6/Textures/Crimson/Decor/Workshops/OrganicReconstructorTopDown.png",
+      "sha256": "D48BBFB41B3EB442AA92E9FA811511DB7AF046E49C86D4DD570F3255823E4352"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Workshops/OrganicReconstructorTopDown_off.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Workshops/OrganicReconstructorTopDown_off.png",
+      "target": "1.6/Textures/Crimson/Decor/Workshops/OrganicReconstructorTopDown_off.png",
+      "sha256": "1279BE2945A835C17118558EB9EA8DE56319D9C3BD537303652D136ACA54B37C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonCommanderWallStorage.xml",
+      "path": "Content/1.6/Defs/MEDICAL__CrimsonCommanderWallStorage.xml",
+      "target": "1.6/Defs/MEDICAL__CrimsonCommanderWallStorage.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonCryptosleep.xml",
+      "path": "Content/1.6/Defs/CrimsonCryptosleep.xml",
+      "target": "1.6/Defs/CrimsonCryptosleep.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonHabitatFurniture.xml",
+      "path": "Content/1.6/Defs/MEDICAL__CrimsonHabitatFurniture.xml",
+      "target": "1.6/Defs/MEDICAL__CrimsonHabitatFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonMedicalFloor.xml",
+      "path": "Content/1.6/Defs/CrimsonMedicalFloor.xml",
+      "target": "1.6/Defs/CrimsonMedicalFloor.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonOrganicReconstructor.xml",
+      "path": "Content/1.6/Defs/CrimsonOrganicReconstructor.xml",
+      "target": "1.6/Defs/CrimsonOrganicReconstructor.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRoomFittings.xml",
+      "path": "Content/1.6/Defs/MEDICAL__CrimsonRoomFittings.xml",
+      "target": "1.6/Defs/MEDICAL__CrimsonRoomFittings.xml",
+      "splitXml": true
+    }
+  ],
+  "authoring": [],
+  "integrationDependencies": [
+    "FURNITURE"
+  ],
+  "buildMode": "integrated-runtime-preserving-existing-assembly-contract",
+  "namespace": "CrimsonSOS2"
+}

@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="ApparelBase">
+    <defName>Crimson_StaffHelmet</defName>
+    <label>모노리스 장교 밀폐 각모</label>
+    <description>각진 각모 아래에 투명 눈 보호면과 검은 호흡 마스크, 귀와 목을 감싸는 압력 내피를 결합한 장교용 머리 장비. 장교 제식복과 함께 착용하면 SOS2 진공 환경에 대응한다. 기존 방호 성능을 유지하며 품질 등급 없이 전설급 능력치가 고정되어 있다.</description>
+    <thingClass>Apparel</thingClass>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <generateCommonality>0</generateCommonality>
+    <uiIconScale>1</uiIconScale>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Equipment/StaffHelmet</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonWardenGroundGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases Inherit="False">
+      <ArmorRating_Sharp>1.26</ArmorRating_Sharp>
+      <ArmorRating_Blunt>.72</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.08</ArmorRating_Heat>
+      <Insulation_Cold>24</Insulation_Cold>
+      <Insulation_Heat>24</Insulation_Heat>
+      <Beauty>4</Beauty>
+      <MarketValue>2400</MarketValue>
+      <Mass>.3</Mass>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <EquipDelay>2</EquipDelay>
+      <WorkToMake>28000</WorkToMake>
+      <DeteriorationRate>0.2</DeteriorationRate>
+    </statBases>
+    <equippedStatOffsets Inherit="False">
+      <HypoxiaResistance>1</HypoxiaResistance>
+      <DecompressionResistance>0.25</DecompressionResistance>
+      <ToxicResistance>0.5</ToxicResistance>
+      <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.7</VacuumResistance>
+    </equippedStatOffsets>
+    <costList Inherit="False">
+      <Plasteel>40</Plasteel>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <recipeMaker Inherit="False">
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>Fabrication</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingCategories Inherit="False">
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <apparel Inherit="False">
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicPath>Crimson/Equipment/StaffHelmet</wornGraphicPath>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <tags>
+        <li>Spacer</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <parentTagDef>ApparelHead</parentTagDef>
+    </apparel>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable" />
+      <li>
+        <compClass>SaveOurShip2.CompEVA</compClass>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_Single" Inherit="False">
+      <color>(1,1,1,1)</color>
+    </colorGenerator>
+    <tradeTags Inherit="False">
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <thingSetMakerTags Inherit="False" />
+  </ThingDef>
+  <ThingDef ParentName="ApparelBase">
+    <defName>Crimson_StaffUniform</defName>
+    <label>모노리스 장교 제식복</label>
+    <description>기존 보강 작업복의 얇은 금속판과 압력 내피를 유지한 장교용 제식복. 상의 아래로 짧은 바지가 보이며 코트 안에 착용한다. 장교 밀폐 각모와 함께 착용하면 SOS2 진공 환경에 대응한다. 품질 등급 없이 전설급 능력치가 고정되어 있다.</description>
+    <thingClass>Apparel</thingClass>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <generateCommonality>0</generateCommonality>
+    <uiIconScale>1</uiIconScale>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Equipment/StaffUniform</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonWardenGroundGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases Inherit="False">
+      <ArmorRating_Sharp>1.26</ArmorRating_Sharp>
+      <ArmorRating_Blunt>.54</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.08</ArmorRating_Heat>
+      <Insulation_Cold>60</Insulation_Cold>
+      <Insulation_Heat>36</Insulation_Heat>
+      <Beauty>4</Beauty>
+      <MarketValue>3200</MarketValue>
+      <Mass>.8</Mass>
+      <MaxHitPoints>280</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <EquipDelay>4</EquipDelay>
+      <WorkToMake>48000</WorkToMake>
+      <DeteriorationRate>0.2</DeteriorationRate>
+    </statBases>
+    <equippedStatOffsets Inherit="False">
+      <DecompressionResistance>0.75</DecompressionResistance>
+      <VacuumSpeedMultiplier>4</VacuumSpeedMultiplier>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
+    </equippedStatOffsets>
+    <costList Inherit="False">
+      <Plasteel>55</Plasteel>
+      <Hyperweave>20</Hyperweave>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <recipeMaker Inherit="False">
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>Fabrication</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingCategories Inherit="False">
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel Inherit="False">
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <wornGraphicPath>Crimson/Equipment/StaffUniform</wornGraphicPath>
+      <countsAsClothingForNudity>true</countsAsClothingForNudity>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <tags>
+        <li>Spacer</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <parentTagDef>ApparelBody</parentTagDef>
+    </apparel>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable" />
+      <li>
+        <compClass>SaveOurShip2.CompEVA</compClass>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_Single" Inherit="False">
+      <color>(1,1,1,1)</color>
+    </colorGenerator>
+    <tradeTags Inherit="False">
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <thingSetMakerTags Inherit="False" />
+  </ThingDef>
+</Defs>

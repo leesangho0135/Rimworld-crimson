@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef Name="Crimson_HabitatBedBase" ParentName="BedWithQualityBase" Abstract="True">
+    <designationCategory>Furniture</designationCategory>
+    <uiIconColorTwo>(255,255,255)</uiIconColorTwo>
+    <drawerType>RealtimeOnly</drawerType>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <graphicClass>CrimsonSOS2.CrimsonHabitatGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawRotated>true</drawRotated>
+      <shadowData IsNull="True" />
+    </graphicData>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <size>(1,2)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>42</pathCost>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToBuild>1800</WorkToBuild>
+      <Mass>35</Mass>
+      <Flammability>0.5</Flammability>
+      <Beauty>2</Beauty>
+    </statBases>
+    <building>
+      <bed_UseSheetColor>false</bed_UseSheetColor>
+      <bed_showSleeperBody>false</bed_showSleeperBody>
+      <bed_healPerDay>6</bed_healPerDay>
+    </building>
+    <researchPrerequisites><li>ComplexFurniture</li><li>Electricity</li></researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <techLevel>Industrial</techLevel>
+  </ThingDef>
+
+  <ThingDef ParentName="Crimson_HabitatBedBase">
+    <defName>Crimson_CrewBed</defName>
+    <label>심홍 1인용 침대</label>
+    <description>함선 거주 구역을 위한 1인용 침대입니다. 전원 공급 시 편안함이 50% 향상되며 기본 자연 치유량은 하루 6입니다. 편안함은 전설 규격을 기준으로 연결된 협탁·옷장의 보조 효과에 따라 달라집니다. 250W 전력은 표시등과 약한 주변 조명, 편안함 보조 장치에 사용하며 정전 중에도 침대에서 잘 수 있습니다.</description>
+    <graphicData><texPath>Crimson/Decor/Habitat/SingleBedStates</texPath><drawSize>(1,2)</drawSize></graphicData>
+    <statBases><BedRestEffectiveness>1.2</BedRestEffectiveness><Comfort>1.6</Comfort><Beauty>120</Beauty><MarketValue>9205.832</MarketValue><MaxHitPoints>1260</MaxHitPoints><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>60</Steel><Cloth>30</Cloth><ComponentIndustrial>2</ComponentIndustrial></costList>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>250</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Glower"><glowRadius>1.6</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li Class="CompProperties_AffectedByFacilities"><linkableFacilities><li>Crimson_BedsideTable</li><li>Crimson_Wardrobe</li></linkableFacilities></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonPoweredComfort" />
+    <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><facilityComfortIsFinal>true</facilityComfortIsFinal><originalMaxHitPoints>180</originalMaxHitPoints></li></comps>
+    <uiOrder>1000</uiOrder>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_BedroomFurniture</designatorDropdown>
+  </ThingDef>
+
+  <ThingDef ParentName="Crimson_HabitatBedBase">
+    <defName>Crimson_CrewDoubleBed</defName>
+    <label>심홍 2인용 침대</label>
+    <description>두 사람이 함께 사용할 수 있는 2인용 승무원 침대입니다. 전원 공급 시 편안함이 50% 향상되며 기본 자연 치유량은 하루 6입니다. 편안함은 전설 규격을 기준으로 연결된 협탁·옷장의 보조 효과에 따라 달라집니다. 500W 전력은 표시등과 약한 주변 조명, 편안함 보조 장치에 사용하며 정전 중에도 침대에서 잘 수 있습니다.</description>
+    <size>(2,2)</size>
+    <graphicData><texPath>Crimson/Decor/Habitat/DoubleBedStates</texPath><drawSize>(2,2)</drawSize></graphicData>
+    <statBases><MaxHitPoints>1680</MaxHitPoints><WorkToBuild>2600</WorkToBuild><Mass>50</Mass><BedRestEffectiveness>1.2</BedRestEffectiveness><Comfort>2</Comfort><Beauty>160</Beauty><MarketValue>15308.4238</MarketValue><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>100</Steel><Cloth>50</Cloth><ComponentIndustrial>3</ComponentIndustrial></costList>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>500</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Glower"><glowRadius>1.6</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li Class="CompProperties_AffectedByFacilities"><linkableFacilities><li>Crimson_BedsideTable</li><li>Crimson_Wardrobe</li></linkableFacilities></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonPoweredComfort" />
+    <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><facilityComfortIsFinal>true</facilityComfortIsFinal><originalMaxHitPoints>240</originalMaxHitPoints></li></comps>
+    <uiOrder>1001</uiOrder>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_BedroomFurniture</designatorDropdown>
+  </ThingDef>
+
+  <ThingDef ParentName="Crimson_HabitatFacilityBase">
+    <defName>Crimson_BedsideTable</defName>
+    <label>심홍 협탁</label>
+    <description>함선용 협탁입니다. 전원이 공급되면 머리맡에 연결된 침대에 편안함 +.1와 휴식 효율 +10%p를 제공합니다. 이 보조 효과는 최종 고정값이며 같은 종류의 시설은 중첩되지 않습니다. 소비전력은 500W입니다.</description>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/EndTable</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(1,1.1)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
+    <surfaceType>Item</surfaceType>
+    <costList Inherit="False"><Steel>30</Steel><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>500</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Glower"><glowRadius>1.6</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li Class="CompProperties_Facility"><statOffsets><Comfort>0.1</Comfort><BedRestEffectiveness>0.1</BedRestEffectiveness></statOffsets><maxSimultaneous>1</maxSimultaneous><mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead></li>
+    <li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>120</originalMaxHitPoints></li></comps>
+    <uiOrder>1002</uiOrder>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+      <statBases><Beauty>120</Beauty><MarketValue>3103.24</MarketValue><MaxHitPoints>840</MaxHitPoints><Flammability>0</Flammability></statBases>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_BedroomFurniture</designatorDropdown>
+  <defaultPlacingRot>North</defaultPlacingRot></ThingDef>
+
+  <ThingDef ParentName="StorageShelfBase">
+    <defName>Crimson_Wardrobe</defName>
+    <label>심홍 옷장</label>
+    <designationHotKey IsNull="True" />
+    <description>함선용 옷장입니다. 전원이 공급되면 6칸 범위의 연결된 침대에 편안함 +.2와 휴식 효율 +20%p를 제공합니다. 이 보조 효과는 최종 고정값이며 같은 종류의 시설은 중첩되지 않습니다. 소비전력은 625W입니다.</description>
+    <designationCategory>Furniture</designationCategory>
+    <drawerType>RealtimeOnly</drawerType>
+    <tickerType>Normal</tickerType>
+    <size>(2,1)</size>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/Wardrobe</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(2,1.3)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <statBases><MaxHitPoints>1120</MaxHitPoints><WorkToBuild>2000</WorkToBuild><Mass>25</Mass><Beauty>120</Beauty><MarketValue>7206.48</MarketValue><Flammability>0</Flammability></statBases>
+    <stuffCategories Inherit="False" />
+    <costList Inherit="False"><Steel>70</Steel><ComponentIndustrial>2</ComponentIndustrial></costList>
+    <building>
+      <storageGroupTag>Crimson_Wardrobe</storageGroupTag>
+      <fixedStorageSettings Inherit="False"><filter><categories><li>Apparel</li></categories></filter></fixedStorageSettings>
+      <defaultStorageSettings Inherit="False"><priority>Preferred</priority><filter><categories><li>Apparel</li></categories></filter></defaultStorageSettings>
+    </building>
+    <placeWorkers><li>PlaceWorker_ShowFacilitiesConnections</li></placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>625</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Glower"><glowRadius>1.6</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li Class="CompProperties_Facility"><statOffsets><Comfort>0.2</Comfort><BedRestEffectiveness>0.2</BedRestEffectiveness></statOffsets><maxSimultaneous>1</maxSimultaneous><maxDistance>6</maxDistance></li>
+    <li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>160</originalMaxHitPoints></li></comps>
+    <researchPrerequisites><li>Electricity</li></researchPrerequisites>
+    <uiOrder>1003</uiOrder>
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designatorDropdown>Crimson_BedroomFurniture</designatorDropdown>
+  </ThingDef>
+
+  </Defs>

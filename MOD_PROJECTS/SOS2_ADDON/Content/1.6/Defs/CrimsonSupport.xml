@@ -1,0 +1,794 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="BuildingBase">
+    <defName>Crimson_CloakingDevice</defName>
+    <label>위상 은폐기</label>
+    <thingClass>SaveOurShip2.Building_ShipCloakingDevice</thingClass>
+    <graphicData>
+      <texPath>Crimson/Support/CloakingDevice</texPath>
+      <graphicClass>SaveOurShip2.Graphic_SingleOnOff</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.9</fillPercent>
+    <blockLight>false</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <WorkToBuild>9600</WorkToBuild>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <description>Generates a field which masks heat emissions, hiding your ship from passive scans. This prevents random ship battles from starting, but is not helpful once combat has already begun. It also cannot protect you from the powerful scanners used to find ships with high Notoriety.\n\nWhile the device is active, your ship's heat sinks will be disabled and heat capacity will decrease.</description>
+    <designationCategory>Crimson_CS</designationCategory>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>5000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="SaveOurShip2.CompProps_GraphicOnOff" />
+      <li Class="SaveOurShip2.CompProps_ShipHeat">
+        <compClass>SaveOurShip2.CompShipHeatSource</compClass>
+        <heatPerSecond>1</heatPerSecond>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>SaveOurShip2.PlaceWorker_OnShipHull</li>
+    </placeWorkers>
+    <rotatable>false</rotatable>
+    <costList>
+      <Steel>80</Steel>
+      <Plasteel>120</Plasteel>
+      <Gold>20</Gold>
+      <ComponentSpacer>12</ComponentSpacer>
+    </costList>
+    <tickerType>Normal</tickerType>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <researchPrerequisites>
+      <li>ShipCloaking</li>
+    </researchPrerequisites>
+    <designationHotKey>Misc1</designationHotKey>
+    <size>(3,3)</size>
+    <modExtensions>
+      <li Class="Vehicles.CustomCostDefModExtension">
+        <cost>10000</cost>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_LifeSupport</defName>
+    <label>맥동 생명유지장치</label>
+    <designatorDropdown>Ship_LifeSupports</designatorDropdown>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Crimson/Support/LifeSupport</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonWallStateGraphic</graphicClass>
+      <drawSize>(3,1)</drawSize>
+      <drawOffsetNorth>(0,0,0.9)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,-0.9)</drawOffsetSouth>
+      <drawOffsetEast>(0.9,0,0)</drawOffsetEast>
+      <drawOffsetWest>(-0.9,0,0)</drawOffsetWest>
+    </graphicData>
+    <researchPrerequisites>
+      <li>ShipLifeSupport</li>
+    </researchPrerequisites>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>Standable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.8</fillPercent>
+    <blockLight>false</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <WorkToBuild>30000</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>밀폐된 함선 구획에 산소를 공급하는 맥동 생명유지장치입니다. Dubs Bad Hygiene 활성화 시 SOS2 원본과 같은 자동 급수(5틱당 1L), 25,000L 물 저장, 25,000L 오수 수용 및 내장 정수·멸균 기능을 제공합니다. 작동 중 연결된 급수망의 물을 멸균하여 수인성 질병 위험을 제거하고, 유입 오수는 다음 처리 틱에 잔여물 없이 제거합니다. 내장 자동 보일러는 난방 출력 2,500과 기본 온수 탱크 10개 분량의 열 저장 용량을 갖추며, 전원이 공급되고 장치가 작동하는 동안 연결된 온수탱크의 실제 물 온도를 100%로 유지합니다. 온수 사용과 자연 냉각으로 온도가 떨어지지 않으며 별도의 온도조절기 설정에 의존하지 않습니다. 정전·전원 차단 시 자동 급수·가열·멸균·오수 처리가 중단되며, 저장된 온기는 기본 온수 탱크와 같은 방식으로 식습니다. 소비전력은 7,500W입니다.</description>
+    <size>(3,1)</size>
+    <designationCategory>Crimson_CS</designationCategory>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ShipCachePart" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>7500</basePowerConsumption>
+        <transmitsPower>false</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="SaveOurShip2.CompProps_LifeSupport" />
+      <li Class="SaveOurShip2.CompProps_GraphicOnOff" />
+      <li MayRequire="Ludeon.RimWorld.Odyssey" Class="CompProperties_OxygenPusher">
+        <requiresPower>true</requiresPower>
+        <airPerSecondPerHundredCells>2</airPerSecondPerHundredCells>
+      </li>
+      <li Class="DubsBadHygiene.CompProperties_Pipe" MayRequire="Dubwise.DubsBadHygiene"><mode>Sewage</mode></li>
+      <li Class="DubsBadHygiene.CompProperties_WaterStorage" MayRequire="Dubwise.DubsBadHygiene"><WaterStorageCap>25000</WaterStorageCap><Auto>true</Auto><Tickrate>5</Tickrate><AutoGenRate>1</AutoGenRate></li>
+      <li Class="DubsBadHygiene.CompProperties_SepticTank" MayRequire="Dubwise.DubsBadHygiene"><compClass>CrimsonSOS2.CrimsonLifeSupportSewageProcessor</compClass><capacity>25000</capacity><priority>2</priority></li>
+      <li Class="DubsBadHygiene.CompProperties_WaterFiltration" MayRequire="Dubwise.DubsBadHygiene"><compClass>CrimsonSOS2.CrimsonLifeSupportSterilizer</compClass></li>
+      <li Class="DubsBadHygiene.CompProperties_CompBoiler" MayRequire="Dubwise.DubsBadHygiene">
+        <BaseCapacity>2500</BaseCapacity>
+        <ThermostatControl>true</ThermostatControl>
+        <ShouldUsePowerModes>false</ShouldUsePowerModes>
+      </li>
+      <li Class="DubCore.CompProperties_HeatStore" MayRequire="Dubwise.DubsBadHygiene">
+        <compClass>DubsBadHygiene.CompHeatStore</compClass>
+        <StoreCapacity>1000</StoreCapacity>
+        <RiseRate>0.0024</RiseRate>
+        <FallRate>0.00001</FallRate>
+        <ForRunningWater>true</ForRunningWater>
+      </li>
+    </comps>
+    <costList>
+      <Steel>60</Steel>
+      <Plasteel>30</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <designationHotKey>Misc5</designationHotKey>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <rotatable>true</rotatable>
+    <modExtensions>
+      <li Class="Vehicles.CustomCostDefModExtension">
+        <cost>10000</cost>
+      </li>
+    </modExtensions>
+    <pathCost>0</pathCost>
+    <building>
+      <isEdifice>false</isEdifice>
+      <isAttachment>true</isAttachment>
+    </building>
+    <placeWorkers>
+      <li>CrimsonSOS2.CrimsonLifeSupportWallPlaceWorker</li>
+    </placeWorkers>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_LifeSupportSmall</defName>
+    <label>소형 맥동 생명유지장치</label>
+    <designatorDropdown>Ship_LifeSupports</designatorDropdown>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Crimson/Support/LifeSupportSmall</texPath>
+      <graphicClass>SaveOurShip2.Graphic_SingleOnOff</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <researchPrerequisites>
+      <li>ShipLifeSupport</li>
+    </researchPrerequisites>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <WorkToBuild>10000</WorkToBuild>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>Recycles oxygen in all fully-enclosed ship rooms. Required to keep non-cryptosleeping colonists and animals alive. This version sacrifices power efficiency for a more compact design that can fit on small ships.\n\nWhile one one life-support system is necessary per ship, having backups can save the crew in an emergency.</description>
+    <size>(1,1)</size>
+    <designationCategory>Crimson_CS</designationCategory>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ShipCachePart" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>2400</basePowerConsumption>
+        <transmitsPower>false</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="SaveOurShip2.CompProps_LifeSupport" />
+      <li Class="SaveOurShip2.CompProps_GraphicOnOff" />
+      <li MayRequire="Ludeon.RimWorld.Odyssey" Class="CompProperties_OxygenPusher">
+        <requiresPower>true</requiresPower>
+        <airPerSecondPerHundredCells>1</airPerSecondPerHundredCells>
+      </li>
+    </comps>
+    <costList>
+      <Steel>20</Steel>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <designationHotKey>Misc5</designationHotKey>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <rotatable>false</rotatable>
+    <modExtensions>
+      <li Class="Vehicles.CustomCostDefModExtension">
+        <cost>10000</cost>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BuildingShipBase">
+    <defName>Crimson_AdvancedSensor</defName>
+    <label>공명 탐지기</label>
+    <blockLight>false</blockLight>
+    <designatorDropdown>Ship_Sensors</designatorDropdown>
+    <thingClass>SaveOurShip2.Building_ShipSensor</thingClass>
+    <graphicData>
+      <texPath>Crimson/Support/AdvancedSensor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <researchPrerequisites>
+      <li>ShipSensorClusterAdv</li>
+    </researchPrerequisites>
+    <statBases>
+      <WorkToBuild>60000</WorkToBuild>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>Advanced ship sensors. Automatically scans for nearby sites of interest. Capable of scanning the interiors of enemy ships.</description>
+    <size>(3,3)</size>
+    <designationCategory>Crimson_CS</designationCategory>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ShipCachePart" />
+      <li Class="SaveOurShip2.CompProps_ShipScannerAI" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>750</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <rotatable>false</rotatable>
+    <costList>
+      <Steel>240</Steel>
+      <Gold>16</Gold>
+      <ComponentSpacer>12</ComponentSpacer>
+    </costList>
+    <placeWorkers>
+      <li>SaveOurShip2.PlaceWorker_OnShipHull</li>
+    </placeWorkers>
+    <designationHotKey>Misc5</designationHotKey>
+    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+    <building>
+      <isAirtight>true</isAirtight>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_ShuttleDock</defName>
+    <label>귀환 왕복선 도크</label>
+    <designatorDropdown>Ship_ShuttleBays</designatorDropdown>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Crimson/Support/ShuttleDock</texPath>
+      <graphicClass>SaveOurShip2.Graphic_SingleOnOff</graphicClass>
+      <drawSize>(5,5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <researchPrerequisites>
+      <li>ShipShuttleBay</li>
+    </researchPrerequisites>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <passability>Standable</passability>
+    <fillPercent>0.1</fillPercent>
+    <statBases>
+      <WorkToBuild>5000</WorkToBuild>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <description>Provides docking facilities for shuttles. This advanced maintenance bay uses mechanites to automatically repair damaged components up to half health, and will double the rate at which pawns perform repairs. It will also automatically refuel docked shuttles from its internal storage.\n\nMust be kept clear of obstructions. Imperial shuttles can land on this without beacons.</description>
+    <size>(5,5)</size>
+    <designationCategory>Crimson_CS</designationCategory>
+    <rotatable>false</rotatable>
+    <building>
+      <isEdifice>false</isEdifice>
+    </building>
+    <costList>
+      <Steel>125</Steel>
+      <Plasteel>25</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ShipCachePart" />
+      <li Class="SaveOurShip2.CompProps_ShipBay">
+        <maxShuttleSize>5</maxShuttleSize>
+        <graphicPath>Crimson/Support/DockRoof5</graphicPath>
+        <repairBonus>1</repairBonus>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelCapacity>500.0</fuelCapacity>
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>0</initialConfigurableTargetFuelLevel>
+        <fuelFilter>
+          <thingDefs>
+            <li>ShuttleFuelPods</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <autoRefuelPercent>1</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>400</basePowerConsumption>
+      </li>
+      <li Class="SaveOurShip2.CompProps_GraphicOnOff" />
+    </comps>
+    <placeWorkers>
+      <li>SaveOurShip2.PlaceWorker_ShipBay</li>
+      <li>SaveOurShip2.PlaceWorker_OnShipHull</li>
+    </placeWorkers>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_ShuttleDockLarge</defName>
+    <label>대형 귀환 왕복선 도크</label>
+    <designatorDropdown>Ship_ShuttleBays</designatorDropdown>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Crimson/Support/ShuttleDockLarge</texPath>
+      <graphicClass>SaveOurShip2.Graphic_SingleOnOff</graphicClass>
+      <drawSize>(7,7)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <researchPrerequisites>
+      <li>ShipShuttleBay</li>
+    </researchPrerequisites>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <passability>Standable</passability>
+    <fillPercent>0.1</fillPercent>
+    <statBases>
+      <WorkToBuild>7000</WorkToBuild>
+      <MaxHitPoints>700</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <description>Provides docking facilities for shuttles, including the superheavy version. This advanced maintenance bay uses mechanites to automatically repair damaged components up to half health, and will double the rate at which pawns perform repairs. It will also automatically refuel docked shuttles from its internal storage.\n\nMust be kept clear of obstructions. Imperial shuttles can land on this without beacons.</description>
+    <size>(7,7)</size>
+    <designationCategory>Crimson_CS</designationCategory>
+    <rotatable>false</rotatable>
+    <building>
+      <isEdifice>false</isEdifice>
+    </building>
+    <costList>
+      <Steel>175</Steel>
+      <Plasteel>40</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ShipCachePart" />
+      <li Class="SaveOurShip2.CompProps_ShipBay">
+        <maxShuttleSize>7</maxShuttleSize>
+        <graphicPath>Crimson/Support/DockRoof7</graphicPath>
+        <repairBonus>1</repairBonus>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelCapacity>1000.0</fuelCapacity>
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>0</initialConfigurableTargetFuelLevel>
+        <fuelFilter>
+          <thingDefs>
+            <li>ShuttleFuelPods</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <autoRefuelPercent>1</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>600</basePowerConsumption>
+      </li>
+      <li Class="SaveOurShip2.CompProps_GraphicOnOff" />
+    </comps>
+    <placeWorkers>
+      <li>SaveOurShip2.PlaceWorker_ShipBay</li>
+      <li>SaveOurShip2.PlaceWorker_OnShipHull</li>
+    </placeWorkers>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_SalvageDock</defName>
+    <label>잔해 인양 도크</label>
+    <designatorDropdown>Ship_SalvageBays</designatorDropdown>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Crimson/Support/SalvageDock</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(5,5.6)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <researchPrerequisites>
+      <li>ShipSalvageBay</li>
+    </researchPrerequisites>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <passability>Standable</passability>
+    <fillPercent>0.1</fillPercent>
+    <statBases>
+      <WorkToBuild>5000</WorkToBuild>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <description>Moves wrecks to your map or removes unwanted ones. More bays are required to move larger ships.\n\nWeight limit: 5000</description>
+    <size>(5,5)</size>
+    <designationCategory>Crimson_CS</designationCategory>
+    <rotatable>false</rotatable>
+    <building>
+      <isEdifice>false</isEdifice>
+    </building>
+    <costList>
+      <Steel>125</Steel>
+      <Plasteel>25</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ShipCachePart" />
+      <li Class="SaveOurShip2.CompProps_ShipBay">
+        <compClass>SaveOurShip2.CompShipBaySalvage</compClass>
+        <weight>5000</weight>
+        <borderSize>1</borderSize>
+        <graphicPath>Crimson/Support/DockRoof5</graphicPath>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>SaveOurShip2.PlaceWorker_ShipBay</li>
+      <li>SaveOurShip2.PlaceWorker_OnShipHull</li>
+    </placeWorkers>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_SalvageDockAdvanced</defName>
+    <label>환원 인양 도크</label>
+    <designatorDropdown>Ship_SalvageBays</designatorDropdown>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Crimson/Support/SalvageDockAdvanced</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(5,5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <researchPrerequisites>
+      <li>ShipSalvageBayGlitter</li>
+    </researchPrerequisites>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <passability>Standable</passability>
+    <fillPercent>0.1</fillPercent>
+    <statBases>
+      <WorkToBuild>5000</WorkToBuild>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <description>Unlike the normal salvage bay this version uses a tractor beam based on a reverse JT principle. Moves wrecks to your map or removes unwanted ones. It can also retrieve small loose objects from around enemy wrecks. \n\nWeight limit: 10000</description>
+    <size>(5,5)</size>
+    <designationCategory>Crimson_CS</designationCategory>
+    <rotatable>false</rotatable>
+    <building>
+      <isEdifice>false</isEdifice>
+    </building>
+    <costList>
+      <Steel>250</Steel>
+      <Plasteel>100</Plasteel>
+      <ComponentSpacer>12</ComponentSpacer>
+      <SoSEntanglementManifold>1</SoSEntanglementManifold>
+    </costList>
+    <resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ShipCachePart" />
+      <li Class="SaveOurShip2.CompProps_ShipBay">
+        <compClass>SaveOurShip2.CompShipBaySalvage</compClass>
+        <beam>true</beam>
+        <weight>10000</weight>
+        <borderSize>1</borderSize>
+        <graphicPath>Crimson/Support/DockRoof5</graphicPath>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>2000</basePowerConsumption>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>SaveOurShip2.PlaceWorker_OnShipHull</li>
+      <li>SaveOurShip2.PlaceWorker_ShipBay</li>
+    </placeWorkers>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_Observer</defName>
+    <label>목격자</label>
+    <designatorDropdown>Ship_ArchoSpore</designatorDropdown>
+    <thingClass>SaveOurShip2.Building_ArchotechSpore</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Crimson/Support/ObserverBodyV05</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,5)</drawSize>
+      <drawOffset>(0,0,1.36419753)</drawOffset>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+      <shaderType>Cutout</shaderType>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.9</fillPercent>
+    <statBases>
+      <WorkToBuild>50000</WorkToBuild>
+      <MaxHitPoints>5000</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <MeditationFocusStrength>0.5</MeditationFocusStrength>
+      <ArchotechPillarsConnected>0</ArchotechPillarsConnected>
+      <Beauty>100</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>함선에 목격자가 내장된 모노리스 통제 중추. 범용 인공지능 대신 목격자의 의식이 함선을 통솔하며, 별도 AI 인격핵이나 외부 의식 이식 없이 함선 컴퓨터 코어로 가동한다. 목격자와 연결된 로봇들은 함선의 무선 전력으로 자율 행동한다. 주변 명상과 기존 초월공학 포자의 정신장 기능을 유지한다.</description>
+    <size>(3,2)</size>
+    <building>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+    </building>
+    <costList>
+      <Gold>100</Gold>
+      <Plasteel>200</Plasteel>
+      <Uranium>75</Uranium>
+      <ComponentSpacer>10</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ShipCachePart" />
+      <li Class="CompProperties_ShipPart" />
+      <li Class="SaveOurShip2.CompProps_ResearchUnlock">
+        <unlock>ArchotechSpore</unlock>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>2000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="SaveOurShip2.CompProps_ShipHeat">
+        <compClass>SaveOurShip2.CompShipHeat</compClass>
+      </li>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Archotech</li>
+        </focusTypes>
+        <offsets>
+          <li Class="FocusStrengthOffset_BuildingDefs">
+            <defs>
+              <Crimson_PillarA>0.02</Crimson_PillarA>
+              <Crimson_PillarB>0.02</Crimson_PillarB>
+              <Crimson_PillarC>0.02</Crimson_PillarC>
+              <Crimson_PillarD>0.02</Crimson_PillarD>
+            </defs>
+            <radius>9.9</radius>
+            <maxBuildings>4</maxBuildings>
+            <explanationKey>MeditationFocusPerPillar</explanationKey>
+            <explanationKeyAbstract>MeditationFocusPerPillarAbstract</explanationKeyAbstract>
+          </li>
+        </offsets>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>Crimson_PillarA</li>
+          <li>Crimson_PillarB</li>
+          <li>Crimson_PillarC</li>
+          <li>Crimson_PillarD</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonWitness">
+        <holoHediff>SoSHologramArchotech</holoHediff>
+        <canMergeHuman>true</canMergeHuman>
+        <canMergeAI>true</canMergeAI>
+        <healOnMerge>true</healOnMerge>
+      </li>
+      <li Class="SaveOurShip2.CompProps_ArchoHullConversion">
+        <radiusPerDayCurve>
+          <points>
+            <li>0  , 3</li>
+            <li>1.5, 18</li>
+            <li>6  , 40</li>
+            <li>30 , 200</li>
+          </points>
+        </radiusPerDayCurve>
+      </li>
+    </comps>
+    <ritualFocus>
+      <spectateDistance>2</spectateDistance>
+      <allowedSpectateSides>Down</allowedSpectateSides>
+    </ritualFocus>
+    <placeWorkers>
+      <li>SaveOurShip2.PlaceWorker_OnShipHull</li>
+      <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_RitualFocus</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_RitualFocusNoArrow</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>True</drawPlaceWorkersWhileSelected>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <constructionSkillPrerequisite>15</constructionSkillPrerequisite>
+    <designationCategory>Crimson_CS</designationCategory>
+    <isAltar>true</isAltar>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0, -1)</interactionCellOffset>
+    <modExtensions>
+      <li Class="Vehicles.CustomCostDefModExtension">
+        <cost>10000</cost>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="ShipPillar">
+    <defName>Crimson_PillarA</defName>
+    <designationCategory>Crimson_CS</designationCategory>
+    <label>지평 첨탑 α</label>
+    <graphicData>
+      <texPath>Crimson/Support/PillarA</texPath>
+      <drawOffset>(0,0,0.743093923)</drawOffset>
+    </graphicData>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ResearchUnlock">
+        <unlock>ArchotechPillarA</unlock>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ShipPillar">
+    <defName>Crimson_PillarB</defName>
+    <designationCategory>Crimson_CS</designationCategory>
+    <label>지평 첨탑 β</label>
+    <graphicData>
+      <texPath>Crimson/Support/PillarB</texPath>
+      <drawOffset>(0,0,0.609116022)</drawOffset>
+    </graphicData>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ResearchUnlock">
+        <unlock>ArchotechPillarB</unlock>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ShipPillar">
+    <defName>Crimson_PillarC</defName>
+    <designationCategory>Crimson_CS</designationCategory>
+    <label>지평 첨탑 γ</label>
+    <graphicData>
+      <texPath>Crimson/Support/PillarC</texPath>
+      <drawOffset>(0,0,0.533149171)</drawOffset>
+    </graphicData>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ResearchUnlock">
+        <unlock>ArchotechPillarC</unlock>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ShipPillar">
+    <defName>Crimson_PillarD</defName>
+    <designationCategory>Crimson_CS</designationCategory>
+    <label>지평 첨탑 δ</label>
+    <graphicData>
+      <texPath>Crimson/Support/PillarD</texPath>
+      <drawOffset>(0,0,0.455801105)</drawOffset>
+    </graphicData>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ResearchUnlock">
+        <unlock>ArchotechPillarD</unlock>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>Crimson_Reclaimer</defName>
+    <label>물질 환원기</label>
+    <description>Uses mechanites to break down any object into its base materials, with near perfect efficiency.</description>
+    <thingClass>Building_WorkTable_HeatPush</thingClass>
+    <graphicData>
+      <texPath>Crimson/Support/Reclaimer</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,2)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <constructEffect>ConstructMetal</constructEffect>
+    <costList>
+      <Steel>60</Steel>
+      <Plasteel>40</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+      <ArchotechMechaniteCore>1</ArchotechMechaniteCore>
+    </costList>
+    <resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>7000</WorkToBuild>
+      <MaxHitPoints>1800</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <size>(3,2)</size>
+    <designationCategory>Crimson_CS</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+    <recipes>
+      <li>RecyclotronRecipe</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1400</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(217,24,45,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>9</heatPerSecond>
+      </li>
+    </comps>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>0.32</heatPerTickWhileWorking>
+    </building>
+    <designationHotKey>Misc10</designationHotKey>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>ArchotechMechaniteWeapon</li>
+    </researchPrerequisites>
+    <interactionCellIcon>DiningChair</interactionCellIcon>
+    <rotatable>true</rotatable>
+  </ThingDef>
+</Defs>

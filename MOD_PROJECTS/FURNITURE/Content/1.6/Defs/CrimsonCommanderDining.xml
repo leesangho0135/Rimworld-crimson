@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="TableBase">
+    <defName>Crimson_CommanderDiningTable</defName>
+    <label>심홍 고급 식탁</label>
+    <description>연결된 침대의 주인 최대 두 명이 사용하는 3×2 고급 식탁입니다. 검은 상판과 얇은 심홍색 테두리, 중앙 문양으로 개인 식사 공간을 구분합니다. 주인이 한 명 또는 두 명인 침대를 연결한 뒤 양쪽 긴 변 중앙의 표시된 칸에 의자를 하나씩 놓으세요. 연결된 침대의 주인들이 양쪽 자리에서 식사하거나 쉴 수 있고, 침대 주인이 바뀌면 식탁 사용자도 자동으로 바뀝니다. 연결이 없거나 침대 주인이 없거나 세 명 이상이면 사용할 수 없습니다. 침대 연결은 저장 후에도 유지됩니다. 전력을 사용하지 않습니다.</description>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey IsNull="True" />
+    <size>(3,2)</size>
+    <rotatable>true</rotatable>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Rare</tickerType>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Decor/Dining/CommanderDiningTableAtlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonV51FurnitureGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(3,2)</drawSize>
+      <drawRotated>false</drawRotated>
+      <addTopAltitudeBias>true</addTopAltitudeBias>
+      <shadowData IsNull="True" />
+    </graphicData>
+    <uiIconPath>Crimson/Decor/Dining/CommanderDiningTableAtlas</uiIconPath>
+    <stuffCategories Inherit="False" />
+    <costStuffCount>0</costStuffCount>
+    <defaultStuff IsNull="True" />
+    <costList Inherit="False"><Steel>100</Steel><Plasteel>30</Plasteel></costList>
+    <statBases><MaxHitPoints>2800</MaxHitPoints><WorkToBuild>3000</WorkToBuild><Mass>50</Mass><Beauty>60</Beauty><Flammability>0</Flammability></statBases>
+    <researchPrerequisites><li>ComplexFurniture</li></researchPrerequisites>
+    <building><paintable>false</paintable></building>
+    <comps Inherit="False">
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>400</originalMaxHitPoints></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonCommanderDining" />
+    </comps>
+    <uiOrder>1041</uiOrder>
+    <designatorDropdown>Crimson_Tables</designatorDropdown>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,154 @@
+{
+  "name": "RECREATION",
+  "sources": [
+    {
+      "original": "Source/CrimsonSOS2/CrimsonBrazierFire.cs",
+      "path": "Source/Main/CrimsonBrazierFire.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonFire.cs",
+      "path": "Source/Main/CrimsonFire.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonRecreationSkills.cs",
+      "path": "Source/Main/CrimsonRecreationSkills.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonWallTelevision.cs",
+      "path": "Source/Main/CrimsonWallTelevision.cs",
+      "assembly": "main"
+    }
+  ],
+  "content": [
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Recreation/AlienArtResonator.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Recreation/AlienArtResonator.png",
+      "target": "1.6/Textures/Crimson/Decor/Recreation/AlienArtResonator.png",
+      "sha256": "D584C73B7D4190798711693FD503D12028A3CB607C47F99AA79B971B8D6CE4B7"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Recreation/BilliardsTableStates.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Recreation/BilliardsTableStates.png",
+      "target": "1.6/Textures/Crimson/Decor/Recreation/BilliardsTableStates.png",
+      "sha256": "1822DAB0801C2C5AD8DCAFA01D3C1D83EB6AE737CE09DC9EECD75893B8E63701"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Recreation/ChessTableStates.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Recreation/ChessTableStates.png",
+      "target": "1.6/Textures/Crimson/Decor/Recreation/ChessTableStates.png",
+      "sha256": "0D470900D2170C30C49A932549319E83D8CDC7F170543F3A12EF2B63F0FF679D"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Recreation/CraftMemoryInfuser.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Recreation/CraftMemoryInfuser.png",
+      "target": "1.6/Textures/Crimson/Decor/Recreation/CraftMemoryInfuser.png",
+      "sha256": "BD3EBFD84679DB3E3E69B590E3883A84E6BADE962407E5BBEE618A174ED4EFD7"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Recreation/LargeTelevisionWallStates.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Recreation/LargeTelevisionWallStates.png",
+      "target": "1.6/Textures/Crimson/Decor/Recreation/LargeTelevisionWallStates.png",
+      "sha256": "DB43BCD9816DE34C80A4311CDA661701B1A2F84CD9ED8F8E02E3EEF5675F1CF0"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Recreation/PokerTableV44States.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Recreation/PokerTableV44States.png",
+      "target": "1.6/Textures/Crimson/Decor/Recreation/PokerTableV44States.png",
+      "sha256": "70536028059FB425A15B6391BB31B5D7FF467CCDC12AA9D1C43C8BB83B47B304"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/Harp.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/Harp.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/Harp.png",
+      "sha256": "4FDB00A3C07E9E13AB6AD494EBBEB574D68A45D943D75BF66EB0CD8167DDE3EA"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Royalty/Harpsichord_east.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Royalty/Harpsichord_east.png",
+      "target": "1.6/Textures/Crimson/Decor/Royalty/Harpsichord_east.png",
+      "sha256": "29F4634AD295DF3BE043F8B45376AE8B7B7399649C6BC58C456071FA5B1875AE"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Royalty/Harpsichord_north.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Royalty/Harpsichord_north.png",
+      "target": "1.6/Textures/Crimson/Decor/Royalty/Harpsichord_north.png",
+      "sha256": "EE297B65C3493FC6D1DFFFA86DB49696DE78C2B5D59285EFB9D7270CFBAFF189"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Royalty/Harpsichord_south.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Royalty/Harpsichord_south.png",
+      "target": "1.6/Textures/Crimson/Decor/Royalty/Harpsichord_south.png",
+      "sha256": "E68E18BCEC0FD7F3DDFECC7FF9887E260C9B6096A634BF411AAB94EED5CF062C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Royalty/Harpsichord_west.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Royalty/Harpsichord_west.png",
+      "target": "1.6/Textures/Crimson/Decor/Royalty/Harpsichord_west.png",
+      "sha256": "33DEAE1750322551C1BA29970EB51C28EB13A6A1ABD451956B461D20654C33E1"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Royalty/PianoAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Royalty/PianoAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Royalty/PianoAtlas.png",
+      "sha256": "25ADBCE219922B14643B5352337EF082BE949288A840C76CFA8C05B13497F17C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Royalty/PianoStoolAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Royalty/PianoStoolAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Royalty/PianoStoolAtlas.png",
+      "sha256": "F637C9E3F0E6C405405850D041986B60CDBBD1ADC869142588D5F5683A45765B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonCreativeRecreation.xml",
+      "path": "Content/1.6/Defs/CrimsonCreativeRecreation.xml",
+      "target": "1.6/Defs/CrimsonCreativeRecreation.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonPianoStool.xml",
+      "path": "Content/1.6/Defs/CrimsonPianoStool.xml",
+      "target": "1.6/Defs/CrimsonPianoStool.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRecreationFurniture.xml",
+      "path": "Content/1.6/Defs/RECREATION__CrimsonRecreationFurniture.xml",
+      "target": "1.6/Defs/RECREATION__CrimsonRecreationFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRoyaltyFurniture.xml",
+      "path": "Content/1.6/Defs/RECREATION__CrimsonRoyaltyFurniture.xml",
+      "target": "1.6/Defs/RECREATION__CrimsonRoyaltyFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRoyaltyJoy.xml",
+      "path": "Content/1.6/Defs/CrimsonRoyaltyJoy.xml",
+      "target": "1.6/Defs/CrimsonRoyaltyJoy.xml",
+      "splitXml": true
+    }
+  ],
+  "authoring": [
+    {
+      "original": "Source/CrimsonSOS2/Art/AlienArtResonator.svg",
+      "path": "Authoring/Art/AlienArtResonator.svg"
+    },
+    {
+      "original": "Source/CrimsonSOS2/Art/CraftMemoryInfuser.svg",
+      "path": "Authoring/Art/CraftMemoryInfuser.svg"
+    },
+    {
+      "original": "Source/CrimsonSOS2/Art/GenerateCreativeRecreation.cs",
+      "path": "Authoring/Art/GenerateCreativeRecreation.cs"
+    }
+  ],
+  "integrationDependencies": [
+    "FURNITURE"
+  ],
+  "buildMode": "integrated-runtime-preserving-existing-assembly-contract",
+  "namespace": "CrimsonSOS2"
+}

@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><!-- Native SculptureBase preserves art, quality, meditation, trade and minification.
+       These additions are built in place, so the sculpting-table recipe is removed. -->
+  <ThingDef Name="Crimson_ConstructedSculptureBase" ParentName="SculptureBase" Abstract="True">
+    <thingClass>CrimsonSOS2.CrimsonSculpture</thingClass>
+    <drawerType>RealtimeOnly</drawerType>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>200</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Glower"><glowRadius>2.5</glowRadius><glowColor>(144,24,16,0)</glowColor></li>
+    </comps>
+    <rotatable>false</rotatable>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <recipeMaker IsNull="True" />
+    <thingSetMakerTags Inherit="False" />
+    <graphicData>
+      <graphicClass>CrimsonSOS2.CrimsonSculptureGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawRotated>false</drawRotated>
+      <shadowData IsNull="True" />
+    </graphicData>
+    <stuffCategories><li>Metallic</li><li>Woody</li><li>Stony</li></stuffCategories>
+    <building><paintable>false</paintable></building>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_Sculptures</designatorDropdown>
+    <uiOrder>1050</uiOrder>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_ConstructedSculptureBase">
+    <defName>Crimson_SculptureGrand</defName>
+    <label>심홍 대형 조각상</label>
+    <description>검은 각면과 절제된 진홍색 포인트로 구성한 조각품입니다. 건설할 때 선택된 조형 4종 가운데 하나가 무작위로 정해지며, 저장·운반·재설치 후에도 같은 외형을 유지합니다. 좌우반전 명령은 현재 조형의 방향만 바꿉니다.</description>
+    <size>(3,3)</size>
+    <fillPercent>0.5</fillPercent>
+    <uiIconPath>Crimson/Decor/Sculptures/L03</uiIconPath>
+    <graphicData>
+      <texPath>Crimson/Decor/Sculptures/L03</texPath>
+      <drawSize>(3.8,3.8)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>2100</MaxHitPoints>
+      <Mass>28</Mass>
+      <Beauty>12600</Beauty>
+      <WorkToBuild>105000</WorkToBuild>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">40</StyleDominance>
+    <MarketValue>40340.2</MarketValue><Flammability>0</Flammability></statBases>
+    <costStuffCount>0</costStuffCount>
+    <modExtensions>
+      <li Class="CrimsonSOS2.CrimsonSculptureVariants">
+        <variants><li>L03</li><li>L04</li><li>L05</li><li>L07</li></variants>
+        <variantLabels><li>공허의 합의</li><li>검은 날개의 수호자</li><li>흑일의 봉헌</li><li>문턱의 사제</li></variantLabels>
+        <!-- Preserve each unmodified source PNG's aspect ratio; selected geometry is not final runtime validation. -->
+        <drawSizes><li>(3.8,3.8)</li><li>(3.8,2.53333)</li><li>(3.8,3.47271)</li><li>(3.8,3.47271)</li></drawSizes>
+      </li>
+    </modExtensions>
+    <uiOrder>1020</uiOrder>
+      <stuffCategories Inherit="False" />
+      <defaultStuff IsNull="True" />
+      <costList Inherit="False"><WoodLog>400</WoodLog></costList>
+      <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>300</originalMaxHitPoints></li></comps>
+    <designationCategory>Misc</designationCategory>
+    <designatorDropdown>Crimson_Sculptures</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_ConstructedSculptureBase">
+    <defName>Crimson_SculptureMedium</defName>
+    <label>심홍 중형 조각상</label>
+    <description>검은 각면과 절제된 진홍색 포인트로 구성한 조각품입니다. 건설할 때 선택된 조형 4종 가운데 하나가 무작위로 정해지며, 저장·운반·재설치 후에도 같은 외형을 유지합니다. 좌우반전 명령은 현재 조형의 방향만 바꿉니다.</description>
+    <size>(2,2)</size>
+    <fillPercent>0.5</fillPercent>
+    <uiIconPath>Crimson/Decor/Sculptures/M08</uiIconPath>
+    <graphicData>
+      <texPath>Crimson/Decor/Sculptures/M08</texPath>
+      <drawSize>(2.6,2.6)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1050</MaxHitPoints>
+      <Mass>7</Mass>
+      <Beauty>9000</Beauty>
+      <WorkToBuild>30000</WorkToBuild>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">20</StyleDominance>
+    <MarketValue>10097.2</MarketValue><Flammability>0</Flammability></statBases>
+    <costStuffCount>0</costStuffCount>
+    <modExtensions>
+      <li Class="CrimsonSOS2.CrimsonSculptureVariants">
+        <variants><li>M08</li><li>M09</li><li>M11</li><li>M12</li></variants>
+        <variantLabels><li>회귀</li><li>균형의 방</li><li>두 겹의 침묵</li><li>역전된 성물</li></variantLabels>
+        <!-- Preserve each unmodified source PNG's aspect ratio; selected geometry is not final runtime validation. -->
+        <drawSizes><li>(2.6,2.6)</li><li>(2.6,2.6)</li><li>(2.6,2.84504)</li><li>(2.6,2.37607)</li></drawSizes>
+      </li>
+    </modExtensions>
+    <uiOrder>1021</uiOrder>
+      <stuffCategories Inherit="False" />
+      <defaultStuff IsNull="True" />
+      <costList Inherit="False"><WoodLog>100</WoodLog></costList>
+      <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>150</originalMaxHitPoints></li></comps>
+    <designationCategory>Misc</designationCategory>
+    <designatorDropdown>Crimson_Sculptures</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_ConstructedSculptureBase">
+    <defName>Crimson_SculptureSmall</defName>
+    <label>심홍 소형 조각상</label>
+    <description>검은 각면과 절제된 진홍색 포인트로 구성한 조각품입니다. 건설할 때 선택된 조형 4종 가운데 하나가 무작위로 정해지며, 저장·운반·재설치 후에도 같은 외형을 유지합니다. 좌우반전 명령은 현재 조형의 방향만 바꿉니다.</description>
+    <size>(1,1)</size>
+    <fillPercent>0.35</fillPercent>
+    <uiIconPath>Crimson/Decor/Sculptures/S09</uiIconPath>
+    <graphicData>
+      <texPath>Crimson/Decor/Sculptures/S09</texPath>
+      <drawSize>(1.4,1.27942)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>630</MaxHitPoints>
+      <Mass>3</Mass>
+      <Beauty>1800</Beauty>
+      <WorkToBuild>18000</WorkToBuild>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
+    <MarketValue>5058.32</MarketValue><Flammability>0</Flammability></statBases>
+    <costStuffCount>0</costStuffCount>
+    <modExtensions>
+      <li Class="CrimsonSOS2.CrimsonSculptureVariants">
+        <variants><li>S09</li><li>S10</li><li>S11</li><li>S12</li></variants>
+        <variantLabels><li>교차하는 띠</li><li>접힌 날개</li><li>화석의 꽃</li><li>세 갈래 파편</li></variantLabels>
+        <!-- Preserve each unmodified source PNG's aspect ratio; selected geometry is not final runtime validation. -->
+        <drawSizes><li>(1.4,1.27942)</li><li>(1.4,0.93333)</li><li>(1.4,1.27942)</li><li>(1.4,1.27942)</li></drawSizes>
+      </li>
+    </modExtensions>
+    <uiOrder>1022</uiOrder>
+      <stuffCategories Inherit="False" />
+      <defaultStuff IsNull="True" />
+      <costList Inherit="False"><WoodLog>50</WoodLog></costList>
+      <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>90</originalMaxHitPoints></li></comps>
+    <designationCategory>Misc</designationCategory>
+    <designatorDropdown>Crimson_Sculptures</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_ConstructedSculptureBase">
+    <defName>Crimson_WallRelief</defName>
+    <label>심홍 벽걸이 부조</label>
+    <description>북쪽의 연속된 세 칸 벽에 부착하는 얕은 부조입니다. 바닥 기단은 없습니다. 건설할 때 선택된 조형 4종 가운데 하나가 무작위로 정해지며, 저장·운반·재설치 후에도 같은 외형을 유지합니다. 좌우반전 명령은 현재 조형의 방향만 바꿉니다.</description>
+    <size>(3,1)</size>
+    <fillPercent>0.15</fillPercent>
+    <uiIconPath>Crimson/Decor/Sculptures/R06</uiIconPath>
+    <graphicData>
+      <texPath>Crimson/Decor/Sculptures/R06</texPath>
+      <drawSize>(3.3,1.1)</drawSize>
+      <drawOffset>(0,0,1.0)</drawOffset>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1050</MaxHitPoints>
+      <Mass>7</Mass>
+      <Beauty>6000</Beauty>
+      <WorkToBuild>30000</WorkToBuild>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">20</StyleDominance>
+    <MarketValue>10097.2</MarketValue><Flammability>0</Flammability></statBases>
+    <costStuffCount>0</costStuffCount>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>Standable</passability>
+    <pathCost>0</pathCost>
+    <blockLight>false</blockLight>
+    <clearBuildingArea>false</clearBuildingArea>
+    <building><isEdifice>false</isEdifice><isAttachment>true</isAttachment></building>
+    <placeWorkers Inherit="False"><li>CrimsonSOS2.CrimsonFurnitureWallPlaceWorker</li></placeWorkers>
+    <modExtensions>
+      <li Class="CrimsonSOS2.CrimsonSculptureVariants">
+        <variants><li>R06</li><li>R07</li><li>R08</li><li>R11</li></variants>
+        <variantLabels><li>침몰한 왕좌</li><li>쌍면의 서약</li><li>검은 파도의 기록</li><li>시간의 척추</li></variantLabels>
+        <!-- Preserve each unmodified source PNG's aspect ratio; selected geometry is not final runtime validation. -->
+        <drawSizes><li>(3.3,1.1)</li><li>(3.3,1.1)</li><li>(3.3,1.1)</li><li>(3.3,1.1)</li></drawSizes>
+      </li>
+    </modExtensions>
+    <uiOrder>1023</uiOrder>
+      <stuffCategories Inherit="False" />
+      <defaultStuff IsNull="True" />
+      <costList Inherit="False"><WoodLog>100</WoodLog></costList>
+      <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>150</originalMaxHitPoints></li></comps>
+    <designationCategory>Misc</designationCategory>
+    <designatorDropdown>Crimson_Sculptures</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_ConstructedSculptureBase">
+    <defName>Crimson_Obelisk</defName>
+    <label>심홍 오벨리스크</label>
+    <description>검은 각면과 절제된 진홍색 포인트로 구성한 조각품입니다. 건설할 때 선택된 조형 6종 가운데 하나가 무작위로 정해지며, 저장·운반·재설치 후에도 같은 외형을 유지합니다. 좌우반전 명령은 현재 조형의 방향만 바꿉니다.</description>
+    <size>(1,1)</size>
+    <fillPercent>0.35</fillPercent>
+    <uiIconPath>Crimson/Decor/Sculptures/O01</uiIconPath>
+    <graphicData>
+      <texPath>Crimson/Decor/Sculptures/O01</texPath>
+      <drawSize>(1.5,2.25)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>630</MaxHitPoints>
+      <Mass>3</Mass>
+      <Beauty>3600</Beauty>
+      <WorkToBuild>18000</WorkToBuild>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
+    <MarketValue>5058.32</MarketValue><Flammability>0</Flammability></statBases>
+    <costStuffCount>0</costStuffCount>
+    <modExtensions>
+      <li Class="CrimsonSOS2.CrimsonSculptureVariants">
+        <variants><li>O01</li><li>O02</li><li>O05</li><li>O06</li><li>O10</li><li>O12</li></variants>
+        <variantLabels><li>갈라진 침</li><li>엇갈린 층</li><li>역피라미드의 무게</li><li>나선의 기둥</li><li>검은 피라미드</li><li>마름모의 공백</li></variantLabels>
+        <!-- Preserve each unmodified source PNG's aspect ratio; selected geometry is not final runtime validation. -->
+        <drawSizes><li>(1.5,2.25)</li><li>(1.5,2.25)</li><li>(1.5,2.25)</li><li>(1.5,2.25)</li><li>(1.5,2.25)</li><li>(1.5,2.25)</li></drawSizes>
+      </li>
+    </modExtensions>
+    <uiOrder>1024</uiOrder>
+      <stuffCategories Inherit="False" />
+      <defaultStuff IsNull="True" />
+      <costList Inherit="False"><WoodLog>50</WoodLog></costList>
+      <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>90</originalMaxHitPoints></li></comps>
+    <designationCategory>Misc</designationCategory>
+    <designatorDropdown>Crimson_Sculptures</designatorDropdown>
+  </ThingDef>
+</Defs>

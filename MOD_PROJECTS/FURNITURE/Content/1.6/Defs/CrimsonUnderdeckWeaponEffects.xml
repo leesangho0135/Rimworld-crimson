@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><!-- Dedicated copies of the native visual definitions; damage is unchanged. -->
+  <ThingDef ParentName="MoteBase">
+    <defName>Crimson_UnderdeckLaserMote</defName>
+    <thingClass>CrimsonSOS2.CrimsonUnderdeckLaserMote</thingClass>
+    <graphicData><texPath>Other/OrbitalBeam</texPath><shaderType>MoteGlow</shaderType></graphicData>
+    <altitudeLayer>TerrainEdges</altitudeLayer>
+    <drawOffscreen>true</drawOffscreen>
+    <mote><fadeInTime>0.125</fadeInTime><solidTime>0.25</solidTime><fadeOutTime>0.25</fadeOutTime></mote>
+    <seeThroughFog>true</seeThroughFog>
+  </ThingDef>
+  <FleckDef ParentName="FleckBase">
+    <defName>Crimson_UnderdeckShotFlash</defName>
+    <altitudeLayer>TerrainEdges</altitudeLayer>
+    <solidTime>0.05</solidTime><fadeOutTime>0.05</fadeOutTime>
+    <graphicData><texPath>Things/Mote/ShotFlash</texPath><shaderType>MoteGlow</shaderType></graphicData>
+  </FleckDef>
+</Defs>

@@ -1,0 +1,95 @@
+{
+  "name": "SANITARY",
+  "sources": [
+    {
+      "original": "Source/CrimsonSOS2.DubsBadHygiene/AssemblyInfo.cs",
+      "path": "Source/DubsBadHygiene/AssemblyInfo.cs",
+      "assembly": "hygiene"
+    },
+    {
+      "original": "Source/CrimsonSOS2.DubsBadHygiene/CrimsonBath.cs",
+      "path": "Source/DubsBadHygiene/CrimsonBath.cs",
+      "assembly": "hygiene"
+    },
+    {
+      "original": "Source/CrimsonSOS2.DubsBadHygiene/CrimsonBathPawnDraw.cs",
+      "path": "Source/DubsBadHygiene/CrimsonBathPawnDraw.cs",
+      "assembly": "hygiene"
+    },
+    {
+      "original": "Source/CrimsonSOS2.DubsBadHygiene/CrimsonLifeSupportHygiene.cs",
+      "path": "Source/DubsBadHygiene/CrimsonLifeSupportHygiene.cs",
+      "assembly": "hygiene"
+    },
+    {
+      "original": "Source/CrimsonSOS2.DubsBadHygiene/CrimsonSpacerToilet.cs",
+      "path": "Source/DubsBadHygiene/CrimsonSpacerToilet.cs",
+      "assembly": "hygiene"
+    },
+    {
+      "original": "Source/CrimsonSOS2.DubsBadHygiene/CrimsonStallDoorApproach.cs",
+      "path": "Source/DubsBadHygiene/CrimsonStallDoorApproach.cs",
+      "assembly": "hygiene"
+    }
+  ],
+  "content": [
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Dining/ToiletStallDoorLeaf.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Dining/ToiletStallDoorLeaf.png",
+      "target": "1.6/Textures/Crimson/Decor/Dining/ToiletStallDoorLeaf.png",
+      "sha256": "F651A7BDFE6F2B346367891C5B7C364C26A3237AE08277119FA17CD75A085D38"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Hygiene/BathtubStates.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Hygiene/BathtubStates.png",
+      "target": "1.6/Textures/Crimson/Decor/Hygiene/BathtubStates.png",
+      "sha256": "D9C1E4BC6BA8A3FA5D1CC9A8E7A9ADD47814B3079EA2CC42D3E3DA351C0E9A93"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Hygiene/ShowerV42States.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Hygiene/ShowerV42States.png",
+      "target": "1.6/Textures/Crimson/Decor/Hygiene/ShowerV42States.png",
+      "sha256": "36BF9362C59270D0211B55DAA39076F91BD6D6C558FB73839789766EE75C24B8"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Hygiene/ToiletV44AngularStates.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Hygiene/ToiletV44AngularStates.png",
+      "target": "1.6/Textures/Crimson/Decor/Hygiene/ToiletV44AngularStates.png",
+      "sha256": "98BBFC2E208984A1E27B76A1B4D9867B064A1BE24677447E6F96F6F7A336E350"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Partitions/ShipPartitionDoorLeaf.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Partitions/ShipPartitionDoorLeaf.png",
+      "target": "1.6/Textures/Crimson/Decor/Partitions/ShipPartitionDoorLeaf.png",
+      "sha256": "CA89563CC7D227D46F6C77250682DAF6C813385B4F22D473F2A1A11B964FEC78"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/WashBasin.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/WashBasin.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/WashBasin.png",
+      "sha256": "069C226E33AAF6BEBAD06340F276A98B7A146C867FCC4F3B48DDC6F168054D2A"
+    },
+    {
+      "original": "CrimsonSOS2/Compatibility/DubsBadHygiene/Defs/CrimsonHygieneFurniture.xml",
+      "path": "Content/Compatibility/DubsBadHygiene/Defs/CrimsonHygieneFurniture.xml",
+      "target": "Compatibility/DubsBadHygiene/Defs/CrimsonHygieneFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/Compatibility/DubsBadHygiene/Defs/CrimsonPartitionDoor.xml",
+      "path": "Content/Compatibility/DubsBadHygiene/Defs/CrimsonPartitionDoor.xml",
+      "target": "Compatibility/DubsBadHygiene/Defs/CrimsonPartitionDoor.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/Compatibility/DubsBadHygiene/Defs/CrimsonStallDoor.xml",
+      "path": "Content/Compatibility/DubsBadHygiene/Defs/CrimsonStallDoor.xml",
+      "target": "Compatibility/DubsBadHygiene/Defs/CrimsonStallDoor.xml",
+      "splitXml": true
+    }
+  ],
+  "authoring": [],
+  "integrationDependencies": [],
+  "buildMode": "integrated-runtime-preserving-existing-assembly-contract",
+  "namespace": "CrimsonSOS2"
+}

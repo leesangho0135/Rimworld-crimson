@@ -1,0 +1,133 @@
+{
+  "name": "PRODUCTION",
+  "sources": [
+    {
+      "original": "Source/CrimsonSOS2/CrimsonElectricSmelterArt.cs",
+      "path": "Source/Main/CrimsonElectricSmelterArt.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonRepairStation.cs",
+      "path": "Source/Main/CrimsonRepairStation.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonResearchArt.cs",
+      "path": "Source/Main/CrimsonResearchArt.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonResearchFurniture.cs",
+      "path": "Source/Main/CrimsonResearchFurniture.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonWorkshopFurniture.cs",
+      "path": "Source/Main/CrimsonWorkshopFurniture.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2.AutomaticHydroponics/AssemblyInfo.cs",
+      "path": "Source/AutomaticHydroponics/AssemblyInfo.cs",
+      "assembly": "hydroponics"
+    },
+    {
+      "original": "Source/CrimsonSOS2.AutomaticHydroponics/CrimsonAutomaticHydroponics.cs",
+      "path": "Source/AutomaticHydroponics/CrimsonAutomaticHydroponics.cs",
+      "assembly": "hydroponics"
+    }
+  ],
+  "content": [
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Hydroponics/HydroponicsLargeAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Hydroponics/HydroponicsLargeAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Hydroponics/HydroponicsLargeAtlas.png",
+      "sha256": "66A9F032C8DBCC41EABDB502209F072BDAB31D5CE730148DB66BD38C96E1F138"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Hydroponics/HydroponicsSmallAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Hydroponics/HydroponicsSmallAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Hydroponics/HydroponicsSmallAtlas.png",
+      "sha256": "CB20EBE377D5FAA5F14C534FE08B838201670FD2153A2015012F093DD1B44BF6"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/ResearchBench.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/ResearchBench.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/ResearchBench.png",
+      "sha256": "A55ED0D173E00F887A7FDCDB0B50E2CB11636837EE7D115EFF13F04D4D959394"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/ResearchUplink.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/ResearchUplink.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/ResearchUplink.png",
+      "sha256": "52A34913204457BE1D6DE623FA17A055A5CE041240BE633A655D3EFB2D759BB7"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Workshops/ElectricSmelterRecessedAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Workshops/ElectricSmelterRecessedAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Workshops/ElectricSmelterRecessedAtlas.png",
+      "sha256": "ACB9440510A575CAB5382C35710A2A71878C8704FE2373EB7EAB910C7EB50FDA"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Workshops/FabricationBenchAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Workshops/FabricationBenchAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Workshops/FabricationBenchAtlas.png",
+      "sha256": "BA81241EEFAFBAD087254111230A438CFC3D45B2062F4DAD2AC441247EE940BF"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/RepairStation2x2Atlas.png",
+      "path": "Content/1.6/Textures/Crimson/Support/RepairStation2x2Atlas.png",
+      "target": "1.6/Textures/Crimson/Support/RepairStation2x2Atlas.png",
+      "sha256": "FE6D7AAC4EE42340F14AC621F483F08279ABE34606B1F7B73D0FE397B086041E"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonElectricSmelter.xml",
+      "path": "Content/1.6/Defs/CrimsonElectricSmelter.xml",
+      "target": "1.6/Defs/CrimsonElectricSmelter.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonGrowthWallDisplay.xml",
+      "path": "Content/1.6/Defs/CrimsonGrowthWallDisplay.xml",
+      "target": "1.6/Defs/CrimsonGrowthWallDisplay.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRepairStation.xml",
+      "path": "Content/1.6/Defs/CrimsonRepairStation.xml",
+      "target": "1.6/Defs/CrimsonRepairStation.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonResearchFurniture.xml",
+      "path": "Content/1.6/Defs/PRODUCTION__CrimsonResearchFurniture.xml",
+      "target": "1.6/Defs/PRODUCTION__CrimsonResearchFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonWorkshopFurniture.xml",
+      "path": "Content/1.6/Defs/PRODUCTION__CrimsonWorkshopFurniture.xml",
+      "target": "1.6/Defs/PRODUCTION__CrimsonWorkshopFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonWorkshopWorkGivers.xml",
+      "path": "Content/1.6/Defs/PRODUCTION__CrimsonWorkshopWorkGivers.xml",
+      "target": "1.6/Defs/PRODUCTION__CrimsonWorkshopWorkGivers.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/Compatibility/AutomaticHydroponics/Defs/CrimsonAutomaticHydroponics.xml",
+      "path": "Content/Compatibility/AutomaticHydroponics/Defs/CrimsonAutomaticHydroponics.xml",
+      "target": "Compatibility/AutomaticHydroponics/Defs/CrimsonAutomaticHydroponics.xml",
+      "splitXml": true
+    }
+  ],
+  "authoring": [],
+  "integrationDependencies": [
+    "FURNITURE",
+    "RECREATION"
+  ],
+  "buildMode": "integrated-runtime-preserving-existing-assembly-contract",
+  "namespace": "CrimsonSOS2"
+}

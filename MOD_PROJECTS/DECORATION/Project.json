@@ -1,0 +1,370 @@
+{
+  "name": "DECORATION",
+  "sources": [
+    {
+      "original": "Source/CrimsonSOS2/CrimsonCeilingLight.cs",
+      "path": "Source/Main/CrimsonCeilingLight.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonDeckLightDrawLayout.cs",
+      "path": "Source/Main/CrimsonDeckLightDrawLayout.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonDeckLightLayout.cs",
+      "path": "Source/Main/CrimsonDeckLightLayout.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonDeckLights.cs",
+      "path": "Source/Main/CrimsonDeckLights.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonDecorHoverMotion.cs",
+      "path": "Source/Main/CrimsonDecorHoverMotion.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonFloorGuides.cs",
+      "path": "Source/Main/CrimsonFloorGuides.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonRoomFittings.cs",
+      "path": "Source/Main/CrimsonRoomFittings.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonRugGraphic.cs",
+      "path": "Source/Main/CrimsonRugGraphic.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonRugPlaceWorker.cs",
+      "path": "Source/Main/CrimsonRugPlaceWorker.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonSculptures.cs",
+      "path": "Source/Main/CrimsonSculptures.cs",
+      "assembly": "main"
+    }
+  ],
+  "content": [
+    {
+      "original": "CrimsonSOS2/1.6/Languages/English/Keyed/CrimsonDecor.xml",
+      "path": "Content/1.6/Languages/English/Keyed/CrimsonDecor.xml",
+      "target": "1.6/Languages/English/Keyed/CrimsonDecor.xml",
+      "sha256": "18064A0F942842DDD9ED022BC8C3D4840AF209B55EDFF4BA788909F6025BEFDA"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Languages/Korean/Keyed/CrimsonDecor.xml",
+      "path": "Content/1.6/Languages/Korean/Keyed/CrimsonDecor.xml",
+      "target": "1.6/Languages/Korean/Keyed/CrimsonDecor.xml",
+      "sha256": "B6AA1AB7E0D7DD0AC1D1F9E1C7A6C385C2D7DFF6F72F7780D3AC4714519F7959"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/DeckLightEnd.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/DeckLightEnd.png",
+      "target": "1.6/Textures/Crimson/Decor/DeckLightEnd.png",
+      "sha256": "8266B7F8D49B8F9506359331806EC49BE88C71491205663A60D3034BBF964F1B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/DeckLightHub.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/DeckLightHub.png",
+      "target": "1.6/Textures/Crimson/Decor/DeckLightHub.png",
+      "sha256": "A205D8854088E130AC48240D831D7C81256B3731A95E6B84CC445E54CE734460"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/DeckLightRail.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/DeckLightRail.png",
+      "target": "1.6/Textures/Crimson/Decor/DeckLightRail.png",
+      "sha256": "50E5C55917810B24DDBA9E24E72F4ED142B6E729F07075D26AD508E6A6B31EED"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/ArtifactCase.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/ArtifactCase.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/ArtifactCase.png",
+      "sha256": "DFF36E6B8208A9A249B6A8962C19C4CF0B23887FDA3B43FA98D1D2B9C2C83198"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/ArtifactCase_off.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/ArtifactCase_off.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/ArtifactCase_off.png",
+      "sha256": "BDED55DE73FA23A0D535D74AB16CE7085BFBC4B4FBADFE8BFC78248AF509092B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/PresenceBody.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/PresenceBody.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/PresenceBody.png",
+      "sha256": "ED2ADA7AC5C8518CFEC7690C1DF83B05998BF50052EB3BA917B184EA6ABED92D"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/PresenceBody_off.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/PresenceBody_off.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/PresenceBody_off.png",
+      "sha256": "BC447686DD496CEDA88147E8A23CA6764090D0EB06C5F16817E490C51780FC25"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/ResonanceRingBody.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/ResonanceRingBody.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/ResonanceRingBody.png",
+      "sha256": "034FED74FEE73AD4D795E31DFEA2F89EF2659E94FCF6BBAF5939FEA2CADD0FEA"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/ResonanceRingBody_off.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/ResonanceRingBody_off.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/ResonanceRingBody_off.png",
+      "sha256": "73BAFF698D035F876D39661B3312A59FF7FD94136BBBF9A6B0BFD5430BB36397"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/WallStripLight.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/WallStripLight.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/WallStripLight.png",
+      "sha256": "A108BA7CC5DFAC66A8BC878D7E317763BB0A89561521F5F81704BB8B485A3C71"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/WallStripLight_off.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/WallStripLight_off.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/WallStripLight_off.png",
+      "sha256": "428039B29FF834386563B14090D286F2B0ECB63038E5059403D94D3D3CE97779"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Guides/FloorBeaconStates.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Guides/FloorBeaconStates.png",
+      "target": "1.6/Textures/Crimson/Decor/Guides/FloorBeaconStates.png",
+      "sha256": "8DF6656BA5A78D5CF14C363DDD7E648ABACF7000D8D375B0E4EF5B5B868A0066"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/CrewBench.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/CrewBench.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/CrewBench.png",
+      "sha256": "1739D0053CFFF50C06C8446250CEDC706633B36A133D26BED39AC060F200E4A3"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Rooms/PathGuideLight.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Rooms/PathGuideLight.png",
+      "target": "1.6/Textures/Crimson/Decor/Rooms/PathGuideLight.png",
+      "sha256": "E15539481D209D90E0E285B6EFF817158EE94ECD099E27009EC420C4AFD33168"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Royalty/Drape_east.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Royalty/Drape_east.png",
+      "target": "1.6/Textures/Crimson/Decor/Royalty/Drape_east.png",
+      "sha256": "047DA9E1FDC29B8089E3A42E0261D44A0DDF9F393A26CB5CA66EB6648ED63CFC"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Royalty/Drape_north.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Royalty/Drape_north.png",
+      "target": "1.6/Textures/Crimson/Decor/Royalty/Drape_north.png",
+      "sha256": "48641B47FDDA62CF4427D9981FB4FD9DDF4500951EEB6693EFDA832A73E0A082"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Royalty/Drape_south.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Royalty/Drape_south.png",
+      "target": "1.6/Textures/Crimson/Decor/Royalty/Drape_south.png",
+      "sha256": "304D12D8D18CCB4AB5FF90E070F950C7AD3FC6ADE02125B8B4D9953B192AF794"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Royalty/Drape_west.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Royalty/Drape_west.png",
+      "target": "1.6/Textures/Crimson/Decor/Royalty/Drape_west.png",
+      "sha256": "B9EC5BD62181179653F3C0C516AB5C051916D74A8D936071A960C7B264D68DA6"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Rugs/RugA1.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Rugs/RugA1.png",
+      "target": "1.6/Textures/Crimson/Decor/Rugs/RugA1.png",
+      "sha256": "D81DD8E5538F06B1657A90539D0012FA3ABEA9FDF350E7C015A455EE41EBEB76"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/L03.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/L03.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/L03.png",
+      "sha256": "15C127719672077409CF6F6CA803213278410EFAAD2EAA04F1F2CFEC929F1E1B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/L04.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/L04.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/L04.png",
+      "sha256": "9BE9C93FB86FB9CA8B9456396F4512CF24BAAD4D5BC75630F2CABA02B36C0F99"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/L05.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/L05.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/L05.png",
+      "sha256": "83397CC29F1CAA7EDF4FA806FE7EAA4E6A4E08504D99F3DA681C9A9692B321A1"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/L07.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/L07.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/L07.png",
+      "sha256": "7966E35838DB227B0C35AB609FB4DB819C66B882382000B84756066991CF17A3"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/M08.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/M08.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/M08.png",
+      "sha256": "799F854F908B87841B8EBE34959C70D5FCD335761EED23AF36E074ADF236F065"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/M09.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/M09.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/M09.png",
+      "sha256": "E39A1BFA83485277055FFBB5423D94EFF0D6C3CAED86D590AF5349D88EA0B0A0"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/M11.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/M11.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/M11.png",
+      "sha256": "2DEA461DF15553A4CCF1D0448C048D55D6640985BAA5487507A7D5A135960A4A"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/M12.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/M12.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/M12.png",
+      "sha256": "3FD12BF2EEFF7F9973611AE458DF8A5DDA6891D0576E32BD1EF8DB60EBA43629"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/O01.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/O01.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/O01.png",
+      "sha256": "B06917BD6F7B7101D5E27C36D263739D773A4FCA5DAE419F4258150312113385"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/O02.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/O02.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/O02.png",
+      "sha256": "BB06B8113E4B2B33FD4665BABA9EC8C9835823FB1366E96A09965AAFF73BC978"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/O05.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/O05.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/O05.png",
+      "sha256": "930EF574F89A221AD1965536541E44C6CB722099AAD56BDBAFE82FFB87DCD996"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/O06.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/O06.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/O06.png",
+      "sha256": "299255737CA34C2044B2D6636B8064AECA8FF052A018F4592E0066078EF93BC9"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/O10.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/O10.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/O10.png",
+      "sha256": "A3B5B771027CECDD1EC103AD3757F3A6CC5FDAEC1ED048FDBB2F84FA48077659"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/O12.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/O12.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/O12.png",
+      "sha256": "BB21B94E0E1E8C3D5CD5B0F906316B9C0728F247D3563E3593D839B97B803B5F"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/R06.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/R06.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/R06.png",
+      "sha256": "A9BBE1FF066E3372C30A5490673A20707F72998A369C4A18DAC6F39E82D14700"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/R07.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/R07.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/R07.png",
+      "sha256": "D474D90A0C2F43B1B844956400DDD7C52ED064E1BBD2DD16113C9B36F82A5B17"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/R08.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/R08.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/R08.png",
+      "sha256": "D54A9FA1FD2A2F57A472B7AFB4D9D4DBADCDB2F0A2627E70E516D77820ED2CCA"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/R11.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/R11.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/R11.png",
+      "sha256": "EB88673023E25CDAE99A7B6AE0DCBE9574CA556E57AE625B1DE954A79EB5C641"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/S09.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/S09.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/S09.png",
+      "sha256": "3187C645353BB41BC51B3CEAC0508B3C1C371E543DBDD011E4AF3BA173A657F8"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/S10.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/S10.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/S10.png",
+      "sha256": "D7663EDC4E3AA83E71482C2B0C82DC109976101DE033FCB1FE4BF56488114523"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/S11.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/S11.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/S11.png",
+      "sha256": "2DC18D2BD0FEBD3AE4C7C041D6D3CC85A944948785534B17D66DF984ACB6F797"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Sculptures/S12.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Sculptures/S12.png",
+      "target": "1.6/Textures/Crimson/Decor/Sculptures/S12.png",
+      "sha256": "DFB86A5DCEBBF3402952802589D2959349A81B2D71CB8C98412C57C80D5FC4D3"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonCeilingLight.xml",
+      "path": "Content/1.6/Defs/CrimsonCeilingLight.xml",
+      "target": "1.6/Defs/CrimsonCeilingLight.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonDecor.xml",
+      "path": "Content/1.6/Defs/DECORATION__CrimsonDecor.xml",
+      "target": "1.6/Defs/DECORATION__CrimsonDecor.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonDecorExtras.xml",
+      "path": "Content/1.6/Defs/DECORATION__CrimsonDecorExtras.xml",
+      "target": "1.6/Defs/DECORATION__CrimsonDecorExtras.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonFloorGuides.xml",
+      "path": "Content/1.6/Defs/DECORATION__CrimsonFloorGuides.xml",
+      "target": "1.6/Defs/DECORATION__CrimsonFloorGuides.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRoomFittings.xml",
+      "path": "Content/1.6/Defs/DECORATION__CrimsonRoomFittings.xml",
+      "target": "1.6/Defs/DECORATION__CrimsonRoomFittings.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRoyaltyFurniture.xml",
+      "path": "Content/1.6/Defs/DECORATION__CrimsonRoyaltyFurniture.xml",
+      "target": "1.6/Defs/DECORATION__CrimsonRoyaltyFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRugs.xml",
+      "path": "Content/1.6/Defs/DECORATION__CrimsonRugs.xml",
+      "target": "1.6/Defs/DECORATION__CrimsonRugs.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonSculptures.xml",
+      "path": "Content/1.6/Defs/DECORATION__CrimsonSculptures.xml",
+      "target": "1.6/Defs/DECORATION__CrimsonSculptures.xml",
+      "splitXml": true
+    }
+  ],
+  "authoring": [],
+  "integrationDependencies": [
+    "FURNITURE",
+    "RECREATION"
+  ],
+  "buildMode": "integrated-runtime-preserving-existing-assembly-contract",
+  "namespace": "CrimsonSOS2"
+}

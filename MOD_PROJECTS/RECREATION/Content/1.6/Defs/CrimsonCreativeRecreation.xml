@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><JoyKindDef>
+    <defName>Crimson_CreativeHobby</defName>
+    <label>창작 활동</label>
+  </JoyKindDef>
+
+  <ThingDef Name="Crimson_CreativeRecreationBase" ParentName="Crimson_RecreationFurnitureBase" Abstract="True">
+    <designationCategory>Joy</designationCategory>
+    <size>(2,2)</size>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <graphicData>
+      <graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass>
+      <drawSize>(2.2,2.8)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1120</MaxHitPoints><WorkToBuild>10000</WorkToBuild><Mass>30</Mass>
+      <JoyGainFactor>1.3</JoyGainFactor><Beauty>80</Beauty><MarketValue>9732.4</MarketValue><Flammability>0</Flammability>
+    </statBases>
+    <building><joyKind>Crimson_CreativeHobby</joyKind><buildingSizeCategory>Small</buildingSizeCategory></building>
+    <costList Inherit="False"><Steel>80</Steel><Plasteel>15</Plasteel><ComponentIndustrial>2</ComponentIndustrial></costList>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>60</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>160</originalMaxHitPoints></li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_CreativeRecreationBase">
+    <defName>Crimson_AlienArtResonator</defName>
+    <label>심홍 이형 공명체</label>
+    <description>비대칭 결정과 끊어진 고리가 공중에 떠 있는 외계의 예술 유물입니다. 인간의 시각으로 해석하기 어려운 형상과 공명을 감상하는 동안 낯선 미적 감각이 의식에 스며듭니다. 여가 시간에 오락을 충족하면서 예술 기술을 익힙니다. 재료를 소모하거나 작품을 생산하지 않습니다. 앞쪽 한 칸을 비워 두거나 의자를 놓아 이용할 수 있으며 전원이 공급되는 동안 이용을 시작할 수 있습니다. 소비전력은 60W입니다.</description>
+    <graphicData><texPath>Crimson/Decor/Recreation/AlienArtResonator</texPath></graphicData>
+    <uiOrder>1004</uiOrder>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_CreativeRecreationBase">
+    <defName>Crimson_CraftMemoryInfuser</defName>
+    <label>심홍 기예 주입기</label>
+    <description>분리된 검은 척추와 신경 접속 고리로 이루어진 외계의 기억 전송 장치입니다. 앞에서 쉬는 동안 정체불명의 제작자가 남긴 구조와 조립의 감각이 의식에 주입됩니다. 공구를 직접 다루지 않고 여가 시간에 오락을 충족하면서 제작 기술을 익힙니다. 재료를 소모하거나 물품을 생산하지 않습니다. 앞쪽 한 칸을 비워 두거나 의자를 놓아 이용할 수 있으며 전원이 공급되는 동안 이용을 시작할 수 있습니다. 소비전력은 60W입니다.</description>
+    <graphicData><texPath>Crimson/Decor/Recreation/CraftMemoryInfuser</texPath></graphicData>
+    <uiOrder>1005</uiOrder>
+  </ThingDef>
+
+  <JobDef Name="Crimson_CreativeHobbyJobBase" Abstract="True">
+    <driverClass>JobDriver_SitFacingBuilding</driverClass>
+    <joyDuration>4000</joyDuration><joyMaxParticipants>1</joyMaxParticipants>
+    <joyXpPerTick>0.004</joyXpPerTick><joyKind>Crimson_CreativeHobby</joyKind>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  <JobDef ParentName="Crimson_CreativeHobbyJobBase">
+    <defName>Crimson_ContemplateAlienArt</defName>
+    <reportString>이형 공명체의 형상을 감상하는 중.</reportString>
+    <joySkill>Artistic</joySkill>
+  </JobDef>
+  <JobDef ParentName="Crimson_CreativeHobbyJobBase">
+    <defName>Crimson_ReceiveCraftMemories</defName>
+    <reportString>외계의 제작 기억을 받아들이는 중.</reportString>
+    <joySkill>Crafting</joySkill>
+  </JobDef>
+  <JoyGiverDef Name="Crimson_CreativeHobbyGiverBase" Abstract="True">
+    <giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
+    <baseChance>2</baseChance><requireChair>false</requireChair>
+    <joyKind>Crimson_CreativeHobby</joyKind>
+    <requiredCapacities><li>Sight</li><li>Manipulation</li></requiredCapacities>
+  </JoyGiverDef>
+  <JoyGiverDef ParentName="Crimson_CreativeHobbyGiverBase">
+    <defName>Crimson_EnjoyAlienArt</defName>
+    <thingDefs><li>Crimson_AlienArtResonator</li></thingDefs>
+    <jobDef>Crimson_ContemplateAlienArt</jobDef>
+  </JoyGiverDef>
+  <JoyGiverDef ParentName="Crimson_CreativeHobbyGiverBase">
+    <defName>Crimson_EnjoyCraftMemories</defName>
+    <thingDefs><li>Crimson_CraftMemoryInfuser</li></thingDefs>
+    <jobDef>Crimson_ReceiveCraftMemories</jobDef>
+  </JoyGiverDef>
+</Defs>

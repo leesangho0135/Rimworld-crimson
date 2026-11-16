@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="ApparelBase" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_WardenCloak</defName>
+    <label>모노리스 수호 망토</label>
+    <description>검은 외피와 심홍색 안감을 두른 전용 보호막 망토. 보호막을 유지하며 원거리 무기를 발사할 수 있다. 전설 규격의 보호막 최대 에너지와 재충전 속도를 각각 1.5배 강화했다. 근접 공격과 열은 차단하지 못하고 EMP에 정지한다. 전설 성능이 규격으로 고정되어 품질 등급이 없다.</description>
+    <thingClass>Apparel</thingClass>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <generateCommonality>0</generateCommonality>
+    <uiIconScale>1</uiIconScale>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Equipment/Cloak</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonWardenGroundGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <statBases Inherit="False">
+      <ArmorRating_Sharp>0.6300000000000001</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.25200000000000006</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.9450000000000001</ArmorRating_Heat>
+      <Insulation_Cold>96</Insulation_Cold>
+      <Insulation_Heat>72</Insulation_Heat>
+      <Beauty>24</Beauty>
+      <MarketValue>4000</MarketValue>
+      <EnergyShieldEnergyMax>3.465</EnergyShieldEnergyMax>
+      <EnergyShieldRechargeRate>0.2535</EnergyShieldRechargeRate>
+      <Mass>.4</Mass>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <EquipDelay>2</EquipDelay>
+      <WorkToMake>28000</WorkToMake>
+    </statBases>
+    <equippedStatOffsets Inherit="False" />
+    <costList Inherit="False">
+      <Hyperweave>60</Hyperweave>
+      <Plasteel>25</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <recipeMaker Inherit="False">
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>ShieldBelt</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingCategories Inherit="False">
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel Inherit="False">
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>Crimson/Equipment/Cloak</wornGraphicPath>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <useDeflectMetalEffect>false</useDeflectMetalEffect>
+      <tags>
+        <li>Spacer</li>
+        <li>PrestigeCombatGear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <parentTagDef>ApparelBody</parentTagDef>
+    </apparel>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Biocodable" />
+      <li Class="CrimsonSOS2.CompProperties_WardenShield">
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_Single" Inherit="False">
+      <color>(1,1,1,1)</color>
+    </colorGenerator>
+    <tradeTags Inherit="False">
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <thingSetMakerTags Inherit="False" />
+  </ThingDef>
+  </Defs>

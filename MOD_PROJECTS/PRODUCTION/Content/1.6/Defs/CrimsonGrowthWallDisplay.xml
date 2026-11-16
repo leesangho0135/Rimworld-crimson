@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><!-- Retain save references as a hidden 3x1 screen with the growth page. -->
+  <ThingDef ParentName="Crimson_WallDisplayBase">
+    <defName>Crimson_GrowthWallDisplay</defName>
+    <label>심홍 재배 스크린</label>
+    <graphicData>
+      <drawOffsetNorth>(0,0,0.65)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,-0.65)</drawOffsetSouth>
+      <drawOffsetEast>(0.65,0,0)</drawOffsetEast>
+      <drawOffsetWest>(-0.65,0,0)</drawOffsetWest>
+    </graphicData>
+    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="MusicalInstrumentBase" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_Harp</defName>
+    <label>심홍 하프</label>
+    <description>검은 각면 프레임과 절제된 진홍색 장식을 갖춘 하프입니다. 음악을 연주하여 휴식을 즐길 수 있습니다. 가구 메뉴에서 직접 건설할 수 있으며 기존 제작 작업도 사용할 수 있습니다.</description>
+    <possessionCount>1</possessionCount>
+    <descriptionHyperlinks>
+      <ThingDef>Harpsichord</ThingDef>
+      <ThingDef>Piano</ThingDef>
+    </descriptionHyperlinks>
+    <size>(1,1)</size>
+    <pathCost>30</pathCost>
+    <minTechLevelToBuild>Medieval</minTechLevelToBuild>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <soundPlayInstrument>Harp_Play</soundPlayInstrument>
+    <researchPrerequisites>
+      <li>Harp</li>
+    </researchPrerequisites>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MaxHitPoints>490</MaxHitPoints>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>4</Mass>
+      <JoyGainFactor>1</JoyGainFactor>
+      <Beauty>800</Beauty>
+    <MarketValue>15058.32</MarketValue><Flammability>0</Flammability><WorkToBuild>18000</WorkToBuild></statBases>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>Harp</researchPrerequisite>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>
+      </recipeUsers>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+    <costList Inherit="False"><WoodLog>150</WoodLog></costList>
+    <building>
+      <instrumentRange>12</instrumentRange>
+    </building>
+    <uiIconOffset>(0, 0.08)</uiIconOffset>
+    <uiIconScale>0.5</uiIconScale>
+    <minifiedDrawScale>0.5</minifiedDrawScale>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/Harp</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(1.6,2)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
+    <uiIconPath>Crimson/Decor/Revision/Harp</uiIconPath>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+      <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>70</originalMaxHitPoints></li></comps>
+      <designationCategory>Joy</designationCategory>
+      <designatorDropdown>Crimson_Instruments</designatorDropdown>
+      <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <uiOrder>1020</uiOrder>
+  <defaultPlacingRot>North</defaultPlacingRot></ThingDef>
+  <ThingDef ParentName="MusicalInstrumentBase" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_Harpsichord</defName>
+    <label>심홍 하프시코드</label>
+    <description>검은 몸체와 건반을 갖춘 하프시코드입니다. 건반으로 현을 뜯어 음악을 연주합니다. 가구 메뉴에서 직접 건설할 수 있으며 기존 제작 작업도 사용할 수 있습니다.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Harp</ThingDef>
+      <ThingDef>Piano</ThingDef>
+    </descriptionHyperlinks>
+    <size>(2,3)</size>
+    <minTechLevelToBuild>Medieval</minTechLevelToBuild>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <soundPlayInstrument>Harpsichord_Play</soundPlayInstrument>
+    <defaultPlacingRot>West</defaultPlacingRot>
+    <researchPrerequisites>
+      <li>Harpsichord</li>
+    </researchPrerequisites>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MaxHitPoints>1050</MaxHitPoints>
+      <WorkToMake>32000</WorkToMake>
+      <Mass>30</Mass>
+      <JoyGainFactor>1</JoyGainFactor>
+      <Beauty>1600</Beauty>
+    <MarketValue>25103.68</MarketValue><Flammability>0</Flammability><WorkToBuild>32000</WorkToBuild></statBases>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>Harpsichord</researchPrerequisite>
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>
+      </recipeUsers>
+      <displayPriority>610</displayPriority>
+    </recipeMaker>
+    <costList Inherit="False"><WoodLog>250</WoodLog></costList>
+    <building>
+      <instrumentRange>16</instrumentRange>
+    </building>
+    <graphicData>
+      <graphicClass>CrimsonSOS2.CrimsonRoyaltyMultiGraphic</graphicClass>
+      <texPath>Crimson/Decor/Royalty/Harpsichord</texPath>
+      <drawSize>(3.5,3.5)</drawSize>
+      <drawOffsetNorth>(0,0,0.08)</drawOffsetNorth>
+      <shadowData>
+        <volume>(0.8, 0.3, 1.1)</volume>
+        <offset>(0, 0, 0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.6,0.2,1,1.7)</rect>
+      </damageData>
+      <shaderType>Cutout</shaderType>
+      <allowFlip>false</allowFlip>
+    </graphicData>
+    <uiIconPath>Crimson/Decor/Royalty/Harpsichord_south</uiIconPath>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+      <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>150</originalMaxHitPoints></li></comps>
+      <designationCategory>Joy</designationCategory>
+      <designatorDropdown>Crimson_Instruments</designatorDropdown>
+      <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <uiOrder>1021</uiOrder>
+  </ThingDef>
+  <ThingDef ParentName="MusicalInstrumentBase" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_Piano</defName>
+    <label>심홍 그랜드 피아노</label>
+    <description>검은 각면 몸체와 절제된 진홍색 장식을 갖춘 그랜드 피아노입니다. 건반과 해머로 현을 울려 풍부한 음악을 연주합니다. 가구 메뉴에서 직접 건설할 수 있으며 기존 제작 작업도 사용할 수 있습니다.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Harp</ThingDef>
+      <ThingDef>Harpsichord</ThingDef>
+    </descriptionHyperlinks>
+    <size>(3,3)</size>
+    <minTechLevelToBuild>Industrial</minTechLevelToBuild>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <soundPlayInstrument>Piano_Play</soundPlayInstrument>
+    <defaultPlacingRot>West</defaultPlacingRot>
+    <researchPrerequisites>
+      <li>Piano</li>
+    </researchPrerequisites>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MaxHitPoints>1260</MaxHitPoints>
+      <WorkToMake>50000</WorkToMake>
+      <Mass>60</Mass>
+      <JoyGainFactor>1</JoyGainFactor>
+      <Beauty>3200</Beauty>
+    <MarketValue>34162</MarketValue><Flammability>0</Flammability><WorkToBuild>50000</WorkToBuild></statBases>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>Piano</researchPrerequisite>
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedPiano</unfinishedThingDef>
+      <displayPriority>630</displayPriority>
+    </recipeMaker>
+    <costList Inherit="False"><WoodLog>220</WoodLog><Steel>120</Steel></costList>
+    <building>
+      <instrumentRange>20</instrumentRange>
+    </building>
+    <uiIconScale>0.9</uiIconScale>
+    <graphicData>
+      <graphicClass>CrimsonSOS2.CrimsonV48AtlasGraphic</graphicClass>
+      <texPath>Crimson/Decor/Royalty/PianoAtlas</texPath>
+      <drawSize>(3.4,3.4)</drawSize>
+      <drawOffsetNorth>(0,0,0.25)</drawOffsetNorth>
+      <shadowData>
+        <volume>(2.2, 0.4, 0.8)</volume>
+        <offset>(0, 0, 0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.6,0.3,2,1.2)</rect>
+      </damageData>
+      <shaderType>Cutout</shaderType>
+      <allowFlip>false</allowFlip>
+    </graphicData>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+      <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>180</originalMaxHitPoints></li></comps>
+      <designationCategory>Joy</designationCategory>
+      <designatorDropdown>Crimson_Instruments</designatorDropdown>
+      <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <uiOrder>1022</uiOrder>
+  </ThingDef>
+  </Defs>

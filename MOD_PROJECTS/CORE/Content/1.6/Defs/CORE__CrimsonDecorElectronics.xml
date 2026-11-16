@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><DesignatorDropdownGroupDef>
+    <defName>Crimson_DecorElectronics</defName>
+  </DesignatorDropdownGroupDef>
+  <ThingDef Name="Crimson_ElectronicDecorBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>Building</thingClass>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <coversFloor>false</coversFloor>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>true</rotatable>
+    <tickerType>Normal</tickerType>
+    <building>
+      <isInert>true</isInert>
+      <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <graphicData>
+      <graphicClass>CrimsonSOS2.CrimsonFurnitureStateGraphic</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawRotated>true</drawRotated>
+      <shadowData IsNull="True" />
+    </graphicData>
+    <statBases>
+      <Beauty>0</Beauty>
+      <Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <transmitsPower>false</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_DecorElectronics</designatorDropdown>
+    <researchPrerequisites><li>Electricity</li></researchPrerequisites>
+    <uiOrder>990</uiOrder>
+  </ThingDef>
+  </Defs>

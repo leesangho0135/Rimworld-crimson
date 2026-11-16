@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="Crimson_FunctionalChairBase">
+    <defName>Crimson_AuxiliaryCrewSeat</defName>
+    <label>심홍 보조 승무원 좌석</label>
+    <description>지휘실의 보조 담당자가 사용하는 간결한 1×1 좌석입니다. 작업대 앞이나 식탁, 놀이 시설과 TV 시청에 앉아 사용할 수 있습니다. 표시등과 편안함 보조 장치에 75W를 사용합니다.</description>
+    <designatorDropdown>Crimson_SeatingFurniture</designatorDropdown>
+    <size>(1,1)</size>
+    <graphicData>
+      <texPath>Crimson/Decor/Rooms/AuxiliaryCrewSeatAtlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonV48AtlasGraphic</graphicClass>
+      <drawSize>(1,1.4)</drawSize><drawOffset>(0,0,0)</drawOffset>
+    </graphicData>
+    <statBases><MaxHitPoints>1400</MaxHitPoints><Comfort>0.8</Comfort><Beauty>60</Beauty><Mass>12</Mass><WorkToBuild>1200</WorkToBuild><MarketValue>3803.888</MarketValue><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>25</Steel><Cloth>12</Cloth><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>75</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonPoweredComfort" />
+    <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>200</originalMaxHitPoints></li></comps>
+    <uiOrder>1021</uiOrder>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designationCategory>Furniture</designationCategory>
+  </ThingDef>
+
+  </Defs>

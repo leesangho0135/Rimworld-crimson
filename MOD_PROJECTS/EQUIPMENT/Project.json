@@ -1,0 +1,214 @@
+{
+  "name": "EQUIPMENT",
+  "sources": [
+    {
+      "original": "Source/CrimsonSOS2/CrimsonRankEquipmentArt.cs",
+      "path": "Source/Main/CrimsonRankEquipmentArt.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonWardenFrames.cs",
+      "path": "Source/Main/CrimsonWardenFrames.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonWardenGraphics.cs",
+      "path": "Source/Main/CrimsonWardenGraphics.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonWardenShield.cs",
+      "path": "Source/Main/CrimsonWardenShield.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonWardenWeaponTraits.cs",
+      "path": "Source/Main/CrimsonWardenWeaponTraits.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonWeaponGroundPlaceWorker.cs",
+      "path": "Source/Main/CrimsonWeaponGroundPlaceWorker.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonWeaponPatches.cs",
+      "path": "Source/Main/CrimsonWeaponPatches.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonWeaponStatus.cs",
+      "path": "Source/Main/CrimsonWeaponStatus.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonWitness.cs",
+      "path": "Source/Main/CrimsonWitness.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonWorkEquipment.cs",
+      "path": "Source/Main/CrimsonWorkEquipment.cs",
+      "assembly": "main"
+    }
+  ],
+  "content": [
+    {
+      "original": "CrimsonSOS2/1.6/Languages/English/Keyed/CrimsonWeapons.xml",
+      "path": "Content/1.6/Languages/English/Keyed/CrimsonWeapons.xml",
+      "target": "1.6/Languages/English/Keyed/CrimsonWeapons.xml",
+      "sha256": "F133A17311ECEBDAD4256E2DE59939C8FF92DFA1D7A1B64730F7ABE43E88EE78"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Languages/Korean/Keyed/CrimsonWeapons.xml",
+      "path": "Content/1.6/Languages/Korean/Keyed/CrimsonWeapons.xml",
+      "target": "1.6/Languages/Korean/Keyed/CrimsonWeapons.xml",
+      "sha256": "50C914A4C373B3BCBB6BBB25055F1DDCE472DD9573843FE815667623E7AFFA03"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/WallEquipment/ArmorCabinet.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/WallEquipment/ArmorCabinet.png",
+      "target": "1.6/Textures/Crimson/Decor/WallEquipment/ArmorCabinet.png",
+      "sha256": "25476D8128EC65E07014EDDD80E9491AAB9325FF5DE744C0E4304D034FEA08EA"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/Helmet.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/Helmet.png",
+      "target": "1.6/Textures/Crimson/Equipment/Helmet.png",
+      "sha256": "14E5739C26B2A96D48B0AD6D1867EFCB7BB98FD0870CD401E97D7E247467BD2F"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/Infantry/Dagger.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/Infantry/Dagger.png",
+      "target": "1.6/Textures/Crimson/Equipment/Infantry/Dagger.png",
+      "sha256": "54546DAA5A51ACE2DB1123682B2A063D67FAD38BAADF60A6FC1A538D21C784F3"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/Infantry/SMG.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/Infantry/SMG.png",
+      "target": "1.6/Textures/Crimson/Equipment/Infantry/SMG.png",
+      "sha256": "5656AE2E84F81A616866A06D3E25FFE135234A6F65F4F3625FC650D7A02EA97F"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/Pistol.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/Pistol.png",
+      "target": "1.6/Textures/Crimson/Equipment/Pistol.png",
+      "sha256": "1D710C04094478DFB6E406AE0E28D2009412BAD6338071F61E46D682F65CF200"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/RanksV173/HammerAxe.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/RanksV173/HammerAxe.png",
+      "target": "1.6/Textures/Crimson/Equipment/RanksV173/HammerAxe.png",
+      "sha256": "25CF02A0B43E4AAC45E8905B1BF8D3F519D487A7655F8C938522C0C2D4FE15F3"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/RanksV173/LeaderHood.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/RanksV173/LeaderHood.png",
+      "target": "1.6/Textures/Crimson/Equipment/RanksV173/LeaderHood.png",
+      "sha256": "0BD119C18CFF55B65FAEE5A82A638908A9FB27482723BA6F3E3C609113DA76C0"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/RanksV173/OfficerCap.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/RanksV173/OfficerCap.png",
+      "target": "1.6/Textures/Crimson/Equipment/RanksV173/OfficerCap.png",
+      "sha256": "91954097ACA36FD6E8C71F961F8C07623D90B93E98631B1310A2EC4C0FEC37BC"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/RanksV173/OfficerCoat.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/RanksV173/OfficerCoat.png",
+      "target": "1.6/Textures/Crimson/Equipment/RanksV173/OfficerCoat.png",
+      "sha256": "B48F2A46B125F70BA5AD9ECA382D09895E611D6A11C59B1CD151DB47860C47A6"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/RanksV173/SoldierHelmet.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/RanksV173/SoldierHelmet.png",
+      "target": "1.6/Textures/Crimson/Equipment/RanksV173/SoldierHelmet.png",
+      "sha256": "48156A54D1E7CC9EE0BBBD750166CCB2A9E77B82FE293A2A37C3F4F0030895C4"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/RanksV173/SoldierRifle.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/RanksV173/SoldierRifle.png",
+      "target": "1.6/Textures/Crimson/Equipment/RanksV173/SoldierRifle.png",
+      "sha256": "B72AE6F1211D811E77A4E814453D130C84B4BF0FCAE6F9CA4C6B3169444AF1AA"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/RanksV173/SoldierUniform.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/RanksV173/SoldierUniform.png",
+      "target": "1.6/Textures/Crimson/Equipment/RanksV173/SoldierUniform.png",
+      "sha256": "71EA319E659D96964871F5D2833C1B0A7891143930A20ED379817F61C960F3A9"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/StaffHelmet.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/StaffHelmet.png",
+      "target": "1.6/Textures/Crimson/Equipment/StaffHelmet.png",
+      "sha256": "20294566449063BA05A0103913EC1E3717ADA2D2F2FDF49BB197CF0811C40EB2"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/StaffUniform.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/StaffUniform.png",
+      "target": "1.6/Textures/Crimson/Equipment/StaffUniform.png",
+      "sha256": "9B5DD1BDFA36B0F3B9A5DD2E5BBE5A98EE00827B822C32EA977767B97557A161"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/Sword.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/Sword.png",
+      "target": "1.6/Textures/Crimson/Equipment/Sword.png",
+      "sha256": "EB59F959FAEB80A4486F62431D70B54276288690FC6838A64317685D498F2D60"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/Uniform.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/Uniform.png",
+      "target": "1.6/Textures/Crimson/Equipment/Uniform.png",
+      "sha256": "A4989C84E881EE40A09B347F976A60DCF0C39F26520419B0A3C9AD445AC71F74"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonInfantryWeapons.xml",
+      "path": "Content/1.6/Defs/CrimsonInfantryWeapons.xml",
+      "target": "1.6/Defs/CrimsonInfantryWeapons.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRankApparel.xml",
+      "path": "Content/1.6/Defs/EQUIPMENT__CrimsonRankApparel.xml",
+      "target": "1.6/Defs/EQUIPMENT__CrimsonRankApparel.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonSoldierWeapons.xml",
+      "path": "Content/1.6/Defs/CrimsonSoldierWeapons.xml",
+      "target": "1.6/Defs/CrimsonSoldierWeapons.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonStaffArmor.xml",
+      "path": "Content/1.6/Defs/CrimsonStaffArmor.xml",
+      "target": "1.6/Defs/CrimsonStaffArmor.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonWallEquipmentStorage.xml",
+      "path": "Content/1.6/Defs/EQUIPMENT__CrimsonWallEquipmentStorage.xml",
+      "target": "1.6/Defs/EQUIPMENT__CrimsonWallEquipmentStorage.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonWardenEquipment.xml",
+      "path": "Content/1.6/Defs/EQUIPMENT__CrimsonWardenEquipment.xml",
+      "target": "1.6/Defs/EQUIPMENT__CrimsonWardenEquipment.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonWardenWeaponTraits.xml",
+      "path": "Content/1.6/Defs/CrimsonWardenWeaponTraits.xml",
+      "target": "1.6/Defs/CrimsonWardenWeaponTraits.xml",
+      "splitXml": true
+    }
+  ],
+  "authoring": [],
+  "integrationDependencies": [
+    "RECREATION",
+    "SOS2_ADDON"
+  ],
+  "buildMode": "integrated-runtime-preserving-existing-assembly-contract",
+  "namespace": "CrimsonSOS2"
+}

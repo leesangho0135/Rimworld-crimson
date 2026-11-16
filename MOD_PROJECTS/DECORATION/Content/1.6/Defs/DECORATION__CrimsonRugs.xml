@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef Name="Crimson_RugA1Base" ParentName="BuildingBase" Abstract="True">
+    <thingClass>Building</thingClass>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>LowPlant</altitudeLayer>
+    <passability>Standable</passability><pathCost>0</pathCost><fillPercent>0</fillPercent>
+    <coversFloor>false</coversFloor><wipesPlants>false</wipesPlants><clearBuildingArea>false</clearBuildingArea>
+    <rotatable>true</rotatable><defaultPlacingRot>North</defaultPlacingRot>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories><li>BuildingsFurniture</li></thingCategories>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_RugsA1</designatorDropdown>
+    <graphicData>
+      <texPath>Crimson/Decor/Rugs/RugA1</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonRugGraphic</graphicClass>
+      <shaderType>Cutout</shaderType><drawRotated>false</drawRotated>
+      <drawOffset>(0,0.01,0)</drawOffset><shadowData IsNull="True" />
+    </graphicData>
+    <building>
+      <isEdifice>false</isEdifice><isInert>true</isInert>
+      <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder><paintable>false</paintable>
+    </building>
+    <placeWorkers><li>CrimsonSOS2.CrimsonRugPlaceWorker</li></placeWorkers>
+    <comps><li><compClass>CompQuality</compClass></li></comps>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <!-- Fixed Hyperweave recipe; Beauty uses the native carpet base 2 x thrumbofur factor 8. -->
+    <statBases><MaxHitPoints>100</MaxHitPoints><Beauty>16</Beauty><Flammability>0.32</Flammability></statBases>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites><li>CarpetMaking</li></researchPrerequisites>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_RugA1Base">
+    <defName>Crimson_RugA1Small</defName><label>심홍 카펫 (2×1)</label>
+    <description>문 앞이나 침대 옆에 놓는 2×1 크기의 검은 직물 카펫입니다. 네 모서리의 사선과 끊어진 진홍색 테두리를 유지합니다. 기존 바닥 위에 덧놓으며 통행을 막지 않고 가구 아래에도 깔 수 있습니다.</description>
+    <size>(2,1)</size><graphicData><drawSize>(2,1)</drawSize></graphicData>
+    <costList><Hyperweave>14</Hyperweave></costList><statBases><Beauty>900</Beauty><WorkToBuild>1600</WorkToBuild><Mass>0.4</Mass></statBases>
+    <uiOrder>1000</uiOrder>
+      <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><legendaryOnly>true</legendaryOnly></li></comps>
+    <designationCategory>Floors</designationCategory>
+    <designatorDropdown>Crimson_RugsA1</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_RugA1Base">
+    <defName>Crimson_RugA1Medium</defName><label>심홍 카펫 (3×2)</label>
+    <description>침실이나 작은 휴게 공간에 놓는 3×2 크기의 검은 직물 카펫입니다. 네 모서리의 사선과 끊어진 진홍색 테두리를 유지합니다. 기존 바닥 위에 덧놓으며 통행을 막지 않고 가구 아래에도 깔 수 있습니다.</description>
+    <size>(3,2)</size><graphicData><drawSize>(3,2)</drawSize></graphicData>
+    <costList><Hyperweave>42</Hyperweave></costList><statBases><Beauty>1200</Beauty><WorkToBuild>4800</WorkToBuild><Mass>1.2</Mass></statBases>
+    <uiOrder>1001</uiOrder>
+      <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><legendaryOnly>true</legendaryOnly></li></comps>
+    <designationCategory>Floors</designationCategory>
+    <designatorDropdown>Crimson_RugsA1</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_RugA1Base">
+    <defName>Crimson_RugA1MediumWide</defName><label>심홍 카펫 (4×3)</label>
+    <description>침실과 거실, 휴게 공간에 놓는 4×3 크기의 검은 직물 카펫입니다. 기존 A1 카펫의 네 모서리와 끊어진 심홍색 테두리를 유지합니다. 회전하면 3×4가 되며, 기존 바닥 위와 가구 아래에 깔 수 있습니다.</description>
+    <size>(4,3)</size><graphicData><drawSize>(4,3)</drawSize></graphicData>
+    <costList><Hyperweave>84</Hyperweave></costList>
+    <statBases><Beauty>1275</Beauty><WorkToBuild>9600</WorkToBuild><Mass>2.4</Mass></statBases>
+    <uiOrder>1001.25</uiOrder>
+    <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><legendaryOnly>true</legendaryOnly></li></comps>
+    <designationCategory>Floors</designationCategory><designatorDropdown>Crimson_RugsA1</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_RugA1Base">
+    <defName>Crimson_RugA1SemiLarge</defName><label>심홍 카펫 (3×5)</label>
+    <description>침실과 휴게실의 긴 공간에 맞춘 3×5 크기의 검은 직물 카펫입니다. 기존 A1 카펫의 네 모서리와 끊어진 심홍색 테두리를 유지합니다. 회전하면 5×3이 되며, 기존 바닥 위와 가구 아래에 깔 수 있습니다.</description>
+    <size>(3,5)</size><graphicData><drawSize>(3,5)</drawSize></graphicData>
+    <costList><Hyperweave>105</Hyperweave></costList>
+    <statBases><Beauty>1350</Beauty><WorkToBuild>12000</WorkToBuild><Mass>3</Mass></statBases>
+    <uiOrder>1001.5</uiOrder>
+    <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><legendaryOnly>true</legendaryOnly></li></comps>
+    <designationCategory>Floors</designationCategory><designatorDropdown>Crimson_RugsA1</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_RugA1Base">
+    <defName>Crimson_RugA1Large</defName><label>심홍 카펫 (5×4)</label>
+    <description>거실이나 식당, 오락 공간에 놓는 5×4 크기의 검은 직물 카펫입니다. 네 모서리의 사선과 끊어진 진홍색 테두리를 유지합니다. 기존 바닥 위에 덧놓으며 통행을 막지 않고 가구 아래에도 깔 수 있습니다.</description>
+    <size>(5,4)</size><graphicData><drawSize>(5,4)</drawSize></graphicData>
+    <costList><Hyperweave>140</Hyperweave></costList><statBases><Beauty>1500</Beauty><WorkToBuild>16000</WorkToBuild><Mass>4</Mass></statBases>
+    <uiOrder>1002</uiOrder>
+      <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><legendaryOnly>true</legendaryOnly></li></comps>
+    <designationCategory>Floors</designationCategory>
+    <designatorDropdown>Crimson_RugsA1</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_RugA1Base">
+    <defName>Crimson_RugA1ExtraLarge</defName><label>심홍 카펫 (5×7)</label>
+    <description>넓은 지휘실과 왕실, 휴게실을 위한 5×7 크기의 검은 직물 카펫입니다. 기존 A1 카펫의 네 모서리와 끊어진 심홍색 테두리를 유지합니다. 회전하면 7×5가 되며, 기존 바닥 위와 가구 아래에 깔 수 있습니다.</description>
+    <size>(5,7)</size><graphicData><drawSize>(5,7)</drawSize></graphicData>
+    <costList><Hyperweave>245</Hyperweave></costList>
+    <statBases><Beauty>1800</Beauty><WorkToBuild>28000</WorkToBuild><Mass>7</Mass></statBases>
+    <uiOrder>1003</uiOrder>
+    <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><legendaryOnly>true</legendaryOnly></li></comps>
+    <designationCategory>Floors</designationCategory><designatorDropdown>Crimson_RugsA1</designatorDropdown>
+  </ThingDef>
+</Defs>

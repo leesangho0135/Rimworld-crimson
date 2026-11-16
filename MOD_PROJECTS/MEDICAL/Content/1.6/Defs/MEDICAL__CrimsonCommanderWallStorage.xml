@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="Crimson_CommanderWallStorageBase">
+    <defName>Crimson_CommanderWallMedicineCabinet</defName>
+    <label>심홍 벽형 약품장</label>
+    <description>지휘관방의 선체벽을 대신하는 가로 1칸·세로 2칸 고정형 약품장입니다. 벽면의 얕은 수납칸 이음선과 작은 표식으로만 구분되며 수납물은 보이지 않습니다. 약품을 두 칸에 총 6묶음까지 보관하고 열화로부터 보호합니다. 기존 약품장과 같이 50W로 표시등과 약한 주변 조명을 유지하며 냉장 기능은 없습니다.</description>
+    <statBases><MaxHitPoints>980</MaxHitPoints><WorkToBuild>1400</WorkToBuild><Mass>20</Mass><Beauty>40</Beauty><MarketValue>6104.536</MarketValue><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>60</Steel><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <building>
+      <storageGroupTag>Crimson_MedicineCabinet</storageGroupTag>
+      <fixedStorageSettings Inherit="False"><filter><categories><li>Medicine</li></categories></filter></fixedStorageSettings>
+      <defaultStorageSettings Inherit="False"><priority>Preferred</priority><filter><categories><li>Medicine</li></categories></filter></defaultStorageSettings>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>50</basePowerConsumption><transmitsPower>true</transmitsPower></li>
+      <li Class="CompProperties_Glower"><glowRadius>1.6</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>140</originalMaxHitPoints></li>
+    </comps>
+    <researchPrerequisites Inherit="False"><li>Electricity</li></researchPrerequisites>
+    <designatorDropdown>Crimson_StorageFurniture</designatorDropdown><uiOrder>1088</uiOrder>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><DesignationCategoryDef>
+    <defName>Crimson_CS</defName>
+    <label>CS-Ship</label>
+    <order>51</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+  <DesignatorDropdownGroupDef><defName>Crimson_BedroomFurniture</defName><label>심홍 침실 가구</label></DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef><defName>Crimson_Tables</defName><label>심홍 탁자</label></DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef><defName>Crimson_Lighting</defName><label>심홍 조명</label></DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef><defName>Crimson_Refrigerators</defName><label>심홍 냉장고</label></DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef><defName>Crimson_Thrones</defName><label>모노리스 옥좌</label></DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef><defName>Crimson_Instruments</defName><label>모노리스 악기</label></DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef><defName>Crimson_CommandFurniture</defName><label>심홍 지휘 설비</label></DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef><defName>Crimson_MedicalSupport</defName><label>심홍 의료 보조</label></DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef><defName>Crimson_AutomaticHydroponics</defName><label>심홍 자동 수경기</label></DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef><defName>Crimson_HygieneFurniture</defName><label>심홍 위생 설비</label></DesignatorDropdownGroupDef>
+</Defs>

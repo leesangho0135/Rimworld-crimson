@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><!--Large Auto Hydroponic-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_HydroponicsLarge</defName>
+    <label>심홍 대형 자동 수경재배기</label>
+    <description>밀폐형 재배 포드 8개에 구당 4주씩, 총 32주를 동시에 기르는 대형 자동 수경재배기입니다. Automatic Hydroponics의 자동 재배 및 수확 기능을 사용하며, 재배 속도는 원본의 2.5배이고 한 주기의 재배 시간은 원본의 40%입니다. 한 번의 수확량은 원본 8구 재배기의 4배이며 소비 전력은 원본을 유지합니다.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Crimson/Decor/Hydroponics/HydroponicsLargeAtlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonV48AtlasGraphic</graphicClass>
+      <drawSize>3</drawSize>
+      <shaderType>Cutout</shaderType>
+      <allowFlip>false</allowFlip>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <blocksAltitudes>
+      <li>FloorCoverings</li>
+    </blocksAltitudes>
+    <wipesPlants>true</wipesPlants>
+    <passability>Standable</passability>
+    <size>(3,3)</size>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <statBases>
+      <MaxHitPoints>3500</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>60</Beauty>
+      <WorkToBuild>36000</WorkToBuild>
+    <MarketValue>81316.64</MarketValue></statBases>
+    <costList Inherit="False"><Steel>800</Steel><ComponentIndustrial>8</ComponentIndustrial><ComponentSpacer>2</ComponentSpacer></costList>
+    <researchPrerequisites>
+      <li>Fabrication</li>
+      <li>Hydroponics</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <comps>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonAutomaticHydroponics">
+        <processes>
+          <!--Base Game-->
+          <li>AutoHydroponic_Rice</li>
+          <li>AutoHydroponic_Healroot</li>
+          <li>AutoHydroponic_Potato</li>
+          <li MayRequire="ludeon.rimworld.ideology">AutoHydroponic_Nutrifungus</li>
+          <li>AutoHydroponic_Hay</li>
+          <li>AutoHydroponic_Berries</li>
+          <li>AutoHydroponic_Fibercorn</li>
+          <li>AutoHydroponic_Hops</li>
+          <li>AutoHydroponic_Psychoid</li>
+          <li>AutoHydroponic_Smoke</li>
+          <li>AutoHydroponic_Dye</li>
+          <li>AutoHydroponic_Cotton</li>
+          <li>AutoHydroponic_Corn</li>
+          <li>AutoHydroponic_Devilstrand</li>
+          <!--Paste and Chemfuel-->
+          <li>AutoHydroponic_NutrientPaste</li>
+          <li>AutoHydroponic_Chemfuel</li>
+          <li MayRequire="vanillaexpanded.vchemfuele">AutoHydroponic_ChemfuelNetwork</li>
+          <li MayRequire="vanillaexpanded.vnutriente">AutoHydroponic_NutrientPasteNetwork</li>
+          <!--Giant Crops-->
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCBellPepper</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCCabbage</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCCarrot</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCCauliflower</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCEggplant</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCLettuce</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCOnion</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCPineapple</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCPumpkin</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCTomato</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCWatermelon</li>
+          <!--Hemofungus-->
+          <li MayRequire="nosleep.hemofungus">AutoHydroponic_HFHemofungus</li>
+          <!--Meatleaf-->
+          <li MayRequire="argon.meatleaf">AutoHydroponic_MLMeatleaf</li>
+          <!--GroThing-->
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTSteel</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTGold</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTPlasteel</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTJade</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTSilver</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTUranium</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTWood</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTPatchLeather</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTLightLeather</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTPlainLeather</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTHeavyLeather</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTSynthread</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTHyperweave</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTComponent</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTAdvancedComponent</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTNeutroshroom</li>
+          <!--Farmable Neutroamine-->
+          <li MayRequire="kongkim.farmableneutroamine">AutoHydroponic_FNNeutroamine</li>
+          <!--Neutroamine Network-->
+          <li MayRequire="vanillaracesexpanded.android,kongkim.farmableneutroamine">AutoHydroponic_NNNeutroamine</li>
+          <!--Vanilla Plants Expanded-->
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPEAgave</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPEOnion</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPEPumpkin</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPEPepper</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPEPeas</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPEEggplant</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPECabbage</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPEBeet</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPETomato</li>
+          <!--Erin's Hot Drinks-->
+          <li MayRequire="erin.hotdrink">AutoHydroponic_EHDCoffee</li>
+          <li MayRequire="erin.hotdrink">AutoHydroponic_EHDTea</li>
+          <!--VGE-->
+          <li MayRequire="vanillaexpanded.gravship">AutoHydroponic_VGEOxyalgae</li>
+          <li MayRequire="vanillaexpanded.gravship">AutoHydroponic_VGEOxyalgaeNetwork</li>
+        </processes>
+        <progressBarOffset>(0,0,-0.5)</progressBarOffset>
+        <inProgressTexture />
+        <finishedTexture />
+        <notWorkingKey>EmptyAutoHydroponic</notWorkingKey>
+        <nativeDefName>AutoHydroponic</nativeDefName>
+        <plantsPerPod>4</plantsPerPod><plantClusterSpacing>0.10</plantClusterSpacing><cropColumns>3</cropColumns>
+        <cropRows>3</cropRows>
+        <skipCenter>true</skipCenter>
+        <cropSpacing>0.70</cropSpacing>
+        <cropDrawScale>0.27</cropDrawScale>
+        <cropDrawOffset>(0,0,0.075)</cropDrawOffset>
+        <cropPositionsNorth>
+          <li>(-0.697381,0,0.731403)</li>
+          <li>(0.004861,0,0.728973)</li>
+          <li>(0.702244,0,0.731403)</li>
+          <li>(-0.694951,0,0.075328)</li>
+          <li>(0.702244,0,0.075328)</li>
+          <li>(-0.694951,0,-0.575886)</li>
+          <li>(0.007291,0,-0.578316)</li>
+          <li>(0.702244,0,-0.578316)</li>
+        </cropPositionsNorth>
+        <cropPositionsEast>
+          <li>(-0.707104,0,0.733835)</li>
+          <li>(-0.004860,0,0.731405)</li>
+          <li>(0.694954,0,0.733835)</li>
+          <li>(-0.707104,0,0.077760)</li>
+          <li>(0.694954,0,0.077760)</li>
+          <li>(-0.707104,0,-0.575885)</li>
+          <li>(-0.002430,0,-0.575885)</li>
+          <li>(0.694954,0,-0.575885)</li>
+        </cropPositionsEast>
+        <cropPositionsSouth>
+          <li>(-0.694951,0,0.743554)</li>
+          <li>(0.007291,0,0.741125)</li>
+          <li>(0.704674,0,0.743554)</li>
+          <li>(-0.694951,0,0.087479)</li>
+          <li>(0.704674,0,0.087479)</li>
+          <li>(-0.692521,0,-0.566166)</li>
+          <li>(0.009721,0,-0.568596)</li>
+          <li>(0.704674,0,-0.568596)</li>
+        </cropPositionsSouth>
+        <cropPositionsWest>
+          <li>(-0.707104,0,0.743554)</li>
+          <li>(-0.002430,0,0.741125)</li>
+          <li>(0.694954,0,0.738695)</li>
+          <li>(-0.704674,0,0.087479)</li>
+          <li>(0.694954,0,0.085050)</li>
+          <li>(-0.709534,0,-0.566166)</li>
+          <li>(0.000000,0,-0.568596)</li>
+          <li>(0.697383,0,-0.566166)</li>
+        </cropPositionsWest>
+      </li>
+      <li Class="PipeSystem.CompProperties_GlowerOnProcess">
+        <glowRadius>5</glowRadius>
+        <glowColor>(245, 192, 226)</glowColor>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1600</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="PipeSystem.CompProperties_Resource" MayRequire="vanillaexpanded.vnutriente">
+        <pipeNet MayRequire="vanillaexpanded.vnutriente">VNPE_NutrientPasteNet</pipeNet>
+      </li>
+      <li Class="PipeSystem.CompProperties_Resource" MayRequire="vanillaexpanded.vchemfuele">
+        <pipeNet MayRequire="vanillaexpanded.vchemfuele">VCHE_ChemfuelNet</pipeNet>
+      </li>
+      <li Class="PipeSystem.CompProperties_Resource" MayRequire="vanillaexpanded.gravship">
+        <pipeNet MayRequire="vanillaexpanded.gravship">VGE_OxygenNet</pipeNet>
+      </li>
+      <li Class="PipeSystem.CompProperties_Resource" MayRequire="vanillaracesexpanded.android,kongkim.farmableneutroamine">
+        <pipeNet MayRequire="vanillaracesexpanded.android,kongkim.farmableneutroamine">VREA_NeutroamineNet</pipeNet>
+      </li>
+    <li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>500</originalMaxHitPoints></li></comps>
+    <inspectorTabs>
+      <li>PipeSystem.ITab_Processor</li>
+    </inspectorTabs>
+    <tickerType>Rare</tickerType>
+    <designationCategory>Production</designationCategory>
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <isEdifice>false</isEdifice>
+    </building>
+    <clearBuildingArea>false</clearBuildingArea>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designatorDropdown>Crimson_AutomaticHydroponics</designatorDropdown>
+    <uiOrder>1020</uiOrder>
+  </ThingDef>
+  <!--Small Auto Hydroponic-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_HydroponicsSmall</defName>
+    <label>심홍 소형 자동 수경재배기</label>
+    <description>밀폐형 재배 포드 4개에 구당 3주씩, 총 12주를 동시에 기르는 소형 자동 수경재배기입니다. Automatic Hydroponics의 자동 재배 및 수확 기능을 사용하며, 재배 속도는 원본의 2.5배이고 한 주기의 재배 시간은 원본의 40%입니다. 한 번의 수확량은 원본 4구 재배기의 3배이며 소비 전력은 원본을 유지합니다.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Crimson/Decor/Hydroponics/HydroponicsSmallAtlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonV48AtlasGraphic</graphicClass>
+      <drawSize>2</drawSize>
+      <shaderType>Cutout</shaderType>
+      <allowFlip>false</allowFlip>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <blocksAltitudes>
+      <li>FloorCoverings</li>
+    </blocksAltitudes>
+    <wipesPlants>true</wipesPlants>
+    <passability>Standable</passability>
+    <size>(2,2)</size>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <statBases>
+      <MaxHitPoints>1750</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>40</Beauty>
+      <WorkToBuild>18000</WorkToBuild>
+    <MarketValue>40858.32</MarketValue></statBases>
+    <costList Inherit="False"><Steel>400</Steel><ComponentIndustrial>6</ComponentIndustrial><ComponentSpacer>1</ComponentSpacer></costList>
+    <researchPrerequisites>
+      <li>Fabrication</li>
+      <li>Hydroponics</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <comps>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonAutomaticHydroponics">
+        <processes>
+          <!--Base Game-->
+          <li>AutoHydroponic_RiceSm</li>
+          <li>AutoHydroponic_HealrootSm</li>
+          <li>AutoHydroponic_PotatoSm</li>
+          <li MayRequire="ludeon.rimworld.ideology">AutoHydroponic_NutrifungusSm</li>
+          <li>AutoHydroponic_HaySm</li>
+          <li>AutoHydroponic_BerriesSm</li>
+          <li>AutoHydroponic_FibercornSm</li>
+          <li>AutoHydroponic_HopsSm</li>
+          <li>AutoHydroponic_PsychoidSm</li>
+          <li>AutoHydroponic_SmokeSm</li>
+          <li>AutoHydroponic_DyeSm</li>
+          <li>AutoHydroponic_CottonSm</li>
+          <li>AutoHydroponic_CornSm</li>
+          <li>AutoHydroponic_DevilstrandSm</li>
+          <!--Paste and Chemfuel-->
+          <li>AutoHydroponic_NutrientPasteSm</li>
+          <li>AutoHydroponic_ChemfuelSm</li>
+          <li MayRequire="vanillaexpanded.vchemfuele">AutoHydroponic_ChemfuelNetworkSm</li>
+          <li MayRequire="vanillaexpanded.vnutriente">AutoHydroponic_NutrientPasteNetworkSm</li>
+          <!--Giant Crops-->
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCBellPepperSm</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCCabbageSm</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCCarrotSm</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCCauliflowerSm</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCEggplantSm</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCLettuceSm</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCOnionSm</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCPineappleSm</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCPumpkinSm</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCTomatoSm</li>
+          <li MayRequire="lingluo.giantcrop">AutoHydroponic_LGCWatermelonSm</li>
+          <!--Hemofungus-->
+          <li MayRequire="nosleep.hemofungus">AutoHydroponic_HFHemofungusSm</li>
+          <!--Meatleaf-->
+          <li MayRequire="argon.meatleaf">AutoHydroponic_MLMeatleafSm</li>
+          <!--GroThing-->
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTSteelSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTGoldSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTPlasteelSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTJadeSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTSilverSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTUraniumSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTWoodSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTPatchLeatherSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTLightLeatherSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTPlainLeatherSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTHeavyLeatherSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTSynthreadSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTHyperweaveSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTComponentSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTAdvancedComponentSm</li>
+          <li MayRequire="dandman.grothingthings">AutoHydroponic_GTNeutroshroomSm</li>
+          <!--Farmable Neutroamine-->
+          <li MayRequire="kongkim.farmableneutroamine">AutoHydroponic_FNNeutroamineSm</li>
+          <!--Neutroamine Network-->
+          <li MayRequire="vanillaracesexpanded.android,kongkim.farmableneutroamine">AutoHydroponic_NNNeutroamineSm</li>
+          <!--Vanilla Plants Expanded-->
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPEAgaveSm</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPEOnionSm</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPEPumpkinSm</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPEPepperSm</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPEPeasSm</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPEEggplantSm</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPECabbageSm</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPEBeetSm</li>
+          <li MayRequire="vanillaexpanded.vplantse">AutoHydroponic_VPETomatoSm</li>
+          <!--Erin's Hot Drinks-->
+          <li MayRequire="erin.hotdrink">AutoHydroponic_EHDCoffeeSm</li>
+          <li MayRequire="erin.hotdrink">AutoHydroponic_EHDTeaSm</li>
+          <!--VGE-->
+          <li MayRequire="vanillaexpanded.gravship">AutoHydroponic_VGEOxyalgaeSm</li>
+          <li MayRequire="vanillaexpanded.gravship">AutoHydroponic_VGEOxyalgaeNetworkSm</li>
+        </processes>
+        <progressBarOffset>(0,0,-0.5)</progressBarOffset>
+        <inProgressTexture />
+        <finishedTexture />
+        <notWorkingKey>EmptyAutoHydroponic</notWorkingKey>
+        <nativeDefName>SmallAutoHydroponic</nativeDefName>
+        <plantsPerPod>3</plantsPerPod><plantClusterSpacing>0.13</plantClusterSpacing><cropColumns>2</cropColumns>
+        <cropRows>2</cropRows>
+        <skipCenter>false</skipCenter>
+        <cropSpacing>0.75</cropSpacing>
+        <cropDrawScale>0.27</cropDrawScale>
+        <cropDrawOffset>(0,0,0.05)</cropDrawOffset>
+      </li>
+      <li Class="PipeSystem.CompProperties_GlowerOnProcess">
+        <glowRadius>5</glowRadius>
+        <glowColor>(245, 192, 226)</glowColor>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>800</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="PipeSystem.CompProperties_Resource" MayRequire="vanillaexpanded.vnutriente">
+        <pipeNet MayRequire="vanillaexpanded.vnutriente">VNPE_NutrientPasteNet</pipeNet>
+      </li>
+      <li Class="PipeSystem.CompProperties_Resource" MayRequire="vanillaexpanded.vchemfuele">
+        <pipeNet MayRequire="vanillaexpanded.vchemfuele">VCHE_ChemfuelNet</pipeNet>
+      </li>
+      <li Class="PipeSystem.CompProperties_Resource" MayRequire="vanillaracesexpanded.android,kongkim.farmableneutroamine">
+        <pipeNet MayRequire="vanillaracesexpanded.android,kongkim.farmableneutroamine">VREA_NeutroamineNet</pipeNet>
+      </li>
+      <li Class="PipeSystem.CompProperties_Resource" MayRequire="vanillaexpanded.gravship">
+        <pipeNet MayRequire="vanillaexpanded.gravship">VGE_OxygenNet</pipeNet>
+      </li>
+    <li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>250</originalMaxHitPoints></li></comps>
+    <inspectorTabs>
+      <li>PipeSystem.ITab_Processor</li>
+    </inspectorTabs>
+    <tickerType>Rare</tickerType>
+    <designationCategory>Production</designationCategory>
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <isEdifice>false</isEdifice>
+    </building>
+    <clearBuildingArea>false</clearBuildingArea>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designatorDropdown>Crimson_AutomaticHydroponics</designatorDropdown>
+    <uiOrder>1021</uiOrder>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="ThroneBase" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_Throne</defName>
+    <label>심홍 명상 옥좌</label>
+    <description>간결한 검은 각면과 진홍색 장식을 갖춘 명상 옥좌입니다. 위엄 명상을 수행하는 귀족에게 어울리는 좌석입니다.</description>
+    <statBases>
+      <MaxHitPoints>1050</MaxHitPoints>
+      <WorkToBuild>10000</WorkToBuild>
+      <Mass>40</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>8000</Beauty>
+      <Comfort>1</Comfort>
+    <MarketValue>12532.4</MarketValue></statBases>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <stuffCategories Inherit="False" />
+    <costStuffCount>0</costStuffCount>
+    <uiIconOffset>(0, 0.08)</uiIconOffset>
+    <uiIconScale>0.75</uiIconScale>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/Throne</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(1.35,1.8)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_Thrones</designatorDropdown>
+    <uiIconPath>Crimson/Decor/Revision/Throne</uiIconPath>
+  <comps><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>200</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CompProperties_Glower"><glowRadius>2.5</glowRadius><glowColor>(144,24,16,0)</glowColor></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>150</originalMaxHitPoints></li></comps><tickerType>Normal</tickerType>    <defaultStuff IsNull="True" />
+      <costList Inherit="False"><WoodLog>125</WoodLog></costList>
+    <uiOrder>1120</uiOrder>
+  <defaultPlacingRot>North</defaultPlacingRot></ThingDef>
+  <ThingDef ParentName="ThroneBase" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_GrandThrone</defName>
+    <label>심홍 대형 명상 옥좌</label>
+    <description>넓은 기단과 높은 등받이를 갖춘 대형 명상 옥좌입니다. 위엄 명상과 알현실의 중심이 되는 좌석입니다.</description>
+    <castEdgeShadows>True</castEdgeShadows>
+    <size>(3,2)</size>
+    <interactionCellOffset>(0,0,1)</interactionCellOffset>
+    <statBases>
+      <MaxHitPoints>2450</MaxHitPoints>
+      <WorkToBuild>40000</WorkToBuild>
+      <Mass>100</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>15000</Beauty>
+      <Comfort>1.2</Comfort>
+    <MarketValue>30879.6</MarketValue></statBases>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <stuffCategories Inherit="False" />
+    <costStuffCount>0</costStuffCount>
+    <costList Inherit="False"><Gold>75</Gold><Steel>300</Steel></costList>
+    <building>
+      <buildingSizeCategory>Medium</buildingSizeCategory>
+    </building>
+    <uiIconOffset>(0, 0.04)</uiIconOffset>
+    <uiIconScale>1</uiIconScale>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/GrandThrone</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(3.15,3.05)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_Thrones</designatorDropdown>
+  <comps><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>200</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CompProperties_Glower"><glowRadius>2.5</glowRadius><glowColor>(144,24,16,0)</glowColor></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>350</originalMaxHitPoints></li></comps><tickerType>Normal</tickerType>    <defaultStuff IsNull="True" />
+    <uiOrder>1121</uiOrder>
+  <defaultPlacingRot>North</defaultPlacingRot></ThingDef>
+  <ThingDef ParentName="FurnitureBase" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_Brazier</defName>
+    <label>심홍 화로</label>
+    <description>검은 각면으로 둘러싼 화로입니다. 목재를 태워 주변을 밝히고 열을 냅니다. 연료가 있어 불이 켜져야 왕실의 점등 요구를 충족합니다.</description>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <MaxHitPoints>560</MaxHitPoints>
+      <WorkToBuild>1000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Mass>15</Mass>
+      <MeditationFocusStrength>0.0</MeditationFocusStrength>
+    <Beauty>600</Beauty><MarketValue>5003.24</MarketValue></statBases>
+    <selectable>true</selectable>
+    <designationCategory>Furniture</designationCategory>
+    <uiOrder>1140</uiOrder>
+    <uiIconOffset>(0, -0.04)</uiIconOffset>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <stuffCategories Inherit="False" />
+    <costStuffCount>0</costStuffCount>
+    <placeWorkers>
+      <li>PlaceWorker_Heater</li>
+      <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+      <li>PlaceWorker_GlowRadius</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>2.0</fuelConsumptionRate>
+        <fuelCapacity>30.0</fuelCapacity>
+        <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>0</initialFuelPercent>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <functionsInVacuum>false</functionsInVacuum>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(144,24,16,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>3.5</heatPerSecond>
+        <heatPushMaxTemperature>23</heatPushMaxTemperature>
+      </li>
+      <li Class="CompProperties_FireOverlay"><compClass>CrimsonSOS2.CompCrimsonBrazierFire</compClass>
+        <fireSize>1</fireSize>
+        <offset>(0.000738,0,0.398704)</offset>
+      </li>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Flame</li>
+        </focusTypes>
+        <offsets>
+          <li Class="FocusStrengthOffset_Lit">
+            <offset>0.15</offset>
+          </li>
+          <li Class="FocusStrengthOffset_BuildingDefsLit">
+            <defs>
+              <li>Campfire</li>
+              <li>TorchLamp</li>
+              <li MayRequire="Ludeon.RimWorld.Royalty">Brazier</li>
+              <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
+              <li MayRequire="Ludeon.RimWorld.Ideology">Darktorch</li>
+              <li MayRequire="Ludeon.RimWorld.Ideology">DarktorchFungus</li>
+              <li>Crimson_Brazier</li>
+            </defs>
+            <offsetPerBuilding>0.02</offsetPerBuilding>
+            <radius>9.9</radius>
+            <maxBuildings>8</maxBuildings>
+            <explanationKey>MeditationFocusPerFlame</explanationKey>
+            <explanationKeyAbstract>MeditationFocusPerFlameAbstract</explanationKeyAbstract>
+            <drawRingRadius>false</drawRingRadius>
+          </li>
+        </offsets>
+      </li>
+    <li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>80</originalMaxHitPoints></li></comps>
+    <canOverlapZones>false</canOverlapZones>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <rotatable>false</rotatable>
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+    </researchPrerequisites>
+    <graphicData>
+      <!-- art+to -->
+      <texPath>Crimson/Decor/Royalty/Brazier</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonRoyaltySingleGraphic</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <shadowData>
+        <volume>(0.55, 0.35, 0.3)</volume>
+        <offset>(0, 0, -0.28)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.3,0.6,0.6)</rect>
+      </damageData>
+      <allowFlip>false</allowFlip>
+    <drawOffset>(0.000738,0,0.285108)</drawOffset><drawSize>(1.85,1.85)</drawSize></graphicData>
+    <building>
+      <paintable>true</paintable>
+    </building>
+    <designatorDropdown IsNull="True" />
+    <uiIconPath>Crimson/Decor/Royalty/Brazier</uiIconPath>
+      <defaultStuff IsNull="True" />
+      <costList Inherit="False"><Steel>50</Steel></costList>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_Column</defName>
+    <label>심홍 왕실 기둥</label>
+    <description>검은 각면과 절제된 진홍색 장식을 갖춘 기둥입니다. 시야와 이동을 가리지 않으며 지붕을 지탱하고 왕실의 방과 알현실을 꾸밉니다.</description>
+    <designationCategory>Structure</designationCategory>
+    <uiOrder>1000</uiOrder>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.25</fillPercent>
+    <pathCost>0</pathCost>
+    <uiIconScale>1.2</uiIconScale>
+    <statBases>
+      <MaxHitPoints>1120</MaxHitPoints>
+      <WorkToBuild>750</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>600</Beauty>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
+    <MarketValue>2002.43</MarketValue></statBases>
+    <costList Inherit="False"><Steel>20</Steel></costList>
+    <holdsRoof>true</holdsRoof>
+    <canOverlapZones>false</canOverlapZones>
+    <rotatable>false</rotatable>
+    <fertility>0</fertility>
+    <specialDisplayRadius>6.9</specialDisplayRadius>
+    <!-- must be kept in sync with roof hold-up radius -->
+    <building>
+      <isInert>true</isInert>
+      <ai_chillDestination>false</ai_chillDestination>
+      <paintable>true</paintable>
+    </building>
+    <graphicData>
+      <drawSize>(2,1.25)</drawSize>
+      <drawOffset>(0,0,0.2)</drawOffset>
+      <texPath>Crimson/Decor/Royalty/Column</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonRoyaltySingleGraphic</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.5, 0.3)</volume>
+        <offset>(0,0,-0.23)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shaderType>Cutout</shaderType>
+      <allowFlip>false</allowFlip>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Styleable" />
+    <li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>160</originalMaxHitPoints></li></comps>
+    <designatorDropdown IsNull="True" />
+    <uiIconPath>Crimson/Decor/Royalty/Column</uiIconPath>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+  </ThingDef>
+</Defs>

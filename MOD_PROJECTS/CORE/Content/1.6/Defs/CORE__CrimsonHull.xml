@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><!--Independent Crimson hull definitions. Concrete SOS2 1.6 definitions are cloned without copying shared abstract names. Original costs, research, sizes and non-requested behavior are retained.-->
+  <DesignatorDropdownGroupDef>
+    <defName>Crimson_HullStructures</defName>
+  </DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef>
+    <defName>Crimson_Decks</defName>
+  </DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef>
+    <defName>Crimson_Airlocks</defName>
+  </DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef>
+    <defName>Crimson_SolarGenerators</defName>
+  </DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef>
+    <defName>Crimson_Vents</defName>
+  </DesignatorDropdownGroupDef>
+  </Defs>

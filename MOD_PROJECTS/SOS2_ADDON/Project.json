@@ -1,0 +1,1170 @@
+{
+  "name": "SOS2_ADDON",
+  "sources": [
+    {
+      "original": "Source/CrimsonSOS2/CrimsonCommsConsoleArt.cs",
+      "path": "Source/Main/CrimsonCommsConsoleArt.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonHangarVentGraphic.cs",
+      "path": "Source/Main/CrimsonHangarVentGraphic.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonHull.cs",
+      "path": "Source/Main/CrimsonHull.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonHullWindow.cs",
+      "path": "Source/Main/CrimsonHullWindow.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonHullWindowFrame.cs",
+      "path": "Source/Main/CrimsonHullWindowFrame.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonHullWindowGraphic.cs",
+      "path": "Source/Main/CrimsonHullWindowGraphic.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonLaser.cs",
+      "path": "Source/Main/CrimsonLaser.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonPilgrim.cs",
+      "path": "Source/Main/CrimsonPilgrim.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonPilgrimBits.cs",
+      "path": "Source/Main/CrimsonPilgrimBits.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonPilgrimGeometry.cs",
+      "path": "Source/Main/CrimsonPilgrimGeometry.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonPilgrimHeat.cs",
+      "path": "Source/Main/CrimsonPilgrimHeat.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonPilgrimMissions.cs",
+      "path": "Source/Main/CrimsonPilgrimMissions.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonPower.cs",
+      "path": "Source/Main/CrimsonPower.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonPulseProjectile.cs",
+      "path": "Source/Main/CrimsonPulseProjectile.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonShield.cs",
+      "path": "Source/Main/CrimsonShield.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonShipRobotControl.cs",
+      "path": "Source/Main/CrimsonShipRobotControl.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonShipRobots.cs",
+      "path": "Source/Main/CrimsonShipRobots.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonShipVent.cs",
+      "path": "Source/Main/CrimsonShipVent.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonSpinalLaser.cs",
+      "path": "Source/Main/CrimsonSpinalLaser.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonSupport.cs",
+      "path": "Source/Main/CrimsonSupport.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonTacticalReports.cs",
+      "path": "Source/Main/CrimsonTacticalReports.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonTacticalTableArt.cs",
+      "path": "Source/Main/CrimsonTacticalTableArt.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonTorpedoAmmoFree.cs",
+      "path": "Source/Main/CrimsonTorpedoAmmoFree.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonTorpedoLauncher.cs",
+      "path": "Source/Main/CrimsonTorpedoLauncher.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonTorpedoLauncherGraphic.cs",
+      "path": "Source/Main/CrimsonTorpedoLauncherGraphic.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonTransportLaserImpact.cs",
+      "path": "Source/Main/CrimsonTransportLaserImpact.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonUnderdeckWeapons.cs",
+      "path": "Source/Main/CrimsonUnderdeckWeapons.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2.WallReports/CrimsonWallReports.cs",
+      "path": "Source/WallReports/CrimsonWallReports.cs",
+      "assembly": "reports"
+    }
+  ],
+  "content": [
+    {
+      "original": "CrimsonSOS2/1.6/Languages/English/Keyed/CrimsonEcho.xml",
+      "path": "Content/1.6/Languages/English/Keyed/CrimsonEcho.xml",
+      "target": "1.6/Languages/English/Keyed/CrimsonEcho.xml",
+      "sha256": "6454F462CD32904ACFB5BF97ECC9797415F253D1A72512AD6F322E869733C3CA"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Languages/Korean/DefInjected/ThingDef/CrimsonTorpedoes.xml",
+      "path": "Content/1.6/Languages/Korean/DefInjected/ThingDef/CrimsonTorpedoes.xml",
+      "target": "1.6/Languages/Korean/DefInjected/ThingDef/CrimsonTorpedoes.xml",
+      "sha256": "A62A4100EE1A2B50A8CE64FB84C8FCAA0B7C179895D5DCDDBEDCF9FCC7FC7298"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Languages/Korean/Keyed/CrimsonEcho.xml",
+      "path": "Content/1.6/Languages/Korean/Keyed/CrimsonEcho.xml",
+      "target": "1.6/Languages/Korean/Keyed/CrimsonEcho.xml",
+      "sha256": "47C12B130A67EEFAF1C1C5D8579D881327662C912D631B974247E574A5D93B9B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Communications/CommsConsoleAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Communications/CommsConsoleAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Communications/CommsConsoleAtlas.png",
+      "sha256": "CCEE6ECF3A2B448821BACC50D9076854A1393CD66524C9625B15BBD2ADB3A04C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/CommsPanel.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/CommsPanel.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/CommsPanel.png",
+      "sha256": "E3A0E7CB311580459A4A2D60D6963345118A30E942A009E780442EF44F563819"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/CommsPanel_off.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/CommsPanel_off.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/CommsPanel_off.png",
+      "sha256": "141703EEADA4DBE7C42F47E8633043A7C5387F5CE92EE8F6164E8002385F9844"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Floors/CommanderTile.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Floors/CommanderTile.png",
+      "target": "1.6/Textures/Crimson/Decor/Floors/CommanderTile.png",
+      "sha256": "15E98F5C800C222DFD22C4E0431E3B974DCD4C1038B6E9083ABB58A50259FF4C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Floors/ShipInteriorTile.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Floors/ShipInteriorTile.png",
+      "target": "1.6/Textures/Crimson/Decor/Floors/ShipInteriorTile.png",
+      "sha256": "A0E0372B5C57FC07B0C3FC1D0B0D6BEDDAE57630064B53D49889535C736A8A8E"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/CommandReports/ExpeditionResources.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/CommandReports/ExpeditionResources.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/CommandReports/ExpeditionResources.png",
+      "sha256": "13F220AFE4F7B48993888C65BB3C0433E538C6BAEECED6BFB3E2781F49C53090"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/CommandReports/VoyageOperations.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/CommandReports/VoyageOperations.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/CommandReports/VoyageOperations.png",
+      "sha256": "094075F9C00BB85BBB15BE26B734677DD28D31BBBCD6D1EF3F97B12911C7FA11"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ControlReports/CapacitorFlow.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ControlReports/CapacitorFlow.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ControlReports/CapacitorFlow.png",
+      "sha256": "8F5521F343F2813B5EA5B01197068A084113B659E00A68E683789D625F34418A"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ControlReports/CapacitorReserve.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ControlReports/CapacitorReserve.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ControlReports/CapacitorReserve.png",
+      "sha256": "0B5BDF704C9913AE831D860CC0AFC62E983B7B7E4ACA29B2AF8D41F89575D10D"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ControlReports/CommanderShipOverview.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ControlReports/CommanderShipOverview.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ControlReports/CommanderShipOverview.png",
+      "sha256": "44A81DB39FE374FFDD7D102D987B525C8CF6771A99461FCF4D0493A847F29725"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ControlReports/ConvergenceCharge.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ControlReports/ConvergenceCharge.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ControlReports/ConvergenceCharge.png",
+      "sha256": "534673D45CFDAA1CD927EEA7F4FC8D192F238FD330EDEC926C46035E6A51C06B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ControlReports/ConvergenceFireControl.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ControlReports/ConvergenceFireControl.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ControlReports/ConvergenceFireControl.png",
+      "sha256": "E4D6EC13B5CBFF86D39C835DB9BC800AC79DDA441EF4E12793E85FB569B65E56"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ControlReports/CryosleepVitals.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ControlReports/CryosleepVitals.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ControlReports/CryosleepVitals.png",
+      "sha256": "0D078940BBB1858A7F49B556A8253F563A27AF42790D7167AF5303C61F28E515"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ControlReports/EntropyCycle.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ControlReports/EntropyCycle.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ControlReports/EntropyCycle.png",
+      "sha256": "FD7CCC51E806E9A3D12FB7101F35620CA2EFC49F260F9D288ECFFD5054848D3D"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ControlReports/EntropyEfficiency.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ControlReports/EntropyEfficiency.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ControlReports/EntropyEfficiency.png",
+      "sha256": "934B2D2ED6C93EB89014B12008DFB4AF6EE61286E966A569C3AECA500426ECBF"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ControlReports/HeatDistribution.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ControlReports/HeatDistribution.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ControlReports/HeatDistribution.png",
+      "sha256": "7881D641DF3A4421C7FDC6A700D28A506BE85B2FF0ED8992B3CACCA7EA17BBFE"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ControlReports/MedbayReception.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ControlReports/MedbayReception.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ControlReports/MedbayReception.png",
+      "sha256": "1E2DF826C4D3046AB6F3B2DF69C02554F7B1EFCA8E2733BDB29D4BFA1B8875DF"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ControlReports/OfficerShipStatus.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ControlReports/OfficerShipStatus.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ControlReports/OfficerShipStatus.png",
+      "sha256": "6659E96446DE8F8CB3AB40354A480201B62F5ED112B0652D1E3A69F08D9BF54F"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ControlReports/ResonanceContacts.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ControlReports/ResonanceContacts.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ControlReports/ResonanceContacts.png",
+      "sha256": "7262122EA9E8BEC20FBDEAD5476D2C64B18DF20E15DDC142E0F8CBB065144A08"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ControlReports/SingularityReactor.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ControlReports/SingularityReactor.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ControlReports/SingularityReactor.png",
+      "sha256": "582B2CF822E46AFF0CDF6FC58BDBC6DC73415E0FE47323E339830B069EBDC9BB"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/GrowthDisplay/WallDisplay.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/GrowthDisplay/WallDisplay.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/GrowthDisplay/WallDisplay.png",
+      "sha256": "538C3469927A6A442B10C0A438BA9BEBAF1256979057005241CC17F494081206"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/GrowthDisplay/WallDisplay_off.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/GrowthDisplay/WallDisplay_off.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/GrowthDisplay/WallDisplay_off.png",
+      "sha256": "5B6F9C82BCCD79FD2394BA1B70902E12B8B0D9DC350515D94E91F9DF8158386C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/CapacitorReserve.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/CapacitorReserve.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalReports/CapacitorReserve.png",
+      "sha256": "2E3CBEB61580818322C0EA9DF5D639B870FF6C5229059C295AE548027A858817"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/CommanderShipOverview.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/CommanderShipOverview.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalReports/CommanderShipOverview.png",
+      "sha256": "067C6DC10D46480DB9F25535B20010DFA56EC4370AB80C932DAECE59962B41AF"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/ConvergenceCharge.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/ConvergenceCharge.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalReports/ConvergenceCharge.png",
+      "sha256": "72774986D22E841DE37252C0E6622D220A66C562EC8B5EBAC1EE8F54C4E0CFEF"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/ConvergenceFireControl.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/ConvergenceFireControl.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalReports/ConvergenceFireControl.png",
+      "sha256": "F6BEAEAC89F445879864B7523F019A681038C899EAB20A299663CFD5360F6588"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/CryosleepVitals.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/CryosleepVitals.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalReports/CryosleepVitals.png",
+      "sha256": "50935D5CCF62128ED5EE0E5F1A918A23418C6B08628514C9BED04F6E3817B5A3"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/EntropyCycle.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/EntropyCycle.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalReports/EntropyCycle.png",
+      "sha256": "C13EB00A9DC1CB95908B14A17736534585517D39FFD2DDCBEC41463BF9F9570E"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/HeatDistribution.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/HeatDistribution.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalReports/HeatDistribution.png",
+      "sha256": "FE8009CD8A22770D0A153019FA830A660F81922E25EE8575E167631D00AC4835"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/MedbayReception.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/MedbayReception.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalReports/MedbayReception.png",
+      "sha256": "90DDE4E5517156ADCF8253E156AD154ADB5E21AEDB73D89D2EA049E09DC40E8E"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/NavigationWeaponsBriefing.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/NavigationWeaponsBriefing.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalReports/NavigationWeaponsBriefing.png",
+      "sha256": "3E4E371E8C135BFBD750EBC9705737D8746238CD2E1CB9FDA73366333E9689DD"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/OfficerShipStatus.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/OfficerShipStatus.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalReports/OfficerShipStatus.png",
+      "sha256": "B115E1C33BE69160032A3C07389BB5EABCCBB28BA2CA3DB5056DBA430C1A08D9"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/SingularityReactor.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalReports/SingularityReactor.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalReports/SingularityReactor.png",
+      "sha256": "F470FF2DB870EC9903CD43586C94766AC39DB64B827E275E70375D630355A37B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalTableCompactParallelV137.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalTableCompactParallelV137.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalTableCompactParallelV137.png",
+      "sha256": "09C851397CA275D31CACA8C8611E51501045BB0431FF4BCC7EDBBFA93B8739DB"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalTableLargeParallelV137.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalTableLargeParallelV137.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalTableLargeParallelV137.png",
+      "sha256": "A0C27944E1262EB7D22812ADB1BA7175D45275D73B25537B3918384E84E0F34E"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalTableParallelV137.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalTableParallelV137.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalTableParallelV137.png",
+      "sha256": "EBC3863603792A57F9D4D26C4AD5E3C803015816F31348CDA369632FDE542F53"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/WallReports/Laser/WallDisplay.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/WallReports/Laser/WallDisplay.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/WallReports/Laser/WallDisplay.png",
+      "sha256": "428111AA262BA515AD1DF8D6CF3F8431B24F10CFE2E808B51DBE5519C2E5CAE5"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/WallReports/Laser/WallDisplay_off.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/WallReports/Laser/WallDisplay_off.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/WallReports/Laser/WallDisplay_off.png",
+      "sha256": "5B6F9C82BCCD79FD2394BA1B70902E12B8B0D9DC350515D94E91F9DF8158386C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/WallReports/Missile/WallDisplay.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/WallReports/Missile/WallDisplay.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/WallReports/Missile/WallDisplay.png",
+      "sha256": "5ABA1AE779493C75F123359F1EB2BC86DF9E6221CD4AF9E760E82A34018143F8"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/WallReports/Missile/WallDisplay_off.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/WallReports/Missile/WallDisplay_off.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/WallReports/Missile/WallDisplay_off.png",
+      "sha256": "5B6F9C82BCCD79FD2394BA1B70902E12B8B0D9DC350515D94E91F9DF8158386C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/ObservationWindow/W04.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/ObservationWindow/W04.png",
+      "target": "1.6/Textures/Crimson/Decor/ObservationWindow/W04.png",
+      "sha256": "E8B25FD7EB69920850EE81CEEAC2F2A388931F17DAE97558EF9311616A65CF15"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/Cloak.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/Cloak.png",
+      "target": "1.6/Textures/Crimson/Equipment/Cloak.png",
+      "sha256": "90461CA7D9619F8742220DA2E09D7081BEBE9C30FE3E584504A5599C0F829D58"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Equipment/RanksV173/AssistDrones.png",
+      "path": "Content/1.6/Textures/Crimson/Equipment/RanksV173/AssistDrones.png",
+      "target": "1.6/Textures/Crimson/Equipment/RanksV173/AssistDrones.png",
+      "sha256": "B7E29D99212D60C58FC2594782111392EC4D4FB8E3D24D9C624E487D08A35629"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/AirlockIcon.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/AirlockIcon.png",
+      "target": "1.6/Textures/Crimson/Hull/AirlockIcon.png",
+      "sha256": "B9101CAD964A6B4927EB74C828337189D9CE9165DE497D7E77440B053EE9145C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/AirlockMover.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/AirlockMover.png",
+      "target": "1.6/Textures/Crimson/Hull/AirlockMover.png",
+      "sha256": "FDC6709E1B89E4A37254257F2D63DADC9DAFFEACDE20C02B2294B66442238140"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/Deck.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/Deck.png",
+      "target": "1.6/Textures/Crimson/Hull/Deck.png",
+      "sha256": "34C46D29F136160ED337AD912072D52A36035181E62CD0FAA7ED3634ECDE707B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/DeckSeamless.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/DeckSeamless.png",
+      "target": "1.6/Textures/Crimson/Hull/DeckSeamless.png",
+      "sha256": "BFF1B4C3E88C6C15452FFD5A26B77E5C400B8E44A71E15E86FC4920A857BA05D"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/DockTube.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/DockTube.png",
+      "target": "1.6/Textures/Crimson/Hull/DockTube.png",
+      "sha256": "C5AB0E08A2BDCBF44A2161FCC8468606D956B94152056EA3A1C99BAA3CD5EE95"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/DockTubeV.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/DockTubeV.png",
+      "target": "1.6/Textures/Crimson/Hull/DockTubeV.png",
+      "sha256": "C5AB0E08A2BDCBF44A2161FCC8468606D956B94152056EA3A1C99BAA3CD5EE95"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/HangarVent.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/HangarVent.png",
+      "target": "1.6/Textures/Crimson/Hull/HangarVent.png",
+      "sha256": "1C37221CC560B360DD3099DE64CEBEA91BF2727ECE8D91A6180E29A767E1895F"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/HangarVentDirectionalAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/HangarVentDirectionalAtlas.png",
+      "target": "1.6/Textures/Crimson/Hull/HangarVentDirectionalAtlas.png",
+      "sha256": "EC38C543CCB0E4769DB02070F02D5D38ADC10E8E3268C57795AAE0EAD002EAF2"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/HullRoofPanel.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/HullRoofPanel.png",
+      "target": "1.6/Textures/Crimson/Hull/HullRoofPanel.png",
+      "sha256": "D2C6B6BE26CCEAF31EEA7160D60F1F301F97944013FFB4CAC79B681758D1983E"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/HullWall_Atlas.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/HullWall_Atlas.png",
+      "target": "1.6/Textures/Crimson/Hull/HullWall_Atlas.png",
+      "sha256": "1C04A02783D2E79A01E3C8898FE7F1CF304D7ED4844C9E22CC8B3D8475F33D48"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/HullWallIcon.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/HullWallIcon.png",
+      "target": "1.6/Textures/Crimson/Hull/HullWallIcon.png",
+      "sha256": "A13CC07E8CC75332644F4A31CA2BD3EBBE6B6D546EB628F56B004FFBA8855A50"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/Slope1x1.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/Slope1x1.png",
+      "target": "1.6/Textures/Crimson/Hull/Slope1x1.png",
+      "sha256": "0EAF440AF708FF548A4471E06CC5D76E3C248231D0466E9A8BCC5A82B72D6DE2"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/Slope1x1Flip.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/Slope1x1Flip.png",
+      "target": "1.6/Textures/Crimson/Hull/Slope1x1Flip.png",
+      "sha256": "A24C026424D2ADB8E3C32231AA818472E5BB5A0C17C0AB309C6A99743E580456"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/Slope1x2.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/Slope1x2.png",
+      "target": "1.6/Textures/Crimson/Hull/Slope1x2.png",
+      "sha256": "CAC0A248738D8BA0669AFDA3AA8736F4137EB82DCF6E67079AC440FB028CD0B2"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/Slope1x2Flip.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/Slope1x2Flip.png",
+      "target": "1.6/Textures/Crimson/Hull/Slope1x2Flip.png",
+      "sha256": "04D3529E6CD775699A07144A100A34DEC2A22C2A43AF20E31525C8AFC1853BB9"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/Slope1x3.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/Slope1x3.png",
+      "target": "1.6/Textures/Crimson/Hull/Slope1x3.png",
+      "sha256": "032E1ACC150EF49E16A4C82E0D44BB33CB15F9DA3A86D1E8D0CC6B1BE6BF04E3"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/Slope1x3Flip.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/Slope1x3Flip.png",
+      "target": "1.6/Textures/Crimson/Hull/Slope1x3Flip.png",
+      "sha256": "5D1755FF8BB0FCEB4C33E13835B89C311575297E3560495375396B3A37F3B9E0"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/SolarExpand.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/SolarExpand.png",
+      "target": "1.6/Textures/Crimson/Hull/SolarExpand.png",
+      "sha256": "08587F3AC4514C985A7FBCE83ED8715340DD548E203F976AE99E4FF08DFCEAAD"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/SolarIcon.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/SolarIcon.png",
+      "target": "1.6/Textures/Crimson/Hull/SolarIcon.png",
+      "sha256": "79749C30A19DD909D47FDAFAD925538E29D7D88622FBECB92BDB0E64DA208D2E"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/Vent.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/Vent.png",
+      "target": "1.6/Textures/Crimson/Hull/Vent.png",
+      "sha256": "18839351ED3472784CD7D8A0A85D37CBA9AF46553952B43EB2138B312078579B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Hull/VentInset.png",
+      "path": "Content/1.6/Textures/Crimson/Hull/VentInset.png",
+      "target": "1.6/Textures/Crimson/Hull/VentInset.png",
+      "sha256": "F4AF401B4EAFE2FB99A2EB7E1ED7E4389994BEBD0ADCCB2134612605E9FA25DE"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Battery/Body_east.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Battery/Body_east.png",
+      "target": "1.6/Textures/Crimson/Power/Battery/Body_east.png",
+      "sha256": "39F0E90943E6D3061C176D5776FBA37C04F45A40115B2F37A22F2EBCF408AA30"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Battery/Body_north.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Battery/Body_north.png",
+      "target": "1.6/Textures/Crimson/Power/Battery/Body_north.png",
+      "sha256": "41F1887D756B8541B6C531B57221723FB855AC6EAF1461B60CCBDD1C191CBD4F"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Battery/Body_south.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Battery/Body_south.png",
+      "target": "1.6/Textures/Crimson/Power/Battery/Body_south.png",
+      "sha256": "8265FD6ECE47DCF99E0070F18E3582D00EEA1E15A1BE64E9BC16D2D627958E4C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Battery/Body_west.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Battery/Body_west.png",
+      "target": "1.6/Textures/Crimson/Power/Battery/Body_west.png",
+      "sha256": "D6CC94E7D484DDA219ABF822AE46FC754CCA52DB2D4AD20087BEE31BF5817AE9"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Battery/ChargeFill.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Battery/ChargeFill.png",
+      "target": "1.6/Textures/Crimson/Power/Battery/ChargeFill.png",
+      "sha256": "7E9C41F1C4A0FBECF4AEEC24EC7F02891E418DBFE92146A7E7D9125BA39989E5"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Battery/GaugeEmpty.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Battery/GaugeEmpty.png",
+      "target": "1.6/Textures/Crimson/Power/Battery/GaugeEmpty.png",
+      "sha256": "B795EFE49728520E5020809CA7001453061EE0CEB9977278E4877D3EE7E88F3A"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Heatbank/Fixed.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Heatbank/Fixed.png",
+      "target": "1.6/Textures/Crimson/Power/Heatbank/Fixed.png",
+      "sha256": "1395B82162F40571579681EF08B86D41B86515DA7B15620827428D3AFB97CFED"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Nuclear/Active_east.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Nuclear/Active_east.png",
+      "target": "1.6/Textures/Crimson/Power/Nuclear/Active_east.png",
+      "sha256": "7671ED15BACA8299C4191466107B6F0D3A9511DABE2E304A2523F7B6841CA9A0"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Nuclear/Active_north.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Nuclear/Active_north.png",
+      "target": "1.6/Textures/Crimson/Power/Nuclear/Active_north.png",
+      "sha256": "18169EF9E0105FEF492978A4D0269F6709F7C04AA4AD462A59AC36980DBBA1E2"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Nuclear/Active_south.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Nuclear/Active_south.png",
+      "target": "1.6/Textures/Crimson/Power/Nuclear/Active_south.png",
+      "sha256": "3266906436068FF3BB7FB24D4A19E2716329151A38E7CF0A525DDA7ABC38686F"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Nuclear/Active_west.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Nuclear/Active_west.png",
+      "target": "1.6/Textures/Crimson/Power/Nuclear/Active_west.png",
+      "sha256": "F8D35E39276C2A5A09F76CB68CE307A4BCFF98251BEB63B727F809A7B2C3916D"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Nuclear/Flame_east.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Nuclear/Flame_east.png",
+      "target": "1.6/Textures/Crimson/Power/Nuclear/Flame_east.png",
+      "sha256": "59A9F28C7E1D48FB613490EB18A59F93D9FDF9FE4F6A54FA57C6A2EFFE5FE5A7"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Nuclear/Flame_north.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Nuclear/Flame_north.png",
+      "target": "1.6/Textures/Crimson/Power/Nuclear/Flame_north.png",
+      "sha256": "17B690E58F5009087491E105ED3F74B519B2B1ED5CFD5AF4D74EE8A08D0C1BED"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Nuclear/Flame_south.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Nuclear/Flame_south.png",
+      "target": "1.6/Textures/Crimson/Power/Nuclear/Flame_south.png",
+      "sha256": "B57AB951BFDBDE73868B3A994F6BEC5D259BC0875AE5FA83AA834C87F8B0E7D8"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Nuclear/Flame_west.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Nuclear/Flame_west.png",
+      "target": "1.6/Textures/Crimson/Power/Nuclear/Flame_west.png",
+      "sha256": "224FD5CBDBFC39A890D5F55DAB7A1720275D528C639D88DEE484602B96FD32C8"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Nuclear/Inactive_east.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Nuclear/Inactive_east.png",
+      "target": "1.6/Textures/Crimson/Power/Nuclear/Inactive_east.png",
+      "sha256": "23F895B3CF70F2ECB9486E52BD12EC459776BF3DAF87347E3CAB8A2542BFA622"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Nuclear/Inactive_north.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Nuclear/Inactive_north.png",
+      "target": "1.6/Textures/Crimson/Power/Nuclear/Inactive_north.png",
+      "sha256": "2266B87FA887478D463EF079840CEC8D5A3DD25413B0C46B5EA0BEF6BD34BB49"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Nuclear/Inactive_south.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Nuclear/Inactive_south.png",
+      "target": "1.6/Textures/Crimson/Power/Nuclear/Inactive_south.png",
+      "sha256": "D0C70DAB89AF8D508CC1FE2E35946FD009A2EB21FFA68DB460722DF1A78B4ED6"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Nuclear/Inactive_west.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Nuclear/Inactive_west.png",
+      "target": "1.6/Textures/Crimson/Power/Nuclear/Inactive_west.png",
+      "sha256": "B6108FC406B271174DE39B88659968B0642B893A88603D9F140AFD0A5381BE15"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Reactor/Active.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Reactor/Active.png",
+      "target": "1.6/Textures/Crimson/Power/Reactor/Active.png",
+      "sha256": "5FC9F0C8B1FCDF276A971A5CB2185FF114D945587846A6E6B5E359D0F10754D5"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Reactor/Inactive.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Reactor/Inactive.png",
+      "target": "1.6/Textures/Crimson/Power/Reactor/Inactive.png",
+      "sha256": "40B076ADFD56409B36336174E657A2C6429109D3C96C3EB43B31030B8AAFD78B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Tanaka/Body_east.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Tanaka/Body_east.png",
+      "target": "1.6/Textures/Crimson/Power/Tanaka/Body_east.png",
+      "sha256": "F9EA8107ED59E7ACB96C432CA575B6DC119453F61FD81CB2067480C4A8BBCC3E"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Tanaka/Body_north.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Tanaka/Body_north.png",
+      "target": "1.6/Textures/Crimson/Power/Tanaka/Body_north.png",
+      "sha256": "F7F8836C260FD3FA848D61F8AFF1ED25F9A76A3F98F67A9E33137D9AF7CFD815"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Tanaka/Body_south.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Tanaka/Body_south.png",
+      "target": "1.6/Textures/Crimson/Power/Tanaka/Body_south.png",
+      "sha256": "732B804B87F02A026765D511D0FDF81D8C4B7EAC6AD1CE064F21710701299A5B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Tanaka/Body_west.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Tanaka/Body_west.png",
+      "target": "1.6/Textures/Crimson/Power/Tanaka/Body_west.png",
+      "sha256": "E31BE12BCE1EBF25C25793E309D61005D9AE54D5722B9BA8CDDAECAABB7A0EE6"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Robots/OmniAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Robots/OmniAtlas.png",
+      "target": "1.6/Textures/Crimson/Robots/OmniAtlas.png",
+      "sha256": "B7F598194BA1FF095EC4C5F6C8D8111C6C4AD9109F94F1A0ED8C9EB68AF5A2BA"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Shield/Field.png",
+      "path": "Content/1.6/Textures/Crimson/Shield/Field.png",
+      "target": "1.6/Textures/Crimson/Shield/Field.png",
+      "sha256": "A89C1C8C35FCA2C9B7A51C9E38506346273396944EDECFAD5AE10776D0FD1B37"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Shield/Generator.png",
+      "path": "Content/1.6/Textures/Crimson/Shield/Generator.png",
+      "target": "1.6/Textures/Crimson/Shield/Generator.png",
+      "sha256": "20BA95047E9D404B49C3ABF0A8BEBFD6C09F8F1B7AB90D734EA2A5D3F0A03A91"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Shield/Generator_off.png",
+      "path": "Content/1.6/Textures/Crimson/Shield/Generator_off.png",
+      "target": "1.6/Textures/Crimson/Shield/Generator_off.png",
+      "sha256": "6208E896F148EDB3D5CA371586CC7970818D0590BFBA8BDFD605BFB1926FE171"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Shield/Membrane.png",
+      "path": "Content/1.6/Textures/Crimson/Shield/Membrane.png",
+      "target": "1.6/Textures/Crimson/Shield/Membrane.png",
+      "sha256": "4949E7FE139406EBD8CE133D23547CBEEA8F2CBB3963CAD62287F511CA617CC5"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/SingularityTorpedo.png",
+      "path": "Content/1.6/Textures/Crimson/SingularityTorpedo.png",
+      "target": "1.6/Textures/Crimson/SingularityTorpedo.png",
+      "sha256": "41B5B3F3D3F3E3F69B1241DC5DBA98A9651FC3F9F372A91809184B5F21B7C0C4"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/AdvancedSensor.png",
+      "path": "Content/1.6/Textures/Crimson/Support/AdvancedSensor.png",
+      "target": "1.6/Textures/Crimson/Support/AdvancedSensor.png",
+      "sha256": "E65776723BF6A25EFB9A58C8EA8A1AD318CA1D1EBEADF5DEA2B761F5E86AB92C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/CloakingDevice.png",
+      "path": "Content/1.6/Textures/Crimson/Support/CloakingDevice.png",
+      "target": "1.6/Textures/Crimson/Support/CloakingDevice.png",
+      "sha256": "57AACC9305139D1FCCB1621037AF62033C0D2407F98EBD1C2F5D2E6C992E4697"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/CloakingDevice_off.png",
+      "path": "Content/1.6/Textures/Crimson/Support/CloakingDevice_off.png",
+      "target": "1.6/Textures/Crimson/Support/CloakingDevice_off.png",
+      "sha256": "438FA26B1441426C46AA711C56003796954184BBA16A9AE4B87208F1E331432A"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/DockRoof5.png",
+      "path": "Content/1.6/Textures/Crimson/Support/DockRoof5.png",
+      "target": "1.6/Textures/Crimson/Support/DockRoof5.png",
+      "sha256": "FDAE879D6E4518210E0ED6C1BD057794FC10F6D0A049FB14B5C412079778AAF2"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/DockRoof7.png",
+      "path": "Content/1.6/Textures/Crimson/Support/DockRoof7.png",
+      "target": "1.6/Textures/Crimson/Support/DockRoof7.png",
+      "sha256": "641BB3A0499DCC099C75F7FC53195920F8948172838686FA1A31C5956DC98A51"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/LifeSupport.png",
+      "path": "Content/1.6/Textures/Crimson/Support/LifeSupport.png",
+      "target": "1.6/Textures/Crimson/Support/LifeSupport.png",
+      "sha256": "2DF509ED1A8EBBCA48C6E19E4D94F63E0E02E9AA97E7D0719E1E8A54E967FD73"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/LifeSupport_off.png",
+      "path": "Content/1.6/Textures/Crimson/Support/LifeSupport_off.png",
+      "target": "1.6/Textures/Crimson/Support/LifeSupport_off.png",
+      "sha256": "4CEEB4E2018100CA6FFAB623766EF4B8500F3766008F91A851D09957880AD8F9"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/LifeSupportSmall.png",
+      "path": "Content/1.6/Textures/Crimson/Support/LifeSupportSmall.png",
+      "target": "1.6/Textures/Crimson/Support/LifeSupportSmall.png",
+      "sha256": "EBDF840DAD70BA8DFA0A43842302C7D0358C8EFAC578163552E129F3ACD0A438"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/LifeSupportSmall_off.png",
+      "path": "Content/1.6/Textures/Crimson/Support/LifeSupportSmall_off.png",
+      "target": "1.6/Textures/Crimson/Support/LifeSupportSmall_off.png",
+      "sha256": "3F7BD4674D2FC0524BC5EB641664AC518BB4ADF022A949B9299EED5CB4451CB0"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/ObserverBody.png",
+      "path": "Content/1.6/Textures/Crimson/Support/ObserverBody.png",
+      "target": "1.6/Textures/Crimson/Support/ObserverBody.png",
+      "sha256": "C5AA53BE9454AF2002A83DE6F9A06F720F28B67B3722071BE586C624CDDC1FF6"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/ObserverBodyV05.png",
+      "path": "Content/1.6/Textures/Crimson/Support/ObserverBodyV05.png",
+      "target": "1.6/Textures/Crimson/Support/ObserverBodyV05.png",
+      "sha256": "60A0AF7C98B227FEDE712743BD0AE46A49AA349791B6958277ABC56C1E104C89"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/ObserverEye.png",
+      "path": "Content/1.6/Textures/Crimson/Support/ObserverEye.png",
+      "target": "1.6/Textures/Crimson/Support/ObserverEye.png",
+      "sha256": "03D7E2050ADBBE935578FB89A1F7AB1CD9058DF1C439E12E5794410FA042D9F0"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/PillarA.png",
+      "path": "Content/1.6/Textures/Crimson/Support/PillarA.png",
+      "target": "1.6/Textures/Crimson/Support/PillarA.png",
+      "sha256": "56B3E3D16D80452F36D8114EE4446D3E296D4947AA232F805E3086E5BD41F8EB"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/PillarB.png",
+      "path": "Content/1.6/Textures/Crimson/Support/PillarB.png",
+      "target": "1.6/Textures/Crimson/Support/PillarB.png",
+      "sha256": "C6FB3AD8AE656AE61B000CD86B7C7216B24C025BDD14EC508DE50DDD23E3B97F"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/PillarC.png",
+      "path": "Content/1.6/Textures/Crimson/Support/PillarC.png",
+      "target": "1.6/Textures/Crimson/Support/PillarC.png",
+      "sha256": "38E3D5E19F9AC0A45B7237A414093F5C177A9A522B531126C9B0C4B8FF4D4D4B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/PillarD.png",
+      "path": "Content/1.6/Textures/Crimson/Support/PillarD.png",
+      "target": "1.6/Textures/Crimson/Support/PillarD.png",
+      "sha256": "1AAD53DAEB0B5075F7944CBEDE5BDCA57E72AE9DAC4EE80A3A3AB76D6AF218E0"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/Reclaimer_east.png",
+      "path": "Content/1.6/Textures/Crimson/Support/Reclaimer_east.png",
+      "target": "1.6/Textures/Crimson/Support/Reclaimer_east.png",
+      "sha256": "3ACF145A059BAF254568C8777EA4BB53570B37EA7E0590402D8559FE7B0221E4"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/Reclaimer_north.png",
+      "path": "Content/1.6/Textures/Crimson/Support/Reclaimer_north.png",
+      "target": "1.6/Textures/Crimson/Support/Reclaimer_north.png",
+      "sha256": "FCAA571E8A2ECF79121FCBF44C5C1F7AD1063FACE16C546A3A9091276E8F3055"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/Reclaimer_south.png",
+      "path": "Content/1.6/Textures/Crimson/Support/Reclaimer_south.png",
+      "target": "1.6/Textures/Crimson/Support/Reclaimer_south.png",
+      "sha256": "392D83393814733695C2DCE916B7EB0A6668F9AF1CF7607530551392852569AA"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/Reclaimer_west.png",
+      "path": "Content/1.6/Textures/Crimson/Support/Reclaimer_west.png",
+      "target": "1.6/Textures/Crimson/Support/Reclaimer_west.png",
+      "sha256": "8BBE5C0D6CE1710E2D767E85CCE8110044090A41963271E0D091B4CB9D12D66C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/RepairStationAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Support/RepairStationAtlas.png",
+      "target": "1.6/Textures/Crimson/Support/RepairStationAtlas.png",
+      "sha256": "FC5DC169513B0D79ECB205FA8D2370C49CFBE22FFAA1309BEDC99CA26A39D93A"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/SalvageDock.png",
+      "path": "Content/1.6/Textures/Crimson/Support/SalvageDock.png",
+      "target": "1.6/Textures/Crimson/Support/SalvageDock.png",
+      "sha256": "C15312FBA88FFF2E99D51D2A338B1FA0E6AAB5B83CF66D4E321AEC402DCE0730"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/SalvageDockAdvanced.png",
+      "path": "Content/1.6/Textures/Crimson/Support/SalvageDockAdvanced.png",
+      "target": "1.6/Textures/Crimson/Support/SalvageDockAdvanced.png",
+      "sha256": "9CDAF73A4D0B7C780AC28D86791912F1B327A9650D4209D399BD5D768C37DEB9"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/ShipVent/V01.png",
+      "path": "Content/1.6/Textures/Crimson/Support/ShipVent/V01.png",
+      "target": "1.6/Textures/Crimson/Support/ShipVent/V01.png",
+      "sha256": "66EF448BC9E5C39C087F7459C4E5238879EF2FC4F23FC3FE91941D3F4A3114CD"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/ShuttleDock.png",
+      "path": "Content/1.6/Textures/Crimson/Support/ShuttleDock.png",
+      "target": "1.6/Textures/Crimson/Support/ShuttleDock.png",
+      "sha256": "94FC44BCE3BC6ABCF985DDDBD02FC81A3DA5FB2E11E5CEE88193F624D2EAA1DA"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/ShuttleDock_off.png",
+      "path": "Content/1.6/Textures/Crimson/Support/ShuttleDock_off.png",
+      "target": "1.6/Textures/Crimson/Support/ShuttleDock_off.png",
+      "sha256": "BB9341B84BB8533A1C78A67536DC5CC92CDC0293E12F1D64EDED9CE040DE7979"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/ShuttleDockLarge.png",
+      "path": "Content/1.6/Textures/Crimson/Support/ShuttleDockLarge.png",
+      "target": "1.6/Textures/Crimson/Support/ShuttleDockLarge.png",
+      "sha256": "4795352373E1555828587B82A591BB023C7472C360F8C75E501F023EEC8F1CE6"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/ShuttleDockLarge_off.png",
+      "path": "Content/1.6/Textures/Crimson/Support/ShuttleDockLarge_off.png",
+      "target": "1.6/Textures/Crimson/Support/ShuttleDockLarge_off.png",
+      "sha256": "97ECBAC61E144A66DBC204054C506122F99E5E338495E2413E63BBA758B8A554"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Support/SingularityRestorationAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Support/SingularityRestorationAtlas.png",
+      "target": "1.6/Textures/Crimson/Support/SingularityRestorationAtlas.png",
+      "sha256": "F5D29059A1857359970AD544134CE1861A1A32A95B363A03101DFA7FACD02367"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/TorpedoLauncher.png",
+      "path": "Content/1.6/Textures/Crimson/TorpedoLauncher.png",
+      "target": "1.6/Textures/Crimson/TorpedoLauncher.png",
+      "sha256": "39DC0B13C759339B6F802E496F2329BF5B2AE9C8D4061636223EF664EE9E5CCE"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Vehicles/Pilgrim/Bits/PointedBody.png",
+      "path": "Content/1.6/Textures/Crimson/Vehicles/Pilgrim/Bits/PointedBody.png",
+      "target": "1.6/Textures/Crimson/Vehicles/Pilgrim/Bits/PointedBody.png",
+      "sha256": "BD0498FEEF0ED88F80E991920FC15DD830F7A9278771AB9BAEABF19B015CB23E"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Vehicles/Pilgrim/Bits/PointedEmitter.png",
+      "path": "Content/1.6/Textures/Crimson/Vehicles/Pilgrim/Bits/PointedEmitter.png",
+      "target": "1.6/Textures/Crimson/Vehicles/Pilgrim/Bits/PointedEmitter.png",
+      "sha256": "AEF811CB1CA79B98F61BB26E75052254C8368CB2371D31000B0E2ACAFF021AE9"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Vehicles/Pilgrim/Bits/PointedIcon.png",
+      "path": "Content/1.6/Textures/Crimson/Vehicles/Pilgrim/Bits/PointedIcon.png",
+      "target": "1.6/Textures/Crimson/Vehicles/Pilgrim/Bits/PointedIcon.png",
+      "sha256": "0C9F203A278ABFB72C8DDACFC0A5AA3D7C2E13006CC66001725E81E327FA9ECF"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Vehicles/Pilgrim/Effects/IonTrail.png",
+      "path": "Content/1.6/Textures/Crimson/Vehicles/Pilgrim/Effects/IonTrail.png",
+      "target": "1.6/Textures/Crimson/Vehicles/Pilgrim/Effects/IonTrail.png",
+      "sha256": "95AA07469E8C4234660FEDF873C7D20FC9D74EC6415662EFE73B451A86C67B57"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Vehicles/Pilgrim/Effects/SoftExhaustParticle.png",
+      "path": "Content/1.6/Textures/Crimson/Vehicles/Pilgrim/Effects/SoftExhaustParticle.png",
+      "target": "1.6/Textures/Crimson/Vehicles/Pilgrim/Effects/SoftExhaustParticle.png",
+      "sha256": "7BD9D9DFD2E46B23105B56574601FA49F586A1C5403F690E8DEAC62974C399F1"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Vehicles/Pilgrim/Hull.png",
+      "path": "Content/1.6/Textures/Crimson/Vehicles/Pilgrim/Hull.png",
+      "target": "1.6/Textures/Crimson/Vehicles/Pilgrim/Hull.png",
+      "sha256": "46A128D2DA3BA19FC1E0AB87A8DB9D3D3A66EE60487DB93ECCD2B9733BD51EC4"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Vehicles/PilgrimTransport/Hull.png",
+      "path": "Content/1.6/Textures/Crimson/Vehicles/PilgrimTransport/Hull.png",
+      "target": "1.6/Textures/Crimson/Vehicles/PilgrimTransport/Hull.png",
+      "sha256": "ADE80C4A2BF2DEF558F90E0D8BF7426297B6AA2E0D519D872827E33FB444100C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Weapons/Echo/EchoA.png",
+      "path": "Content/1.6/Textures/Crimson/Weapons/Echo/EchoA.png",
+      "target": "1.6/Textures/Crimson/Weapons/Echo/EchoA.png",
+      "sha256": "E7F48D8EB8EB14AE4C2A2DDB2E0122C2942B4D867A49F2FB319E68E1A39D947B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Weapons/Echo/EchoB.png",
+      "path": "Content/1.6/Textures/Crimson/Weapons/Echo/EchoB.png",
+      "target": "1.6/Textures/Crimson/Weapons/Echo/EchoB.png",
+      "sha256": "D97A0C0467EE551592FC2B2594D45B2374E831B523628FDCBABCDEC60A62A87D"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Weapons/Echo/EchoC.png",
+      "path": "Content/1.6/Textures/Crimson/Weapons/Echo/EchoC.png",
+      "target": "1.6/Textures/Crimson/Weapons/Echo/EchoC.png",
+      "sha256": "B681DEC615430A8F0E699B48C17B73AC802554F475B04EAE6BC3E22AB9ABF2C7"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Weapons/Echo/EchoD.png",
+      "path": "Content/1.6/Textures/Crimson/Weapons/Echo/EchoD.png",
+      "target": "1.6/Textures/Crimson/Weapons/Echo/EchoD.png",
+      "sha256": "7A92194313278F16C89D9E785B0AE4ECA331B0025B1F8802C6F35AAE96B0C477"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Weapons/Echo/EchoE.png",
+      "path": "Content/1.6/Textures/Crimson/Weapons/Echo/EchoE.png",
+      "target": "1.6/Textures/Crimson/Weapons/Echo/EchoE.png",
+      "sha256": "DDCC660BD1D01DF708510CFEF593D00D91FAB9A784195597100336CD5E117295"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Weapons/Laser/Barrel.png",
+      "path": "Content/1.6/Textures/Crimson/Weapons/Laser/Barrel.png",
+      "target": "1.6/Textures/Crimson/Weapons/Laser/Barrel.png",
+      "sha256": "24ABA4D52C8F5B58E859D8AC416BDD42E36DA8074660B9B1820E549EC05336AE"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Weapons/Laser/Base.png",
+      "path": "Content/1.6/Textures/Crimson/Weapons/Laser/Base.png",
+      "target": "1.6/Textures/Crimson/Weapons/Laser/Base.png",
+      "sha256": "42C33839F99196C9426D8B5FB10F1AB92A24B275E2B542A0B3026313EFB41BC0"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Weapons/Spinal/IntegratedLaser.png",
+      "path": "Content/1.6/Textures/Crimson/Weapons/Spinal/IntegratedLaser.png",
+      "target": "1.6/Textures/Crimson/Weapons/Spinal/IntegratedLaser.png",
+      "sha256": "D686676D9FD367D92F9B39F815721ACD039EA820E5FD4DDC8E11B2EAA3C99894"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Weapons/Spinal/TorpedoLauncher3x5.png",
+      "path": "Content/1.6/Textures/Crimson/Weapons/Spinal/TorpedoLauncher3x5.png",
+      "target": "1.6/Textures/Crimson/Weapons/Spinal/TorpedoLauncher3x5.png",
+      "sha256": "735F706EC92151F1F381AB8B4DAF1CBA78F8DFB0105503FF532754A808F5C6D3"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonCommsConsole.xml",
+      "path": "Content/1.6/Defs/CrimsonCommsConsole.xml",
+      "target": "1.6/Defs/CrimsonCommsConsole.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonDecorElectronics.xml",
+      "path": "Content/1.6/Defs/SOS2_ADDON__CrimsonDecorElectronics.xml",
+      "target": "1.6/Defs/SOS2_ADDON__CrimsonDecorElectronics.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonDecorExtras.xml",
+      "path": "Content/1.6/Defs/SOS2_ADDON__CrimsonDecorExtras.xml",
+      "target": "1.6/Defs/SOS2_ADDON__CrimsonDecorExtras.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonDiningAndRefrigerators.xml",
+      "path": "Content/1.6/Defs/SOS2_ADDON__CrimsonDiningAndRefrigerators.xml",
+      "target": "1.6/Defs/SOS2_ADDON__CrimsonDiningAndRefrigerators.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonEcho.xml",
+      "path": "Content/1.6/Defs/CrimsonEcho.xml",
+      "target": "1.6/Defs/CrimsonEcho.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonHangarVent.xml",
+      "path": "Content/1.6/Defs/CrimsonHangarVent.xml",
+      "target": "1.6/Defs/CrimsonHangarVent.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonHangarVent7x1.xml",
+      "path": "Content/1.6/Defs/CrimsonHangarVent7x1.xml",
+      "target": "1.6/Defs/CrimsonHangarVent7x1.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonHull.xml",
+      "path": "Content/1.6/Defs/SOS2_ADDON__CrimsonHull.xml",
+      "target": "1.6/Defs/SOS2_ADDON__CrimsonHull.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonHullWindows.xml",
+      "path": "Content/1.6/Defs/SOS2_ADDON__CrimsonHullWindows.xml",
+      "target": "1.6/Defs/SOS2_ADDON__CrimsonHullWindows.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonObservationWindow.xml",
+      "path": "Content/1.6/Defs/CrimsonObservationWindow.xml",
+      "target": "1.6/Defs/CrimsonObservationWindow.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonPilgrim.xml",
+      "path": "Content/1.6/Defs/CrimsonPilgrim.xml",
+      "target": "1.6/Defs/CrimsonPilgrim.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonPilgrimTransport.xml",
+      "path": "Content/1.6/Defs/CrimsonPilgrimTransport.xml",
+      "target": "1.6/Defs/CrimsonPilgrimTransport.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonPower.xml",
+      "path": "Content/1.6/Defs/SOS2_ADDON__CrimsonPower.xml",
+      "target": "1.6/Defs/SOS2_ADDON__CrimsonPower.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRankApparel.xml",
+      "path": "Content/1.6/Defs/SOS2_ADDON__CrimsonRankApparel.xml",
+      "target": "1.6/Defs/SOS2_ADDON__CrimsonRankApparel.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRobotRestoration.xml",
+      "path": "Content/1.6/Defs/CrimsonRobotRestoration.xml",
+      "target": "1.6/Defs/CrimsonRobotRestoration.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonShipFloors.xml",
+      "path": "Content/1.6/Defs/CrimsonShipFloors.xml",
+      "target": "1.6/Defs/CrimsonShipFloors.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonShipRobots.xml",
+      "path": "Content/1.6/Defs/CrimsonShipRobots.xml",
+      "target": "1.6/Defs/CrimsonShipRobots.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonShipVent.xml",
+      "path": "Content/1.6/Defs/CrimsonShipVent.xml",
+      "target": "1.6/Defs/CrimsonShipVent.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonSpinalLaser.xml",
+      "path": "Content/1.6/Defs/CrimsonSpinalLaser.xml",
+      "target": "1.6/Defs/CrimsonSpinalLaser.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonSupport.xml",
+      "path": "Content/1.6/Defs/CrimsonSupport.xml",
+      "target": "1.6/Defs/CrimsonSupport.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonTacticalTableCompact.xml",
+      "path": "Content/1.6/Defs/CrimsonTacticalTableCompact.xml",
+      "target": "1.6/Defs/CrimsonTacticalTableCompact.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonTorpedoes.xml",
+      "path": "Content/1.6/Defs/CrimsonTorpedoes.xml",
+      "target": "1.6/Defs/CrimsonTorpedoes.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonWardenEffects.xml",
+      "path": "Content/1.6/Defs/CrimsonWardenEffects.xml",
+      "target": "1.6/Defs/CrimsonWardenEffects.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonWardenEquipment.xml",
+      "path": "Content/1.6/Defs/SOS2_ADDON__CrimsonWardenEquipment.xml",
+      "target": "1.6/Defs/SOS2_ADDON__CrimsonWardenEquipment.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonWeaponsAndShield.xml",
+      "path": "Content/1.6/Defs/CrimsonWeaponsAndShield.xml",
+      "target": "1.6/Defs/CrimsonWeaponsAndShield.xml",
+      "splitXml": true
+    }
+  ],
+  "authoring": [],
+  "integrationDependencies": [
+    "CORE",
+    "EQUIPMENT",
+    "FURNITURE",
+    "RECREATION"
+  ],
+  "buildMode": "integrated-runtime-preserving-existing-assembly-contract",
+  "namespace": "CrimsonSOS2"
+}

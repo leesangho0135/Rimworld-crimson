@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><!-- Independent integrated variant; installed SOS2 definitions remain unchanged. -->
+  <ThingDef ParentName="BaseShipTurretBuilding">
+    <defName>Crimson_SpinalLaser</defName>
+    <label>심홍 척추 광선포</label>
+    <description>함선 선수에 설치하는 3×7 일체형 척추 광선포입니다. 축전부와 포신이 통합되어 별도의 축전기나 증폭기를 연결할 필요가 없으며, 외부 증폭기의 효과도 받지 않습니다. 증폭기 없는 원본 레이저 척추포의 실제 피해·전력·발열을 각각25배, 사거리를10배 적용하며 연사 수는 원본과 같은40발입니다. 1발 피해1525, 40발 연사, 상시 소비전력3750W, 연사 시작 시 명목18000Wd와 열6750Hu를 사용합니다. 함선전 최적 사거리는500, 최대 사거리는1000입니다. 원본의 준비2초·재사용45초를 유지합니다. 포구는 건설 방향을 따릅니다. 열망을 통한 함교 연결과 충분한 전력·열 저장 여유가 필요합니다. 본체는 갑판 위에 표시되며, 발사체·광선·발사 섬광만 우주 배경 위·갑판 아래에 그려집니다. 전방 시설에 충돌 피해를 주지 않습니다.</description>
+    <thingClass>CrimsonSOS2.CrimsonSpinalLaser</thingClass>
+    <designationCategory>Crimson_CS</designationCategory>
+    <size>(3,7)</size>
+    <rotatable>true</rotatable>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <castEdgeShadows>false</castEdgeShadows>
+    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Weapons/Spinal/IntegratedLaser</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(3.9632653,7.1142498)</drawSize>
+      <drawOffsetNorth>(0,0,0.0131827)</drawOffsetNorth>
+      <drawOffsetEast>(0.0131827,0,0)</drawOffsetEast>
+      <drawOffsetSouth>(0,0,-0.0131827)</drawOffsetSouth>
+      <drawOffsetWest>(-0.0131827,0,0)</drawOffsetWest>
+      <drawRotated>true</drawRotated>
+    </graphicData>
+    <uiIconPath>Crimson/Weapons/Spinal/IntegratedLaser</uiIconPath>
+    <uiIconScale>0.85</uiIconScale>
+    <statBases>
+      <MaxHitPoints>1250</MaxHitPoints>
+      <WorkToBuild>11000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <!-- Damage is already frozen at round(60 * 1.01) * 25 = 1525. -->
+      <RangedWeapon_DamageMultiplier>1</RangedWeapon_DamageMultiplier>
+    </statBases>
+    <costList>
+      <Steel>480</Steel>
+      <Uranium>80</Uranium>
+      <Plasteel>480</Plasteel>
+      <ComponentSpacer>20</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Stunnable">
+        <affectedDamageDefs><li>EMP</li></affectedDamageDefs>
+      </li>
+      <li Class="SaveOurShip2.CompProps_ShipCachePart"><hermetic>true</hermetic></li>
+      <li Class="SaveOurShip2.CompProps_SpinalMount">
+        <emits>false</emits>
+        <receives>false</receives>
+        <stackEnd>true</stackEnd>
+        <ampAmount>0</ampAmount>
+        <color>(0.93,0.09,0.19)</color>
+        <wipeoutWidth>3</wipeoutWidth>
+        <wipeoutOffset>3</wipeoutOffset>
+        <destroysHull>false</destroysHull>
+      </li>
+      <li Class="SaveOurShip2.CompProps_ShipHeat">
+        <compClass>SaveOurShip2.CompShipHeat</compClass>
+        <heatPerPulse>2250</heatPerPulse>
+        <energyToFire>18000</energyToFire>
+        <optRange>500</optRange>
+        <maxRange>1000</maxRange>
+        <projectileSpeed>10</projectileSpeed>
+        <singleFireSound>ShipCombatLaser</singleFireSound>
+        <laserColor>(0.93,0.09,0.19)</laserColor>
+        <threat>100</threat>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>3750</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <placeWorkers Inherit="False"><li>CrimsonSOS2.CrimsonWeaponGroundPlaceWorker</li></placeWorkers>
+    <researchPrerequisites><li>ShipTurretLarge</li></researchPrerequisites>
+    <building>
+      <shipPart>true</shipPart>
+      <turretGunDef>Crimson_SpinalLaserGun</turretGunDef>
+      <turretBurstWarmupTime>2</turretBurstWarmupTime>
+      <turretBurstCooldownTime>45</turretBurstCooldownTime>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BaseShipArtilleryWeapon">
+    <defName>Crimson_SpinalLaserGun</defName>
+    <label>심홍 척추 광선포 포신</label>
+    <description>일체형 척추 광선포의 내부 무장입니다.</description>
+    <graphicData><texPath>Things/Building/Ship/HullPlateTransparent</texPath></graphicData>
+    <verbs>
+      <li>
+        <label>shoot</label>
+        <verbClass>SaveOurShip2.Verb_LaunchProjectileShip</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>10000</range>
+        <warmupTime>0</warmupTime>
+        <forcedMissRadius>1</forcedMissRadius>
+        <noiseRadius>4</noiseRadius>
+        <burstShotCount>40</burstShotCount>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <requireLineOfSight>false</requireLineOfSight>
+        <targetParams><canTargetLocations>true</canTargetLocations></targetParams>
+        <defaultProjectile>Crimson_SpinalLaserProjectile</defaultProjectile>
+        <spawnDef>Bullet_Fake_Laser</spawnDef>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Crimson_SpinalLaserProjectile</defName>
+    <label>심홍 척추 광선</label>
+    <thingClass>SaveOurShip2.Projectile_ExplosiveShipLaser</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Ship/HullPlateTransparent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <explosionRadius>4.9</explosionRadius>
+      <damageDef>ShipLaserTwo</damageDef>
+      <damageAmountBase>1525</damageAmountBase>
+      <speed>400</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

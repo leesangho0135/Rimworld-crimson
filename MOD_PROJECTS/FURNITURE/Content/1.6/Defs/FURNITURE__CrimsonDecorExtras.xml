@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="Crimson_ExtraDecorBase">
+    <defName>Crimson_CommandSeat</defName>
+    <passability>Standable</passability>
+    <label>심홍 지휘석</label>
+    <description>검은 각면 등받이와 짙은 쿠션을 갖춘 지휘석입니다. 앉아서 식사나 휴식을 할 수 있으며 전원 공급 시 편안함이 50% 향상됩니다. 통전 시 250W로 팔걸이의 진홍색 표시등과 편안함 보조 장치를 작동합니다. 함선 조종 기능은 없습니다.</description>
+    <size>(1,1)</size>
+    <rotatable>true</rotatable>
+    <tickerType>Normal</tickerType>
+    <uiIconPath>Crimson/Decor/Extras/CommandSeat</uiIconPath>
+    <graphicData>
+      <texPath>Crimson/Decor/Extras/CommandSeatDirections</texPath>
+      <shaderType>Cutout</shaderType>
+      <graphicClass>CrimsonSOS2.CrimsonDirectionalSeatGraphic</graphicClass>
+      <drawSize>(1,1.4)</drawSize>
+      <drawRotated>false</drawRotated>
+      <drawOffset>(0,0,0.2)</drawOffset>
+      <addTopAltitudeBias>true</addTopAltitudeBias>
+    </graphicData>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <pathCost>30</pathCost>
+    <fillPercent>0.35</fillPercent>
+    <building><isSittable>true</isSittable><isInert>false</isInert></building>
+    <statBases><MaxHitPoints>1400</MaxHitPoints><WorkToBuild>400</WorkToBuild><Comfort>1</Comfort><Beauty>80</Beauty><MarketValue>3001.296</MarketValue><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>20</Steel><Cloth>10</Cloth></costList>
+    <comps Inherit="False"><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>250</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CompProperties_Flickable" /><li Class="CompProperties_Glower"><glowRadius>2</glowRadius><glowColor>(120,20,16,0)</glowColor></li><li Class="CrimsonSOS2.CompProperties_CrimsonPoweredComfort" /><li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>200</originalMaxHitPoints></li></comps>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_SeatingFurniture</designatorDropdown>
+    <uiOrder>1020</uiOrder>
+  </ThingDef>
+  </Defs>

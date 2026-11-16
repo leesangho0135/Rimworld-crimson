@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="BuildingBase">
+    <defName>Crimson_ToolCabinet</defName><label>심홍 공구함</label>
+    <description>2×1 검은 금속 공구함입니다. 기본 공구함과 같은 작업대에 연결되며 작업 속도 +6%p를 제공합니다. 작업대당 최대 두 개가 효과를 제공합니다. 전원은 필요하지 않습니다.</description>
+    <designationCategory>Misc</designationCategory><designationHotKey IsNull="True" />
+    <drawerType>RealtimeOnly</drawerType><size>(2,1)</size><rotatable>true</rotatable><defaultPlacingRot>North</defaultPlacingRot>
+    <altitudeLayer>Building</altitudeLayer><passability>PassThroughOnly</passability><pathCost>42</pathCost><fillPercent>0.5</fillPercent><canOverlapZones>false</canOverlapZones>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/ToolCabinet</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(2,1.25)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
+    <statBases><MaxHitPoints>700</MaxHitPoints><WorkToBuild>1800</WorkToBuild><Mass>20</Mass><Beauty>5</Beauty><Flammability>0</Flammability></statBases>
+    <costList><Steel>200</Steel></costList>
+    <building><paintable>false</paintable></building>
+    <comps><li Class="CompProperties_Facility"><statOffsets><WorkTableWorkSpeedFactor>0.06</WorkTableWorkSpeedFactor></statOffsets><maxSimultaneous>2</maxSimultaneous></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>100</originalMaxHitPoints><goldReference>true</goldReference></li></comps>
+    <researchPrerequisites><li>ComplexFurniture</li></researchPrerequisites><constructionSkillPrerequisite>4</constructionSkillPrerequisite><techLevel>Industrial</techLevel><terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <placeWorkers><li>PlaceWorker_ShowFacilitiesConnections</li></placeWorkers><uiOrder>1062</uiOrder>
+    <designatorDropdown IsNull="True" />
+  </ThingDef>
+</Defs>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="BasedHygieneMom">
+    <defName>Crimson_ToiletStallDoor</defName>
+    <label>심홍 화장실 칸막이 문</label>
+    <description>각진 검은 금속 문짝과 작은 심홍색 표시를 갖춘 화장실 칸막이 문입니다. Dubs Bad Hygiene의 원래 문 열림과 프라이버시 판정을 사용합니다. 화장실 사용자를 가리는 얇은 문으로, 방을 분리하거나 열 손실을 막지 않습니다. 전기 배선, 수도 배관과 함선 열이동 파이프를 내장하여 인접 설비의 연결을 이어 줍니다.</description>
+    <designationCategory>Hygiene</designationCategory><designationHotKey IsNull="True" />
+    <thingClass>DubsBadHygiene.Building_StallDoor</thingClass>
+    <holdsRoof>false</holdsRoof><fillPercent>0.15</fillPercent><category>Building</category><size>(1,1)</size>
+    <graphicData><texPath>Crimson/Decor/Dining/ToiletStallDoorLeaf</texPath><graphicClass>CrimsonSOS2.CrimsonStallDoorGraphic</graphicClass><shaderType>Cutout</shaderType><damageData><enabled>false</enabled></damageData></graphicData>
+    <uiIconPath>Crimson/Decor/Dining/ToiletStallDoorLeaf</uiIconPath>
+    <costStuffCount>0</costStuffCount><stuffCategories Inherit="False" />
+    <statBases><WorkToBuild>250</WorkToBuild><MaxHitPoints>1750</MaxHitPoints><Flammability>0</Flammability><Beauty>20</Beauty><MarketValue>500.81</MarketValue></statBases>
+    <passability>Standable</passability><leaveResourcesWhenKilled>false</leaveResourcesWhenKilled><tickerType>Normal</tickerType><rotatable>false</rotatable><staticSunShadowHeight>1</staticSunShadowHeight><blockLight>false</blockLight><drawerType>RealtimeOnly</drawerType><altitudeLayer>DoorMoveable</altitudeLayer>
+    <building><soundDoorOpenManual>StallDoor</soundDoorOpenManual><blueprintGraphicData><texPath>DBH/Things/Building/Door_Blueprint</texPath></blueprintGraphicData><blueprintClass>Blueprint_Door</blueprintClass><isEdifice>true</isEdifice><isInert>true</isInert><canPlaceOverWall>true</canPlaceOverWall></building>
+    <comps><li Class="CompProperties_Power"><compClass>CompPowerTransmitter</compClass><transmitsPower>true</transmitsPower></li><li Class="SaveOurShip2.CompProps_ShipHeat"><compClass>SaveOurShip2.CompShipHeat</compClass></li><li Class="DubsBadHygiene.CompProperties_Pipe"><mode>Sewage</mode></li><li Class="CompProperties_Forbiddable" /><li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>250</originalMaxHitPoints></li></comps><placeWorkers><li>PlaceWorker_DoorLearnOpeningSpeed</li></placeWorkers>
+    <uiOrder>1004</uiOrder>
+      <defaultStuff IsNull="True" />
+      <costList Inherit="False"><Steel>5</Steel></costList>
+    <designatorDropdown>Crimson_HygieneFurniture</designatorDropdown>
+  </ThingDef>
+</Defs>

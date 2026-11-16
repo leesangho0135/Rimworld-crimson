@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="Crimson_FloorGuideBase">
+    <defName>Crimson_PathGuideLight</defName>
+    <label>심홍 방향 안내등</label>
+    <description>모노리스 갑판 위에 놓는 낮은 화살표 안내등입니다. 회전해 복도나 출입구의 진행 방향을 표시합니다. 전력 10W가 공급되면 가까운 바닥을 은은한 진홍색으로 밝히며 통행을 막지 않습니다.</description>
+    <designatorDropdown>Crimson_Lighting</designatorDropdown>
+    <size>(1,1)</size><defaultPlacingRot>North</defaultPlacingRot>
+    <graphicData>
+      <texPath>Crimson/Decor/Rooms/PathGuideLight</texPath>
+      <graphicClass>Graphic_Single</graphicClass><shaderType>Cutout</shaderType>
+      <drawSize>(2.15,2.15)</drawSize><drawRotated>true</drawRotated>
+    </graphicData>
+    <uiIconScale>3.25</uiIconScale>
+    <placeWorkers Inherit="False"><li>CrimsonSOS2.CrimsonPathGuideLightPlaceWorker</li></placeWorkers>
+    <uiOrder>1062</uiOrder>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+      <costList Inherit="False"><Steel>2</Steel></costList>
+      <statBases><Beauty>20</Beauty><MarketValue>200.1944</MarketValue><MaxHitPoints>560</MaxHitPoints><Flammability>0</Flammability></statBases>
+      <comps><li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>80</originalMaxHitPoints></li></comps>
+    <designationCategory>Furniture</designationCategory>
+  </ThingDef>
+
+  </Defs>

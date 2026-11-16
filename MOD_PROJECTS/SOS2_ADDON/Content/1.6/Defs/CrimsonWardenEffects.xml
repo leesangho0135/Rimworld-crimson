@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><!-- Native Shield_Break shape, sound, timing and scale. Only this cloak uses the crimson tint. -->
+  <EffecterDef>
+    <defName>Crimson_WardenShieldBreak</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+        <soundDef>EnergyShield_Broken</soundDef>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>FlashShieldBreak</moteDef>
+        <scale>2</scale><burstCount>1</burstCount>
+        <spawnLocType>OnSource</spawnLocType><attachToSpawnThing>true</attachToSpawnThing>
+        <color>(1,0.055,0.15,1)</color>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>CracksShieldBreak</moteDef>
+        <scale>2</scale><burstCount>1</burstCount>
+        <spawnLocType>OnSource</spawnLocType><attachToSpawnThing>true</attachToSpawnThing>
+        <color>(1,0.055,0.15,1)</color>
+      </li>
+    </children>
+  </EffecterDef>
+</Defs>

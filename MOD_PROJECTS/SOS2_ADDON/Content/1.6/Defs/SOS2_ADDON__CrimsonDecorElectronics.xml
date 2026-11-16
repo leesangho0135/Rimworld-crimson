@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="Crimson_ElectronicDecorBase">
+    <defName>Crimson_TacticalTable</defName>
+    <label>심홍 구형 전술 테이블</label>
+    <description>이전 세이브에 배치된 3×2 중형 전술 테이블의 호환용 정의입니다. 새 제작 목록에서는 제외되며, 기존 배치는 관제 화면 13종을 사용합니다. 보고 화면은 장식용이며 선택은 저장 후에도 유지됩니다.</description>
+    <size>(3,2)</size>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData><texPath>Crimson/Decor/Furniture/TacticalTableParallelV137</texPath><graphicClass>CrimsonSOS2.CrimsonTacticalReportGraphic</graphicClass><drawSize>(3,2)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
+    <statBases><MaxHitPoints>2100</MaxHitPoints><WorkToBuild>700</WorkToBuild><Beauty>80</Beauty><MarketValue>4202.268</MarketValue><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>40</Steel><ComponentIndustrial>2</ComponentIndustrial></costList>
+    <comps Inherit="False">
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>300</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower"><glowRadius>2</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li><compClass>CrimsonSOS2.CompCrimsonFurnitureVisuals</compClass></li>
+    <li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>300</originalMaxHitPoints></li><li Class="CrimsonSOS2.CompProperties_CrimsonTacticalReport" /></comps>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <!-- Retired from construction; retain the identity of existing saved furniture. -->
+    <designationCategory IsNull="True" />
+    <designatorDropdown IsNull="True" />
+    <uiOrder>1004</uiOrder>
+  </ThingDef>
+</Defs>

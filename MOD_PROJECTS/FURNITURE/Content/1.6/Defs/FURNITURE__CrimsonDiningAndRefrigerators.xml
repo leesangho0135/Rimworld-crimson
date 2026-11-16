@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="TableGatherSpotBase">
+    <defName>Crimson_DiningTable</defName>
+    <label>심홍 식탁</label>
+    <description>검은 금속 상판과 각진 지지대를 갖춘 2×2 식탁입니다. 사방에 좌석을 놓고 식사할 수 있습니다. 심홍색 모서리 장식은 전원 없이 유지됩니다.</description>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey IsNull="True" />
+    <size>(2,2)</size><rotatable>true</rotatable><defaultPlacingRot>South</defaultPlacingRot>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Dining/DiningTableLongTopAtlas</texPath><graphicClass>CrimsonSOS2.CrimsonV51FurnitureGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(2,2)</drawSize><drawRotated>false</drawRotated><addTopAltitudeBias>true</addTopAltitudeBias><shadowData IsNull="True" /></graphicData>
+    <uiIconPath>Crimson/Decor/Dining/DiningTableLongTopAtlas</uiIconPath>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <costList Inherit="False"><Steel>70</Steel><Plasteel>10</Plasteel></costList>
+    <statBases><MaxHitPoints>2100</MaxHitPoints><WorkToBuild>1800</WorkToBuild><Mass>30</Mass><Beauty>40</Beauty><Flammability>0</Flammability><MarketValue>8005.832</MarketValue></statBases>
+    <researchPrerequisites><li>ComplexFurniture</li></researchPrerequisites>
+    <uiOrder>1040</uiOrder>
+      <comps><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>300</originalMaxHitPoints></li></comps>
+    <designatorDropdown>Crimson_Tables</designatorDropdown>
+  </ThingDef>
+
+  <ThingDef Name="Crimson_RefrigeratorBase" ParentName="StorageShelfBase" Abstract="True">
+    <designationCategory>Furniture</designationCategory><designationHotKey IsNull="True" />
+    <size>(2,1)</size><rotatable>true</rotatable><defaultPlacingRot>South</defaultPlacingRot>
+    <drawerType>MapMeshAndRealTime</drawerType><tickerType>Normal</tickerType>
+    <graphicData><shaderType>Cutout</shaderType><drawSize>(2,1)</drawSize><drawRotated>false</drawRotated><addTopAltitudeBias>true</addTopAltitudeBias><shadowData IsNull="True" /></graphicData>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <costList><Steel>80</Steel><Plasteel>10</Plasteel><ComponentIndustrial>3</ComponentIndustrial></costList>
+    <statBases><MaxHitPoints>250</MaxHitPoints><WorkToBuild>2600</WorkToBuild><Mass>40</Mass><Beauty>4</Beauty><Flammability>0</Flammability></statBases>
+    <building><storageGroupTag>Crimson_Refrigerators</storageGroupTag><preventDeteriorationOnTop>true</preventDeteriorationOnTop><ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty><paintable>false</paintable><fixedStorageSettings Inherit="False"><filter><categories><li>Foods</li></categories></filter></fixedStorageSettings></building>
+    <comps><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>300</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CompProperties_Flickable" /><li Class="CompProperties_Glower"><glowRadius>1.6</glowRadius><glowColor>(120,20,16,0)</glowColor></li></comps>
+    <researchPrerequisites Inherit="False"><li>AirConditioning</li></researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite><techLevel>Spacer</techLevel>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_RefrigeratorBase">
+    <defName>Crimson_CookingRefrigerator</defName>
+    <label>심홍 조리용 냉장고</label>
+    <description>내용물을 가리는 2×1 밀폐형 식재료 냉장고입니다. 칸마다 3묶음씩 총 6묶음을 보관합니다. 전력 300W가 공급되면 보관 식품을 -5°C 이하로 유지합니다. 정전되거나 밖으로 꺼낸 식품은 주변 온도를 따릅니다. 방의 온도를 바꾸지 않으며, 기본 필터는 생식재료입니다.</description>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Revision/CookingRefrigerator</texPath><graphicClass>CrimsonSOS2.CrimsonCardinalGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(2,1.72)</drawSize><drawRotated>false</drawRotated><shadowData IsNull="True" /></graphicData>
+    <uiIconPath>Crimson/Decor/Revision/CookingRefrigerator</uiIconPath>
+    <building><maxItemsInCell>3</maxItemsInCell><defaultStorageSettings Inherit="False"><priority>Preferred</priority><filter><categories><li>FoodRaw</li></categories></filter></defaultStorageSettings></building>
+    <comps><li Class="CrimsonSOS2.CompProperties_CrimsonRefrigerator"><storageTemperature>-5</storageTemperature><displayContents>false</displayContents></li><li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>250</originalMaxHitPoints></li><li Class="CrimsonSOS2.CompProperties_CrimsonMirror"><refrigeratorScreen>true</refrigeratorScreen></li></comps>
+    <uiOrder>1100</uiOrder>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+      <costList Inherit="False"><Steel>80</Steel><Plasteel>10</Plasteel><ComponentIndustrial>3</ComponentIndustrial></costList>
+      <statBases><Beauty>40</Beauty><MarketValue>9308.424</MarketValue><MaxHitPoints>1750</MaxHitPoints><Flammability>0</Flammability></statBases>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_Refrigerators</designatorDropdown>
+  <defaultPlacingRot>North</defaultPlacingRot></ThingDef>
+  <ThingDef ParentName="Crimson_RefrigeratorBase">
+    <defName>Crimson_MealDisplayRefrigerator</defName>
+    <label>심홍 냉장 진열벽</label>
+    <description>벽을 대신하는 2×1 밀폐형 음식 배포용 냉장 진열벽. 통행과 실내외 공기 흐름을 막고 지붕을 지지하며 주변 선체벽에 이어진다. 전기·SOS2 열망과 Dubs Bad Hygiene 배관을 연결한다. 유리 안에 실제 보관 식품이 보이며, 칸마다 3묶음씩 총 6묶음을 보관한다. 300W 공급 시 식품을 -5°C 이하로 유지하며, 정전 중에도 인접한 주민이 원래 식사 동작으로 꺼낼 수 있다.</description>
+    <thingClass>Building_Storage</thingClass>
+    <passability>Impassable</passability><fillPercent>1</fillPercent><holdsRoof>true</holdsRoof><blockLight>true</blockLight><blockWind>true</blockWind>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <graphicData Inherit="False"><texPath>Crimson/Decor/Dining/MealDisplayWallV111</texPath><graphicClass>CrimsonSOS2.CrimsonWallRefrigeratorGraphic</graphicClass><shaderType>Cutout</shaderType><drawSize>(2,1)</drawSize><drawRotated>true</drawRotated><linkFlags><li>Wall</li></linkFlags><shadowData IsNull="True" /></graphicData>
+    <uiIconPath>Crimson/Decor/Dining/MealDisplayWallV111</uiIconPath>
+    <building><isEdifice>true</isEdifice><isAirtight>true</isAirtight><shipPart>true</shipPart><maxItemsInCell>3</maxItemsInCell><defaultStorageSettings Inherit="False"><priority>Preferred</priority><filter><categories><li>FoodMeals</li></categories></filter></defaultStorageSettings></building>
+    <comps Inherit="False">
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>300</basePowerConsumption><transmitsPower>true</transmitsPower></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower"><glowRadius>1.6</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonRefrigerator"><storageTemperature>-5</storageTemperature><displayContents>true</displayContents></li>
+      <li><compClass>CompQuality</compClass></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>250</originalMaxHitPoints></li>
+      <li Class="SaveOurShip2.CompProps_ShipCachePart"><isHull>true</isHull><hermetic>true</hermetic><roof>true</roof><archotech>true</archotech></li>
+      <li Class="SaveOurShip2.CompProps_ShipHeat"><compClass>SaveOurShip2.CompShipHeat</compClass></li>
+      <li Class="DubsBadHygiene.CompProperties_Pipe" MayRequire="Dubwise.DubsBadHygiene"><mode>Sewage</mode></li>
+    </comps>
+    <uiOrder>1101</uiOrder>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+      <costList Inherit="False"><Steel>80</Steel><Plasteel>10</Plasteel><ComponentIndustrial>3</ComponentIndustrial></costList>
+      <statBases><Beauty>40</Beauty><MarketValue>9308.424</MarketValue><MaxHitPoints>1750</MaxHitPoints><Flammability>0</Flammability></statBases>
+    <designationCategory>Furniture</designationCategory>
+    <designatorDropdown>Crimson_Refrigerators</designatorDropdown>
+  </ThingDef>
+  </Defs>

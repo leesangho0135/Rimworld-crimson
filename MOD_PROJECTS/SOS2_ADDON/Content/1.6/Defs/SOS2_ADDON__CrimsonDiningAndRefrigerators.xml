@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="Crimson_ElectronicDecorBase">
+    <defName>Crimson_TacticalTableLarge</defName>
+    <label>심홍 지휘테이블</label>
+    <description>북쪽 끝에 지휘자가 앉는 세로 3×5 지휘테이블입니다. 제작 시 기본 북향은 가로 3칸, 세로 5칸입니다. 소비전력 750W. 알현실의 원정 자원 계획도와 장교·병사 회의실의 항해 임무 작전도, 지휘 전용 화면 2종을 선택합니다. 북쪽 지휘자 시점에 맞춘 장식용 화면이며 선택은 저장 후에도 유지됩니다. 전원이 꺼지면 상판의 그림도 꺼집니다.</description>
+    <size>(3,5)</size><rotatable>true</rotatable><defaultPlacingRot>North</defaultPlacingRot><drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData><texPath>Crimson/Decor/Furniture/TacticalTableLargeParallelV137</texPath><graphicClass>CrimsonSOS2.CrimsonTacticalReportGraphic</graphicClass><drawSize>(3,5)</drawSize><shaderType>Cutout</shaderType><drawRotated>false</drawRotated><addTopAltitudeBias>true</addTopAltitudeBias><shadowData IsNull="True" /></graphicData>
+    <uiIconPath>Crimson/Decor/Furniture/TacticalTableLargeParallelV137</uiIconPath>
+    <statBases><MaxHitPoints>4200</MaxHitPoints><WorkToBuild>3000</WorkToBuild><Mass>100</Mass><Beauty>100</Beauty><MarketValue>12509.72</MarketValue><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>100</Steel><Plasteel>20</Plasteel><ComponentIndustrial>5</ComponentIndustrial></costList>
+    <comps Inherit="False"><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>750</basePowerConsumption><transmitsPower>false</transmitsPower></li><li Class="CompProperties_Flickable" /><li Class="CompProperties_Glower"><glowRadius>3</glowRadius><glowColor>(120,20,16,0)</glowColor></li><li><compClass>CrimsonSOS2.CompCrimsonFurnitureVisuals</compClass></li><li><compClass>CompQuality</compClass></li><li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>600</originalMaxHitPoints></li><li Class="CrimsonSOS2.CompProperties_CrimsonTacticalReport" /></comps>
+    <uiOrder>1005</uiOrder>
+      <stuffCategories Inherit="False" />
+      <costStuffCount>0</costStuffCount>
+      <defaultStuff IsNull="True" />
+    <designationCategory>Misc</designationCategory>
+    <designatorDropdown>Crimson_CommandFurniture</designatorDropdown>
+  </ThingDef>
+</Defs>

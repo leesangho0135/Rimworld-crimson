@@ -1,0 +1,18 @@
+{
+  "files.exclude": {
+    "**/.artifacts": true,
+    "CrimsonSOS2": true,
+    "Artwork": true
+  },
+  "search.exclude": {
+    "**/.artifacts/**": true,
+    "CrimsonSOS2/**": true,
+    "Artwork/**": true
+  },
+  "files.watcherExclude": {
+    "**/.artifacts/**": true,
+    "CrimsonSOS2/**": true,
+    "Artwork/**": true
+  },
+  "search.followSymlinks": false
+}

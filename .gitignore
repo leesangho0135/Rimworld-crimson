@@ -6,7 +6,12 @@
 !/THIRD-PARTY-NOTICES.md
 !/Build.ps1
 !/CrimsonSOS2/
-!/Source/
+!/MOD_PROJECTS/
+!/Tools/
+!/.vscode/
+
+# Reassembled package is a generated junction; projects own the editable files.
+/CrimsonSOS2
 
 # Never publish saves, local profiles, credentials, or transient build output.
 **/bin/

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef ParentName="Crimson_ElectronicDecorBase">
+    <defName>Crimson_TacticalTableCompact</defName>
+    <label>심홍 관제테이블</label>
+    <description>함선 설비의 상태와 성능을 분석하는 가로 3×1 관제테이블입니다. 소비전력 300W. 설비·전력·열·생체·함선 상태를 보여주는 관제 전용 화면 13종을 선택합니다. 화면은 3×1 비율에 맞춘 장식용 도식이며 선택은 저장 후에도 유지됩니다. 전원이 꺼지면 상판의 그림도 꺼집니다.</description>
+    <size>(3,1)</size>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Crimson/Decor/Furniture/TacticalTableCompactParallelV137</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonTacticalReportGraphic</graphicClass>
+      <drawSize>(3,1)</drawSize>
+      <shaderType>Cutout</shaderType>
+      <drawRotated>false</drawRotated>
+      <addTopAltitudeBias>true</addTopAltitudeBias>
+      <shadowData IsNull="True" />
+    </graphicData>
+    <uiIconPath>Crimson/Decor/Furniture/TacticalTableCompactParallelV137</uiIconPath>
+    <statBases>
+      <MaxHitPoints>2100</MaxHitPoints>
+      <WorkToBuild>700</WorkToBuild>
+      <Mass>30</Mass>
+      <Beauty>10</Beauty>
+      <Flammability>0</Flammability>
+    </statBases>
+    <stuffCategories Inherit="False" />
+    <costStuffCount>0</costStuffCount>
+    <defaultStuff IsNull="True" />
+    <costList Inherit="False"><Steel>40</Steel><ComponentIndustrial>2</ComponentIndustrial></costList>
+    <comps Inherit="False">
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>300</basePowerConsumption><transmitsPower>false</transmitsPower></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower"><glowRadius>2</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li><compClass>CrimsonSOS2.CompCrimsonFurnitureVisuals</compClass></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonTacticalReport" />
+      <li><compClass>CompQuality</compClass></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>300</originalMaxHitPoints><goldReference>true</goldReference></li>
+    </comps>
+    <uiOrder>1006</uiOrder>
+    <designationCategory>Misc</designationCategory>
+    <designatorDropdown>Crimson_CommandFurniture</designatorDropdown>
+  </ThingDef>
+</Defs>

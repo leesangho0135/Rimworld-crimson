@@ -1,0 +1,684 @@
+{
+  "name": "FURNITURE",
+  "sources": [
+    {
+      "original": "Source/CrimsonSOS2/CrimsonBedSleep.cs",
+      "path": "Source/Main/CrimsonBedSleep.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonBookshelf.cs",
+      "path": "Source/Main/CrimsonBookshelf.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonCardinalArt.cs",
+      "path": "Source/Main/CrimsonCardinalArt.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonClosedCargoVisibility.cs",
+      "path": "Source/Main/CrimsonClosedCargoVisibility.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonCommanderDining.cs",
+      "path": "Source/Main/CrimsonCommanderDining.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonCommanderDiningArt.cs",
+      "path": "Source/Main/CrimsonCommanderDiningArt.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonCommanderWallStorage.cs",
+      "path": "Source/Main/CrimsonCommanderWallStorage.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonCrewSofaArt.cs",
+      "path": "Source/Main/CrimsonCrewSofaArt.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonFixedFurniture.cs",
+      "path": "Source/Main/CrimsonFixedFurniture.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonFoodScreen.cs",
+      "path": "Source/Main/CrimsonFoodScreen.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonFurniture.cs",
+      "path": "Source/Main/CrimsonFurniture.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonFurnitureDepth.cs",
+      "path": "Source/Main/CrimsonFurnitureDepth.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonFurnitureDirections.cs",
+      "path": "Source/Main/CrimsonFurnitureDirections.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonFurnitureExtras.cs",
+      "path": "Source/Main/CrimsonFurnitureExtras.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonFurniturePalette.cs",
+      "path": "Source/Main/CrimsonFurniturePalette.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonHabitatGraphic.cs",
+      "path": "Source/Main/CrimsonHabitatGraphic.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonHabitatIcons.cs",
+      "path": "Source/Main/CrimsonHabitatIcons.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonHoverRim.cs",
+      "path": "Source/Main/CrimsonHoverRim.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonLargeShelfDisplay.cs",
+      "path": "Source/Main/CrimsonLargeShelfDisplay.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonPoweredComfort.cs",
+      "path": "Source/Main/CrimsonPoweredComfort.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonPremiumSeatingArt.cs",
+      "path": "Source/Main/CrimsonPremiumSeatingArt.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonRefrigerators.cs",
+      "path": "Source/Main/CrimsonRefrigerators.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonRetiredFurniture.cs",
+      "path": "Source/Main/CrimsonRetiredFurniture.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonRobotRestoration.cs",
+      "path": "Source/Main/CrimsonRobotRestoration.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonRoofVisibility.cs",
+      "path": "Source/Main/CrimsonRoofVisibility.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonRoyaltyFurniture.cs",
+      "path": "Source/Main/CrimsonRoyaltyFurniture.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonSeatingReadability.cs",
+      "path": "Source/Main/CrimsonSeatingReadability.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonStorageHygieneGraphic.cs",
+      "path": "Source/Main/CrimsonStorageHygieneGraphic.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonSurfacePalette.cs",
+      "path": "Source/Main/CrimsonSurfacePalette.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonV48ArtRegistration.cs",
+      "path": "Source/Main/CrimsonV48ArtRegistration.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonV49RoyaltyArtRegistration.cs",
+      "path": "Source/Main/CrimsonV49RoyaltyArtRegistration.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonV51ArtRegistration.cs",
+      "path": "Source/Main/CrimsonV51ArtRegistration.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonV51FurnitureGraphic.cs",
+      "path": "Source/Main/CrimsonV51FurnitureGraphic.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonWallEquipmentStorage.cs",
+      "path": "Source/Main/CrimsonWallEquipmentStorage.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonWallRefrigerator.cs",
+      "path": "Source/Main/CrimsonWallRefrigerator.cs",
+      "assembly": "main"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonWallTradeBeacon.cs",
+      "path": "Source/Main/CrimsonWallTradeBeacon.cs",
+      "assembly": "main"
+    }
+  ],
+  "content": [
+    {
+      "original": "CrimsonSOS2/1.6/Patches/CrimsonFurnitureOcclusion.xml",
+      "path": "Content/1.6/Patches/CrimsonFurnitureOcclusion.xml",
+      "target": "1.6/Patches/CrimsonFurnitureOcclusion.xml",
+      "sha256": "0131ED102334E91BEF846F4D49FAE15E2B9F02AB61954BC8A442639E852CEF41"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Communications/WallTradeBeacon.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Communications/WallTradeBeacon.png",
+      "target": "1.6/Textures/Crimson/Decor/Communications/WallTradeBeacon.png",
+      "sha256": "99262DFEEBD911BF71D3C54684F163D635023408A82CCD299FC1EDF586ED00B1"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Communications/WallTradeBeacon_off.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Communications/WallTradeBeacon_off.png",
+      "target": "1.6/Textures/Crimson/Decor/Communications/WallTradeBeacon_off.png",
+      "sha256": "ACF07BD46C3BECB54CCE23E95ADA187E3501A534D20AC3CD631D4928AEA5107B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Dining/CommanderDiningTableAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Dining/CommanderDiningTableAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Dining/CommanderDiningTableAtlas.png",
+      "sha256": "CE3C8185A2B6E0D6A7FC84B2C41A8BC738E9E6D347E2B05A599D12D53A0A31D9"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Dining/DiningTableAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Dining/DiningTableAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Dining/DiningTableAtlas.png",
+      "sha256": "E36D1C7C852DBCE52D4C9B364B26A15AFC7CD95443A52C371DD26BFBC0D413C3"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Dining/DiningTableLongTopAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Dining/DiningTableLongTopAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Dining/DiningTableLongTopAtlas.png",
+      "sha256": "E57F70760027AE0A5B2CAC45C515B744EE7CB6D5984D99593DDB8B9A422E48A0"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Dining/MealDisplayWallV111.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Dining/MealDisplayWallV111.png",
+      "target": "1.6/Textures/Crimson/Decor/Dining/MealDisplayWallV111.png",
+      "sha256": "7D614C4C7B75C868722D67078FAD6D1F5C717B5E029BDE6B85453F179AF5E5A8"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/CommandSeat.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/CommandSeat.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/CommandSeat.png",
+      "sha256": "3D5B411016CC34784B047E0A21A00FDEE597FA9484DE915CE2F691E65A14D64C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/CommandSeatDirections.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/CommandSeatDirections.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/CommandSeatDirections.png",
+      "sha256": "6E0C1201241FBDA4889522EF2BADA51C27ACCA394F3910641D7536DD068E00E9"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/CommandSeatDirections_off.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/CommandSeatDirections_off.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/CommandSeatDirections_off.png",
+      "sha256": "CB3EECE98EEE9A9AA8E14477D0F291C5E93AC5CAB9762B62978E0FEB96C4BDDE"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/CrewBench.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/CrewBench.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/CrewBench.png",
+      "sha256": "81206C4D16BD0BB1607BB0BA54B3659C48ECE6E37808938C0FDFB01EA9D9FF32"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/CrimsonBookSpineV111.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/CrimsonBookSpineV111.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/CrimsonBookSpineV111.png",
+      "sha256": "1AD3C39FCB442C6238CF122A0BADE250E13EC6B7A078DF0A94736D997B18DE0B"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/HoverPlinth.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/HoverPlinth.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/HoverPlinth.png",
+      "sha256": "7C6B98028DEAF1C75DA708F9C4E6E598EF26D2A85F8BF93AF32F7E4542B33FF0"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Extras/HoverPlinth_off.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Extras/HoverPlinth_off.png",
+      "target": "1.6/Textures/Crimson/Decor/Extras/HoverPlinth_off.png",
+      "sha256": "8B2AFC9B05551B3745A743C136E2E815CBF965CF194BE73B882F665AD2DA99C7"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ServerPort.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ServerPort.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ServerPort.png",
+      "sha256": "47E8A021A26F2A78893450B5D031B44CE119E9C1B7457D4DD9A0B041F9EC66A4"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/ServerPort_off.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/ServerPort_off.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/ServerPort_off.png",
+      "sha256": "50D5B6EDAD7D7ED51C9B25EDF933B12C3035B7020955EB9475150F2E7363313A"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/TacticalTableCompactAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/TacticalTableCompactAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/TacticalTableCompactAtlas.png",
+      "sha256": "1985E93E64CCFED634F89E3C85EC5E1CEBDA5B83A3F3A13BDD4E27EF14325418"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/WallReports/Navigation/WallDisplay.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/WallReports/Navigation/WallDisplay.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/WallReports/Navigation/WallDisplay.png",
+      "sha256": "BF01E1EA1EDC588B979F68F13AC872349B072737F3F0EED37AC11A18EA25A649"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Furniture/WallReports/Navigation/WallDisplay_off.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Furniture/WallReports/Navigation/WallDisplay_off.png",
+      "target": "1.6/Textures/Crimson/Decor/Furniture/WallReports/Navigation/WallDisplay_off.png",
+      "sha256": "5B6F9C82BCCD79FD2394BA1B70902E12B8B0D9DC350515D94E91F9DF8158386C"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Habitat/DoubleBedStates.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Habitat/DoubleBedStates.png",
+      "target": "1.6/Textures/Crimson/Decor/Habitat/DoubleBedStates.png",
+      "sha256": "5DB54827A2455226180280D2711AC02EC2A726DA29BA2AE785B53C17C8F73E7A"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Habitat/SingleBedStates.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Habitat/SingleBedStates.png",
+      "target": "1.6/Textures/Crimson/Decor/Habitat/SingleBedStates.png",
+      "sha256": "2149D748F971CC9A35A49F595D0DD209793EF3C3C43AF45C663470C9CBB400C3"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Research/CoffeeTableAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Research/CoffeeTableAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Research/CoffeeTableAtlas.png",
+      "sha256": "65D0A722D023C885FAE72A3F7099C95A90580DEF51576A409DBB6C9A5C61F68F"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Research/CrewSofaTwoAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Research/CrewSofaTwoAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Research/CrewSofaTwoAtlas.png",
+      "sha256": "224E9B401E1915D5F98502EA01769D2E82A62179F2C0FD0AE0FCB51720F07F78"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/ConsoleTerminal.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/ConsoleTerminal.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/ConsoleTerminal.png",
+      "sha256": "479E8FF086665575872EE9F1BF1DA8D1403DCE745E1B553D6DCDB6F70C4EA587"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/CookingRefrigerator.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/CookingRefrigerator.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/CookingRefrigerator.png",
+      "sha256": "4A93C218337A06E324E0205EA9A9E0B091D66485CBE2C79E02A9E804460FEAB3"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/EndTable.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/EndTable.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/EndTable.png",
+      "sha256": "44F0C6146724F272C934BEAFD7220C11097ECE625FBF7ED21F0626C60E552EAB"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/GrandThrone.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/GrandThrone.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/GrandThrone.png",
+      "sha256": "81CFF5C3824DF833B5A8C431FEA97CAD69E0BB459EC4C2024492DF7B8A748DC1"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/InductionCooker.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/InductionCooker.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/InductionCooker.png",
+      "sha256": "38B0762C3984B6CCC04A5F112AA08CB91354D61FD4B16C3249DB0906AD16F847"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/MachiningBench.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/MachiningBench.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/MachiningBench.png",
+      "sha256": "1D276B72F847EF87F5B005982AB847936B232E48CD1878726E82A6CB36EF829E"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/ShelfLarge.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/ShelfLarge.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/ShelfLarge.png",
+      "sha256": "64035D2F0CC01F1EA401ACF18AE1014B1D993987CDEB8AB61D096E42B3511D40"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/ShelfMedium.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/ShelfMedium.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/ShelfMedium.png",
+      "sha256": "AA904FD32BA0C75F29448E2E29A23CC51FBC2D6A04C54991AD2D297C159761F7"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/ShelfSmall.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/ShelfSmall.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/ShelfSmall.png",
+      "sha256": "23F591F994218DE38AAB72956DB55D27B150E99318B90E121A55E5A766909DA2"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/Throne.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/Throne.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/Throne.png",
+      "sha256": "AFA026174105671B3C42056AE570164F32A440FD9B3FF2707B882A06E91CE710"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/ToolCabinet.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/ToolCabinet.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/ToolCabinet.png",
+      "sha256": "A8C1407B9194F98DB49EBEFA3FCDEDF5D733DDEA1FE44349038B52B707CAF8DE"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Revision/Wardrobe.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Revision/Wardrobe.png",
+      "target": "1.6/Textures/Crimson/Decor/Revision/Wardrobe.png",
+      "sha256": "662B946E5D287F57610013A8141B52320E5B1DFD2F45BF5593C77A98F2E72A13"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Rooms/AuxiliaryCrewSeatAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Rooms/AuxiliaryCrewSeatAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Rooms/AuxiliaryCrewSeatAtlas.png",
+      "sha256": "3307EFE49896E05EA3A26BF4C848443A8C018DBCBBF1E3E87F981E31DE33FA14"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Royalty/Brazier.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Royalty/Brazier.png",
+      "target": "1.6/Textures/Crimson/Decor/Royalty/Brazier.png",
+      "sha256": "FB637FE02F51B144509EF29CE7F55CC6D3B143EBC93E0AE6E4F9AE9DF22274F5"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Royalty/Column.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Royalty/Column.png",
+      "target": "1.6/Textures/Crimson/Decor/Royalty/Column.png",
+      "sha256": "422B21CDB1B8BBEDBA834631C90770DA30DA157124542BE84319D041BA81C532"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Seating/CrewSofa3x1Atlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Seating/CrewSofa3x1Atlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Seating/CrewSofa3x1Atlas.png",
+      "sha256": "9A78EB59EFAD46040F79122D41318946A617E2EB55CB4AA9125D1FFF0D1541A1"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Seating/DiningChairV43States.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Seating/DiningChairV43States.png",
+      "target": "1.6/Textures/Crimson/Decor/Seating/DiningChairV43States.png",
+      "sha256": "002229E5A3C1A80984191B51608F92E9B6EF63C8DECE2565ADEDB2387F5E3B30"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Seating/LoungeChairV43States.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Seating/LoungeChairV43States.png",
+      "target": "1.6/Textures/Crimson/Decor/Seating/LoungeChairV43States.png",
+      "sha256": "80869ACAE090EB01CD2D06B7EC23BE172FDB89988C699F498782AFDA0D5863B1"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Seating/Premium/DiningChairAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Seating/Premium/DiningChairAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Seating/Premium/DiningChairAtlas.png",
+      "sha256": "186FAE65C5243406C237AA98DF3F943E31E7EA3728266666179F808D49E064F6"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Seating/Premium/LoungeChairAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Seating/Premium/LoungeChairAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Seating/Premium/LoungeChairAtlas.png",
+      "sha256": "AA60D089182B56D9B2BE437D83768298BD0FD74A08D6A924D68BB6BA83A9CA63"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Seating/Premium/SofaAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Seating/Premium/SofaAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Seating/Premium/SofaAtlas.png",
+      "sha256": "EFCC5E35616B9A69AE29E8E55A829B4669C2DA83B5010096B650892B09565527"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Seating/WorkChairV43States.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Seating/WorkChairV43States.png",
+      "target": "1.6/Textures/Crimson/Decor/Seating/WorkChairV43States.png",
+      "sha256": "351D954BB943953B1B733C78B9F657D86E5FB23E889F7DC6BEEAF75BC7D15AB6"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Storage/CargoContainerStates.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Storage/CargoContainerStates.png",
+      "target": "1.6/Textures/Crimson/Decor/Storage/CargoContainerStates.png",
+      "sha256": "420DF5F8A2B743B20FB31487C21294D649C2CE0A08CE41097134114399D3C359"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Storage/SafeV42States.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Storage/SafeV42States.png",
+      "target": "1.6/Textures/Crimson/Decor/Storage/SafeV42States.png",
+      "sha256": "79381775D6E4B35613E0A376F53C4E2848CAAE4375D882CD538387C1A0655BB8"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/WallEquipment/WeaponCabinet.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/WallEquipment/WeaponCabinet.png",
+      "target": "1.6/Textures/Crimson/Decor/WallEquipment/WeaponCabinet.png",
+      "sha256": "4B2BA50EC530AF8393691B494706165D91593C3D090B2927DC0943E94B375BBB"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Workshops/ElectricSmelterAtlas.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Workshops/ElectricSmelterAtlas.png",
+      "target": "1.6/Textures/Crimson/Decor/Workshops/ElectricSmelterAtlas.png",
+      "sha256": "2AB9C0571140AEA21E206ABB93D5D6BA3FD3C297B328C46E035479FB5A8EC042"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Decor/Workshops/FabricationBenchSidesV144.png",
+      "path": "Content/1.6/Textures/Crimson/Decor/Workshops/FabricationBenchSidesV144.png",
+      "target": "1.6/Textures/Crimson/Decor/Workshops/FabricationBenchSidesV144.png",
+      "sha256": "AA44D22EEF3D0009C6B895025C21AFB60304460DD0848E3E5EE2607039F3CE70"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Tanaka/Active_east.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Tanaka/Active_east.png",
+      "target": "1.6/Textures/Crimson/Power/Tanaka/Active_east.png",
+      "sha256": "ADABB202380C928745793904122D9A23DAD729D9920CA0CF66DB317667BB186F"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Tanaka/Active_north.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Tanaka/Active_north.png",
+      "target": "1.6/Textures/Crimson/Power/Tanaka/Active_north.png",
+      "sha256": "F8210C26EE689B388009F40C77243CCBE8C253E6CB8162E665340338ABDA1926"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Tanaka/Active_south.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Tanaka/Active_south.png",
+      "target": "1.6/Textures/Crimson/Power/Tanaka/Active_south.png",
+      "sha256": "CEED1EF22D1C0A7ABE0D6F39CA9F2A8174F3B5F07E1C870BB1313D4A0AC7515F"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Tanaka/Active_west.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Tanaka/Active_west.png",
+      "target": "1.6/Textures/Crimson/Power/Tanaka/Active_west.png",
+      "sha256": "81B34B4F729AD7AA9AABE7EBFEC6116A626015C65C09917AD4EEC896DFEF40ED"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Tanaka/Inactive_east.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Tanaka/Inactive_east.png",
+      "target": "1.6/Textures/Crimson/Power/Tanaka/Inactive_east.png",
+      "sha256": "58740B399674462A1411837A24D88117AF4A982E549AEC2D718896A1EB55F274"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Tanaka/Inactive_north.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Tanaka/Inactive_north.png",
+      "target": "1.6/Textures/Crimson/Power/Tanaka/Inactive_north.png",
+      "sha256": "1571BB12D6439DB98F42E68C337316B4E5A9C785FDD18021A14905120BC42914"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Tanaka/Inactive_south.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Tanaka/Inactive_south.png",
+      "target": "1.6/Textures/Crimson/Power/Tanaka/Inactive_south.png",
+      "sha256": "DFB371836AB767F754C27E592CA27E190A3E08B51FB73E530AF0F36C09EEFA8A"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Textures/Crimson/Power/Tanaka/Inactive_west.png",
+      "path": "Content/1.6/Textures/Crimson/Power/Tanaka/Inactive_west.png",
+      "target": "1.6/Textures/Crimson/Power/Tanaka/Inactive_west.png",
+      "sha256": "E734864F3C97E434515AEBC3706D36F0683D7FFCB6C986818E4D3CE15069DC58"
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonCommanderDining.xml",
+      "path": "Content/1.6/Defs/CrimsonCommanderDining.xml",
+      "target": "1.6/Defs/CrimsonCommanderDining.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonCommanderWallStorage.xml",
+      "path": "Content/1.6/Defs/FURNITURE__CrimsonCommanderWallStorage.xml",
+      "target": "1.6/Defs/FURNITURE__CrimsonCommanderWallStorage.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonCrewLounge.xml",
+      "path": "Content/1.6/Defs/CrimsonCrewLounge.xml",
+      "target": "1.6/Defs/CrimsonCrewLounge.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonCrewSofa.xml",
+      "path": "Content/1.6/Defs/CrimsonCrewSofa.xml",
+      "target": "1.6/Defs/CrimsonCrewSofa.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonDecorElectronics.xml",
+      "path": "Content/1.6/Defs/FURNITURE__CrimsonDecorElectronics.xml",
+      "target": "1.6/Defs/FURNITURE__CrimsonDecorElectronics.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonDecorExtras.xml",
+      "path": "Content/1.6/Defs/FURNITURE__CrimsonDecorExtras.xml",
+      "target": "1.6/Defs/FURNITURE__CrimsonDecorExtras.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonDiningAndRefrigerators.xml",
+      "path": "Content/1.6/Defs/FURNITURE__CrimsonDiningAndRefrigerators.xml",
+      "target": "1.6/Defs/FURNITURE__CrimsonDiningAndRefrigerators.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonHabitatFurniture.xml",
+      "path": "Content/1.6/Defs/FURNITURE__CrimsonHabitatFurniture.xml",
+      "target": "1.6/Defs/FURNITURE__CrimsonHabitatFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonPower.xml",
+      "path": "Content/1.6/Defs/FURNITURE__CrimsonPower.xml",
+      "target": "1.6/Defs/FURNITURE__CrimsonPower.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonPremiumSeating.xml",
+      "path": "Content/1.6/Defs/CrimsonPremiumSeating.xml",
+      "target": "1.6/Defs/CrimsonPremiumSeating.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonResearchFurniture.xml",
+      "path": "Content/1.6/Defs/FURNITURE__CrimsonResearchFurniture.xml",
+      "target": "1.6/Defs/FURNITURE__CrimsonResearchFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRoomFittings.xml",
+      "path": "Content/1.6/Defs/FURNITURE__CrimsonRoomFittings.xml",
+      "target": "1.6/Defs/FURNITURE__CrimsonRoomFittings.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonRoyaltyFurniture.xml",
+      "path": "Content/1.6/Defs/FURNITURE__CrimsonRoyaltyFurniture.xml",
+      "target": "1.6/Defs/FURNITURE__CrimsonRoyaltyFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonSeatingFurniture.xml",
+      "path": "Content/1.6/Defs/FURNITURE__CrimsonSeatingFurniture.xml",
+      "target": "1.6/Defs/FURNITURE__CrimsonSeatingFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonStorageFurniture.xml",
+      "path": "Content/1.6/Defs/FURNITURE__CrimsonStorageFurniture.xml",
+      "target": "1.6/Defs/FURNITURE__CrimsonStorageFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonUnderdeckWeaponEffects.xml",
+      "path": "Content/1.6/Defs/CrimsonUnderdeckWeaponEffects.xml",
+      "target": "1.6/Defs/CrimsonUnderdeckWeaponEffects.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonWallEquipmentStorage.xml",
+      "path": "Content/1.6/Defs/FURNITURE__CrimsonWallEquipmentStorage.xml",
+      "target": "1.6/Defs/FURNITURE__CrimsonWallEquipmentStorage.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonWallTradeBeacon.xml",
+      "path": "Content/1.6/Defs/CrimsonWallTradeBeacon.xml",
+      "target": "1.6/Defs/CrimsonWallTradeBeacon.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonWorkshopFurniture.xml",
+      "path": "Content/1.6/Defs/FURNITURE__CrimsonWorkshopFurniture.xml",
+      "target": "1.6/Defs/FURNITURE__CrimsonWorkshopFurniture.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonWorkshopWorkGivers.xml",
+      "path": "Content/1.6/Defs/FURNITURE__CrimsonWorkshopWorkGivers.xml",
+      "target": "1.6/Defs/FURNITURE__CrimsonWorkshopWorkGivers.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/Compatibility/AdaptiveStorageFramework/Defs/CrimsonRefrigeratorGraphics.xml",
+      "path": "Content/Compatibility/AdaptiveStorageFramework/Defs/CrimsonRefrigeratorGraphics.xml",
+      "target": "Compatibility/AdaptiveStorageFramework/Defs/CrimsonRefrigeratorGraphics.xml",
+      "splitXml": true
+    }
+  ],
+  "authoring": [
+    {
+      "original": "Source/CrimsonSOS2/Art/frames.json",
+      "path": "Authoring/Art/frames.json"
+    },
+    {
+      "original": "Source/CrimsonSOS2/Art/prompts.json",
+      "path": "Authoring/Art/prompts.json"
+    },
+    {
+      "original": "Source/CrimsonSOS2/Art/README.md",
+      "path": "Authoring/Art/README.md"
+    }
+  ],
+  "integrationDependencies": [
+    "CORE",
+    "DECORATION",
+    "PRODUCTION",
+    "RECREATION",
+    "SOS2_ADDON"
+  ],
+  "buildMode": "integrated-runtime-preserving-existing-assembly-contract",
+  "namespace": "CrimsonSOS2"
+}

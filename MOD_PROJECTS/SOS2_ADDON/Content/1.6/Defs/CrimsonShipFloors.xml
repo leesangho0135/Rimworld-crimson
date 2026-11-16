@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><TerrainDef ParentName="FloorBase">
+    <defName>Crimson_ShipInteriorTile</defName>
+    <label>심홍 함내 타일</label>
+    <description>함선 복도와 생활실, 작업실을 위한 흑연색 금속 타일입니다. 얇은 금속 이음선과 작은 심홍색 표시로 마감했습니다. 바닥 한 칸의 미관은 10, 청결도는 +0.5입니다. 모노리스 갑판 위에 시공해도 갑판의 함선 기능을 유지합니다.</description>
+    <renderPrecedence>245</renderPrecedence>
+    <texturePath>Crimson/Decor/Floors/ShipInteriorTile</texturePath>
+    <color>(1,1,1)</color>
+    <pollutionTintColor>(0.95,0.95,0.93,1)</pollutionTintColor>
+    <isPaintable>true</isPaintable>
+    <statBases>
+      <WorkToBuild>1200</WorkToBuild>
+      <Beauty>10</Beauty>
+      <Cleanliness>0.5</Cleanliness>
+      <CleaningTimeFactor>0.6</CleaningTimeFactor>
+    </statBases>
+    <costList><Steel>7</Steel><Plasteel>1</Plasteel></costList>
+    <constructEffect>ConstructMetal</constructEffect>
+    <designationHotKey IsNull="True" />
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <researchPrerequisites><li>Smithing</li></researchPrerequisites>
+    <uiOrder>2052</uiOrder>
+  </TerrainDef>
+  <TerrainDef ParentName="FloorBase">
+    <defName>Crimson_CommanderTile</defName>
+    <label>심홍 지휘관 타일</label>
+    <description>함선 지휘실과 알현실, 지휘관 침실을 위한 고급 금속 타일입니다. 검은 금속 패널에 정교한 기하학 상감과 절제된 심홍색 장식을 넣었습니다. 바닥 한 칸의 미관은 75, 청결도는 +1이며, 작위의 고급 바닥 요구 조건에 인정됩니다. 모노리스 갑판 위에 시공해도 갑판의 함선 기능을 유지합니다.</description>
+    <renderPrecedence>246</renderPrecedence>
+    <texturePath>Crimson/Decor/Floors/CommanderTile</texturePath>
+    <color>(1,1,1)</color>
+    <pollutionTintColor>(0.95,0.95,0.93,1)</pollutionTintColor>
+    <isPaintable>true</isPaintable>
+    <statBases>
+      <WorkToBuild>5000</WorkToBuild>
+      <Beauty>75</Beauty>
+      <Cleanliness>1</Cleanliness>
+      <CleaningTimeFactor>0.6</CleaningTimeFactor>
+    </statBases>
+    <costList><Steel>7</Steel><Plasteel>3</Plasteel><Gold>5</Gold></costList>
+    <constructEffect>ConstructMetal</constructEffect>
+    <designationHotKey IsNull="True" />
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites><li>Smithing</li></researchPrerequisites>
+    <tags><li>FineFloor</li></tags>
+    <uiOrder>2053</uiOrder>
+  </TerrainDef>
+</Defs>

@@ -66,12 +66,6 @@
       "splitXml": true
     },
     {
-      "original": "CrimsonSOS2/1.6/Defs/CrimsonCommanderWallStorage.xml",
-      "path": "Content/1.6/Defs/CORE__CrimsonCommanderWallStorage.xml",
-      "target": "1.6/Defs/CORE__CrimsonCommanderWallStorage.xml",
-      "splitXml": true
-    },
-    {
       "original": "CrimsonSOS2/1.6/Defs/CrimsonDecor.xml",
       "path": "Content/1.6/Defs/CORE__CrimsonDecor.xml",
       "target": "1.6/Defs/CORE__CrimsonDecor.xml",

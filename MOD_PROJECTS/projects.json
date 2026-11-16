@@ -20,8 +20,11 @@
                                           "추진기",
                                           "함선 무장",
                                           "왕복선",
-                                          "함선 로봇"
-                                      ]
+                                          "함선 로봇",
+                                          "벽형 냉장고",
+                                          "벽형 약품장"
+                                      ],
+                         "context":  "SOS2_ADDON/PROJECT.md"
                      },
                      {
                          "name":  "FURNITURE",
@@ -34,7 +37,8 @@
                                           "일반 침대",
                                           "수납",
                                           "냉장고"
-                                      ]
+                                      ],
+                         "context":  "FURNITURE/PROJECT.md"
                      },
                      {
                          "name":  "RECREATION",

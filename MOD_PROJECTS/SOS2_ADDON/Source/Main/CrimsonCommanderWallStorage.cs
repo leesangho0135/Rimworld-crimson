@@ -32,14 +32,14 @@ namespace CrimsonSOS2
         }
     }
 
-    // Print a native linked hull tile for EACH cell, rather than stretching a
-    // single tile over the cabinet. A slightly wider shell makes a shallow
-    // step on each side without changing the native storage footprint.
+    // The hull tiles stay exactly 1x1. Separate narrow jambs extend beyond
+    // their native silhouettes; the wall artwork itself is never stretched.
     public sealed class CrimsonCommanderWallStorageGraphic : Graphic_Single
     {
         private WallCellGraphic cells;
         private static Material floor;
         public override bool ShouldDrawRotated { get { return false; } }
+        internal static Vector2 BodyCellSize { get { return Vector2.one; } }
 
         private WallCellGraphic Cells
         {
@@ -67,28 +67,35 @@ namespace CrimsonSOS2
                     Printer_Plane.PrintPlane(layer, location, Vector2.one, floor);
                 }
                 location.y = thing.def.altitudeLayer.AltitudeFor();
-                Printer_Plane.PrintPlane(layer, location, new Vector2(drawSize.x, 1f), Cells.At(thing, cell));
-            }
-            if (!built) return;
-            foreach (PanelLine line in PanelLines(IsMedicine(thing.def)))
-            {
-                Vector3 location = thing.TrueCenter() + new Vector3(line.x * drawSize.x, .006f, line.z);
-                Printer_Plane.PrintPlane(layer, location, new Vector2(line.width * drawSize.x, line.height),
-                    SolidColorMaterials.SimpleSolidColorMaterial(line.color));
+                Printer_Plane.PrintPlane(layer, location, BodyCellSize, Cells.At(thing, cell));
+                if (!built) continue;
+                float cellZ = cell.z + .5f - thing.TrueCenter().z;
+                foreach (PanelLine line in SideLines(Cells.Mask(thing, cell), cellZ, IsMedicine(thing.def)))
+                {
+                    Vector3 side = thing.TrueCenter() + new Vector3(line.x, .006f, line.z);
+                    Printer_Plane.PrintPlane(layer, side, new Vector2(line.width, line.height),
+                        SolidColorMaterials.SimpleSolidColorMaterial(line.color));
+                }
             }
         }
 
         public override void DrawWorker(Vector3 loc, Rot4 rot, ThingDef def, Thing thing, float extraRotation)
         {
-            // Placement previews share the shell width; installation stays 1x2.
+            // A fixed 1x2 preview uses the original tile sizes too.
             for (int index = 0; index < 2; index++)
             {
                 LinkDirections links = index == 0 ? LinkDirections.Up : LinkDirections.Down;
                 Material material = MaterialAtlasPool.SubMaterialFromAtlas(mat, links);
                 Vector3 location = loc + new Vector3(0f, 0f, index - .5f);
-                Matrix4x4 transform = Matrix4x4.TRS(location, Quaternion.identity,
-                    new Vector3(drawSize.x, 1f, 1f));
-                Graphics.DrawMesh(MeshPool.plane10, transform, material, 0);
+                Graphics.DrawMesh(MeshPool.plane10, location, Quaternion.identity, material, 0);
+                foreach (PanelLine line in SideLines((int)links, index - .5f, IsMedicine(def)))
+                {
+                    Vector3 side = loc + new Vector3(line.x, .006f, line.z);
+                    Matrix4x4 matrix = Matrix4x4.TRS(side, Quaternion.identity,
+                        new Vector3(line.width, 1f, line.height));
+                    Graphics.DrawMesh(MeshPool.plane10, matrix,
+                        SolidColorMaterials.SimpleSolidColorMaterial(line.color), 0);
+                }
             }
         }
 
@@ -105,26 +112,41 @@ namespace CrimsonSOS2
             { this.x = x; this.z = z; this.width = width; this.height = height; this.color = color; }
         }
 
-        internal static IEnumerable<PanelLine> PanelLines(bool medicine)
+        // Native atlas face bounds in pixels for each N/E/S/W link mask.
+        // Reading these constants does not allocate cropped wall textures.
+        private static readonly int[] LeftPixels = {33,21,32,24,32,32,31,32,0,0,0,0,0,0,0,0};
+        private static readonly int[] RightPixels = {224,235,256,256,224,224,256,256,224,224,256,256,224,224,256,256};
+        internal static float SideEdge(int mask, int sign)
         {
-            Color shadow = new Color(.045f, .045f, .047f);
-            Color lip = new Color(.16f, .16f, .17f);
-            Color recess = new Color(.065f, .065f, .07f);
-            Color marker = new Color(.25f, .055f, .045f);
-            yield return new PanelLine(-.288f, 0f, .012f, 1.53f, shadow);
-            yield return new PanelLine(.288f, 0f, .010f, 1.53f, lip);
-            yield return new PanelLine(0f, .765f, .576f, .010f, lip);
-            yield return new PanelLine(0f, -.765f, .576f, .016f, shadow);
-            yield return new PanelLine(0f, 0f, .565f, .012f, shadow);
-            yield return new PanelLine(0f, -.016f, .565f, .006f, lip);
-            yield return new PanelLine(.175f, .105f, .095f, .022f, recess);
-            yield return new PanelLine(.175f, .091f, .095f, .006f, lip);
-            yield return new PanelLine(.175f, -.655f, .040f, .014f, marker);
-            if (medicine)
+            return (sign < 0 ? LeftPixels[mask & 15] : RightPixels[mask & 15]) / 256f - .5f;
+        }
+
+        internal static IEnumerable<PanelLine> SideLines(int mask, float cellZ, bool medicine)
+        {
+            float bottom = System.Math.Max(-.78f, cellZ - .5f);
+            float top = System.Math.Min(.78f, cellZ + .5f);
+            float center = (bottom + top) * .5f, height = top - bottom;
+            Color shadow = new Color(.035f,.035f,.038f);
+            Color face = new Color(.115f,.115f,.12f);
+            Color bevel = new Color(.19f,.19f,.20f);
+            Color marker = new Color(.23f,.04f,.035f);
+            foreach (int sign in new[] {-1, 1})
             {
-                yield return new PanelLine(0f, .385f, .565f, .010f, shadow);
-                yield return new PanelLine(0f, -.385f, .565f, .010f, shadow);
-                yield return new PanelLine(.105f, -.655f, .040f, .014f, marker);
+                float edge = SideEdge(mask, sign);
+                yield return new PanelLine(edge + sign*.012f, center, .024f, height, shadow);
+                yield return new PanelLine(edge + sign*.009f, center, .016f, height-.012f, face);
+                yield return new PanelLine(edge + sign*.019f, center, .004f, height-.02f, bevel);
+                if (bottom <= 0f && top >= 0f)
+                    yield return new PanelLine(edge + sign*.012f, 0f, .024f, .008f, shadow);
+                if (medicine)
+                    foreach (float seam in new[] {-.37f,.37f})
+                        if (seam > bottom && seam < top)
+                            yield return new PanelLine(edge + sign*.009f, seam, .016f, .009f, shadow);
+                if (sign > 0 && bottom < -.62f && top > -.62f)
+                {
+                    yield return new PanelLine(edge+.009f,-.62f,.009f,.014f,marker);
+                    if (medicine) yield return new PanelLine(edge+.009f,-.66f,.009f,.014f,marker);
+                }
             }
         }
 
@@ -132,6 +154,13 @@ namespace CrimsonSOS2
         {
             internal WallCellGraphic(Graphic subGraphic) : base(subGraphic) { }
             internal Material At(Thing thing, IntVec3 cell) { return LinkedDrawMatFrom(thing, cell); }
+            internal int Mask(Thing thing, IntVec3 cell)
+            {
+                int result = 0;
+                for (int direction = 0; direction < 4; direction++)
+                    if (ShouldLinkWith(cell + GenAdj.CardinalDirections[direction], thing)) result |= 1 << direction;
+                return result;
+            }
             public override bool ShouldLinkWith(IntVec3 cell, Thing parent)
             {
                 // Internal cells must join even for an unspawned blueprint.

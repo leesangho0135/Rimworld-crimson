@@ -32,11 +32,6 @@
       "assembly": "main"
     },
     {
-      "original": "Source/CrimsonSOS2/CrimsonCommanderWallStorage.cs",
-      "path": "Source/Main/CrimsonCommanderWallStorage.cs",
-      "assembly": "main"
-    },
-    {
       "original": "Source/CrimsonSOS2/CrimsonCrewSofaArt.cs",
       "path": "Source/Main/CrimsonCrewSofaArt.cs",
       "assembly": "main"
@@ -535,12 +530,6 @@
       "original": "CrimsonSOS2/1.6/Defs/CrimsonCommanderDining.xml",
       "path": "Content/1.6/Defs/CrimsonCommanderDining.xml",
       "target": "1.6/Defs/CrimsonCommanderDining.xml",
-      "splitXml": true
-    },
-    {
-      "original": "CrimsonSOS2/1.6/Defs/CrimsonCommanderWallStorage.xml",
-      "path": "Content/1.6/Defs/FURNITURE__CrimsonCommanderWallStorage.xml",
-      "target": "1.6/Defs/FURNITURE__CrimsonCommanderWallStorage.xml",
       "splitXml": true
     },
     {

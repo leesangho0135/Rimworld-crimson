@@ -9,6 +9,7 @@
 !/MOD_PROJECTS/
 !/Tools/
 !/.vscode/
+!/.agents/
 
 # Reassembled package is a generated junction; projects own the editable files.
 /CrimsonSOS2

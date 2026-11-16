@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs><ThingDef Name="Crimson_CommanderWallStorageBase" ParentName="StorageShelfBase" Abstract="True">
+    <thingClass>CrimsonSOS2.CrimsonCommanderWallStorage</thingClass>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey IsNull="True" />
+    <size>(1,2)</size><rotatable>false</rotatable><defaultPlacingRot>North</defaultPlacingRot>
+    <drawerType>MapMeshOnly</drawerType><tickerType>Normal</tickerType>
+    <passability>Impassable</passability><fillPercent>1</fillPercent><holdsRoof>true</holdsRoof>
+    <blockLight>true</blockLight><blockWind>true</blockWind><altitudeLayer>BuildingOnTop</altitudeLayer>
+    <graphicData Inherit="False">
+      <texPath>Crimson/Hull/HullWall_Atlas</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonCommanderWallStorageGraphic</graphicClass>
+      <shaderType>Cutout</shaderType><drawSize>(1,2)</drawSize><drawRotated>false</drawRotated>
+      <linkFlags><li>Wall</li><li>Rock</li></linkFlags><shadowData IsNull="True" />
+    </graphicData>
+    <uiIconPath>Crimson/Hull/HullWallIcon</uiIconPath>
+    <surfaceType>Item</surfaceType><staticSunShadowHeight>1</staticSunShadowHeight>
+    <stuffCategories Inherit="False" /><costStuffCount>0</costStuffCount><defaultStuff IsNull="True" />
+    <building>
+      <isEdifice>true</isEdifice><isAirtight>true</isAirtight><shipPart>true</shipPart>
+      <supportsWallAttachments>true</supportsWallAttachments><paintable>false</paintable>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop><ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>3</maxItemsInCell>
+    </building>
+    <comps Inherit="False">
+      <li Class="SaveOurShip2.CompProps_ShipCachePart"><isHull>true</isHull><hermetic>true</hermetic><roof>true</roof><archotech>true</archotech></li>
+      <li Class="SaveOurShip2.CompProps_ShipHeat"><compClass>SaveOurShip2.CompShipHeat</compClass></li>
+      <li Class="DubsBadHygiene.CompProperties_Pipe" MayRequire="Dubwise.DubsBadHygiene"><mode>Sewage</mode></li>
+    </comps>
+    <techLevel>Spacer</techLevel>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_CommanderWallStorageBase">
+    <defName>Crimson_CommanderWallRefrigerator</defName>
+    <label>심홍 벽형 냉장고</label>
+    <description>지휘관방의 선체벽을 대신하는 가로 1칸·세로 2칸 고정형 냉장고입니다. 원래 선체벽의 크기와 연결 무늬를 유지하고, 양옆에 아주 얇은 숨김 수납문 테두리만 돌출됩니다. 수납물은 보이지 않으며 두 칸에 총 6묶음을 보관합니다. 기존 조리용 냉장고와 같이 300W 공급 시 식품을 -5°C 이하로 유지하며 기본 필터는 생식재료입니다.</description>
+    <statBases><MaxHitPoints>1750</MaxHitPoints><WorkToBuild>2600</WorkToBuild><Mass>40</Mass><Beauty>40</Beauty><MarketValue>9308.424</MarketValue><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>80</Steel><Plasteel>10</Plasteel><ComponentIndustrial>3</ComponentIndustrial></costList>
+    <building>
+      <storageGroupTag>Crimson_Refrigerators</storageGroupTag>
+      <fixedStorageSettings Inherit="False"><filter><categories><li>Foods</li></categories></filter></fixedStorageSettings>
+      <defaultStorageSettings Inherit="False"><priority>Preferred</priority><filter><categories><li>FoodRaw</li></categories></filter></defaultStorageSettings>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>300</basePowerConsumption><transmitsPower>true</transmitsPower></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower"><glowRadius>1.6</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonRefrigerator"><storageTemperature>-5</storageTemperature><displayContents>false</displayContents></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>250</originalMaxHitPoints></li>
+    </comps>
+    <researchPrerequisites Inherit="False"><li>AirConditioning</li></researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <designatorDropdown>Crimson_Refrigerators</designatorDropdown><uiOrder>1102</uiOrder>
+  </ThingDef>
+  <ThingDef ParentName="Crimson_CommanderWallStorageBase">
+    <defName>Crimson_CommanderWallMedicineCabinet</defName>
+    <label>심홍 벽형 약품장</label>
+    <description>지휘관방의 선체벽을 대신하는 가로 1칸·세로 2칸 고정형 약품장입니다. 원래 선체벽의 크기와 연결 무늬를 유지하고, 양옆에 아주 얇은 숨김 수납문 테두리만 돌출됩니다. 수납물은 보이지 않으며 약품을 두 칸에 총 6묶음까지 보관합니다. 기존 약품장과 같이 50W로 표시등과 약한 주변 조명을 유지하며 냉장 기능은 없습니다.</description>
+    <statBases><MaxHitPoints>980</MaxHitPoints><WorkToBuild>1400</WorkToBuild><Mass>20</Mass><Beauty>40</Beauty><MarketValue>6104.536</MarketValue><Flammability>0</Flammability></statBases>
+    <costList Inherit="False"><Steel>60</Steel><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <building>
+      <storageGroupTag>Crimson_MedicineCabinet</storageGroupTag>
+      <fixedStorageSettings Inherit="False"><filter><categories><li>Medicine</li></categories></filter></fixedStorageSettings>
+      <defaultStorageSettings Inherit="False"><priority>Preferred</priority><filter><categories><li>Medicine</li></categories></filter></defaultStorageSettings>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>50</basePowerConsumption><transmitsPower>true</transmitsPower></li>
+      <li Class="CompProperties_Glower"><glowRadius>1.6</glowRadius><glowColor>(120,20,16,0)</glowColor></li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonFixedFurniture"><originalMaxHitPoints>140</originalMaxHitPoints></li>
+    </comps>
+    <researchPrerequisites Inherit="False"><li>Electricity</li></researchPrerequisites>
+    <designatorDropdown>Crimson_StorageFurniture</designatorDropdown><uiOrder>1088</uiOrder>
+  </ThingDef>
+</Defs>

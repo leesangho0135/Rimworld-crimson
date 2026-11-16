@@ -99,12 +99,6 @@
       "sha256": "1279BE2945A835C17118558EB9EA8DE56319D9C3BD537303652D136ACA54B37C"
     },
     {
-      "original": "CrimsonSOS2/1.6/Defs/CrimsonCommanderWallStorage.xml",
-      "path": "Content/1.6/Defs/MEDICAL__CrimsonCommanderWallStorage.xml",
-      "target": "1.6/Defs/MEDICAL__CrimsonCommanderWallStorage.xml",
-      "splitXml": true
-    },
-    {
       "original": "CrimsonSOS2/1.6/Defs/CrimsonCryptosleep.xml",
       "path": "Content/1.6/Defs/CrimsonCryptosleep.xml",
       "target": "1.6/Defs/CrimsonCryptosleep.xml",

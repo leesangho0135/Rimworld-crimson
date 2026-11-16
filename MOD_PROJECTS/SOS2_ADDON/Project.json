@@ -140,6 +140,11 @@
       "original": "Source/CrimsonSOS2.WallReports/CrimsonWallReports.cs",
       "path": "Source/WallReports/CrimsonWallReports.cs",
       "assembly": "reports"
+    },
+    {
+      "original": "Source/CrimsonSOS2/CrimsonCommanderWallStorage.cs",
+      "path": "Source/Main/CrimsonCommanderWallStorage.cs",
+      "assembly": "main"
     }
   ],
   "content": [
@@ -1155,6 +1160,12 @@
       "original": "CrimsonSOS2/1.6/Defs/CrimsonWeaponsAndShield.xml",
       "path": "Content/1.6/Defs/CrimsonWeaponsAndShield.xml",
       "target": "1.6/Defs/CrimsonWeaponsAndShield.xml",
+      "splitXml": true
+    },
+    {
+      "original": "CrimsonSOS2/1.6/Defs/CrimsonCommanderWallStorage.xml",
+      "path": "Content/1.6/Defs/CrimsonCommanderWallStorage.xml",
+      "target": "1.6/Defs/CrimsonCommanderWallStorage.xml",
       "splitXml": true
     }
   ],

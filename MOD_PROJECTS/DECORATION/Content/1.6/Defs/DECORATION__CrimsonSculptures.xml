@@ -133,14 +133,20 @@
   <ThingDef ParentName="Crimson_ConstructedSculptureBase">
     <defName>Crimson_WallRelief</defName>
     <label>심홍 벽걸이 부조</label>
-    <description>북쪽의 연속된 세 칸 벽에 부착하는 얕은 부조입니다. 바닥 기단은 없습니다. 건설할 때 선택된 조형 4종 가운데 하나가 무작위로 정해지며, 저장·운반·재설치 후에도 같은 외형을 유지합니다. 좌우반전 명령은 현재 조형의 방향만 바꿉니다.</description>
+    <description>선택한 방향의 연속된 세 칸 벽에 부착하는 얕은 부조입니다. 건설·재설치할 때 회전할 수 있으며 바닥 기단은 없습니다. 건설할 때 선택된 조형 4종 가운데 하나가 무작위로 정해지며, 저장·운반·재설치 후에도 같은 외형을 유지합니다. 좌우반전 명령은 현재 조형의 방향만 바꿉니다.</description>
+    <rotatable>true</rotatable>
     <size>(3,1)</size>
     <fillPercent>0.15</fillPercent>
     <uiIconPath>Crimson/Decor/Sculptures/R06</uiIconPath>
     <graphicData>
       <texPath>Crimson/Decor/Sculptures/R06</texPath>
       <drawSize>(3.3,1.1)</drawSize>
-      <drawOffset>(0,0,1.0)</drawOffset>
+      <drawRotated>true</drawRotated>
+      <drawOffset>(0,0,0)</drawOffset>
+      <drawOffsetNorth>(0,0,1)</drawOffsetNorth>
+      <drawOffsetEast>(1,0,0)</drawOffsetEast>
+      <drawOffsetSouth>(0,0,-1)</drawOffsetSouth>
+      <drawOffsetWest>(-1,0,0)</drawOffsetWest>
     </graphicData>
     <statBases>
       <MaxHitPoints>1050</MaxHitPoints>

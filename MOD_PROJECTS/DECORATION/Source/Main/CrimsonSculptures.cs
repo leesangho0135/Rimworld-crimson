@@ -133,11 +133,11 @@ namespace CrimsonSOS2
         }
     }
 
-    // Finished sculptures and their ghost use an upright silhouette. Rotation
-    // never turns a completed three-dimensional artwork into a flat 90deg sprite.
+    // Freestanding sculptures stay upright; only the wall relief opts in to
+    // rotating its shallow artwork with the supporting wall.
     public class CrimsonSculptureGraphic : Graphic_Single
     {
-        public override bool ShouldDrawRotated { get { return false; } }
+        public override bool ShouldDrawRotated { get { return data != null && data.drawRotated; } }
 
         public override Mesh MeshAt(Rot4 rot)
         {
@@ -149,7 +149,8 @@ namespace CrimsonSOS2
         {
             if (thingDef != null && thingDef.defName != "Crimson_WallRelief")
                 loc.z += Mathf.Max(0f, (drawSize.y - thingDef.size.z) / 2f);
-            CrimsonFurnitureDepth.Draw(this, loc, Rot4.North, thingDef, thing, 0f);
+            CrimsonFurnitureDepth.Draw(this, loc, ShouldDrawRotated ? rot : Rot4.North,
+                thingDef, thing, ShouldDrawRotated ? extraRotation : 0f);
         }
 
         public override Graphic GetColoredVersion(Shader shader, Color color,

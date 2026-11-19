@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase" Name="CrimsonPanoramicMeditationLegacy" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_PanoramicMeditationDais</defName>
+    <label>심홍 전망 명상 연단</label>
+    <description>심홍 파노라마 전망창 앞 바닥 두 줄에 따로 설치하는 어두운 금속 연단입니다. 전체 전망창·연단 배치는 7×3칸이며, 연단은 7×2칸입니다. 지정 소유자 한 명이 중앙에서 창을 바라보며 서서 명상합니다. 다른 정착민은 연단을 지나갈 수 있지만 명상 자리와 보너스를 사용할 수 없습니다. 원본 선체벽의 통행 차단과 기밀 기능은 유지됩니다. 같은 방향의 전망창과 연속된 뒷벽 7칸이 있어야 명상할 수 있습니다.</description>
+    <thingClass>CrimsonSOS2.Building_CrimsonPanoramicMeditationDais</thingClass>
+    <size>(7,2)</size><rotatable>true</rotatable><defaultPlacingRot>North</defaultPlacingRot>
+    <designationCategory IsNull="True" /><uiOrder>1211</uiOrder>
+    <drawerType>MapMeshOnly</drawerType><altitudeLayer>MoteLow</altitudeLayer>
+    <graphicData Class="CrimsonSOS2.CrimsonPanoramaGraphicData">
+      <texPath>Crimson/Panorama/PanoramaDais</texPath>
+      <graphicClass>CrimsonSOS2.CrimsonPanoramaGraphic</graphicClass><shaderType>Cutout</shaderType>
+      <drawSize>(7,2)</drawSize><drawRotated>true</drawRotated><shadowData IsNull="True" />
+      <uvScale>(0.988950276,0.538674033)</uvScale><uvOffset>(0.005524862,0.219613260)</uvOffset>
+    </graphicData>
+    <uiIconPath>Crimson/Panorama/PanoramaDais</uiIconPath>
+    <passability>Standable</passability><pathCost>0</pathCost><fillPercent>0</fillPercent>
+    <blockLight>false</blockLight><blockWind>false</blockWind><coversFloor>false</coversFloor>
+    <clearBuildingArea>false</clearBuildingArea><castEdgeShadows>false</castEdgeShadows><tickerType>Normal</tickerType>
+    <statBases><MaxHitPoints>1500</MaxHitPoints><WorkToBuild>6000</WorkToBuild><Mass>80</Mass><Beauty>108000</Beauty><Comfort>0.8</Comfort><Flammability>0</Flammability><MeditationFocusStrength>0.5</MeditationFocusStrength></statBases>
+    <costList><Steel>160</Steel><Plasteel>60</Plasteel><ComponentIndustrial>4</ComponentIndustrial></costList>
+    <building><isEdifice>false</isEdifice><isInert>true</isInert><ai_chillDestination>false</ai_chillDestination><artificialForMeditationPurposes>false</artificialForMeditationPurposes></building>
+    <comps>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonBridgeDuty" />
+      <li Class="CompProperties_AssignableToPawn"><compClass>CompAssignableToPawn_MeditationSpot</compClass><drawUnownedAssignmentOverlay>false</drawUnownedAssignmentOverlay></li>
+      <li Class="CompProperties_UsesMeditationFocus" />
+      <li Class="CompProperties_MeditationFocus"><statDef>MeditationFocusStrength</statDef><focusTypes><li>Artistic</li><li>Natural</li><li>Dignified</li><li>Morbid</li><li>Minimal</li><li>Flame</li></focusTypes></li>
+    </comps>
+    <placeWorkers><li>CrimsonSOS2.CrimsonPanoramicDaisPlaceWorker</li></placeWorkers>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites><li>Electricity</li></researchPrerequisites><constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+  </ThingDef>
+  <ThingDef ParentName="CrimsonPanoramicMeditationLegacy" MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_PanoramicMeditationDaisWide</defName>
+    <description>15칸 파노라마 전망창 앞 바닥에 설치하는 어두운 금속 명상 연단입니다. 크기는 15×2칸이며, 전망창과 합치면 15×3칸입니다. 지정 소유자 한 명이 중앙 입구의 얕은 계단 세 단을 지나 중앙에서 창을 바라보며 서서 명상합니다. 같은 폭·방향의 전망창과 연속된 뒷벽 15칸이 필요합니다. 연단은 걸어서 지나갈 수 있습니다.</description>
+    <size>(15,2)</size><tickerType>Normal</tickerType><designationCategory>Crimson_CS</designationCategory>
+    <graphicData Class="CrimsonSOS2.CrimsonPanoramaGraphicData">
+      <texPath>Crimson/Panorama/PanoramaDaisWide</texPath>
+      <drawSize>(15,2)</drawSize>
+      <uvScale>(0.980662983,0.388121547)</uvScale><uvOffset>(0.009668508,0.015193370)</uvOffset>
+    </graphicData>
+    <uiIconPath>Crimson/Panorama/PanoramaDaisWide</uiIconPath>
+  </ThingDef>
+  <JobDef MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Crimson_PanoramicMeditation</defName><driverClass>CrimsonSOS2.JobDriver_CrimsonPanoramicMeditation</driverClass>
+    <reportString>전망창을 바라보며 명상하는 중.</reportString><joyDuration>5000</joyDuration><joyKind>Meditative</joyKind><taleOnCompletion>Meditated</taleOnCompletion><isCrawlingIfDowned>false</isCrawlingIfDowned>
+  </JobDef>
+</Defs>

@@ -17,12 +17,14 @@ namespace CrimsonSOS2
         {
             base.PostSpawnSetup(respawningAfterLoad);
             EnsureWitness();
+            EnforceName();
         }
 
         public override void CompTick()
         {
             base.CompTick();
             if (!witnessInstalled && parent.IsHashIntervalTick(250)) EnsureWitness();
+            if (parent.IsHashIntervalTick(250)) EnforceName();
         }
 
         private void EnsureWitness()
@@ -37,6 +39,13 @@ namespace CrimsonSOS2
                 Consciousness.Name = new NameSingle("목격자");
             }
             witnessInstalled = true;
+        }
+
+        public void EnforceName()
+        {
+            AIName = "목격자";
+            if (Consciousness != null && (Consciousness.Name == null || Consciousness.Name.ToStringShort != "목격자"))
+                Consciousness.Name = new NameSingle("목격자");
         }
 
         public override void PostExposeData()

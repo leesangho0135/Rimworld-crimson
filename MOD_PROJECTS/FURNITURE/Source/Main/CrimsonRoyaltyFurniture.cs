@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using HarmonyLib;
 using RimWorld;
@@ -56,6 +57,11 @@ namespace CrimsonSOS2
         }
     }
 
+    public sealed class CrimsonIntegratedThroneFurnishings : DefModExtension
+    {
+        public List<ThingDefCountClass> furnishings = new List<ThingDefCountClass>();
+    }
+
     [StaticConstructorOnStartup]
     internal static class CrimsonRoyaltyFurniture
     {
@@ -63,6 +69,11 @@ namespace CrimsonSOS2
             new Dictionary<ThingDef, List<ThingDef>>();
         private static readonly MethodInfo countAnyOfThing =
             AccessTools.Method(typeof(RoomRequirement_ThingAnyOfCount), "CountThing");
+        private static readonly HashSet<RoomRequirement> throneRoomRequirements = new HashSet<RoomRequirement>();
+        private static readonly Dictionary<RoomRequirement_AllThingsAnyOfAreGlowing, int> minimumGlowingCounts =
+            new Dictionary<RoomRequirement_AllThingsAnyOfAreGlowing, int>();
+        private static readonly ThingDef integratedThrone;
+        private static readonly CrimsonIntegratedThroneFurnishings integratedFurnishings;
 
         static CrimsonRoyaltyFurniture()
         {
@@ -76,7 +87,11 @@ namespace CrimsonSOS2
             AddEquivalent("RoyalBed", "Crimson_CrewDoubleBed");
             AddEquivalent("EndTable", "Crimson_BedsideTable");
             AddEquivalent("Dresser", "Crimson_Wardrobe");
-            if (equivalents.Count == 0) return;
+            integratedThrone = DefDatabase<ThingDef>.GetNamedSilentFail("Crimson_GrandThrone");
+            if (integratedThrone != null)
+                integratedFurnishings = integratedThrone.GetModExtension<CrimsonIntegratedThroneFurnishings>();
+            if (integratedFurnishings != null) RegisterThroneRoomRequirements();
+            if (equivalents.Count == 0 && integratedFurnishings == null) return;
 
             Harmony harmony = new Harmony("rimod.crimson.sos2.royalty-furniture");
             Patch(harmony, typeof(RoomRequirement_Thing), "Met", "ThingMetPostfix");
@@ -108,6 +123,44 @@ namespace CrimsonSOS2
             if (!replacements.Contains(replacement)) replacements.Add(replacement);
         }
 
+        private static void RegisterThroneRoomRequirements()
+        {
+            foreach (RoyalTitleDef title in DefDatabase<RoyalTitleDef>.AllDefsListForReading)
+            {
+                List<RoomRequirement> requirements = title.throneRoomRequirements;
+                if (requirements == null) continue;
+                throneRoomRequirements.UnionWith(requirements);
+                foreach (RoomRequirement_AllThingsAnyOfAreGlowing glowing in
+                    requirements.OfType<RoomRequirement_AllThingsAnyOfAreGlowing>())
+                {
+                    HashSet<ThingDef> definitions = new HashSet<ThingDef>(glowing.things);
+                    foreach (RoomRequirement_ThingAnyOfCount count in requirements.OfType<RoomRequirement_ThingAnyOfCount>())
+                    {
+                        if (count.GetType() != typeof(RoomRequirement_ThingAnyOfCount)
+                            || !definitions.SetEquals(count.things)) continue;
+                        int minimum;
+                        minimumGlowingCounts.TryGetValue(glowing, out minimum);
+                        minimumGlowingCounts[glowing] = System.Math.Max(minimum, count.count);
+                    }
+                }
+            }
+        }
+
+        private static IEnumerable<Thing> BuiltInFurnishingThrones(RoomRequirement requirement, Room room)
+        {
+            if (integratedFurnishings == null || !throneRoomRequirements.Contains(requirement)
+                || room == null || !room.ProperRoom) yield break;
+            foreach (Thing throne in room.ContainedThings(integratedThrone))
+                if (throne.Spawned && throne.Position.GetRoom(throne.Map) == room) yield return throne;
+        }
+
+        private static int BuiltInCount(RoomRequirement requirement, Room room, IEnumerable<ThingDef> requested)
+        {
+            if (!BuiltInFurnishingThrones(requirement, room).Any()) return 0;
+            return integratedFurnishings.furnishings.Where(item => requested.Contains(item.thingDef))
+                .Sum(item => item.count);
+        }
+
         // Only explicit Crimson replacements participate. Original ThingDefs
         // and shared RoyalTitleDef requirements remain unchanged.
         private static IEnumerable<ThingDef> ExtraDefinitions(IEnumerable<ThingDef> originals)
@@ -134,6 +187,7 @@ namespace CrimsonSOS2
                 __result = true;
                 return;
             }
+            __result = BuiltInCount(__instance, __0, new[] { __instance.thingDef }) > 0;
         }
 
         private static void ThingCountPostfix(RoomRequirement_ThingCount __instance,
@@ -142,6 +196,7 @@ namespace CrimsonSOS2
             if (__0 == null) return;
             foreach (ThingDef replacement in ExtraDefinitions(new[] { __instance.thingDef }))
                 __result += __0.ThingCount(replacement);
+            __result += BuiltInCount(__instance, __0, new[] { __instance.thingDef });
         }
 
         private static void AnyOfMetPostfix(RoomRequirement_ThingAnyOf __instance,
@@ -154,6 +209,8 @@ namespace CrimsonSOS2
                 __result = true;
                 return;
             }
+            if (__instance.GetType() == typeof(RoomRequirement_ThingAnyOf))
+                __result = BuiltInCount(__instance, __0, __instance.things) > 0;
         }
 
         private static void AnyOfCountPostfix(RoomRequirement_ThingAnyOfCount __instance,
@@ -170,6 +227,8 @@ namespace CrimsonSOS2
                         __result++;
                 }
             }
+            if (__instance.GetType() == typeof(RoomRequirement_ThingAnyOfCount))
+                __result += BuiltInCount(__instance, __0, __instance.things);
         }
 
         private static void AllGlowingPostfix(RoomRequirement_AllThingsAnyOfAreGlowing __instance,
@@ -186,6 +245,18 @@ namespace CrimsonSOS2
                     return;
                 }
             }
+
+            int minimum;
+            if (!minimumGlowingCounts.TryGetValue(__instance, out minimum)) return;
+            int integratedCount = BuiltInCount(__instance, __0, __instance.things);
+            if (integratedCount == 0) return;
+            IEnumerable<ThingDef> physical = __instance.things.Union(ExtraDefinitions(__instance.things));
+            if (physical.Sum(def => __0.ThingCount(def)) >= minimum) return;
+            __result = BuiltInFurnishingThrones(__instance, __0).Any(throne =>
+            {
+                CompGlower glower = throne.TryGetComp<CompGlower>();
+                return glower != null && glower.Glows;
+            });
         }
 
         private static void AssignedThronePostfix(RoomRequirement_HasAssignedThroneAnyOf __instance,

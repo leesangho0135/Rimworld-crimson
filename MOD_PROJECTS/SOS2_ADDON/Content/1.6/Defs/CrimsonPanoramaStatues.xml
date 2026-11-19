@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Keep the old identities readable until the objects are removed on load. -->
+  <ThingDef ParentName="BuildingBase" Name="CrimsonPanoramaStatueBase" Abstract="True">
+    <thingClass>CrimsonSOS2.Building_CrimsonPanoramaStatue</thingClass>
+    <size>(1,1)</size><drawerType>None</drawerType><tickerType>Never</tickerType>
+    <selectable>false</selectable><destroyable>true</destroyable><useHitPoints>false</useHitPoints>
+    <passability>Standable</passability><fillPercent>0</fillPercent>
+    <blockLight>false</blockLight><blockWind>false</blockWind><clearBuildingArea>false</clearBuildingArea>
+    <designationCategory IsNull="True" />
+    <building><isEdifice>false</isEdifice><isInert>true</isInert></building>
+  </ThingDef>
+  <ThingDef ParentName="CrimsonPanoramaStatueBase">
+    <defName>Crimson_PanoramaRecorder</defName><label>영겁의 기록자</label>
+  </ThingDef>
+  <ThingDef ParentName="CrimsonPanoramaStatueBase">
+    <defName>Crimson_PanoramaExecutor</defName><label>침묵의 집행자</label>
+  </ThingDef>
+</Defs>

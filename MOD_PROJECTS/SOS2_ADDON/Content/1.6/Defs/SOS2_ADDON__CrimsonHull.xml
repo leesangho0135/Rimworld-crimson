@@ -345,9 +345,7 @@
       </li>
     </modExtensions>
   </ThingDef>
-  <ThingDef ParentName="BuildingBase">
-    <defName>Crimson_Airlock</defName>
-    <label>모노리스 에어록</label>
+  <ThingDef ParentName="BuildingBase" Name="CrimsonAirlockBase" Abstract="True">
     <designatorDropdown>Crimson_Airlocks</designatorDropdown>
     <description>Allows access to a ship or divides rooms inside it. Low-energy plasma barriers prevent gases from escaping. In Odyssey space, partially allows vacuum in when open, so having double airlocks on ship exits is recommended.</description>
     <category>Building</category>
@@ -395,17 +393,6 @@
       <li>
         <compClass>CompColorable</compClass>
       </li>
-      <li Class="CrimsonSOS2.CrimsonUnfoldProperties">
-        <extendRate>0.005</extendRate>
-        <retractRate>0.005</retractRate>
-        <retractTime>240</retractTime>
-        <extendDirection>(0,0,-1)</extendDirection>
-        <startOffset>0.5</startOffset>
-        <length>3.0</length>
-        <width>3.0</width>
-        <graphicPath>Crimson/Hull/DockTube</graphicPath>
-        <graphicPathAlt>Crimson/Hull/DockTubeV</graphicPathAlt>
-      </li>
       <li Class="DubsBadHygiene.CompProperties_Pipe" MayRequire="Dubwise.DubsBadHygiene"><mode>Sewage</mode></li>
     </comps>
     <designationHotKey>Misc2</designationHotKey>
@@ -443,6 +430,41 @@
       <paintable>true</paintable>
     </building>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+  </ThingDef>
+  <ThingDef ParentName="CrimsonAirlockBase">
+    <defName>Crimson_Airlock</defName>
+    <label>모노리스 에어록</label>
+    <comps>
+      <li Class="CrimsonSOS2.CrimsonUnfoldProperties">
+        <extendRate>0.005</extendRate>
+        <retractRate>0.005</retractRate>
+        <retractTime>240</retractTime>
+        <extendDirection>(0,0,-1)</extendDirection>
+        <startOffset>0.5</startOffset>
+        <length>3.0</length>
+        <width>3.0</width>
+        <graphicPath>Crimson/Hull/DockTube</graphicPath>
+        <graphicPathAlt>Crimson/Hull/DockTubeV</graphicPathAlt>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="CrimsonAirlockBase">
+    <defName>Crimson_AirlockWide</defName>
+    <label>모노리스 광폭 에어록 (2×1)</label>
+    <description>폭 두 칸의 함선 출입문입니다. 두 칸이 함께 열리며 닫힌 상태에서 기밀을 유지합니다. 함선 내부 구획과 넓은 통로에 사용합니다.</description>
+    <thingClass>CrimsonSOS2.CrimsonWideAirlock</thingClass>
+    <size>(2,1)</size>
+    <rotatable>true</rotatable>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <graphicData><drawSize>(2,1)</drawSize><drawRotated>true</drawRotated></graphicData>
+    <costList Inherit="False">
+      <Steel>40</Steel><ComponentIndustrial>6</ComponentIndustrial><Plasteel>30</Plasteel><Gold>50</Gold>
+    </costList>
+    <statBases><WorkToBuild>2400</WorkToBuild><MaxHitPoints>6000</MaxHitPoints></statBases>
+    <building>
+      <blueprintClass>Blueprint_Build</blueprintClass>
+      <blueprintGraphicData><drawSize>(2,1)</drawSize><drawRotated>true</drawRotated></blueprintGraphicData>
+    </building>
   </ThingDef>
   <ThingDef ParentName="BuildingShipHullBase">
     <defName>Crimson_SolarGenerator</defName>

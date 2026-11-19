@@ -67,7 +67,10 @@ namespace CrimsonSOS2
                 x += thingDef.graphicData.drawOffset.x;
                 z += thingDef.graphicData.drawOffset.z;
             }
-            base.DrawWorker(loc + new Vector3(x, 0f, z), rot, thingDef, thing, extraRotation);
+            Vector3 position = loc + new Vector3(x, thingDef == null || thingDef.graphicData == null ? 0f : thingDef.graphicData.drawOffset.y, z);
+            if (thingDef != null && thingDef.defName == "Crimson_Observer")
+                CrimsonWitnessDepth.Draw(this, position, rot, thing, extraRotation);
+            else base.DrawWorker(position, rot, thingDef, thing, extraRotation);
         }
     }
 

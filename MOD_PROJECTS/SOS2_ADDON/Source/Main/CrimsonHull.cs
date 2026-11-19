@@ -499,30 +499,51 @@ namespace CrimsonSOS2
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             DoorPreDraw();
-            // Keep SOS2's actual support terrain and ship identity. Cover only
-            // this airlock cell visually, below its moving panels and pawns.
+            DrawAirlock(this, drawLoc, CanDrawMovers, OpenPct);
+            Comps_PostDraw();
+        }
+
+        internal static void DrawAirlock(Building_Door door, Vector3 drawLoc, bool drawMovers, float openPct)
+        {
             if (floorGraphic == null)
                 floorGraphic = GraphicDatabase.Get<Graphic_Single>("Crimson/Hull/DeckSeamless",
                     ShaderDatabase.Cutout, Vector2.one, Color.white);
-            Vector3 floorLocation = drawLoc;
-            floorLocation.y = AltitudeLayer.FloorEmplacement.AltitudeFor();
-            floorGraphic.Draw(floorLocation, Rotation, this);
-            if (CanDrawMovers)
+            Rot4 rotation = door.Rotation;
+            if (door.def.size.x == 1)
             {
-                float offset = 0.45f * OpenPct;
-                Rot4 transverse = Rotation;
-                transverse.Rotate(RotationDirection.Clockwise);
-                for (int half = 0; half < 2; half++)
-                {
-                    Vector3 direction = new Vector3(0f, 0f, half == 0 ? -def.size.x : def.size.x);
-                    Vector3 position = drawLoc + transverse.AsQuat * direction * offset;
-                    position.y = AltitudeLayer.DoorMoveable.AltitudeFor();
-                    Matrix4x4 transform = Matrix4x4.TRS(position, Rotation.AsQuat,
-                        new Vector3(def.size.x, 1f, def.size.z));
-                    Graphics.DrawMesh(CrimsonHullGraphics.Door(half == 1), transform,
-                        Graphic.MatAt(Rotation, this), 0);
-                }
+                Vector3 floorLocation = drawLoc;
+                floorLocation.y = AltitudeLayer.FloorEmplacement.AltitudeFor();
+                floorGraphic.Draw(floorLocation, rotation, door);
             }
+            else
+                foreach (IntVec3 cell in door.OccupiedRect())
+                    floorGraphic.Draw(cell.ToVector3ShiftedWithAltitude(AltitudeLayer.FloorEmplacement), rotation, door);
+
+            if (!drawMovers) return;
+            float offset = 0.45f * openPct;
+            Rot4 transverse = rotation;
+            transverse.Rotate(RotationDirection.Clockwise);
+            for (int half = 0; half < 2; half++)
+            {
+                Vector3 direction = new Vector3(0f, 0f, half == 0 ? -door.def.size.x : door.def.size.x);
+                Vector3 position = drawLoc + transverse.AsQuat * direction * offset;
+                position.y = AltitudeLayer.DoorMoveable.AltitudeFor();
+                Matrix4x4 transform = Matrix4x4.TRS(position, rotation.AsQuat,
+                    new Vector3(door.def.size.x, 1f, door.def.size.z));
+                Graphics.DrawMesh(CrimsonHullGraphics.Door(half == 1), transform,
+                    door.Graphic.MatAt(rotation, door), 0);
+            }
+        }
+    }
+
+    public sealed class CrimsonWideAirlock : Building_Door
+    {
+        public override bool ExchangeVacuum { get { return Open; } }
+
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
+        {
+            // The two occupied cells follow the explicit build rotation.
+            CrimsonAirlock.DrawAirlock(this, drawLoc, CanDrawMovers, OpenPct);
             Comps_PostDraw();
         }
     }

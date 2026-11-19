@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase" Name="CrimsonBridgeConsoleBase" Abstract="True">
+    <thingClass>CrimsonSOS2.Building_CrimsonBridgeConsole</thingClass>
+    <designationCategory>Crimson_CS</designationCategory>
+    <size>(6,2)</size><rotatable>true</rotatable><defaultPlacingRot>North</defaultPlacingRot>
+    <tickerType>Normal</tickerType><drawerType>MapMeshOnly</drawerType><altitudeLayer>Building</altitudeLayer>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(-1,0,0)</interactionCellOffset>
+    <interactionCellIcon>DiningChair</interactionCellIcon>
+    <passability>Standable</passability><fillPercent>0</fillPercent><coversFloor>false</coversFloor>
+    <clearBuildingArea>false</clearBuildingArea><terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building><isEdifice>false</isEdifice><isSittable>true</isSittable></building>
+    <graphicData Class="CrimsonSOS2.CrimsonPanoramaGraphicData">
+      <graphicClass>CrimsonSOS2.CrimsonPanoramaGraphic</graphicClass>
+      <shaderType>Cutout</shaderType><drawSize>(6,2.5)</drawSize><drawRotated>true</drawRotated>
+      <drawOffsetNorth>(0,0,0.25)</drawOffsetNorth><drawOffsetEast>(0.25,0,0)</drawOffsetEast>
+      <drawOffsetSouth>(0,0,-0.25)</drawOffsetSouth><drawOffsetWest>(-0.25,0,0)</drawOffsetWest>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints><WorkToBuild>5000</WorkToBuild><Mass>8</Mass>
+      <Flammability>0</Flammability><Beauty>4000</Beauty><Comfort>0.8</Comfort>
+    </statBases>
+    <comps>
+      <li Class="SaveOurShip2.CompProps_ShipCachePart" />
+      <li Class="CompProperties_ShipPart" />
+      <li Class="CompProperties_Mannable"><compClass>CrimsonSOS2.CrimsonBridgeMannable</compClass></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass><basePowerConsumption>50</basePowerConsumption><transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CrimsonSOS2.CompProperties_CrimsonPoweredComfort" />
+      <li Class="CrimsonSOS2.CompProperties_CrimsonBridgeDuty" />
+      <li><compClass>CrimsonSOS2.CompCrimsonFurnitureVisuals</compClass></li>
+    </comps>
+    <placeWorkers>
+      <li>SaveOurShip2.PlaceWorker_OnShipHull</li>
+      <li>CrimsonSOS2.CrimsonBridgeConsolePlaceWorker</li>
+    </placeWorkers>
+    <researchPrerequisites><li>ShipPilotSeat</li></researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="CrimsonBridgeConsoleBase" Name="CrimsonDualBridgeConsoleBase" Abstract="True">
+    <multipleInteractionCellOffsets><li>(-1,0,0)</li><li>(2,0,0)</li></multipleInteractionCellOffsets>
+    <statBases><Beauty>8000</Beauty></statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="CrimsonDualBridgeConsoleBase">
+    <defName>Crimson_BridgeNavigationConsole</defName>
+    <label>심홍 함교 항법석</label>
+    <description>둘이 앉을 수 있는 함선 항법 콘솔입니다. 전투가 시작되면 좌석별 지정 인원이 배치됩니다. 선임 좌석이 비면 다른 좌석의 승무원이 항법 콘솔을 운용할 수 있습니다.</description>
+    <graphicData Class="CrimsonSOS2.CrimsonPanoramaGraphicData">
+      <texPath>Crimson/Bridge/NavigationConsole</texPath>
+      <uvScale>(0.81719876,0.93077874)</uvScale><uvOffset>(0.09165808,0.05191595)</uvOffset>
+    </graphicData>
+    <uiIconPath>Crimson/Bridge/NavigationConsole</uiIconPath>
+    <costList><Steel>20</Steel><ComponentSpacer>1</ComponentSpacer></costList>
+    <comps><li Class="SaveOurShip2.CompProps_ShipHeat"><compClass>SaveOurShip2.CompShipHeat</compClass></li></comps>
+  </ThingDef>
+
+  <ThingDef ParentName="CrimsonDualBridgeConsoleBase">
+    <defName>Crimson_BridgeTacticalConsole</defName>
+    <label>심홍 함교 전술석</label>
+    <description>둘이 앉을 수 있는 함선 전술 콘솔입니다. 전투가 시작되면 좌석별 지정 인원이 배치되며, 조작자가 표적 지정 기능을 사용합니다.</description>
+    <graphicData Class="CrimsonSOS2.CrimsonPanoramaGraphicData">
+      <texPath>Crimson/Bridge/TacticalConsole</texPath>
+      <uvScale>(0.85633368,0.95550062)</uvScale><uvOffset>(0.07209063,0.02472188)</uvOffset>
+    </graphicData>
+    <uiIconPath>Crimson/Bridge/TacticalConsole</uiIconPath>
+    <costList><Steel>20</Steel><ComponentIndustrial>2</ComponentIndustrial></costList>
+    <comps><li Class="SaveOurShip2.CompProps_ShipHeat"><compClass>SaveOurShip2.CompShipHeatTacCon</compClass></li></comps>
+  </ThingDef>
+
+  <ThingDef ParentName="CrimsonBridgeConsoleBase">
+    <defName>Crimson_BridgeCompactConsole</defName>
+    <label>심홍 함교 소형 조작석</label>
+    <description>가운데 한 사람이 앉는 소형 함교 콘솔입니다. 지정된 승무원이 함선 전투에 배치됩니다.</description>
+    <size>(4,2)</size><interactionCellOffset>(0,0,0)</interactionCellOffset>
+    <graphicData Class="CrimsonSOS2.CrimsonPanoramaGraphicData">
+      <texPath>Crimson/Bridge/CompactConsole</texPath><drawSize>(4,2.5)</drawSize>
+      <uvScale>(0.78625473,0.86189516)</uvScale><uvOffset>(0.10718789,0.08971774)</uvOffset>
+    </graphicData>
+    <uiIconPath>Crimson/Bridge/CompactConsole</uiIconPath>
+    <costList><Steel>20</Steel><ComponentIndustrial>2</ComponentIndustrial></costList>
+    <comps><li Class="SaveOurShip2.CompProps_ShipHeat"><compClass>SaveOurShip2.CompShipHeatTacCon</compClass></li></comps>
+  </ThingDef>
+
+  <ThingDef ParentName="CrimsonBridgeConsoleBase">
+    <defName>Crimson_BridgeSingleConsole</defName>
+    <label>심홍 함교 중형 조작석</label>
+    <description>세로로 배치하는 1인 함교 전술 콘솔입니다. 가운데 심홍 보조 승무원 좌석 바로 앞에 키보드가 있으며, 지정된 승무원이 함선 전투에 배치됩니다.</description>
+    <size>(5,2)</size><defaultPlacingRot>East</defaultPlacingRot><interactionCellOffset>(0,0,0)</interactionCellOffset>
+    <statBases><Beauty>6000</Beauty></statBases>
+    <graphicData Class="CrimsonSOS2.CrimsonPanoramaGraphicData">
+      <texPath>Crimson/Bridge/SingleConsole</texPath><graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(5.5,2.5)</drawSize><drawRotated>false</drawRotated><allowFlip>true</allowFlip>
+      <drawOffsetEast>(0.25,0,0.25)</drawOffsetEast><drawOffsetWest>(-0.25,0,0.25)</drawOffsetWest>
+    </graphicData>
+    <uiIconPath>Crimson/Bridge/SingleConsole_east</uiIconPath>
+    <costList><Steel>20</Steel><ComponentIndustrial>2</ComponentIndustrial></costList>
+    <comps><li Class="SaveOurShip2.CompProps_ShipHeat"><compClass>SaveOurShip2.CompShipHeatTacCon</compClass></li></comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Crimson_BridgeConsoleBodyCell</defName>
+    <label>심홍 함교 콘솔 본체</label>
+    <thingClass>CrimsonSOS2.Building_CrimsonBridgeConsoleBodyCell</thingClass>
+    <size>(1,1)</size><drawerType>None</drawerType><tickerType>Never</tickerType>
+    <selectable>false</selectable><useHitPoints>false</useHitPoints><neverMultiSelect>true</neverMultiSelect>
+    <passability>Impassable</passability><fillPercent>0.4</fillPercent>
+    <clearBuildingArea>false</clearBuildingArea><blockLight>false</blockLight><blockWind>false</blockWind>
+    <castEdgeShadows>false</castEdgeShadows><coversFloor>false</coversFloor>
+    <building><isEdifice>true</isEdifice><isInert>true</isInert></building>
+    <placeWorkers><li>CrimsonSOS2.CrimsonBridgeConsolePlaceWorker</li></placeWorkers>
+  </ThingDef>
+
+  <JobDef>
+    <defName>Crimson_BridgeDuty</defName>
+    <driverClass>CrimsonSOS2.JobDriver_CrimsonBridgeDuty</driverClass>
+    <reportString>함교 전투 위치에서 대기 중.</reportString>
+    <isCrawlingIfDowned>false</isCrawlingIfDowned>
+  </JobDef>
+</Defs>

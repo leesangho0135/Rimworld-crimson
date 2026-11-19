@@ -530,13 +530,13 @@
     <defName>Crimson_Observer</defName>
     <label>목격자</label>
     <designatorDropdown>Ship_ArchoSpore</designatorDropdown>
-    <thingClass>SaveOurShip2.Building_ArchotechSpore</thingClass>
+    <thingClass>CrimsonSOS2.Building_CrimsonWitness</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Crimson/Support/ObserverBodyV05</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>CrimsonSOS2.CrimsonWitnessBodyGraphic</graphicClass>
       <drawSize>(3,5)</drawSize>
-      <drawOffset>(0,0,1.36419753)</drawOffset>
+      <drawOffset>(0,-0.02,1.36419753)</drawOffset>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -546,19 +546,17 @@
       <shaderType>Cutout</shaderType>
     </graphicData>
     <rotatable>false</rotatable>
-    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <fillPercent>0.9</fillPercent>
     <statBases>
       <WorkToBuild>50000</WorkToBuild>
       <MaxHitPoints>5000</MaxHitPoints>
       <Flammability>0</Flammability>
-      <MeditationFocusStrength>0.5</MeditationFocusStrength>
-      <ArchotechPillarsConnected>0</ArchotechPillarsConnected>
-      <Beauty>100</Beauty>
+      <Beauty>144000</Beauty>
     </statBases>
     <tickerType>Normal</tickerType>
-    <description>함선에 목격자가 내장된 모노리스 통제 중추. 범용 인공지능 대신 목격자의 의식이 함선을 통솔하며, 별도 AI 인격핵이나 외부 의식 이식 없이 함선 컴퓨터 코어로 가동한다. 목격자와 연결된 로봇들은 함선의 무선 전력으로 자율 행동한다. 주변 명상과 기존 초월공학 포자의 정신장 기능을 유지한다.</description>
+    <description>함선에 목격자가 내장된 모노리스 통제 중추. 범용 인공지능 대신 목격자의 의식이 함선을 통솔하며, 별도 AI 인격핵이나 외부 의식 이식 없이 함선 컴퓨터 코어로 가동한다. 목격자와 연결된 로봇들은 함선의 무선 전력으로 자율 행동한다. 기존 초월공학 포자의 정신장 기능을 유지한다.</description>
     <size>(3,2)</size>
     <building>
       <buildingTags>
@@ -574,9 +572,6 @@
     <comps>
       <li Class="SaveOurShip2.CompProps_ShipCachePart" />
       <li Class="CompProperties_ShipPart" />
-      <li Class="SaveOurShip2.CompProps_ResearchUnlock">
-        <unlock>ArchotechSpore</unlock>
-      </li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>2000</basePowerConsumption>
@@ -585,49 +580,11 @@
       <li Class="SaveOurShip2.CompProps_ShipHeat">
         <compClass>SaveOurShip2.CompShipHeat</compClass>
       </li>
-      <li Class="CompProperties_MeditationFocus">
-        <statDef>MeditationFocusStrength</statDef>
-        <focusTypes>
-          <li>Archotech</li>
-        </focusTypes>
-        <offsets>
-          <li Class="FocusStrengthOffset_BuildingDefs">
-            <defs>
-              <Crimson_PillarA>0.02</Crimson_PillarA>
-              <Crimson_PillarB>0.02</Crimson_PillarB>
-              <Crimson_PillarC>0.02</Crimson_PillarC>
-              <Crimson_PillarD>0.02</Crimson_PillarD>
-            </defs>
-            <radius>9.9</radius>
-            <maxBuildings>4</maxBuildings>
-            <explanationKey>MeditationFocusPerPillar</explanationKey>
-            <explanationKeyAbstract>MeditationFocusPerPillarAbstract</explanationKeyAbstract>
-          </li>
-        </offsets>
-      </li>
-      <li Class="CompProperties_AffectedByFacilities">
-        <linkableFacilities>
-          <li>Crimson_PillarA</li>
-          <li>Crimson_PillarB</li>
-          <li>Crimson_PillarC</li>
-          <li>Crimson_PillarD</li>
-        </linkableFacilities>
-      </li>
       <li Class="CrimsonSOS2.CompProperties_CrimsonWitness">
         <holoHediff>SoSHologramArchotech</holoHediff>
-        <canMergeHuman>true</canMergeHuman>
+        <canMergeHuman>false</canMergeHuman>
         <canMergeAI>true</canMergeAI>
         <healOnMerge>true</healOnMerge>
-      </li>
-      <li Class="SaveOurShip2.CompProps_ArchoHullConversion">
-        <radiusPerDayCurve>
-          <points>
-            <li>0  , 3</li>
-            <li>1.5, 18</li>
-            <li>6  , 40</li>
-            <li>30 , 200</li>
-          </points>
-        </radiusPerDayCurve>
       </li>
     </comps>
     <ritualFocus>
@@ -636,7 +593,6 @@
     </ritualFocus>
     <placeWorkers>
       <li>SaveOurShip2.PlaceWorker_OnShipHull</li>
-      <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_RitualFocus</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_RitualFocusNoArrow</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_PreventInteractionSpotOverlap</li>
@@ -647,8 +603,7 @@
     <constructionSkillPrerequisite>15</constructionSkillPrerequisite>
     <designationCategory>Crimson_CS</designationCategory>
     <isAltar>true</isAltar>
-    <hasInteractionCell>True</hasInteractionCell>
-    <interactionCellOffset>(0,0, -1)</interactionCellOffset>
+    <hasInteractionCell>false</hasInteractionCell>
     <modExtensions>
       <li Class="Vehicles.CustomCostDefModExtension">
         <cost>10000</cost>
@@ -657,7 +612,7 @@
   </ThingDef>
   <ThingDef ParentName="ShipPillar">
     <defName>Crimson_PillarA</defName>
-    <designationCategory>Crimson_CS</designationCategory>
+    <designationCategory IsNull="True" /><designatorDropdown IsNull="True" />
     <label>지평 첨탑 α</label>
     <graphicData>
       <texPath>Crimson/Support/PillarA</texPath>
@@ -671,7 +626,7 @@
   </ThingDef>
   <ThingDef ParentName="ShipPillar">
     <defName>Crimson_PillarB</defName>
-    <designationCategory>Crimson_CS</designationCategory>
+    <designationCategory IsNull="True" /><designatorDropdown IsNull="True" />
     <label>지평 첨탑 β</label>
     <graphicData>
       <texPath>Crimson/Support/PillarB</texPath>
@@ -685,7 +640,7 @@
   </ThingDef>
   <ThingDef ParentName="ShipPillar">
     <defName>Crimson_PillarC</defName>
-    <designationCategory>Crimson_CS</designationCategory>
+    <designationCategory IsNull="True" /><designatorDropdown IsNull="True" />
     <label>지평 첨탑 γ</label>
     <graphicData>
       <texPath>Crimson/Support/PillarC</texPath>
@@ -699,7 +654,7 @@
   </ThingDef>
   <ThingDef ParentName="ShipPillar">
     <defName>Crimson_PillarD</defName>
-    <designationCategory>Crimson_CS</designationCategory>
+    <designationCategory IsNull="True" /><designatorDropdown IsNull="True" />
     <label>지평 첨탑 δ</label>
     <graphicData>
       <texPath>Crimson/Support/PillarD</texPath>

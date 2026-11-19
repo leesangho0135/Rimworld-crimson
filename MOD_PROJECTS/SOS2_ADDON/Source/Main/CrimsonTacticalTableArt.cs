@@ -27,7 +27,7 @@ namespace CrimsonSOS2
             if (path.EndsWith("TacticalTableLargeParallelV137", System.StringComparison.Ordinal))
                 return Create(Window(274,16,544,450), Window(829,142,1287,429),
                     Window(274,520,544,954), Window(829,646,1287,934),
-                    new Vector2(3.04f,4.95f), new Vector2(5.04f,2.765f), -0.0504f,0.053333f);
+                    new Vector2(3.04f,5.15f), new Vector2(5.04f,2.765f), -0.0504f,0.053333f);
             if (path.EndsWith("TacticalTableCompactParallelV137", System.StringComparison.Ordinal))
                 return Create(Window(240,195,745,399), Window(1011,38,1199,470),
                     Window(240,677,745,881), Window(1011,521,1199,953),

@@ -27,10 +27,20 @@
   <ThingDef ParentName="ThroneBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>Crimson_GrandThrone</defName>
     <label>심홍 대형 명상 옥좌</label>
-    <description>넓은 기단과 높은 등받이를 갖춘 대형 명상 옥좌입니다. 위엄 명상과 알현실의 중심이 되는 좌석입니다.</description>
+    <description>넓은 기단과 높은 등받이를 갖춘 대형 명상 옥좌입니다. 위엄 명상과 알현실의 중심이 되는 좌석입니다. 알현실 요구사항에 화로 두 개, 기둥 여섯 개, 가림막 두 개, 피아노 한 개로 인정됩니다. 옥좌의 조명이 켜지면 내장 화로도 점등된 것으로 인정됩니다.</description>
     <castEdgeShadows>True</castEdgeShadows>
     <size>(3,2)</size>
     <interactionCellOffset>(0,0,1)</interactionCellOffset>
+    <modExtensions>
+      <li Class="CrimsonSOS2.CrimsonIntegratedThroneFurnishings">
+        <furnishings>
+          <Brazier>2</Brazier>
+          <Column>6</Column>
+          <Drape>2</Drape>
+          <Piano>1</Piano>
+        </furnishings>
+      </li>
+    </modExtensions>
     <statBases>
       <MaxHitPoints>2450</MaxHitPoints>
       <WorkToBuild>40000</WorkToBuild>
